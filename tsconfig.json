@@ -5,7 +5,6 @@
             "@/env/*": ["env/*"],
             "@/hooks/*": ["hooks/*"],
             "@/server/*": ["server/*"],
-            "@/stores/*": ["stores/*"],
             "@/styles/*": ["styles/*"],
             "@/types/*": ["types/*"],
             "@/utils/*": ["utils/*"],
