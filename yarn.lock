@@ -301,6 +301,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-avatar@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@radix-ui/react-avatar@npm:1.0.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/react-context": 1.0.0
+    "@radix-ui/react-primitive": 1.0.1
+    "@radix-ui/react-use-callback-ref": 1.0.0
+    "@radix-ui/react-use-layout-effect": 1.0.0
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: 88f2367340685912da1dcf7ab95b0055271a3909bef0f7d51edead7be3fb77e019b9aa2db5c51df5f47c9fa8a1eb116893c48594bf03a3bd2d9920477fa16f44
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-collapsible@npm:1.0.1":
   version: 1.0.1
   resolution: "@radix-ui/react-collapsible@npm:1.0.1"
@@ -1187,6 +1203,18 @@ __metadata:
   version: 2.0.0
   resolution: "chownr@npm:2.0.0"
   checksum: c57cf9dd0791e2f18a5ee9c1a299ae6e801ff58fee96dc8bfd0dcb4738a6ce58dd252a3605b1c93c6418fe4f9d5093b28ffbf4d66648cb2a9c67eaef9679be2f
+  languageName: node
+  linkType: hard
+
+"class-variance-authority@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "class-variance-authority@npm:0.4.0"
+  peerDependencies:
+    typescript: ">= 4.5.5 < 5"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 86037e5baa231a0c36a6dc2f260f6c18daa66bdccb6f4c1baee7112abd3dd2a11f412cfb3a0377b65357cc41ec6cb2f9cc70e9f64275109703fd6839ed50a450
   languageName: node
   linkType: hard
 
@@ -4272,6 +4300,7 @@ __metadata:
     "@radix-ui/react-accordion": ^1.1.0
     "@radix-ui/react-alert-dialog": ^1.0.2
     "@radix-ui/react-aspect-ratio": ^1.0.1
+    "@radix-ui/react-avatar": ^1.0.1
     "@types/node": ^18.11.18
     "@types/prettier": ^2.7.2
     "@types/react": ^18.0.27
@@ -4279,6 +4308,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.49.0
     "@typescript-eslint/parser": ^5.49.0
     autoprefixer: ^10.4.13
+    class-variance-authority: ^0.4.0
     eslint: ^8.32.0
     eslint-config-next: 13.1.6
     next: 13.1.6
