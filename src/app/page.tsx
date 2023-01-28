@@ -5,6 +5,7 @@ import { H2 } from "@/components/typography/H2";
 import { H3 } from "@/components/typography/H3";
 import { H4 } from "@/components/typography/H4";
 import { Paragraph } from "@/components/typography/Paragraph";
+import { Blockquote } from "@/components/typography/Blockquote";
 
 const Page = () => {
     return (
@@ -18,6 +19,11 @@ const Page = () => {
                     The king, seeing how much happier his subjects were,
                     realized the error of his ways and repealed the joke tax.
                 </Paragraph>
+                <Blockquote>
+                    &quot;After all,&quot; he said, &quot;everyone enjoys a good
+                    joke, so its only fair that they should pay for the
+                    privilege.&quot;
+                </Blockquote>
             </Container>
         </main>
     );
