@@ -8,6 +8,7 @@ import Paragraph from "@/components/typography/Paragraph";
 import Blockquote from "@/components/typography/Blockquote";
 import type { Table as TableType } from "@/components/Table";
 import Table from "@/components/Table";
+import List from "@/components/typography/List";
 
 const tableContents: TableType = {
     title: ["King's Treasury", "People's happiness"],
@@ -17,6 +18,12 @@ const tableContents: TableType = {
         ["Full", "Ecstatic"],
     ],
 };
+
+const listContents = [
+    "1st level of puns: 5 gold coins",
+    "2nd level of jokes: 10 gold coins",
+    "3rd level of one-liners : 20 gold coins",
+];
 
 const Page = () => {
     return (
@@ -36,6 +43,7 @@ const Page = () => {
                     privilege.&quot;
                 </Blockquote>
                 <Table contents={tableContents} />
+                <List contents={listContents} />
             </Container>
         </main>
     );
