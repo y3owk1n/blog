@@ -6,6 +6,17 @@ import H3 from "@/components/typography/H3";
 import H4 from "@/components/typography/H4";
 import Paragraph from "@/components/typography/Paragraph";
 import Blockquote from "@/components/typography/Blockquote";
+import type { Table as TableType } from "@/components/Table";
+import Table from "@/components/Table";
+
+const tableContents: TableType = {
+    title: ["King's Treasury", "People's happiness"],
+    contents: [
+        ["Empty", "Overflowing"],
+        ["Modest", "Satisfied"],
+        ["Full", "Ecstatic"],
+    ],
+};
 
 const Page = () => {
     return (
@@ -24,6 +35,7 @@ const Page = () => {
                     joke, so its only fair that they should pay for the
                     privilege.&quot;
                 </Blockquote>
+                <Table contents={tableContents} />
             </Container>
         </main>
     );
