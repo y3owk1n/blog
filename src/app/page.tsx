@@ -9,6 +9,7 @@ import Blockquote from "@/components/typography/Blockquote";
 import type { Table as TableType } from "@/components/Table";
 import Table from "@/components/Table";
 import List from "@/components/typography/List";
+import Code from "@/components/typography/Code";
 
 const tableContents: TableType = {
     title: ["King's Treasury", "People's happiness"],
@@ -37,6 +38,22 @@ const Page = () => {
                     The king, seeing how much happier his subjects were,
                     realized the error of his ways and repealed the joke tax.
                 </Paragraph>
+                <Paragraph variant="lead">
+                    The king, seeing how much happier his subjects were,
+                    realized the error of his ways and repealed the joke tax.
+                </Paragraph>
+                <Paragraph variant="large">
+                    The king, seeing how much happier his subjects were,
+                    realized the error of his ways and repealed the joke tax.
+                </Paragraph>
+                <Paragraph variant="small">
+                    The king, seeing how much happier his subjects were,
+                    realized the error of his ways and repealed the joke tax.
+                </Paragraph>
+                <Paragraph variant="subtle">
+                    The king, seeing how much happier his subjects were,
+                    realized the error of his ways and repealed the joke tax.
+                </Paragraph>
                 <Blockquote>
                     &quot;After all,&quot; he said, &quot;everyone enjoys a good
                     joke, so its only fair that they should pay for the
@@ -44,6 +61,7 @@ const Page = () => {
                 </Blockquote>
                 <Table contents={tableContents} />
                 <List contents={listContents} />
+                <Code>@radix-ui/react-alert-dialog</Code>
             </Container>
         </main>
     );
