@@ -15,6 +15,7 @@ import CollapsibleDemo from "./CollapsibleDemo";
 import ContextMenuDemo from "./ContextMenuDemo";
 import InputDemo from "./InputDemo";
 import DialogDemo from "./DialogDemo";
+import DropdownMenuDemo from "./DropdownMenuDemo";
 
 const Page = () => {
     return (
@@ -27,6 +28,7 @@ const Page = () => {
                 <div className="flex gap-4">
                     <AlertDialogDemo />
                     <DialogDemo />
+                    <DropdownMenuDemo />
                 </div>
                 <AspectRatioDemo />
                 <AvatarDemo />

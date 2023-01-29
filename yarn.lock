@@ -509,6 +509,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-dropdown-menu@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@radix-ui/react-dropdown-menu@npm:2.0.2"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/primitive": 1.0.0
+    "@radix-ui/react-compose-refs": 1.0.0
+    "@radix-ui/react-context": 1.0.0
+    "@radix-ui/react-id": 1.0.0
+    "@radix-ui/react-menu": 2.0.2
+    "@radix-ui/react-primitive": 1.0.1
+    "@radix-ui/react-use-controllable-state": 1.0.0
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: 2f96874845dcfe3a6259eef12172b28b84cba7469279c49e2a749c97e62d2138f1ba5b950e1b1141f64bda897fae769e2412e1a932b4761ab45ed0a0cd4ebfd3
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-focus-guards@npm:1.0.0":
   version: 1.0.0
   resolution: "@radix-ui/react-focus-guards@npm:1.0.0"
@@ -4514,6 +4533,7 @@ __metadata:
     "@radix-ui/react-checkbox": ^1.0.1
     "@radix-ui/react-collapsible": ^1.0.1
     "@radix-ui/react-context-menu": ^2.1.1
+    "@radix-ui/react-dropdown-menu": ^2.0.2
     "@radix-ui/react-label": ^2.0.0
     "@types/node": ^18.11.18
     "@types/prettier": ^2.7.2
