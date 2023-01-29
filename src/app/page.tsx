@@ -32,6 +32,7 @@ import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/Avatar";
 import { Button } from "@/components/Button";
 import { InboxIcon } from "@heroicons/react/20/solid";
+import { Checkbox } from "@/components/Checkbox";
 
 const tableContents: TableType = {
     title: ["King's Treasury", "People's happiness"],
@@ -51,7 +52,7 @@ const listContents = [
 const Page = () => {
     return (
         <main>
-            <Container className="space-y-4">
+            <Container className="space-y-8">
                 <H1>The Joke Tax Chronicles</H1>
                 <H2>The Kings Plan</H2>
                 <H3>The Joke Tax</H3>
@@ -155,6 +156,37 @@ const Page = () => {
                         <span className="mr-2 block h-4 w-4 animate-spin rounded-full border-2 border-t-transparent " />
                         Please wait
                     </Button>
+                </div>
+
+                <div className="space-y-2">
+                    <div className="flex gap-4">
+                        <div className="items-top flex space-x-2">
+                            <Checkbox id="terms1" />
+                            <div className="grid gap-1.5 leading-none">
+                                <label
+                                    htmlFor="terms1"
+                                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                                    Accept terms and conditions
+                                </label>
+                                <p className="text-sm text-slate-500">
+                                    You agree to our Terms of Service and
+                                    Privacy Policy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center space-x-2">
+                        <Checkbox
+                            id="terms2"
+                            disabled
+                        />
+                        <label
+                            htmlFor="terms2"
+                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                            Accept terms and conditions
+                        </label>
+                    </div>
                 </div>
             </Container>
         </main>
