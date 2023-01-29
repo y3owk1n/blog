@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/Button";
 import InboxIcon from "@heroicons/react/20/solid/InboxIcon";
