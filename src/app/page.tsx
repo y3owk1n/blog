@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from "@/components/Container";
 import React from "react";
 import TypographyDemo from "./TypographyDemo";
