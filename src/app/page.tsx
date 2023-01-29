@@ -14,6 +14,7 @@ import CheckboxDemo from "./CheckboxDemo";
 import CollapsibleDemo from "./CollapsibleDemo";
 import ContextMenuDemo from "./ContextMenuDemo";
 import InputDemo from "./InputDemo";
+import DialogDemo from "./DialogDemo";
 
 const Page = () => {
     return (
@@ -23,7 +24,10 @@ const Page = () => {
                 <TableDemo />
                 <ListDemo />
                 <AccordionDemo />
-                <AlertDialogDemo />
+                <div className="flex gap-4">
+                    <AlertDialogDemo />
+                    <DialogDemo />
+                </div>
                 <AspectRatioDemo />
                 <AvatarDemo />
                 <ButtonDemo />
