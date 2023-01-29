@@ -269,6 +269,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/number@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@radix-ui/number@npm:1.0.0"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+  checksum: 517ac0790e05cceb41401154d1bc55d4738accd51095e2a918ef9bcedac6a455cd7179201e88e76121bedec19cd93a37b2c20288b084fb224b69c74e67935457
+  languageName: node
+  linkType: hard
+
 "@radix-ui/primitive@npm:1.0.0":
   version: 1.0.0
   resolution: "@radix-ui/primitive@npm:1.0.0"
@@ -795,6 +804,40 @@ __metadata:
     react: ^16.8 || ^17.0 || ^18.0
     react-dom: ^16.8 || ^17.0 || ^18.0
   checksum: 93e260b91198cc9b0b2a05d1e7c8c83a06c7c1b80a46d3088c3fb39a776238128c8b7e6061a5d9726246f75283321fd0858181e51a475a295dd2f3059f513f49
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-scroll-area@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@radix-ui/react-scroll-area@npm:1.0.2"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/number": 1.0.0
+    "@radix-ui/primitive": 1.0.0
+    "@radix-ui/react-compose-refs": 1.0.0
+    "@radix-ui/react-context": 1.0.0
+    "@radix-ui/react-direction": 1.0.0
+    "@radix-ui/react-presence": 1.0.0
+    "@radix-ui/react-primitive": 1.0.1
+    "@radix-ui/react-use-callback-ref": 1.0.0
+    "@radix-ui/react-use-layout-effect": 1.0.0
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: c59062c3321fb92b526f2b63be2636569c4a33fa81bd5c5109b13516932cebaf680a5cd318263d37e7e6e4ca62aa45521c34447478fd2acde3b2639ae53252d7
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-separator@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@radix-ui/react-separator@npm:1.0.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/react-primitive": 1.0.1
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: c7d7aa21f4b00127da07452cf17bca59d02fe40c62ba662d72d4a906b6722173de28a5fd647ed5d11fc483fa62fa74f075433764d8803b07f2721c957e5ec13a
   languageName: node
   linkType: hard
 
@@ -4646,6 +4689,8 @@ __metadata:
     "@radix-ui/react-popover": ^1.0.3
     "@radix-ui/react-progress": ^1.0.1
     "@radix-ui/react-radio-group": ^1.1.1
+    "@radix-ui/react-scroll-area": ^1.0.2
+    "@radix-ui/react-separator": ^1.0.1
     "@types/node": ^18.11.18
     "@types/prettier": ^2.7.2
     "@types/react": ^18.0.27

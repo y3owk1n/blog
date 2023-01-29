@@ -21,6 +21,8 @@ import MenubarDemo from "./MenubarDemo";
 import PopoverDemo from "./PopoverDemo";
 import ProgressDemo from "./ProgressDemo";
 import RadioGroupDemo from "./RadioGroupDemo";
+import SeparatorDemo from "./SeparatorDemo";
+import ScrollAreaDemo from "./ScrollAreaDemo";
 
 const Page = () => {
     return (
@@ -47,6 +49,8 @@ const Page = () => {
                 <PopoverDemo />
                 <ProgressDemo />
                 <RadioGroupDemo />
+                <SeparatorDemo />
+                <ScrollAreaDemo />
             </Container>
         </main>
     );
