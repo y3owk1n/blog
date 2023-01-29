@@ -24,6 +24,7 @@ import RadioGroupDemo from "./RadioGroupDemo";
 import SeparatorDemo from "./SeparatorDemo";
 import ScrollAreaDemo from "./ScrollAreaDemo";
 import SelectDemo from "./SelectDemo";
+import SliderDemo from "./SliderDemo";
 
 const Page = () => {
     return (
@@ -53,6 +54,7 @@ const Page = () => {
                 <SeparatorDemo />
                 <ScrollAreaDemo />
                 <SelectDemo />
+                <SliderDemo />
             </Container>
         </main>
     );
