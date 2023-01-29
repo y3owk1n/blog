@@ -12,4 +12,4 @@ const Blockquote = ({ children }: Props) => {
     );
 };
 
-export default Blockquote;
+export { Blockquote };

@@ -14,4 +14,4 @@ const List = ({ contents }: Props) => {
     );
 };
 
-export default List;
+export { List };

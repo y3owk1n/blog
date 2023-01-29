@@ -27,4 +27,4 @@ const Paragraph = ({ children, variant = "normal" }: Props) => {
     );
 };
 
-export default Paragraph;
+export { Paragraph };

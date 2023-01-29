@@ -12,4 +12,4 @@ const H4 = ({ children }: Props) => {
     );
 };
 
-export default H4;
+export { H4 };

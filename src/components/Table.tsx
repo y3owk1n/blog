@@ -47,4 +47,4 @@ const Table = ({ contents }: Props) => {
     );
 };
 
-export default Table;
+export { Table };

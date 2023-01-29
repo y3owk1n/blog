@@ -1,4 +1,5 @@
-import React, { ReactNode } from "react";
+import type { ReactNode } from "react";
+import React from "react";
 
 interface Props {
     children: ReactNode;
@@ -12,4 +13,4 @@ const Code = ({ children }: Props) => {
     );
 };
 
-export default Code;
+export { Code };
