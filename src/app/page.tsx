@@ -16,6 +16,7 @@ import ContextMenuDemo from "./ContextMenuDemo";
 import InputDemo from "./InputDemo";
 import DialogDemo from "./DialogDemo";
 import DropdownMenuDemo from "./DropdownMenuDemo";
+import HoverCardDemo from "./HoverCardDemo";
 
 const Page = () => {
     return (
@@ -37,6 +38,7 @@ const Page = () => {
                 <CollapsibleDemo />
                 <ContextMenuDemo />
                 <InputDemo />
+                <HoverCardDemo />
             </Container>
         </main>
     );
