@@ -23,6 +23,7 @@ import ProgressDemo from "./ProgressDemo";
 import RadioGroupDemo from "./RadioGroupDemo";
 import SeparatorDemo from "./SeparatorDemo";
 import ScrollAreaDemo from "./ScrollAreaDemo";
+import SelectDemo from "./SelectDemo";
 
 const Page = () => {
     return (
@@ -51,6 +52,7 @@ const Page = () => {
                 <RadioGroupDemo />
                 <SeparatorDemo />
                 <ScrollAreaDemo />
+                <SelectDemo />
             </Container>
         </main>
     );
