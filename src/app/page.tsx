@@ -51,7 +51,7 @@ const listContents = [
 const Page = () => {
     return (
         <main>
-            <Container>
+            <Container className="space-y-4">
                 <H1>The Joke Tax Chronicles</H1>
                 <H2>The Kings Plan</H2>
                 <H3>The Joke Tax</H3>
@@ -142,18 +142,20 @@ const Page = () => {
                     <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
 
-                <Button>Button</Button>
-                <Button variant="outline">Outline</Button>
-                <Button variant="subtle">Subtle</Button>
-                <Button variant="ghost">Ghost</Button>
-                <Button variant="link">Link</Button>
-                <Button>
-                    <InboxIcon className="mr-2 h-4 w-4" /> Login with Email
-                </Button>
-                <Button disabled>
-                    <span className="mr-2 block h-4 w-4 animate-spin rounded-full border-2 border-t-transparent " />
-                    Please wait
-                </Button>
+                <div className="flex gap-4">
+                    <Button>Button</Button>
+                    <Button variant="outline">Outline</Button>
+                    <Button variant="subtle">Subtle</Button>
+                    <Button variant="ghost">Ghost</Button>
+                    <Button variant="link">Link</Button>
+                    <Button>
+                        <InboxIcon className="mr-2 h-4 w-4" /> Login with Email
+                    </Button>
+                    <Button disabled>
+                        <span className="mr-2 block h-4 w-4 animate-spin rounded-full border-2 border-t-transparent " />
+                        Please wait
+                    </Button>
+                </div>
             </Container>
         </main>
     );
