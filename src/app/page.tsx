@@ -18,6 +18,7 @@ import DialogDemo from "./DialogDemo";
 import DropdownMenuDemo from "./DropdownMenuDemo";
 import HoverCardDemo from "./HoverCardDemo";
 import MenubarDemo from "./MenubarDemo";
+import PopoverDemo from "./PopoverDemo";
 
 const Page = () => {
     return (
@@ -41,6 +42,7 @@ const Page = () => {
                 <InputDemo />
                 <HoverCardDemo />
                 <MenubarDemo />
+                <PopoverDemo />
             </Container>
         </main>
     );
