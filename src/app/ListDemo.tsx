@@ -1,3 +1,5 @@
+"use client";
+
 import { List } from "@/components/typography/List";
 import React from "react";
 

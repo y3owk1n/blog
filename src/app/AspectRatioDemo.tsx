@@ -1,3 +1,5 @@
+"use client";
+
 import { AspectRatio } from "@/components/AspectRatio";
 import React from "react";
 import Image from "next/image";

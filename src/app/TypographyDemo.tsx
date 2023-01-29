@@ -1,3 +1,5 @@
+"use client";
+
 import { Blockquote } from "@/components/typography/Blockquote";
 import { Code } from "@/components/typography/Code";
 import { H1 } from "@/components/typography/H1";

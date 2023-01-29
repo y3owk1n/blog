@@ -1,3 +1,5 @@
+"use client";
+
 import { Checkbox } from "@/components/Checkbox";
 import { Label } from "@/components/Label";
 import React from "react";

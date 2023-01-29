@@ -1,3 +1,5 @@
+"use client";
+
 import { Table } from "@/components/Table";
 import React from "react";
 import type { Table as TableType } from "@/components/Table";

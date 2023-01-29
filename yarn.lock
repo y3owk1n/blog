@@ -741,6 +741,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-progress@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@radix-ui/react-progress@npm:1.0.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/react-context": 1.0.0
+    "@radix-ui/react-primitive": 1.0.1
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: 98b16c1886e39f8efcd7fc60a9c30d7851ce3fab501328ebd76581f6956e7c62901db3834fdb018faca6a3b6f438a3a1a509b1db2c1785822deb38886714bfac
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-roving-focus@npm:1.0.2":
   version: 1.0.2
   resolution: "@radix-ui/react-roving-focus@npm:1.0.2"
@@ -4608,6 +4622,7 @@ __metadata:
     "@radix-ui/react-label": ^2.0.0
     "@radix-ui/react-menubar": ^1.0.0
     "@radix-ui/react-popover": ^1.0.3
+    "@radix-ui/react-progress": ^1.0.1
     "@types/node": ^18.11.18
     "@types/prettier": ^2.7.2
     "@types/react": ^18.0.27

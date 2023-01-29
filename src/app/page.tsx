@@ -19,6 +19,7 @@ import DropdownMenuDemo from "./DropdownMenuDemo";
 import HoverCardDemo from "./HoverCardDemo";
 import MenubarDemo from "./MenubarDemo";
 import PopoverDemo from "./PopoverDemo";
+import ProgressDemo from "./ProgressDemo";
 
 const Page = () => {
     return (
@@ -43,6 +44,7 @@ const Page = () => {
                 <HoverCardDemo />
                 <MenubarDemo />
                 <PopoverDemo />
+                <ProgressDemo />
             </Container>
         </main>
     );
