@@ -12,6 +12,7 @@ import AvatarDemo from "./AvatarDemo";
 import ButtonDemo from "./ButtonDemo";
 import CheckboxDemo from "./CheckboxDemo";
 import CollapsibleDemo from "./CollapsibleDemo";
+import ContextMenuDemo from "./ContextMenuDemo";
 
 const Page = () => {
     return (
@@ -27,6 +28,7 @@ const Page = () => {
                 <ButtonDemo />
                 <CheckboxDemo />
                 <CollapsibleDemo />
+                <ContextMenuDemo />
             </Container>
         </main>
     );
