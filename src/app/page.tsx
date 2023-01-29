@@ -27,6 +27,7 @@ import SelectDemo from "./SelectDemo";
 import SliderDemo from "./SliderDemo";
 import SwitchDemo from "./SwitchDemo";
 import TabsDemo from "./TabsDemo";
+import TextareaDemo from "./TextareaDemo";
 
 const Page = () => {
     return (
@@ -48,6 +49,7 @@ const Page = () => {
                 <CollapsibleDemo />
                 <ContextMenuDemo />
                 <InputDemo />
+                <TextareaDemo />
                 <HoverCardDemo />
                 <MenubarDemo />
                 <PopoverDemo />
