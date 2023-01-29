@@ -25,6 +25,7 @@ import SeparatorDemo from "./SeparatorDemo";
 import ScrollAreaDemo from "./ScrollAreaDemo";
 import SelectDemo from "./SelectDemo";
 import SliderDemo from "./SliderDemo";
+import SwitchDemo from "./SwitchDemo";
 
 const Page = () => {
     return (
@@ -55,6 +56,7 @@ const Page = () => {
                 <ScrollAreaDemo />
                 <SelectDemo />
                 <SliderDemo />
+                <SwitchDemo />
             </Container>
         </main>
     );
