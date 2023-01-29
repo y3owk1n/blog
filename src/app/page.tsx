@@ -28,6 +28,7 @@ import SliderDemo from "./SliderDemo";
 import SwitchDemo from "./SwitchDemo";
 import TabsDemo from "./TabsDemo";
 import TextareaDemo from "./TextareaDemo";
+import TooltipDemo from "./TooltipDemo";
 
 const Page = () => {
     return (
@@ -61,6 +62,7 @@ const Page = () => {
                 <SliderDemo />
                 <SwitchDemo />
                 <TabsDemo />
+                <TooltipDemo />
             </Container>
         </main>
     );
