@@ -1,4 +1,5 @@
 import { Checkbox } from "@/components/Checkbox";
+import { Label } from "@/components/Label";
 import React from "react";
 
 const CheckboxDemo = () => {
@@ -8,11 +9,9 @@ const CheckboxDemo = () => {
                 <div className="items-top flex space-x-2">
                     <Checkbox id="terms1" />
                     <div className="grid gap-1.5 leading-none">
-                        <label
-                            htmlFor="terms1"
-                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                        <Label htmlFor="terms1">
                             Accept terms and conditions
-                        </label>
+                        </Label>
                         <p className="text-sm text-slate-500">
                             You agree to our Terms of Service and Privacy
                             Policy.
@@ -26,11 +25,7 @@ const CheckboxDemo = () => {
                     id="terms2"
                     disabled
                 />
-                <label
-                    htmlFor="terms2"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                    Accept terms and conditions
-                </label>
+                <Label htmlFor="terms2">Accept terms and conditions</Label>
             </div>
         </div>
     );

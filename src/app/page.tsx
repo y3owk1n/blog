@@ -13,6 +13,7 @@ import ButtonDemo from "./ButtonDemo";
 import CheckboxDemo from "./CheckboxDemo";
 import CollapsibleDemo from "./CollapsibleDemo";
 import ContextMenuDemo from "./ContextMenuDemo";
+import InputDemo from "./InputDemo";
 
 const Page = () => {
     return (
@@ -29,6 +30,7 @@ const Page = () => {
                 <CheckboxDemo />
                 <CollapsibleDemo />
                 <ContextMenuDemo />
+                <InputDemo />
             </Container>
         </main>
     );
