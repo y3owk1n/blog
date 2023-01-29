@@ -17,6 +17,7 @@ import InputDemo from "./InputDemo";
 import DialogDemo from "./DialogDemo";
 import DropdownMenuDemo from "./DropdownMenuDemo";
 import HoverCardDemo from "./HoverCardDemo";
+import MenubarDemo from "./MenubarDemo";
 
 const Page = () => {
     return (
@@ -39,6 +40,7 @@ const Page = () => {
                 <ContextMenuDemo />
                 <InputDemo />
                 <HoverCardDemo />
+                <MenubarDemo />
             </Container>
         </main>
     );
