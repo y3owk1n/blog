@@ -6,9 +6,7 @@ interface Props {
 
 const H3 = ({ children }: Props) => {
     return (
-        <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
-            {children}
-        </h3>
+        <h3 className="text-2xl font-semibold tracking-tight">{children}</h3>
     );
 };
 

@@ -16,7 +16,7 @@ const Paragraph = ({ children, variant = "normal" }: Props) => {
     return (
         <p
             className={classNames(
-                isNormal && "leading-7 [&:not(:first-child)]:mt-6",
+                isNormal && "leading-7",
                 isLead && "text-xl text-slate-700",
                 isLarge && "text-lg font-semibold text-slate-900",
                 isSmall && "text-sm font-medium leading-none",
