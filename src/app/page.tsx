@@ -20,6 +20,7 @@ import HoverCardDemo from "./HoverCardDemo";
 import MenubarDemo from "./MenubarDemo";
 import PopoverDemo from "./PopoverDemo";
 import ProgressDemo from "./ProgressDemo";
+import RadioGroupDemo from "./RadioGroupDemo";
 
 const Page = () => {
     return (
@@ -45,6 +46,7 @@ const Page = () => {
                 <MenubarDemo />
                 <PopoverDemo />
                 <ProgressDemo />
+                <RadioGroupDemo />
             </Container>
         </main>
     );

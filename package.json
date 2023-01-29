@@ -24,6 +24,7 @@
         "@radix-ui/react-menubar": "^1.0.0",
         "@radix-ui/react-popover": "^1.0.3",
         "@radix-ui/react-progress": "^1.0.1",
+        "@radix-ui/react-radio-group": "^1.1.1",
         "class-variance-authority": "^0.4.0",
         "next": "13.1.6",
         "react": "18.2.0",

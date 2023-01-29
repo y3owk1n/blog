@@ -755,6 +755,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-radio-group@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@radix-ui/react-radio-group@npm:1.1.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/primitive": 1.0.0
+    "@radix-ui/react-compose-refs": 1.0.0
+    "@radix-ui/react-context": 1.0.0
+    "@radix-ui/react-direction": 1.0.0
+    "@radix-ui/react-presence": 1.0.0
+    "@radix-ui/react-primitive": 1.0.1
+    "@radix-ui/react-roving-focus": 1.0.2
+    "@radix-ui/react-use-controllable-state": 1.0.0
+    "@radix-ui/react-use-previous": 1.0.0
+    "@radix-ui/react-use-size": 1.0.0
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: a3edf8636416514cc08ee837cf04fae83cc08a7c35ae44fe99f99e937da99fe92a1df92c084cd897d750a01669f39d118ddacc830e4b4ae59b09fabb18de412e
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-roving-focus@npm:1.0.2":
   version: 1.0.2
   resolution: "@radix-ui/react-roving-focus@npm:1.0.2"
@@ -4623,6 +4645,7 @@ __metadata:
     "@radix-ui/react-menubar": ^1.0.0
     "@radix-ui/react-popover": ^1.0.3
     "@radix-ui/react-progress": ^1.0.1
+    "@radix-ui/react-radio-group": ^1.1.1
     "@types/node": ^18.11.18
     "@types/prettier": ^2.7.2
     "@types/react": ^18.0.27
