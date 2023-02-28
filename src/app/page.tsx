@@ -30,6 +30,10 @@ import TabsDemo from "./TabsDemo";
 import TextareaDemo from "./TextareaDemo";
 import TooltipDemo from "./TooltipDemo";
 import EditorDemo from "./EditorDemo";
+import CommandDialogDemo from "./CommandDialogDemo";
+import CommandComboBoxDemo from "./CommandComboBoxDemo";
+import CommandPopoverDemo from "./CommandPopoverDemo";
+import CommandDropdownMenuDemo from "./CommandDropdownMenuDemo";
 
 const Page = () => {
     return (
@@ -64,6 +68,10 @@ const Page = () => {
                 <SwitchDemo />
                 <TabsDemo />
                 <TooltipDemo />
+                <CommandDialogDemo />
+                <CommandComboBoxDemo />
+                <CommandPopoverDemo />
+                <CommandDropdownMenuDemo />
                 <EditorDemo />
             </Container>
         </main>
