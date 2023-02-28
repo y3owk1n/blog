@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/Toaster";
 import "@/styles/globals.css";
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+            <Toaster />
             <body>{children}</body>
         </html>
     );

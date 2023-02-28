@@ -34,6 +34,7 @@ import CommandDialogDemo from "./CommandDialogDemo";
 import CommandComboBoxDemo from "./CommandComboBoxDemo";
 import CommandPopoverDemo from "./CommandPopoverDemo";
 import CommandDropdownMenuDemo from "./CommandDropdownMenuDemo";
+import ToastDemo from "./ToastDemo";
 
 const Page = () => {
     return (
@@ -72,6 +73,7 @@ const Page = () => {
                 <CommandComboBoxDemo />
                 <CommandPopoverDemo />
                 <CommandDropdownMenuDemo />
+                <ToastDemo />
                 <EditorDemo />
             </Container>
         </main>
