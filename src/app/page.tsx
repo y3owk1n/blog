@@ -29,6 +29,7 @@ import SwitchDemo from "./SwitchDemo";
 import TabsDemo from "./TabsDemo";
 import TextareaDemo from "./TextareaDemo";
 import TooltipDemo from "./TooltipDemo";
+import EditorDemo from "./EditorDemo";
 
 const Page = () => {
     return (
@@ -63,6 +64,7 @@ const Page = () => {
                 <SwitchDemo />
                 <TabsDemo />
                 <TooltipDemo />
+                <EditorDemo />
             </Container>
         </main>
     );

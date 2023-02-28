@@ -14,14 +14,14 @@ const ScrollAreaDemo = () => {
             <div className="p-4">
                 <h4 className="mb-4 text-sm font-medium leading-none">Tags</h4>
                 {tags.map((tag) => (
-                    <>
+                    <div key={tag}>
                         <div
                             className="text-sm"
                             key={tag}>
                             {tag}
                         </div>
                         <Separator className="my-2" />
-                    </>
+                    </div>
                 ))}
             </div>
         </ScrollArea>
