@@ -1,11 +1,11 @@
 "use client";
 
-import { Button } from "@/components/Button";
+import { Button } from "@/components/ui/Button";
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger,
-} from "@/components/Collapsible";
+} from "@/components/ui/Collapsible";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
 import React from "react";
 

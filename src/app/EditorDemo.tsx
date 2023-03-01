@@ -58,15 +58,15 @@ import React, { useMemo } from "react";
 
 import { MarkdownDeserializer } from "@editablejs/deserializer/markdown";
 
-import { createContextMenuItems } from "@/components/editor/ContextMenuItems";
-import { createInlineToolbarItems } from "@/components/editor/InlineToolbarItems";
-import { createSideToolbarItems } from "@/components/editor/SideToolbarItems";
-import { createSlashToolbarItems } from "@/components/editor/SlashToolbarItems";
+import { createContextMenuItems } from "@/components/ui/editor/ContextMenuItems";
+import { createInlineToolbarItems } from "@/components/ui//editor/InlineToolbarItems";
+import { createSideToolbarItems } from "@/components/ui/editor/SideToolbarItems";
+import { createSlashToolbarItems } from "@/components/ui/editor/SlashToolbarItems";
 import {
     createToolbarItems,
     defaultBackgroundColor,
     defaultFontColor,
-} from "@/components/editor/ToolbarItems";
+} from "@/components/ui/editor/ToolbarItems";
 
 const EditorDemo = () => {
     const editor = useMemo(() => {

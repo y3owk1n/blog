@@ -1,12 +1,12 @@
 "use client";
 
-import { Blockquote } from "@/components/typography/Blockquote";
-import { Code } from "@/components/typography/Code";
-import { H1 } from "@/components/typography/H1";
-import { H2 } from "@/components/typography/H2";
-import { H3 } from "@/components/typography/H3";
-import { H4 } from "@/components/typography/H4";
-import { Paragraph } from "@/components/typography/Paragraph";
+import { Blockquote } from "@/components/ui/typography/Blockquote";
+import { Code } from "@/components/ui/typography/Code";
+import { H1 } from "@/components/ui/typography/H1";
+import { H2 } from "@/components/ui/typography/H2";
+import { H3 } from "@/components/ui/typography/H3";
+import { H4 } from "@/components/ui/typography/H4";
+import { Paragraph } from "@/components/ui/typography/Paragraph";
 import React from "react";
 
 const TypographyDemo = () => {

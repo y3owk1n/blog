@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/Button";
+import { Button } from "@/components/ui/Button";
 import {
     Dialog,
     DialogContent,
@@ -9,9 +9,9 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-} from "@/components/Dialog";
-import { Input } from "@/components/Input";
-import { Label } from "@/components/Label";
+} from "@/components/ui/Dialog";
+import { Input } from "@/components/ui/Input";
+import { Label } from "@/components/ui/Label";
 import React from "react";
 
 const DialogDemo = () => {

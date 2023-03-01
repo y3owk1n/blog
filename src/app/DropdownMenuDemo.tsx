@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/Button";
+import { Button } from "@/components/ui/Button";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -14,7 +14,7 @@ import {
     DropdownMenuSubContent,
     DropdownMenuSubTrigger,
     DropdownMenuTrigger,
-} from "@/components/DropdownMenu";
+} from "@/components/ui/DropdownMenu";
 import {
     AdjustmentsHorizontalIcon,
     ArrowLeftOnRectangleIcon,

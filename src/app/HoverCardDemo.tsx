@@ -1,11 +1,14 @@
 "use client";
 
-import { Avatar, AvatarFallback } from "@/components/Avatar";
-import { Button } from "@/components/Button";
-import { HoverCard, HoverCardContent } from "@/components/HoverCard";
+import { Avatar, AvatarFallback } from "@/components/ui/Avatar";
+import { Button } from "@/components/ui/Button";
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "@/components/ui/HoverCard";
 import { CalendarDaysIcon } from "@heroicons/react/20/solid";
 import { AvatarImage } from "@radix-ui/react-avatar";
-import { HoverCardTrigger } from "@radix-ui/react-hover-card";
 import React from "react";
 
 const HoverCardDemo = () => {

@@ -1,7 +1,7 @@
 "use client";
 
-import { Checkbox } from "@/components/Checkbox";
-import { Label } from "@/components/Label";
+import { Checkbox } from "@/components/ui/Checkbox";
+import { Label } from "@/components/ui/Label";
 import React from "react";
 
 const CheckboxDemo = () => {

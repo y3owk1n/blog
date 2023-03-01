@@ -5,8 +5,8 @@ import {
     CommandInput,
     CommandItem,
     CommandList,
-} from "@/components/Command";
-import { Paragraph } from "@/components/typography/Paragraph";
+} from "@/components/ui/Command";
+import { Paragraph } from "@/components/ui/typography/Paragraph";
 import React, { useEffect, useState } from "react";
 
 const CommandDialogDemo = () => {

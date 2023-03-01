@@ -1,8 +1,8 @@
 "use client";
 
-import { Table } from "@/components/Table";
+import { Table } from "@/components/ui/Table";
 import React from "react";
-import type { Table as TableType } from "@/components/Table";
+import type { Table as TableType } from "@/components/ui/Table";
 
 const tableContents: TableType = {
     title: ["King's Treasury", "People's happiness"],

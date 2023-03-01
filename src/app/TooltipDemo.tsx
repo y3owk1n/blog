@@ -1,7 +1,11 @@
 "use client";
 
-import { Button } from "@/components/Button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/Tooltip";
+import { Button } from "@/components/ui/Button";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+} from "@/components/ui/Tooltip";
 import { PlusIcon } from "@heroicons/react/20/solid";
 import React from "react";
 

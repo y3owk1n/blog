@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/Button";
-import { ToastAction } from "@/components/Toast";
+import { Button } from "@/components/ui/Button";
+import { ToastAction } from "@/components/ui/Toast";
 import { useToast } from "@/lib/hooks/useToast";
 
 const ToastDemo = () => {

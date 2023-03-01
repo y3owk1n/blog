@@ -1,7 +1,7 @@
 "use client";
 
-import { Label } from "@/components/Label";
-import { Switch } from "@/components/Switch";
+import { Label } from "@/components/ui/Label";
+import { Switch } from "@/components/ui/Switch";
 import React from "react";
 
 const SwitchDemo = () => {

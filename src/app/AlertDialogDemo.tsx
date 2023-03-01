@@ -10,8 +10,8 @@ import {
     AlertDialogHeader,
     AlertDialogTitle,
     AlertDialogTrigger,
-} from "@/components/AlertDialog";
-import { Button } from "@/components/Button";
+} from "@/components/ui/AlertDialog";
+import { Button } from "@/components/ui/Button";
 import React from "react";
 
 const AlertDialogDemo = () => {

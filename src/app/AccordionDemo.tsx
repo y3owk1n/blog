@@ -5,7 +5,7 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "@/components/Accordion";
+} from "@/components/ui/Accordion";
 import React from "react";
 
 const AccordionDemo = () => {

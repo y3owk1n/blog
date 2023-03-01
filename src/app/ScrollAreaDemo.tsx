@@ -1,7 +1,7 @@
 "use client";
 
-import { ScrollArea } from "@/components/ScrollArea";
-import { Separator } from "@/components/Separator";
+import { ScrollArea } from "@/components/ui/ScrollArea";
+import { Separator } from "@/components/ui/Separator";
 import React from "react";
 
 const tags = Array.from({ length: 50 }).map(

@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "@/components/Button";
-import { Label } from "@/components/Label";
-import { Textarea } from "@/components/Textarea";
+import { Button } from "@/components/ui/Button";
+import { Label } from "@/components/ui/Label";
+import { Textarea } from "@/components/ui/Textarea";
 import React from "react";
 
 const TextareaDemo = () => {

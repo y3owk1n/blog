@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/Button";
+import { Button } from "@/components/ui/Button";
 import {
     Command,
     CommandEmpty,
@@ -8,7 +8,7 @@ import {
     CommandInput,
     CommandItem,
     CommandList,
-} from "@/components/Command";
+} from "@/components/ui/Command";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -21,7 +21,7 @@ import {
     DropdownMenuSubContent,
     DropdownMenuSubTrigger,
     DropdownMenuTrigger,
-} from "@/components/DropdownMenu";
+} from "@/components/ui/DropdownMenu";
 import {
     AdjustmentsVerticalIcon,
     CalendarIcon,

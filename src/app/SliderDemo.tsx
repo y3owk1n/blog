@@ -1,6 +1,6 @@
 "use client";
 
-import { Slider } from "@/components/Slider";
+import { Slider } from "@/components/ui/Slider";
 import React from "react";
 
 const SliderDemo = () => {

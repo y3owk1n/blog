@@ -1,9 +1,9 @@
 "use client";
 
-import { Button } from "@/components/Button";
-import { Input } from "@/components/Input";
-import { Label } from "@/components/Label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/Tabs";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Label } from "@/components/ui/Label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
 import React from "react";
 
 const TabsDemo = () => {

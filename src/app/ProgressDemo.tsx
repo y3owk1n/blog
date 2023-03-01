@@ -1,6 +1,6 @@
 "use client";
 
-import { Progress } from "@/components/Progress";
+import { Progress } from "@/components/ui/Progress";
 import React from "react";
 
 const ProgressDemo = () => {

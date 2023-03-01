@@ -1,14 +1,18 @@
 "use client";
 
-import { Button } from "@/components/Button";
+import { Button } from "@/components/ui/Button";
 import {
     Command,
     CommandEmpty,
     CommandGroup,
     CommandInput,
     CommandItem,
-} from "@/components/Command";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/Popover";
+} from "@/components/ui/Command";
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/Popover";
 import { classNames } from "@/lib/classNames";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import * as React from "react";

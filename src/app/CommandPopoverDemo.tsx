@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/Button";
+import { Button } from "@/components/ui/Button";
 import {
     Command,
     CommandEmpty,
@@ -8,8 +8,12 @@ import {
     CommandInput,
     CommandItem,
     CommandList,
-} from "@/components/Command";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/Popover";
+} from "@/components/ui/Command";
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/Popover";
 import { classNames } from "@/lib/classNames";
 import {
     CheckIcon,

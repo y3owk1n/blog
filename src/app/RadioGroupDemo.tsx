@@ -1,7 +1,7 @@
 "use client";
 
-import { Label } from "@/components/Label";
-import { RadioGroup, RadioGroupItem } from "@/components/RadioGroup";
+import { Label } from "@/components/ui/Label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/RadioGroup";
 import React from "react";
 
 const RadioGroupDemo = () => {

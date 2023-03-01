@@ -9,7 +9,7 @@ import {
     SelectSeparator,
     SelectTrigger,
     SelectValue,
-} from "@/components/Select";
+} from "@/components/ui/Select";
 import React from "react";
 
 const SelectDemo = () => {

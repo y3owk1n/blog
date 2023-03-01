@@ -1,6 +1,6 @@
 "use client";
 
-import { List } from "@/components/typography/List";
+import { List } from "@/components/ui/typography/List";
 import React from "react";
 
 const listContents = [
