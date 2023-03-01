@@ -23,7 +23,7 @@ export default function RootLayout({
                 )}>
                 <div className="flex min-h-screen flex-col">
                     <SiteHeader />
-                    <div className="container flex-1">{children}</div>
+                    <div className="container flex-1 px-4">{children}</div>
                     <SiteFooter />
                 </div>
             </body>

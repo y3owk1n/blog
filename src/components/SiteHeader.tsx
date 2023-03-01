@@ -10,7 +10,7 @@ import { buttonVariants } from "./ui/Button";
 export function SiteHeader() {
     return (
         <header className="sticky top-0 z-40 w-full border-b border-b-slate-200 bg-white ">
-            <div className="container flex h-16 items-center">
+            <div className="flex h-16 items-center px-4">
                 <MainNav />
                 <MobileNav />
                 <div className="flex flex-1 items-center justify-between space-x-2 sm:space-x-4 md:justify-end">

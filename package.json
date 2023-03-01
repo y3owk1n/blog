@@ -22,6 +22,8 @@
         "@editablejs/plugin-toolbar": "^1.0.1",
         "@editablejs/plugins": "^1.0.2",
         "@heroicons/react": "^2.0.16",
+        "@mdx-js/mdx": "^2.3.0",
+        "@next/mdx": "^13.2.3",
         "@radix-ui/react-accordion": "^1.1.0",
         "@radix-ui/react-alert-dialog": "^1.0.2",
         "@radix-ui/react-aspect-ratio": "^1.0.1",
@@ -47,6 +49,8 @@
         "@radix-ui/react-tooltip": "^1.0.4",
         "class-variance-authority": "^0.4.0",
         "cmdk": "^0.1.22",
+        "extract-mdx-metadata": "^2.0.0",
+        "gray-matter": "^4.0.3",
         "next": "13.2.1",
         "react": "18.2.0",
         "react-dom": "18.2.0",
@@ -54,6 +58,7 @@
         "zod": "^3.20.6"
     },
     "devDependencies": {
+        "@tailwindcss/typography": "^0.5.9",
         "@types/node": "^18.14.2",
         "@types/prettier": "^2.7.2",
         "@types/react": "^18.0.28",

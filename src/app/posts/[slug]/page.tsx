@@ -1,10 +1,9 @@
 import { getAllMds } from "@/lib/mdx";
-
 import dynamic from "next/dynamic";
 
 export const dynamicParams = false;
 
-const type = "_docs";
+const type = "_posts";
 
 export async function generateStaticParams() {
     const posts = await getAllMds(["slug"], type);
@@ -14,17 +13,18 @@ export async function generateStaticParams() {
     }));
 }
 
-const getDocs = (slug: string) => {
+const getPost = (slug: string) => {
     return dynamic(() => import(`../../../${type}/${slug}.mdx`));
 };
 
-const Page = ({ params }: { params: { slug: string } }) => {
-    const Docs = getDocs(params.slug);
-    return (
-        <article className="prose my-6">
-            <Docs />
-        </article>
-    );
-};
+export default function Page({ params }: { params: { slug: string } }) {
+    const Post = getPost(params.slug);
 
-export default Page;
+    return (
+        <>
+            <article className="my-6">
+                <Post />
+            </article>
+        </>
+    );
+}
