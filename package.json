@@ -49,15 +49,18 @@
         "@radix-ui/react-tooltip": "^1.0.4",
         "class-variance-authority": "^0.4.0",
         "cmdk": "^0.2.0",
+        "dayjs": "^1.11.7",
         "extract-mdx-metadata": "^2.0.0",
         "gray-matter": "^4.0.3",
         "next": "13.2.3",
         "react": "18.2.0",
         "react-dom": "18.2.0",
+        "react-icons": "^4.8.0",
         "tailwindcss-animate": "^1.0.5",
         "zod": "^3.20.6"
     },
     "devDependencies": {
+        "@tailwindcss/line-clamp": "^0.4.2",
         "@tailwindcss/typography": "^0.5.9",
         "@types/node": "^18.14.6",
         "@types/prettier": "^2.7.2",

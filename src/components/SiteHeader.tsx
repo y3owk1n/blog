@@ -1,17 +1,22 @@
 "use client";
 
-import { GiftIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { CommandMenu } from "./CommandMenu";
 import { MainNav } from "./MainNav";
 import { MobileNav } from "./MobileNav";
 import { buttonVariants } from "./ui/Button";
+import { AiFillGithub } from "react-icons/ai";
+import type { NavItem } from "./SidebarNav";
 
-export function SiteHeader() {
+interface Props {
+    postItems: NavItem[];
+}
+
+export function SiteHeader({ postItems }: Props) {
     return (
         <header className="sticky top-0 z-40 w-full border-b border-b-slate-200 bg-white ">
             <div className="flex h-16 items-center px-4">
-                <MainNav />
+                <MainNav postItems={postItems} />
                 <MobileNav />
                 <div className="flex flex-1 items-center justify-between space-x-2 sm:space-x-4 md:justify-end">
                     <div className="w-full flex-1 md:w-auto md:flex-none">
@@ -19,7 +24,7 @@ export function SiteHeader() {
                     </div>
                     <nav className="flex items-center space-x-1">
                         <Link
-                            href={"#"}
+                            href={"https://github.com/y3owk1n"}
                             target="_blank"
                             rel="noreferrer">
                             <div
@@ -28,7 +33,7 @@ export function SiteHeader() {
                                     variant: "ghost",
                                     className: "text-slate-700 ",
                                 })}>
-                                <GiftIcon className="h-5 w-5" />
+                                <AiFillGithub className="h-5 w-5" />
                                 <span className="sr-only">GitHub</span>
                             </div>
                         </Link>

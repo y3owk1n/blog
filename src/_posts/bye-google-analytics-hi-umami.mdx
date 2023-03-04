@@ -1,0 +1,43 @@
+export const meta = {
+    title: "Bye Google Analytics, Hi Umami",
+    excerpt:
+        "As a digital marketers, we tend to track everything that we can. From recordings, heatmaps, proprietary trackers, profiling and more! For my job, it's perfect, but personally... I don't like getting tracked in any way.",
+    coverImage: "/assets/blog/bye-google-analytics-hi-umami/cover.jpg",
+    date: "2022-07-25T16:00:00.000Z",
+    ogImage: "/assets/blog/bye-google-analytics-hi-umami/cover.jpg",
+};
+
+As a digital marketers, we tend to track everything that we can. From recordings, heatmaps, proprietary trackers, profiling and more! For my job, it's perfect, but personally... I don't like getting tracked in any way.
+
+I am using various tools that include VPN and ad blockers to keep myself clean and clear. I tried my best to move away from tech giants like Google or Facebook, we'll discuss how I did this in the future.
+
+Considering that I would like to have a minimal tracker on my blog site, there are a couple of choices, and definitely, it's not Google Analytics. There's a lot's of discussion about why people hate and love Google Analytics at the same time, you can search and read it on the web.
+
+First, I need a Web Analytics that is:
+
+1. Open source and self hosted
+2. Minimal
+3. Respect user's privacy
+4. Simple
+5. Extendable
+
+And here's my list:
+
+-   [Ackee](https://ackee.electerious.com)
+-   [Umami](https://umami.is)
+-   [Plausible](https://plausible.io)
+-   There's probably more... but I am lazy (sorry)
+
+Yes.. I've gone with Umami instead. The reason? I found a 1 click deploy version from [Railway](https://railway.app/starters?search=umami&referralCode=mK3Big), amazing tool with generous free tier ❤️. It's not entirely hands-free for the deployment, but it was pretty easy! After completed the 1 click deploy on Railway, [follow this guide](https://umami.is/docs/running-on-railway) to link the project, and you're done.
+
+🎉 Congratulation, that's all for the deployment. But here's an important step that I would like to share. If you had read [Umami's Feature](https://umami.is/features), you'll probably notice this sentence.
+
+> Umami is hosted by you under your own domain so you can reliably avoid ad-blockers unlike Google Analytics.
+
+So now, make sure you have created a subdomain of the website that you're looking to track, in my case `xxxx.kylewong.my` and link it to your Umami Railway Project, else ad-blockers like uBlock Origin, Adguard, etc, will be able block the tracking script.
+
+🥳 That's really it!
+
+Up to this point, i'm liking everything that Umami has to offer. Simple integration, minimal UI, and it also comes with a sharable link to my own analytics. Here's the [shareable link for this blog](https://5oddwdpyqe.kylewong.my/share/zT7fHNea/Kyle%20Blog) that might convince you into Umami 😉.
+
+To end this topic, if there's no reason to use Google Analytics and Facebook Pixel, **please don't**. Pick any from the list above and respect everyone that visits your site. Cheers 🥂

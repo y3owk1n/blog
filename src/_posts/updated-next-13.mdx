@@ -1,0 +1,28 @@
+export const meta = {
+    title: "This blog is now officially on NextJS 13",
+    excerpt:
+        "Am so excited about the changes on NextJS 13, and the best place to experiment the features is my personal blog!",
+    coverImage: "/assets/blog/updated-next-13/cover.jpg",
+    date: "2022-11-10T16:00:00.000Z",
+    url: "/assets/blog/updated-next-13/cover.jpg",
+};
+
+So, [Vercel](https://vercel.com/) announced [Next.JS 13](https://nextjs.org/blog/next-13) on 26/10/2022 and there's a lot of exciting new features were announced. To me, the biggest changes during the upgrade that I did for this blog is the [experimental app dir](https://beta.nextjs.org/docs/routing/fundamentals).
+
+The [new beta docs for the upgrade guide to Next.JS 13](https://beta.nextjs.org/docs/upgrade-guide) come in handy. TLDR, here's what i did for my blog migration.
+
+1. Upgrade all my Next.JS packages to the latest
+2. Using codemods provided by Next.JS for my `<Image/>` and `<Link/>` components
+3. Migrate my `_app.tsx` and `_document.tsx` to `/app/layout.tsx`
+4. Rewrite data fetching logic from `GetStaticProps` to just functions to be called with async components.
+5. Migrate all of my `pages` to the new `app directory`
+6. Migrate all the components to sit right beside my pages
+7. Commit and deploy
+
+Fortunately, my blog is way too simple and can be run fully on the server without any client interaction and the migration process was quite smooth. In terms of the speed of the website, it's still blazingly fast! Here's the [GTMetrix Result](https://gtmetrix.com/reports/www.kylewong.my/l7sE9d9z/) and a quick preview down below.
+
+![Latest GTMetrix Result Preview](/assets/blog/updated-next-13/gt-metrix-kyle-wong-blog.jpg)
+
+This is not a tutorial post, rather it is just an update for the tech stacks on this blog site. I think the new layout RFC makes a lot of sense, while it's not perfect, enabling me to do a fetch directly within my components turns me on. Nice stuffs!
+
+> Here's my [git repository for this blog](https://github.com/y3owk1n/kyle-blog-v2).

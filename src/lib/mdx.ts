@@ -11,13 +11,19 @@ export type PostType = {
     date: string;
     coverImage: string;
     excerpt: string;
-    ogImage: {
-        url: string;
-    };
+    ogImage: string;
     content: string;
 };
 
-export type Fields = "slug" | "title" | "date" | "content" | "category";
+export type Fields =
+    | "slug"
+    | "category"
+    | "title"
+    | "date"
+    | "coverImage"
+    | "excerpt"
+    | "ogImage"
+    | "content";
 export type MdType = "_posts" | "_docs";
 
 export function getMdSlugs(type: MdType) {
@@ -60,5 +66,22 @@ export async function getAllMds(fields: Fields[] = [], type: MdType) {
     const posts = await Promise.all(
         slugs.map(async (slug) => await getMdDetailBySlug(slug, fields, type))
     );
-    return posts;
+
+    const sorted = posts.sort((a, b) =>
+        a.date && b.date && a.date > b.date ? -1 : 1
+    );
+
+    return sorted;
+}
+
+export async function getLatestThreeMd(fields: Fields[] = [], type: MdType) {
+    const slugs = getMdSlugs(type);
+    const posts = await Promise.all(
+        slugs.map(async (slug) => await getMdDetailBySlug(slug, fields, type))
+    );
+    const sorted = posts.sort((a, b) =>
+        a.date && b.date && a.date > b.date ? -1 : 1
+    );
+    const sliced = sorted.slice(0, 3);
+    return sliced;
 }

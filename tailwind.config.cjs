@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./src/**/*.{js,ts,jsx,tsx}"],
+    mode: "jit",
     theme: {
         extend: {
             keyframes: {
@@ -22,5 +23,6 @@ module.exports = {
     plugins: [
         require("tailwindcss-animate"),
         require("@tailwindcss/typography"),
+        require("@tailwindcss/line-clamp"),
     ],
 };
