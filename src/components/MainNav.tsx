@@ -9,7 +9,6 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from "./ui/NavigationMenu";
 import { siteDescription, siteName } from "@/lib/constants";
 import { Separator } from "./ui/Separator";
@@ -94,7 +93,7 @@ export function MainNav() {
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className="h-9">
-                            Components
+                            Ui
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid w-[600px] grid-cols-2 gap-3 p-4">
@@ -112,7 +111,7 @@ export function MainNav() {
                             <div className="p-4 pt-0">
                                 <Separator className="mb-4" />
                                 <Link
-                                    href="/docs/primitives/accordion"
+                                    href="/ui/accordion"
                                     passHref
                                     legacyBehavior>
                                     <NavigationMenuLink
@@ -122,40 +121,26 @@ export function MainNav() {
                                             }),
                                             "w-full "
                                         )}>
-                                        Browse components
+                                        More Uis
                                     </NavigationMenuLink>
                                 </Link>
                             </div>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
-                    <NavigationMenuItem className="hidden lg:flex">
-                        <Link
-                            href="/figma"
-                            legacyBehavior
-                            passHref>
-                            <NavigationMenuLink
-                                className={classNames(
-                                    navigationMenuTriggerStyle(),
-                                    "h-9"
-                                )}>
-                                Figma
-                            </NavigationMenuLink>
-                        </Link>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem className="hidden lg:flex">
-                        <Link
-                            href={"git.com"}
-                            legacyBehavior
-                            passHref>
-                            <NavigationMenuLink
-                                className={classNames(
-                                    navigationMenuTriggerStyle(),
-                                    "h-9"
-                                )}>
-                                GitHub
-                            </NavigationMenuLink>
-                        </Link>
-                    </NavigationMenuItem>
+                    {/* <NavigationMenuItem className="hidden lg:flex"> */}
+                    {/*     <Link */}
+                    {/*         href="/figma" */}
+                    {/*         legacyBehavior */}
+                    {/*         passHref> */}
+                    {/*         <NavigationMenuLink */}
+                    {/*             className={classNames( */}
+                    {/*                 navigationMenuTriggerStyle(), */}
+                    {/*                 "h-9" */}
+                    {/*             )}> */}
+                    {/*             Figma */}
+                    {/*         </NavigationMenuLink> */}
+                    {/*     </Link> */}
+                    {/* </NavigationMenuItem> */}
                 </NavigationMenuList>
             </NavigationMenu>
         </div>

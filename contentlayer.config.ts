@@ -1,4 +1,5 @@
 import path from "path";
+import type { ComputedFields } from "contentlayer/source-files";
 import {
     defineDocumentType,
     defineNestedType,
@@ -14,9 +15,9 @@ import { visit } from "unist-util-visit";
 
 import { rehypeComponent } from "./src/lib/rehypeComponents";
 import { rehypeNpmCommand } from "./src/lib/rehypeNpmCommand";
+import type { UnistNode, UnistTree } from "@/types/unist-builder";
 
-/** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields = {
+const computedFields: ComputedFields = {
     slug: {
         type: "string",
         resolve: (doc) => `/${doc._raw.flattenedPath}`,
@@ -55,6 +56,10 @@ export const Ui = defineDocumentType(() => ({
         published: {
             type: "boolean",
             default: true,
+        },
+        tag: {
+            type: "string",
+            required: true,
         },
         radix: {
             type: "nested",
@@ -111,16 +116,19 @@ export default makeSource({
         rehypePlugins: [
             rehypeSlug,
             rehypeComponent,
-            () => (tree) => {
-                visit(tree, (node) => {
+            () => (tree: UnistTree) => {
+                visit(tree, (node: UnistNode) => {
                     if (node?.type === "element" && node?.tagName === "pre") {
-                        const [codeEl] = node.children;
-                        if (codeEl.tagName !== "code") {
-                            return;
+                        const [codeEl] = node.children as UnistNode[];
+
+                        if (codeEl) {
+                            if (codeEl.tagName !== "code") {
+                                return;
+                            }
+                            node.__rawString__ = codeEl.children?.[0]?.value;
                         }
 
-                        node.__rawString__ = codeEl.children?.[0].value;
-                        node.__src__ = node.properties?.__src__;
+                        node.__src__ = node.properties?.__src__ as string;
                     }
                 });
             },
@@ -133,24 +141,33 @@ export default makeSource({
                         );
                         return await getHighlighter({ theme });
                     },
-                    onVisitLine(node) {
+                    onVisitLine(node: UnistNode) {
                         // Prevent lines from collapsing in `display: grid` mode, and allow empty
                         // lines to be copy/pasted
-                        if (node.children.length === 0) {
+                        if (node.children && node.children.length === 0) {
                             node.children = [{ type: "text", value: " " }];
                         }
                     },
-                    onVisitHighlightedLine(node) {
-                        node.properties.className.push("line--highlighted");
+                    onVisitHighlightedLine(node: UnistNode) {
+                        if (node.properties && node.properties.className) {
+                            node.properties.className.push("line--highlighted");
+                        }
                     },
-                    onVisitHighlightedWord(node) {
-                        node.properties.className = ["word--highlighted"];
+                    onVisitHighlightedWord(node: UnistNode) {
+                        if (node.properties && node.properties.className) {
+                            node.properties.className = ["word--highlighted"];
+                        }
                     },
                 },
             ],
-            () => (tree) => {
-                visit(tree, (node) => {
-                    if (node?.type === "element" && node?.tagName === "div") {
+            () => (tree: UnistTree) => {
+                visit(tree, (node: UnistNode) => {
+                    if (
+                        node?.type === "element" &&
+                        node?.tagName === "div" &&
+                        node.properties &&
+                        node.children
+                    ) {
                         if (
                             !(
                                 "data-rehype-pretty-code-fragment" in
@@ -161,17 +178,22 @@ export default makeSource({
                         }
 
                         const preElement = node.children.at(-1);
-                        if (preElement.tagName !== "pre") {
-                            return;
-                        }
+                        if (preElement) {
+                            if (
+                                preElement.tagName !== "pre" ||
+                                !preElement.properties
+                            ) {
+                                return;
+                            }
 
-                        preElement.properties["__withMeta__"] =
-                            node.children.at(0).tagName === "div";
-                        preElement.properties["__rawString__"] =
-                            node.__rawString__;
+                            preElement.properties["__withMeta__"] =
+                                node.children.at(0)?.tagName === "div";
+                            preElement.properties["__rawString__"] =
+                                node.__rawString__;
 
-                        if (node.__src__) {
-                            preElement.properties["__src__"] = node.__src__;
+                            if (node.__src__) {
+                                preElement.properties["__src__"] = node.__src__;
+                            }
                         }
                     }
                 });

@@ -15,7 +15,9 @@ const TabsDemo = () => {
                 <TabsTrigger value="account">Account</TabsTrigger>
                 <TabsTrigger value="password">Password</TabsTrigger>
             </TabsList>
-            <TabsContent value="account">
+            <TabsContent
+                value="account"
+                className="p-4">
                 <p className="text-sm text-slate-500 ">
                     Make changes to your account here. Click save when youre
                     done.
@@ -26,6 +28,7 @@ const TabsDemo = () => {
                         <Input
                             id="name"
                             defaultValue="Pedro Duarte"
+                            className="w-full"
                         />
                     </div>
                     <div className="space-y-1">
@@ -33,6 +36,7 @@ const TabsDemo = () => {
                         <Input
                             id="username"
                             defaultValue="@peduarte"
+                            className="w-full"
                         />
                     </div>
                 </div>
@@ -40,7 +44,9 @@ const TabsDemo = () => {
                     <Button>Save changes</Button>
                 </div>
             </TabsContent>
-            <TabsContent value="password">
+            <TabsContent
+                value="password"
+                className="p-4">
                 <p className="text-sm text-slate-500 ">
                     Change your password here. After saving, youll be logged
                     out.
@@ -51,6 +57,7 @@ const TabsDemo = () => {
                         <Input
                             id="current"
                             type="password"
+                            className="w-full"
                         />
                     </div>
                     <div className="space-y-1">
@@ -58,6 +65,7 @@ const TabsDemo = () => {
                         <Input
                             id="new"
                             type="password"
+                            className="w-full"
                         />
                     </div>
                 </div>

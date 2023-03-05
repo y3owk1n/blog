@@ -2641,6 +2641,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-toggle@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@radix-ui/react-toggle@npm:1.0.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/primitive": 1.0.0
+    "@radix-ui/react-primitive": 1.0.1
+    "@radix-ui/react-use-controllable-state": 1.0.0
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: 9754df4add6c1d4bced810431e51696cd482465aaf84ffca008caf13f5f33e6e4133ce146ae208fede93acfedbfffcee3808794d4f147c949cc15465f3cc22a7
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-tooltip@npm:^1.0.4":
   version: 1.0.4
   resolution: "@radix-ui/react-tooltip@npm:1.0.4"
@@ -9152,6 +9167,7 @@ __metadata:
     "@radix-ui/react-switch": ^1.0.1
     "@radix-ui/react-tabs": ^1.0.2
     "@radix-ui/react-toast": ^1.1.2
+    "@radix-ui/react-toggle": ^1.0.1
     "@radix-ui/react-tooltip": ^1.0.4
     "@tailwindcss/line-clamp": ^0.4.2
     "@tailwindcss/typography": ^0.5.9

@@ -49,7 +49,7 @@ export function CopyButton({
     return (
         <button
             className={cx(
-                " z-20 inline-flex h-8 items-center justify-center rounded-md border-slate-200 p-2 text-sm font-medium text-slate-100 transition-all hover:bg-slate-100 focus:outline-none ",
+                "z-20 inline-flex h-8 items-center justify-center rounded-md border border-slate-300 p-2 text-sm font-medium text-slate-300 transition-all hover:bg-slate-50 focus:outline-none ",
                 className
             )}
             onClick={() => void handleClick()}

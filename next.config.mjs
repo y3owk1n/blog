@@ -8,6 +8,7 @@ import { withContentlayer } from "next-contentlayer";
 
 /** @type {import("next").NextConfig} */
 const config = {
+    swcMinify: true,
     reactStrictMode: true,
     experimental: {
         appDir: true,

@@ -14,6 +14,7 @@ interface ComponentExampleProps extends React.HTMLAttributes<HTMLDivElement> {
 interface Element extends React.ReactElement {
     props: {
         value: string;
+        __rawString__: string;
         "data-rehype-pretty-code-fragment": string;
         children: React.ReactNode;
     };
@@ -36,10 +37,11 @@ export function ComponentExample({
             typeof Code?.props["data-rehype-pretty-code-fragment"] !==
             "undefined"
         ) {
-            const [, Button] = React.Children.toArray(
+            const [String] = React.Children.toArray(
                 Code.props.children
             ) as Element[];
-            if (Button) return Button.props.value;
+
+            if (String) return String.props.__rawString__;
         }
     }, [Code]);
 
@@ -73,7 +75,7 @@ export function ComponentExample({
                     className="p-0">
                     <div
                         className={classNames(
-                            "flex min-h-[350px] justify-center p-10",
+                            "flex justify-center p-10",
                             "items-center" && align === "center",
                             "items-start" && align === "start",
                             "items-end" && align === "end"
@@ -85,7 +87,7 @@ export function ComponentExample({
                     value="code"
                     className="border-none p-0">
                     <div className="flex flex-col space-y-4">
-                        <div className="w-full rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
+                        <div className="relative w-full rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
                             {Code}
                         </div>
                         {Children && (
