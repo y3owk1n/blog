@@ -49,9 +49,7 @@ export function SidebarNavItems({ items, pathname }: SidebarNavItemsProps) {
                         className={classNames(
                             "group flex w-full items-center rounded-md py-1.5 px-2 hover:bg-slate-50 ",
                             item.disabled && "cursor-not-allowed opacity-60",
-                            {
-                                "bg-slate-100 ": pathname === item.href,
-                            }
+                            pathname === item.href && "bg-slate-100"
                         )}
                         target={item.external ? "_blank" : ""}
                         rel={item.external ? "noreferrer" : ""}>
