@@ -21,6 +21,17 @@ export const allPostsAndSort = allPosts
     }))
     .sort((a, b) => (a.date && b.date && a.date > b.date ? -1 : 1));
 
+export const allPostsWithTitle = [
+    {
+        title: "Posts",
+        items: allPostsAndSort.map((item) => ({
+            title: item.title,
+            href: item.href,
+            items: [],
+        })),
+    },
+];
+
 export const getAllPostsAndSort = () => {
     const posts = allPosts.map((content) => ({
         slug: content.slug,
