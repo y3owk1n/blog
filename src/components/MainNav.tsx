@@ -73,7 +73,6 @@ export function MainNav() {
                                 ))}
                             </ul>
                             <div className="p-4 pt-0">
-                                <Separator className="mb-4" />
                                 <Link
                                     href="/posts"
                                     passHref
@@ -109,7 +108,6 @@ export function MainNav() {
                                     ))}
                             </ul>
                             <div className="p-4 pt-0">
-                                <Separator className="mb-4" />
                                 <Link
                                     href="/ui/accordion"
                                     passHref
