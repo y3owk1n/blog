@@ -15,13 +15,22 @@ import { siteDescription, siteName } from "@/lib/constants";
 import { Separator } from "./ui/Separator";
 import { classNames } from "@/lib/classNames";
 import { buttonVariants } from "./ui/Button";
-import type { NavItem } from "./SidebarNav";
+import { allPosts, allUis } from "@/contentlayer/generated";
 
-interface Props {
-    postItems: NavItem[];
-}
+export function MainNav() {
+    const posts = allPosts.map((content) => ({
+        slug: content.slug,
+        title: content.title,
+        date: content.date,
+        description: content.description,
+        href: `/posts/${content.slugAsParams}`,
+    }));
 
-export function MainNav({ postItems }: Props) {
+    const sorted = posts.sort((a, b) =>
+        a.date && b.date && a.date > b.date ? -1 : 1
+    );
+    const sliced = sorted.slice(0, 3);
+
     return (
         <div className="hidden md:flex">
             <Link
@@ -55,10 +64,10 @@ export function MainNav({ postItems }: Props) {
                                         </NavigationMenuLink>
                                     </Link>
                                 </li>
-                                {postItems.map((post, index) => (
+                                {sliced.map((post, index) => (
                                     <ListItem
                                         key={`${post.title}-${index}`}
-                                        href={post.href || "#"}
+                                        href={post.href}
                                         title={post.title}>
                                         {post.description}
                                     </ListItem>
@@ -89,11 +98,16 @@ export function MainNav({ postItems }: Props) {
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid w-[600px] grid-cols-2 gap-3 p-4">
-                                <ListItem
-                                    title={"title"}
-                                    href={"href"}>
-                                    Decs
-                                </ListItem>
+                                {allUis
+                                    .filter((content) => content.featured)
+                                    .map((content) => (
+                                        <ListItem
+                                            key={content._id}
+                                            title={content.title}
+                                            href={content.slug}>
+                                            {content.description}
+                                        </ListItem>
+                                    ))}
                             </ul>
                             <div className="p-4 pt-0">
                                 <Separator className="mb-4" />

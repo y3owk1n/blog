@@ -1,46 +1,41 @@
 import CoverImage from "@/components/CoverImage";
 import { H1 } from "@/components/ui/typography/H1";
-import { getAllMds, getMdDetailBySlug } from "@/lib/mdx";
-import dynamic from "next/dynamic";
+import { allPosts } from "@/contentlayer/generated";
+import { notFound } from "next/navigation";
+import { Mdx } from "@/components/Mdx";
 
-export const dynamicParams = false;
+interface PageProps {
+    params: {
+        slug: string;
+    };
+}
 
-const type = "_posts";
-
-export async function generateStaticParams() {
-    const posts = await getAllMds(["slug"], type);
-
-    return posts.map((post) => ({
-        slug: post.slug,
+export function generateStaticParams(): PageProps["params"][] {
+    return allPosts.map((content) => ({
+        slug: content.slugAsParams,
     }));
 }
 
-const getPost = (slug: string) => {
-    return dynamic(() => import(`../../../${type}/${slug}.mdx`));
-};
+export default function Page({ params }: PageProps) {
+    const slug = params.slug;
+    const content = allPosts.find((content) => content.slugAsParams === slug);
 
-export default async function Page({ params }: { params: { slug: string } }) {
-    const Post = getPost(params.slug);
-
-    const postMeta = await getMdDetailBySlug(
-        params.slug,
-        ["coverImage", "title", "date"],
-        "_posts"
-    );
+    if (!content) {
+        notFound();
+    }
 
     return (
         <div className="mx-auto max-w-[65ch]">
             <article className="space-y-4">
-                <H1>{postMeta.title}</H1>
+                <H1>{content.title}</H1>
 
                 <CoverImage
-                    title={postMeta.title || ""}
-                    src={postMeta.coverImage || ""}
+                    title={content.title}
+                    src={content.coverImage}
                     isEager
                 />
-                <div className="prose">
-                    <Post />
-                </div>
+
+                <Mdx code={content.body.code} />
             </article>
         </div>
     );

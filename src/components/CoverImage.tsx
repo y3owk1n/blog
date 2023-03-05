@@ -31,7 +31,7 @@ const CoverImage = ({ title, src, slug, isEager = false }: Props) => {
         <div className="sm:mx-0">
             {slug ? (
                 <Link
-                    href={`/posts/${slug}`}
+                    href={slug}
                     passHref
                     aria-label={title}>
                     {image}

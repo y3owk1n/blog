@@ -65,7 +65,7 @@ const CommandPopoverDemo = () => {
 
     return (
         <div className="flex items-center space-x-4">
-            <p className="text-sm text-slate-500 dark:text-slate-400">Status</p>
+            <p className="text-sm text-slate-500 ">Status</p>
             <Popover
                 open={open}
                 onOpenChange={setOpen}>

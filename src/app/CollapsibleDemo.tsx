@@ -33,14 +33,14 @@ const CollapsibleDemo = () => {
                     </Button>
                 </CollapsibleTrigger>
             </div>
-            <div className="rounded-md border border-slate-200 px-4 py-3 font-mono text-sm dark:border-slate-700">
+            <div className="rounded-md border border-slate-200 px-4 py-3 font-mono text-sm ">
                 @radix-ui/primitives
             </div>
             <CollapsibleContent className="space-y-2">
-                <div className="rounded-md border border-slate-200 px-4 py-3 font-mono text-sm dark:border-slate-700">
+                <div className="rounded-md border border-slate-200 px-4 py-3 font-mono text-sm ">
                     @radix-ui/colors
                 </div>
-                <div className="rounded-md border border-slate-200 px-4 py-3 font-mono text-sm dark:border-slate-700">
+                <div className="rounded-md border border-slate-200 px-4 py-3 font-mono text-sm ">
                     @stitches/react
                 </div>
             </CollapsibleContent>

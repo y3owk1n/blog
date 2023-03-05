@@ -6,17 +6,12 @@ import { MainNav } from "./MainNav";
 import { MobileNav } from "./MobileNav";
 import { buttonVariants } from "./ui/Button";
 import { AiFillGithub } from "react-icons/ai";
-import type { NavItem } from "./SidebarNav";
 
-interface Props {
-    postItems: NavItem[];
-}
-
-export function SiteHeader({ postItems }: Props) {
+export function SiteHeader() {
     return (
         <header className="sticky top-0 z-40 w-full border-b border-b-slate-200 bg-white ">
             <div className="flex h-16 items-center px-4">
-                <MainNav postItems={postItems} />
+                <MainNav />
                 <MobileNav />
                 <div className="flex flex-1 items-center justify-between space-x-2 sm:space-x-4 md:justify-end">
                     <div className="w-full flex-1 md:w-auto md:flex-none">

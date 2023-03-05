@@ -4,14 +4,13 @@
  * This is especially useful for Docker builds.
  */
 !process.env.SKIP_ENV_VALIDATION && (await import("./src/env/server.mjs"));
-import withMDX from "@next/mdx";
+import { withContentlayer } from "next-contentlayer";
 
 /** @type {import("next").NextConfig} */
 const config = {
     reactStrictMode: true,
     experimental: {
         appDir: true,
-        mdxRs: true,
     },
     images: {
         remotePatterns: [
@@ -24,4 +23,5 @@ const config = {
         ],
     },
 };
-export default withMDX()(config);
+
+export default withContentlayer(config);

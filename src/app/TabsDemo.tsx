@@ -16,7 +16,7 @@ const TabsDemo = () => {
                 <TabsTrigger value="password">Password</TabsTrigger>
             </TabsList>
             <TabsContent value="account">
-                <p className="text-sm text-slate-500 dark:text-slate-400">
+                <p className="text-sm text-slate-500 ">
                     Make changes to your account here. Click save when youre
                     done.
                 </p>
@@ -41,7 +41,7 @@ const TabsDemo = () => {
                 </div>
             </TabsContent>
             <TabsContent value="password">
-                <p className="text-sm text-slate-500 dark:text-slate-400">
+                <p className="text-sm text-slate-500 ">
                     Change your password here. After saving, youll be logged
                     out.
                 </p>

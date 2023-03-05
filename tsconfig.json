@@ -11,7 +11,10 @@
             "@/components/*": ["components/*"],
             "@/lib/*": ["lib/*"],
             "@/_posts/*": ["_posts/*"],
-            "@/_docs/*": ["_docs/*"]
+            "@/_docs/*": ["_docs/*"],
+            "@/content/*": ["content/*"],
+            "@/config/*": ["config/*"],
+            "@/contentlayer/generated": ["../.contentlayer/generated"]
         },
         "target": "es2017",
         "lib": ["dom", "dom.iterable", "esnext"],
@@ -28,7 +31,6 @@
         "jsx": "preserve",
         "incremental": true,
         "noUncheckedIndexedAccess": true,
-        "rootDir": "./",
         "plugins": [
             {
                 "name": "next"
@@ -41,7 +43,9 @@
         "**/*.tsx",
         "**/*.cjs",
         "**/*.mjs",
-        ".next/types/**/*.ts"
+        ".next/types/**/*.ts",
+        ".contentlayer/generated",
+        "/Users/kyle/Dev/ui/.next/types/**/*.ts"
     ],
     "exclude": ["node_modules"]
 }
