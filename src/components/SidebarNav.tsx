@@ -7,9 +7,10 @@ import { usePathname } from "next/navigation";
 
 export interface SidebarNavProps {
     items: SidebarNavItem[];
+    onClickCallback?: () => void;
 }
 
-export function SidebarNav({ items }: SidebarNavProps) {
+export function SidebarNav({ items, onClickCallback }: SidebarNavProps) {
     const pathname = usePathname();
 
     return items.length ? (
@@ -23,6 +24,7 @@ export function SidebarNav({ items }: SidebarNavProps) {
                     </h4>
                     {item?.items?.length && (
                         <SidebarNavItems
+                            onClickCallback={onClickCallback}
                             items={item.items}
                             pathname={pathname}
                         />
@@ -36,9 +38,14 @@ export function SidebarNav({ items }: SidebarNavProps) {
 interface SidebarNavItemsProps {
     items: SidebarNavItem[];
     pathname: string | null;
+    onClickCallback?: () => void;
 }
 
-export function SidebarNavItems({ items, pathname }: SidebarNavItemsProps) {
+export function SidebarNavItems({
+    items,
+    pathname,
+    onClickCallback,
+}: SidebarNavItemsProps) {
     return items?.length ? (
         <div className="grid grid-flow-row auto-rows-max text-sm">
             {items.map((item, index) =>
@@ -46,6 +53,7 @@ export function SidebarNavItems({ items, pathname }: SidebarNavItemsProps) {
                     <Link
                         key={index}
                         href={item.href}
+                        onClick={onClickCallback}
                         className={classNames(
                             "group flex w-full items-center rounded-md py-1.5 px-2 hover:bg-slate-50 ",
                             item.disabled && "cursor-not-allowed opacity-60",

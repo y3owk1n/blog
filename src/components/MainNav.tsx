@@ -147,7 +147,7 @@ export function MainNav() {
     );
 }
 
-const ListItem = React.forwardRef<
+export const ListItem = React.forwardRef<
     React.ElementRef<typeof Link>,
     React.ComponentPropsWithoutRef<typeof Link>
 >(({ className, title, children, href, ...props }, ref) => {

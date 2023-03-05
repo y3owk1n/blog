@@ -21,10 +21,12 @@ export default function RootLayout({
                 className={classNames(
                     "min-h-screen bg-white font-sans text-slate-900 antialiased "
                 )}>
-                <div className="flex min-h-screen flex-col">
+                <div className="mx-auto flex min-h-screen flex-col">
                     <Toaster />
                     <SiteHeader />
-                    <div className="flex-1 p-4">{children}</div>
+                    <div className="container mx-auto flex-1 p-4">
+                        {children}
+                    </div>
                     <SiteFooter />
                 </div>
             </body>

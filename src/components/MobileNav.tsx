@@ -3,69 +3,85 @@
 import * as React from "react";
 import Link from "next/link";
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuGroup,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-} from "./ui/DropdownMenu";
-import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
-import { Button } from "./ui/Button";
-import { siteName } from "@/lib/constants";
+    Drawer,
+    DrawerContent,
+    DrawerDescription,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+} from "./ui/Drawer";
+import { Button, buttonVariants } from "./ui/Button";
 import { ScrollArea } from "./ui/ScrollArea";
-import { classNames } from "@/lib/classNames";
+import { allPosts, allUis } from "@/contentlayer/generated";
+import { ListItem } from "./MainNav";
+import { Separator } from "./ui/Separator";
+import { groupBy } from "@/lib/groupBy";
+import { SidebarNav } from "./SidebarNav";
+import { useState } from "react";
 
 export function MobileNav() {
+    const [open, setOpen] = useState(false);
+
+    const posts = allPosts.map((content) => ({
+        slug: content.slug,
+        title: content.title,
+        date: content.date,
+        description: content.description,
+        href: `/posts/${content.slugAsParams}`,
+    }));
+
+    const sorted = posts.sort((a, b) =>
+        a.date && b.date && a.date > b.date ? -1 : 1
+    );
+
+    const postsWithTitle = [
+        {
+            title: "Posts",
+            items: sorted.map((item) => ({
+                title: item.title,
+                href: item.href,
+                items: [],
+            })),
+        },
+    ];
+
+    const groupByTags = groupBy(allUis, (ui) => ui.tag).map((ui) => ({
+        title: ui.title,
+        items: ui.items.map((item) => ({
+            title: item.title,
+            href: item.slug,
+            items: [],
+        })),
+    }));
+
     return (
-        <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+        <Drawer
+            open={open}
+            onOpenChange={setOpen}>
+            <DrawerTrigger asChild>
                 <Button
                     variant="ghost"
-                    className="-ml-4 text-base hover:bg-transparent focus:ring-0  focus:ring-offset-0 md:hidden">
+                    className="text-base hover:bg-transparent focus:ring-0  focus:ring-offset-0 md:hidden">
                     {/* <Icons.logo className="mr-2 h-4 w-4" />{" "} */}
                     <p>Kyle</p>
                     <span className="font-bold">Menu</span>
                 </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent
-                align="start"
-                sideOffset={24}
-                alignOffset={4}
-                className="w-[300px] overflow-scroll">
-                <DropdownMenuItem asChild>
-                    <Link
-                        href="/"
-                        className="flex items-center">
-                        {/* <Icons.logo className="mr-2 h-4 w-4" /> */}
-                        Logo
-                        {siteName}
-                    </Link>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <ScrollArea className="h-[400px]">
-                    <DropdownMenuItem asChild>
-                        <Link href={"#"}>{"title single"}</Link>
-                    </DropdownMenuItem>
-
-                    <DropdownMenuGroup>
-                        <DropdownMenuSeparator
-                            className={classNames({
-                                // hidden: index === 0,
-                            })}
-                        />
-                        <DropdownMenuLabel>{"title nested"}</DropdownMenuLabel>
-                        <DropdownMenuSeparator className="-mx-2" />
-                        <DropdownMenuItem asChild>
-                            {true ? (
-                                <Link href={"#"}>title with link</Link>
-                            ) : (
-                                "Title without link"
-                            )}
-                        </DropdownMenuItem>
-                    </DropdownMenuGroup>
+            </DrawerTrigger>
+            <DrawerContent
+                position="left"
+                size="full">
+                <ScrollArea className="h-[calc(100vh-4vh)]">
+                    <SidebarNav
+                        items={postsWithTitle}
+                        onClickCallback={() => setOpen(false)}
+                    />
+                    <SidebarNav
+                        items={groupByTags}
+                        onClickCallback={() => setOpen(false)}
+                    />
                 </ScrollArea>
-            </DropdownMenuContent>
-        </DropdownMenu>
+            </DrawerContent>
+        </Drawer>
     );
 }
