@@ -1,16 +1,25 @@
+import { classNames } from "@/lib/classNames";
 import React from "react";
 
-interface Props {
-    contents: string[];
+interface Props
+    extends React.HTMLAttributes<HTMLUListElement | HTMLOListElement> {
+    variant?: "unordered" | "ordered";
 }
 
-const List = ({ contents }: Props) => {
+const List = ({ variant = "unordered", className, ...props }: Props) => {
+    const isUl = variant === "unordered";
+    const isOl = variant === "ordered";
+
     return (
-        <ul className="ml-6 list-disc [&>li]:mt-2">
-            {contents.map((content, index) => (
-                <li key={`${content}-${index}`}>{content}</li>
-            ))}
-        </ul>
+        <ul
+            {...props}
+            className={classNames(
+                "ml-6 list-disc [&>li]:mt-2",
+                isUl && "list-disc",
+                isOl && "list-decimal",
+                className
+            )}
+        />
     );
 };
 

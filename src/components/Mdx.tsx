@@ -14,6 +14,17 @@ import { ComponentExample } from "./ComponentExample";
 import { ComponentSource } from "./ComponentSource";
 import { CodeBlockWrapper } from "./CodeBlockWrapper";
 import { examples } from "./examples";
+import { Code } from "./ui/typography/Code";
+import { H1 } from "./ui/typography/H1";
+import { H2 } from "./ui/typography/H2";
+import { H3 } from "./ui/typography/H3";
+import { H4 } from "./ui/typography/H4";
+import { H5 } from "./ui/typography/H5";
+import { H6 } from "./ui/typography/H6";
+import { LinkTag } from "./ui/typography/LinkTag";
+import { Paragraph } from "./ui/typography/Paragraph";
+import { List } from "./ui/typography/List";
+import { Blockquote } from "./ui/typography/Blockquote";
 
 const components = {
     Accordion,
@@ -21,89 +32,68 @@ const components = {
     AccordionItem,
     AccordionTrigger,
     h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-        <h1
-            className={classNames(
-                "mt-2 scroll-m-20 text-4xl font-bold tracking-tight",
-                className
-            )}
+        <H1
+            className={classNames("mt-2 scroll-m-20", className)}
             {...props}
         />
     ),
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-        <h2
+        <H2
             className={classNames(
-                "mt-12 scroll-m-20 border-b border-b-slate-200 pb-2 text-3xl font-semibold tracking-tight first:mt-0 dark:border-b-slate-700",
+                "mt-12 scroll-m-20 border-b border-b-slate-200 pb-2 first:mt-0 dark:border-b-slate-700",
                 className
             )}
             {...props}
         />
     ),
     h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-        <h3
-            className={classNames(
-                "mt-8 scroll-m-20 text-2xl font-semibold tracking-tight",
-                className
-            )}
+        <H3
+            className={classNames("mt-8 scroll-m-20", className)}
             {...props}
         />
     ),
     h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-        <h4
-            className={classNames(
-                "mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
-                className
-            )}
+        <H4
+            className={classNames("mt-8 scroll-m-20", className)}
             {...props}
         />
     ),
     h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-        <h5
-            className={classNames(
-                "mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-                className
-            )}
+        <H5
+            className={classNames("mt-8 scroll-m-20", className)}
             {...props}
         />
     ),
     h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-        <h6
-            className={classNames(
-                "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
-                className
-            )}
+        <H6
+            className={classNames("mt-8 scroll-m-20", className)}
             {...props}
         />
     ),
-    a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
-        <a
-            className={classNames(
-                "font-medium text-slate-900 underline underline-offset-4 dark:text-slate-50",
-                className
-            )}
-            {...props}
-        />
+    a: (props: React.HTMLAttributes<HTMLAnchorElement>) => (
+        <LinkTag {...props} />
     ),
     p: ({
         className,
         ...props
     }: React.HTMLAttributes<HTMLParagraphElement>) => (
-        <p
-            className={classNames(
-                "leading-7 [&:not(:first-child)]:mt-6",
-                className
-            )}
+        <Paragraph
+            variant="normal"
+            className={classNames("[&:not(:first-child)]:mt-6", className)}
             {...props}
         />
     ),
     ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
-        <ul
-            className={classNames("my-6 ml-6 list-disc", className)}
+        <List
+            variant="unordered"
+            className={classNames("my-6", className)}
             {...props}
         />
     ),
     ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
-        <ol
-            className={classNames("my-6 ml-6 list-decimal", className)}
+        <List
+            variant="ordered"
+            className={classNames("my-6", className)}
             {...props}
         />
     ),
@@ -117,12 +107,8 @@ const components = {
         className,
         ...props
     }: React.HTMLAttributes<HTMLElement>) => (
-        <blockquote
-            className={classNames(
-                "mt-6 border-l-2 border-slate-300 pl-6 italic text-slate-800 [&>*]:text-slate-500",
-                "dark:border-slate-300 dark:text-slate-800 dark:[&>*]:text-slate-300",
-                className
-            )}
+        <Blockquote
+            className={classNames("mt-6 ", className)}
             {...props}
         />
     ),
@@ -243,15 +229,8 @@ const components = {
             </div>
         );
     },
-    code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
-        <code
-            className={classNames(
-                "relative rounded bg-slate-900 py-[0.2rem] px-[0.3rem] font-mono text-sm font-semibold text-slate-200 dark:bg-black dark:text-slate-400",
-                className
-            )}
-            {...props}
-        />
-    ),
+
+    code: (props: React.HTMLAttributes<HTMLElement>) => <Code {...props} />,
     Image,
     Callout,
     Card,

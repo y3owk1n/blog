@@ -1,18 +1,18 @@
 import { classNames } from "@/lib/classNames";
 
-const H4 = ({
+const LinkTag = ({
     className,
     ...props
-}: React.HTMLAttributes<HTMLHeadingElement>) => {
+}: React.HTMLAttributes<HTMLAnchorElement>) => {
     return (
-        <h4
+        <a
             {...props}
             className={classNames(
                 className,
-                "font-serif text-xl font-semibold tracking-tight"
+                "font-medium text-slate-900 underline underline-offset-4 dark:text-slate-50"
             )}
         />
     );
 };
 
-export { H4 };
+export { LinkTag };

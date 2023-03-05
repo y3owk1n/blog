@@ -1,15 +1,15 @@
-import type { ReactNode } from "react";
+import { classNames } from "@/lib/classNames";
 import React from "react";
 
-interface Props {
-    children: ReactNode;
-}
-
-const Code = ({ children }: Props) => {
+const Code = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
     return (
-        <code className=" rounded bg-slate-100 py-[0.2rem] px-[0.3rem] font-mono text-sm font-semibold text-slate-900">
-            {children}
-        </code>
+        <code
+            {...props}
+            className={classNames(
+                "relative rounded bg-slate-900 py-[0.2rem] px-[0.3rem] font-mono text-sm font-semibold text-slate-200 dark:bg-black dark:text-slate-400",
+                className
+            )}
+        />
     );
 };
 

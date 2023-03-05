@@ -20,7 +20,7 @@ export function PageHeader({
             <div
                 className={classNames("space-y-4", className)}
                 {...props}>
-                <H1>{heading}</H1>
+                <H1 className="font-serif">{heading}</H1>
                 {text && <Paragraph>{text}</Paragraph>}
             </div>
             {children}

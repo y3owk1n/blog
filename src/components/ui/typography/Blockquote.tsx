@@ -1,14 +1,19 @@
-import type { ReactNode } from "react";
+import { classNames } from "@/lib/classNames";
+import React from "react";
 
-interface Props {
-    children: ReactNode;
-}
-
-const Blockquote = ({ children }: Props) => {
+const Blockquote = ({
+    className,
+    ...props
+}: React.HTMLAttributes<HTMLElement>) => {
     return (
-        <blockquote className="border-l-2 border-slate-300 pl-6 italic text-slate-800">
-            {children}
-        </blockquote>
+        <blockquote
+            {...props}
+            className={classNames(
+                "border-l-2 border-slate-300 pl-6 italic text-slate-800 [&>*]:text-slate-500",
+                "dark:border-slate-300 dark:text-slate-800 dark:[&>*]:text-slate-300",
+                className
+            )}
+        />
     );
 };
 

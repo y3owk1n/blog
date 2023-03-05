@@ -1,13 +1,10 @@
 import { classNames } from "@/lib/classNames";
-import type { ReactNode } from "react";
 
-interface Props {
-    children: ReactNode;
+interface Props extends React.HTMLAttributes<HTMLParagraphElement> {
     variant?: "normal" | "lead" | "large" | "small" | "subtle";
-    className?: string;
 }
 
-const Paragraph = ({ children, variant = "normal", className = "" }: Props) => {
+const Paragraph = ({ variant = "normal", className, ...props }: Props) => {
     const isNormal = variant === "normal";
     const isLead = variant === "lead";
     const isLarge = variant === "large";
@@ -16,6 +13,7 @@ const Paragraph = ({ children, variant = "normal", className = "" }: Props) => {
 
     return (
         <p
+            {...props}
             className={classNames(
                 isNormal && "leading-7",
                 isLead && "text-xl text-slate-700",
@@ -23,9 +21,8 @@ const Paragraph = ({ children, variant = "normal", className = "" }: Props) => {
                 isSmall && "text-sm font-medium leading-none",
                 isSubtle && "text-sm text-slate-500",
                 className
-            )}>
-            {children}
-        </p>
+            )}
+        />
     );
 };
 

@@ -1,20 +1,17 @@
 import { classNames } from "@/lib/classNames";
-import type { ReactNode } from "react";
 
-interface Props {
-    children: ReactNode;
-    className?: string;
-}
-
-const H1 = ({ children, className }: Props) => {
+const H1 = ({
+    className,
+    ...props
+}: React.HTMLAttributes<HTMLHeadingElement>) => {
     return (
         <h1
+            {...props}
             className={classNames(
                 className,
-                "text-4xl font-extrabold tracking-tight lg:text-5xl"
-            )}>
-            {children}
-        </h1>
+                "font-serif text-4xl font-bold tracking-tight"
+            )}
+        />
     );
 };
 
