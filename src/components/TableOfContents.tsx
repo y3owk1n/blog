@@ -99,7 +99,7 @@ function Tree({ tree, level = 1, activeItem }: TreeProps) {
                                 activeItem
                                     ? item.url === `#${activeItem}`
                                         ? "text-state-900 font-medium"
-                                        : "text-sm text-slate-600 hover:text-slate-900 "
+                                        : "text-sm text-slate-600 hover:text-slate-900 dark:text-slate-400 "
                                     : ""
                             )}>
                             {item.title}

@@ -23,7 +23,7 @@ export function MainNav() {
             <Link
                 href="/"
                 className="mr-6 flex items-center space-x-2">
-                <Logo className="h-10 w-10" />
+                <Logo className="h-10 w-10 text-black dark:text-white" />
                 <span className="sr-only">{siteName}</span>
             </Link>
             <NavigationMenu>
@@ -143,13 +143,13 @@ export const ListItem = React.forwardRef<
                 {...props}>
                 <NavigationMenuLink
                     className={classNames(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 ",
+                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-700 dark:focus:bg-slate-700",
                         className
                     )}>
                     <div className="font-serif  font-medium leading-none">
                         {title}
                     </div>
-                    <p className="text-sm leading-snug text-slate-500 line-clamp-2 ">
+                    <p className="text-sm leading-snug text-slate-500 line-clamp-2 dark:text-slate-400 ">
                         {children}
                     </p>
                 </NavigationMenuLink>

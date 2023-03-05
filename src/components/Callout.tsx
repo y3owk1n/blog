@@ -16,11 +16,9 @@ export function Callout({
         <div
             className={classNames(
                 "my-6 flex items-start rounded-md border border-slate-200 p-4",
-                {
-                    "border-slate-900 ": type === "default",
-                    "border-red-600": type === "danger",
-                    "border-yellow-500": type === "warning",
-                }
+                type === "default" && "border-slate-900 dark:border-slate-700",
+                type === "danger" && "border-red-600",
+                type === "warning" && "border-yellow-500"
             )}
             {...props}>
             {icon && <span className="mr-4 text-2xl">{icon}</span>}

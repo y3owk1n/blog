@@ -57,7 +57,7 @@ const DrawerOverlay = React.forwardRef<
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 
 const drawerVariants = cva(
-    "fixed z-50 scale-100 gap-4 bg-white p-6 opacity-100 ",
+    "fixed z-50 scale-100 gap-4 bg-white p-6 opacity-100 dark:bg-slate-900",
     {
         variants: {
             position: {
@@ -162,7 +162,7 @@ const DrawerContent = React.forwardRef<
             )}
             {...props}>
             {children}
-            <DrawerPrimitive.Close className="absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-slate-100 ">
+            <DrawerPrimitive.Close className="absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-slate-100 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-900 dark:data-[state=open]:bg-slate-800">
                 <XMarkIcon className="h-4 w-4" />
                 <span className="sr-only">Close</span>
             </DrawerPrimitive.Close>
@@ -207,6 +207,8 @@ const DrawerTitle = React.forwardRef<
         ref={ref}
         className={classNames(
             "text-lg font-semibold text-slate-900",
+
+            "dark:text-slate-50",
             className
         )}
         {...props}
@@ -220,7 +222,11 @@ const DrawerDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <DrawerPrimitive.Description
         ref={ref}
-        className={classNames("text-sm text-slate-500", className)}
+        className={classNames(
+            "text-sm text-slate-500",
+            "dark:text-slate-400",
+            className
+        )}
         {...props}
     />
 ));

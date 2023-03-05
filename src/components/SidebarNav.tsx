@@ -55,15 +55,16 @@ export function SidebarNavItems({
                         href={item.href}
                         onClick={onClickCallback}
                         className={classNames(
-                            "group flex w-full items-center rounded-md py-1.5 px-2 hover:bg-slate-50 ",
+                            "group flex w-full items-center rounded-md py-1.5 px-2 hover:bg-slate-50 dark:hover:bg-slate-800",
                             item.disabled && "cursor-not-allowed opacity-60",
-                            pathname === item.href && "bg-slate-100"
+                            pathname === item.href &&
+                                "bg-slate-100 dark:bg-slate-800"
                         )}
                         target={item.external ? "_blank" : ""}
                         rel={item.external ? "noreferrer" : ""}>
                         {item.title}
                         {item.label && (
-                            <span className="ml-2 rounded-md bg-teal-100 px-1.5 py-0.5 text-xs no-underline group-hover:no-underline ">
+                            <span className="ml-2 rounded-md bg-teal-100 px-1.5 py-0.5 text-xs no-underline group-hover:no-underline dark:text-slate-900">
                                 {item.label}
                             </span>
                         )}

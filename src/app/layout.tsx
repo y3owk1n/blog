@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/Toaster";
 import { classNames } from "@/lib/classNames";
 import "@/styles/globals.css";
 import { Arapey } from "next/font/google";
+import RootProviders from "./RootProviders.client";
 
 export const metadata = {
     title: "UI",
@@ -25,19 +26,21 @@ export default function RootLayout({
             lang="en"
             className={arapey.className}
             suppressHydrationWarning>
-            <body
-                className={classNames(
-                    "min-h-screen bg-white font-sans text-slate-900 antialiased "
-                )}>
-                <div className="mx-auto flex min-h-screen flex-col">
-                    <Toaster />
-                    <SiteHeader />
-                    <div className="container mx-auto flex-1 p-4">
-                        {children}
+            <RootProviders>
+                <body
+                    className={classNames(
+                        "min-h-screen bg-white font-sans text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-50"
+                    )}>
+                    <div className="mx-auto flex min-h-screen flex-col">
+                        <Toaster />
+                        <SiteHeader />
+                        <div className="container mx-auto flex-1 p-4">
+                            {children}
+                        </div>
+                        <SiteFooter />
                     </div>
-                    <SiteFooter />
-                </div>
-            </body>
+                </body>
+            </RootProviders>
         </html>
     );
 }

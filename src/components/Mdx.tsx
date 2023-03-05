@@ -32,7 +32,7 @@ const components = {
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h2
             className={classNames(
-                "mt-12 scroll-m-20 border-b border-b-slate-200 pb-2 text-3xl font-semibold tracking-tight first:mt-0 ",
+                "mt-12 scroll-m-20 border-b border-b-slate-200 pb-2 text-3xl font-semibold tracking-tight first:mt-0 dark:border-b-slate-700",
                 className
             )}
             {...props}
@@ -77,7 +77,7 @@ const components = {
     a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
         <a
             className={classNames(
-                "font-medium text-slate-900 underline underline-offset-4 ",
+                "font-medium text-slate-900 underline underline-offset-4 dark:text-slate-50",
                 className
             )}
             {...props}
@@ -142,7 +142,7 @@ const components = {
     ),
     hr: ({ ...props }: React.HTMLAttributes<HTMLHRElement>) => (
         <hr
-            className="my-4 border-slate-200  md:my-8"
+            className="my-4 border-slate-200 dark:border-slate-800 md:my-8"
             {...props}
         />
     ),
@@ -211,7 +211,7 @@ const components = {
             <div className="relative">
                 <pre
                     className={classNames(
-                        "mt-6 mb-4 overflow-x-auto rounded-lg border border-slate-900 bg-slate-900 py-4 px-2 ",
+                        "mt-6 mb-4 overflow-x-auto rounded-lg border border-slate-900 bg-slate-900 py-4 px-2 dark:border-slate-700 dark:bg-black",
                         className
                     )}
                     {...props}
@@ -245,7 +245,7 @@ const components = {
     code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
         <code
             className={classNames(
-                "relative rounded py-[0.2rem] px-[0.3rem] font-mono text-sm font-semibold text-slate-900 ",
+                "relative rounded bg-slate-900 py-[0.2rem] px-[0.3rem] font-mono text-sm font-semibold text-slate-200 dark:bg-black dark:text-slate-400",
                 className
             )}
             {...props}
