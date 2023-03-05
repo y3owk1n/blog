@@ -1,59 +1,26 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
-import {
-    Drawer,
-    DrawerContent,
-    DrawerDescription,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerTrigger,
-} from "./ui/Drawer";
-import { Button, buttonVariants } from "./ui/Button";
+import { Drawer, DrawerContent, DrawerTrigger } from "./ui/Drawer";
+import { Button } from "./ui/Button";
 import { ScrollArea } from "./ui/ScrollArea";
-import { allPosts, allUis } from "@/contentlayer/generated";
-import { ListItem } from "./MainNav";
-import { Separator } from "./ui/Separator";
-import { groupBy } from "@/lib/groupBy";
 import { SidebarNav } from "./SidebarNav";
 import { useState } from "react";
+import { allPostsAndSort, groupUisByTags } from "@/lib/contentlayerApi";
 
 export function MobileNav() {
     const [open, setOpen] = useState(false);
 
-    const posts = allPosts.map((content) => ({
-        slug: content.slug,
-        title: content.title,
-        date: content.date,
-        description: content.description,
-        href: `/posts/${content.slugAsParams}`,
-    }));
-
-    const sorted = posts.sort((a, b) =>
-        a.date && b.date && a.date > b.date ? -1 : 1
-    );
-
     const postsWithTitle = [
         {
             title: "Posts",
-            items: sorted.map((item) => ({
+            items: allPostsAndSort.map((item) => ({
                 title: item.title,
                 href: item.href,
                 items: [],
             })),
         },
     ];
-
-    const groupByTags = groupBy(allUis, (ui) => ui.tag).map((ui) => ({
-        title: ui.title,
-        items: ui.items.map((item) => ({
-            title: item.title,
-            href: item.slug,
-            items: [],
-        })),
-    }));
 
     return (
         <Drawer
@@ -77,7 +44,7 @@ export function MobileNav() {
                         onClickCallback={() => setOpen(false)}
                     />
                     <SidebarNav
-                        items={groupByTags}
+                        items={groupUisByTags}
                         onClickCallback={() => setOpen(false)}
                     />
                 </ScrollArea>

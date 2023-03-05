@@ -11,25 +11,12 @@ import {
     NavigationMenuTrigger,
 } from "./ui/NavigationMenu";
 import { siteDescription, siteName } from "@/lib/constants";
-import { Separator } from "./ui/Separator";
 import { classNames } from "@/lib/classNames";
 import { buttonVariants } from "./ui/Button";
-import { allPosts, allUis } from "@/contentlayer/generated";
+import { allUis } from "@/contentlayer/generated";
+import { firstThreePosts } from "@/lib/contentlayerApi";
 
 export function MainNav() {
-    const posts = allPosts.map((content) => ({
-        slug: content.slug,
-        title: content.title,
-        date: content.date,
-        description: content.description,
-        href: `/posts/${content.slugAsParams}`,
-    }));
-
-    const sorted = posts.sort((a, b) =>
-        a.date && b.date && a.date > b.date ? -1 : 1
-    );
-    const sliced = sorted.slice(0, 3);
-
     return (
         <div className="hidden md:flex">
             <Link
@@ -63,7 +50,7 @@ export function MainNav() {
                                         </NavigationMenuLink>
                                     </Link>
                                 </li>
-                                {sliced.map((post, index) => (
+                                {firstThreePosts.map((post, index) => (
                                     <ListItem
                                         key={`${post.title}-${index}`}
                                         href={post.href}

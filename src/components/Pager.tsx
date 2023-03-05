@@ -1,9 +1,12 @@
+"use client";
+
 import type { NavItem, NavItemWithChildren } from "@/config/uiConfig";
-import { uiConfig } from "@/config/uiConfig";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import type { Ui } from "../../.contentlayer/generated";
 import { buttonVariants } from "./ui/Button";
+import { classNames } from "@/lib/classNames";
+import { groupUisByTags } from "@/lib/contentlayerApi";
 
 interface PagerProps {
     content: Ui;
@@ -16,8 +19,18 @@ export function Pager({ content }: PagerProps) {
         return null;
     }
 
+    const hasPrev = pager.prev?.href && !pager.next?.href;
+    const hasNext = pager.next?.href && !pager.prev?.href;
+    const hasBoth = pager.next?.href && pager.prev?.href;
+
     return (
-        <div className="flex flex-row items-center justify-between">
+        <div
+            className={classNames(
+                "flex flex-row items-center",
+                hasBoth && "justify-between",
+                hasPrev && "justify-start",
+                hasNext && "justify-end"
+            )}>
             {pager?.prev?.href && (
                 <Link
                     href={pager.prev.href}
@@ -39,7 +52,7 @@ export function Pager({ content }: PagerProps) {
 }
 
 export function getPager(doc: Ui) {
-    const flattenedLinks = [null, ...flatten(uiConfig.sidebarNav), null];
+    const flattenedLinks = [null, ...flatten(groupUisByTags), null];
     const activeIndex = flattenedLinks.findIndex(
         (link) => doc.slug === link?.href
     );

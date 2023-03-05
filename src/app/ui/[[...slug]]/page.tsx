@@ -30,7 +30,7 @@ export default async function Page({ params }: PageProps) {
     const toc = await getTableOfContents(content.body.raw);
 
     return (
-        <main className="relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_300px]">
+        <main className="relative lg:gap-10 xl:grid xl:grid-cols-[1fr_300px]">
             <div className="mx-auto w-full min-w-0">
                 <PageHeader
                     heading={content.title}
@@ -64,7 +64,7 @@ export default async function Page({ params }: PageProps) {
                 <Pager content={content} />
             </div>
             <div className="hidden text-sm xl:block">
-                <div className="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-10">
+                <div className="sticky top-20 max-h-[calc(100vh-10vh)] overflow-y-auto">
                     <TableOfContents toc={toc} />
                 </div>
             </div>

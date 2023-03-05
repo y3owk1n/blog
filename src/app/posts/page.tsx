@@ -1,25 +1,12 @@
 import CoverImage from "@/components/CoverImage";
 import Date from "@/components/Date";
 import Link from "next/link";
-import { allPosts } from "@/contentlayer/generated";
+import { allPostsAndSort } from "@/lib/contentlayerApi";
 
 const Page = () => {
-    const posts = allPosts.map((content) => ({
-        slug: content.slug,
-        title: content.title,
-        date: content.date,
-        description: content.description,
-        href: `/posts/${content.slugAsParams}`,
-        coverImage: content.coverImage,
-    }));
-
-    const sorted = posts.sort((a, b) =>
-        a.date && b.date && a.date > b.date ? -1 : 1
-    );
-
     return (
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-            {sorted.map((post, index) => (
+            {allPostsAndSort.map((post, index) => (
                 <div key={`${post.title}-${index}`}>
                     <div className="mb-5">
                         <CoverImage
