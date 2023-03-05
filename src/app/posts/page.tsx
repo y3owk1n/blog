@@ -2,10 +2,12 @@ import CoverImage from "@/components/CoverImage";
 import Date from "@/components/Date";
 import Link from "next/link";
 import { allPostsAndSort } from "@/lib/contentlayerApi";
+import { H3 } from "@/components/ui/typography/H3";
+import { Paragraph } from "@/components/ui/typography/Paragraph";
 
 const Page = () => {
     return (
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {allPostsAndSort.map((post, index) => (
                 <div key={`${post.title}-${index}`}>
                     <div className="mb-5">
@@ -15,20 +17,18 @@ const Page = () => {
                             src={post.coverImage}
                         />
                     </div>
-                    <h3 className="mb-3 text-3xl leading-snug">
+                    <H3 className="font-serif">
                         <Link
                             href={post.href}
                             passHref
                             className="hover:underline">
                             {post.title}
                         </Link>
-                    </h3>
-                    <div className="mb-4 text-gray-500">
+                    </H3>
+                    <div className="my-4 text-sm text-gray-500">
                         <Date dateString={post.date} />
                     </div>
-                    <p className="mb-4 text-lg leading-relaxed">
-                        {post.description}
-                    </p>
+                    <Paragraph>{post.description}</Paragraph>
                 </div>
             ))}
         </div>

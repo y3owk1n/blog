@@ -7,6 +7,7 @@ import { ScrollArea } from "./ui/ScrollArea";
 import { SidebarNav } from "./SidebarNav";
 import { useState } from "react";
 import { allPostsAndSort, groupUisByTags } from "@/lib/contentlayerApi";
+import { Bars3Icon } from "@heroicons/react/20/solid";
 
 export function MobileNav() {
     const [open, setOpen] = useState(false);
@@ -28,11 +29,11 @@ export function MobileNav() {
             onOpenChange={setOpen}>
             <DrawerTrigger asChild>
                 <Button
+                    size="icon"
                     variant="ghost"
-                    className="text-base hover:bg-transparent focus:ring-0  focus:ring-offset-0 md:hidden">
-                    {/* <Icons.logo className="mr-2 h-4 w-4" />{" "} */}
-                    <p>Kyle</p>
-                    <span className="font-bold">Menu</span>
+                    className="flex gap-2 p-1 text-base hover:bg-transparent focus:ring-0  focus:ring-offset-0 md:hidden">
+                    <Bars3Icon className="h-4 w-4 " />
+                    <span className="sr-only font-bold">Menu</span>
                 </Button>
             </DrawerTrigger>
             <DrawerContent

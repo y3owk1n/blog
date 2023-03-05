@@ -3,10 +3,17 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { Toaster } from "@/components/ui/Toaster";
 import { classNames } from "@/lib/classNames";
 import "@/styles/globals.css";
+import { Arapey } from "next/font/google";
 
 export const metadata = {
     title: "UI",
 };
+
+const arapey = Arapey({
+    weight: "400",
+    variable: "--font-arapey",
+    subsets: ["latin"],
+});
 
 export default function RootLayout({
     children,
@@ -16,6 +23,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
+            className={arapey.className}
             suppressHydrationWarning>
             <body
                 className={classNames(

@@ -27,7 +27,7 @@ export default function Page({ params }: PageProps) {
     return (
         <div className="mx-auto max-w-[65ch]">
             <article className="space-y-4">
-                <H1>{content.title}</H1>
+                <H1 className="font-serif">{content.title}</H1>
 
                 <CoverImage
                     title={content.title}

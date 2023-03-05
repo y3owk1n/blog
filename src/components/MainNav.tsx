@@ -15,6 +15,7 @@ import { classNames } from "@/lib/classNames";
 import { buttonVariants } from "./ui/Button";
 import { allUis } from "@/contentlayer/generated";
 import { firstThreePosts } from "@/lib/contentlayerApi";
+import { Logo } from "./Logo";
 
 export function MainNav() {
     return (
@@ -22,11 +23,8 @@ export function MainNav() {
             <Link
                 href="/"
                 className="mr-6 flex items-center space-x-2">
-                <p>Kyle</p>
-                {/* <Icons.logo className="h-6 w-6" /> */}
-                <span className="hidden font-bold sm:inline-block">
-                    {siteName}
-                </span>
+                <Logo className="h-10 w-10" />
+                <span className="sr-only">{siteName}</span>
             </Link>
             <NavigationMenu>
                 <NavigationMenuList>
@@ -148,7 +146,7 @@ export const ListItem = React.forwardRef<
                         "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 ",
                         className
                     )}>
-                    <div className="text-sm font-medium leading-none">
+                    <div className="font-serif  font-medium leading-none">
                         {title}
                     </div>
                     <p className="text-sm leading-snug text-slate-500 line-clamp-2 ">
