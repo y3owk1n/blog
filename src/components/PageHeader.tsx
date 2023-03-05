@@ -1,5 +1,7 @@
 import { classNames } from "@/lib/classNames";
 import { Separator } from "./ui/Separator";
+import { H1 } from "./ui/typography/H1";
+import { Paragraph } from "./ui/typography/Paragraph";
 
 interface PageHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
     heading: string;
@@ -18,14 +20,8 @@ export function PageHeader({
             <div
                 className={classNames("space-y-4", className)}
                 {...props}>
-                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-                    {heading}
-                </h1>
-                {text && (
-                    <p className="max-w-[95%] text-xl text-slate-700 ">
-                        {text}
-                    </p>
-                )}
+                <H1>{heading}</H1>
+                {text && <Paragraph>{text}</Paragraph>}
             </div>
             {children}
             <Separator className="my-4 md:my-6" />
