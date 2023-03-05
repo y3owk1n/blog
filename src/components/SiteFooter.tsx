@@ -1,13 +1,37 @@
+"use client";
+
+import { githubProfile } from "@/lib/constants";
+import Link from "next/link";
+import { AiFillGithub } from "react-icons/ai";
+import { Logo } from "./Logo";
+import { buttonVariants } from "./ui/Button";
+
 export function SiteFooter() {
     return (
         <footer className="">
             <div className="flex  flex-col items-center justify-between gap-4 border-t border-t-slate-200 py-4 dark:border-t-slate-800  md:flex-row">
-                <div className="container mx-auto flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-                    <p>Logo</p>
-                    {/* <Icons.logo className="h-6 w-6" /> */}
-                    <p className="text-center text-sm leading-loose text-slate-600  md:text-left">
-                        Built by love .
+                <div className="container mx-auto flex flex-col items-center gap-2 px-8 md:flex-row md:gap-4 md:px-0">
+                    <Logo className="h-10 w-10 text-black dark:text-white" />
+                    <p className="text-center text-sm leading-loose text-slate-600 dark:text-slate-400  md:text-left">
+                        Kyle Wong
                     </p>
+                    <nav className="flex items-center space-x-1">
+                        <Link
+                            href={githubProfile}
+                            target="_blank"
+                            rel="noreferrer">
+                            <div
+                                className={buttonVariants({
+                                    size: "sm",
+                                    variant: "ghost",
+                                    className:
+                                        "text-slate-700 dark:text-slate-400",
+                                })}>
+                                <AiFillGithub className="h-5 w-5" />
+                                <span className="sr-only">GitHub</span>
+                            </div>
+                        </Link>
+                    </nav>
                 </div>
             </div>
         </footer>

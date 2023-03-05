@@ -37,14 +37,9 @@ export function MainNav() {
                                 <li className="row-span-3">
                                     <Link href="/">
                                         <NavigationMenuLink
-                                            className="flex h-full w-full select-none 
-                    flex-col justify-end space-y-2 rounded-md bg-gradient-to-b from-rose-500 to-indigo-700 p-6 no-underline outline-none focus:shadow-md">
-                                            <div className="text-lg font-medium text-white">
-                                                {siteName}
-                                            </div>
-                                            <p className="text-sm leading-snug text-white/90">
-                                                {siteDescription}
-                                            </p>
+                                            className="grid h-full w-full select-none items-center justify-center 
+                     space-y-2 rounded-md bg-gradient-to-b from-white to-slate-200 p-6 no-underline outline-none focus:shadow-md dark:from-slate-200 dark:to-slate-800">
+                                            <Logo className="h-10 w-10 text-black dark:text-white" />
                                         </NavigationMenuLink>
                                     </Link>
                                 </li>
@@ -77,7 +72,7 @@ export function MainNav() {
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className="h-9">
-                            Ui
+                            UI
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid w-[600px] grid-cols-2 gap-3 p-4">
@@ -104,26 +99,12 @@ export function MainNav() {
                                             }),
                                             "w-full "
                                         )}>
-                                        More Uis
+                                        More UIs
                                     </NavigationMenuLink>
                                 </Link>
                             </div>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
-                    {/* <NavigationMenuItem className="hidden lg:flex"> */}
-                    {/*     <Link */}
-                    {/*         href="/figma" */}
-                    {/*         legacyBehavior */}
-                    {/*         passHref> */}
-                    {/*         <NavigationMenuLink */}
-                    {/*             className={classNames( */}
-                    {/*                 navigationMenuTriggerStyle(), */}
-                    {/*                 "h-9" */}
-                    {/*             )}> */}
-                    {/*             Figma */}
-                    {/*         </NavigationMenuLink> */}
-                    {/*     </Link> */}
-                    {/* </NavigationMenuItem> */}
                 </NavigationMenuList>
             </NavigationMenu>
         </div>

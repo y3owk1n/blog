@@ -119,7 +119,8 @@ const components = {
     }: React.HTMLAttributes<HTMLElement>) => (
         <blockquote
             className={classNames(
-                "mt-6 border-l-2 border-slate-300 pl-6 italic text-slate-800 [&>*]:text-slate-600",
+                "mt-6 border-l-2 border-slate-300 pl-6 italic text-slate-800 [&>*]:text-slate-500",
+                "dark:border-slate-300 dark:text-slate-800 dark:[&>*]:text-slate-300",
                 className
             )}
             {...props}
