@@ -6,7 +6,6 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 
 import type { NpmCommands } from "@/types/unist-builder";
 import { classNames } from "@/lib/classNames";
-import { Callout } from "./Callout";
 import { Card } from "./Card";
 import { CodeBlockWrapper } from "./CodeBlockWrapper";
 import { ComponentExample } from "./ComponentExample";
@@ -29,6 +28,7 @@ import CImage from "./ui/Image";
 import { Separator } from "./ui/Separator";
 import { Table, Tr, Th, Td } from "./ui/Table";
 import { Pre } from "./ui/typography/Pre";
+import { Alert } from "./ui/Alert";
 
 const components = {
     Accordion,
@@ -198,7 +198,7 @@ const components = {
 
     code: (props: React.HTMLAttributes<HTMLElement>) => <Code {...props} />,
     CImage,
-    Callout,
+    Alert,
     Card,
     ComponentExample,
     ComponentSource,
