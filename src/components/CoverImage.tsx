@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
+import CImage from "@/components/ui/Image";
 
 import { classNames } from "@/lib/classNames";
-import { blurDataURL } from "@/lib/constants";
 
 type Props = {
     title: string;
@@ -13,20 +12,20 @@ type Props = {
 
 const CoverImage = ({ title, src, slug, isEager = false }: Props) => {
     const image = (
-        <div className="relative aspect-[2/1]">
-            <Image
-                fill={true}
-                placeholder="blur"
-                blurDataURL={blurDataURL}
-                loading={isEager ? "eager" : "lazy"}
-                src={src}
-                alt={`Cover Image for ${title}`}
-                className={classNames(
+        <CImage
+            aspectRatioProps={{
+                ratio: 2 / 1,
+            }}
+            imageProps={{
+                className: classNames(
                     "rounded-lg shadow-sm ",
                     slug && "transition-shadow duration-200 hover:shadow-lg"
-                )}
-            />
-        </div>
+                ),
+                loading: isEager ? "eager" : "lazy",
+                alt: `Cover Image for ${title}`,
+                src: src,
+            }}
+        />
     );
     return (
         <div className="sm:mx-0">

@@ -25,7 +25,7 @@ import { H6 } from "./ui/typography/H6";
 import { LinkTag } from "./ui/typography/LinkTag";
 import { List } from "./ui/typography/List";
 import { Paragraph } from "./ui/typography/Paragraph";
-import CImage from "./Image";
+import CImage from "./ui/Image";
 import { Separator } from "./ui/Separator";
 import { Table, Tr, Th, Td } from "./ui/Table";
 import { Pre } from "./ui/typography/Pre";
