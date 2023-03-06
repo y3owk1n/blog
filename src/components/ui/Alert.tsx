@@ -12,7 +12,7 @@ const alertVariants = cva("flex items-start rounded-md  p-4", {
     variants: {
         variant: {
             default:
-                "bg-slate-900 text-white dark:bg-slate-50 dark:text-slate-900",
+                "bg-slate-700 text-slate-100 dark:bg-slate-300 dark:text-slate-700",
             destructive: "bg-red-500 text-white ",
             outline:
                 "bg-transparent border border-slate-200  dark:border-slate-700 dark:text-slate-100",

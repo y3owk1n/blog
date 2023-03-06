@@ -5,12 +5,12 @@ featured: true
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/alert-dialog
-  api: https://www.radix-ui.com/docs/primitives/components/alert-dialog#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/alert-dialog
+    api: https://www.radix-ui.com/docs/primitives/components/alert-dialog#api-reference
 ---
 
 <ComponentExample src="src/components/examples/AlertDialogDemo.tsx">
-  <AlertDialogDemo />
+    <AlertDialogDemo />
 </ComponentExample>
 
 ## Installation
@@ -35,33 +35,33 @@ This is the `<AlertDialog />` primitive. You can place it in a file at `componen
 
 ```tsx
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/AlertDialog"
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from "@/components/ui/AlertDialog";
 ```
 
 ```tsx
 <AlertDialog>
-  <AlertDialogTrigger>Open</AlertDialogTrigger>
-  <AlertDialogContent>
-    <AlertDialogHeader>
-      <AlertDialogTitle>Are you sure absolutely sure?</AlertDialogTitle>
-      <AlertDialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </AlertDialogDescription>
-    </AlertDialogHeader>
-    <AlertDialogFooter>
-      <AlertDialogCancel>Cancel</AlertDialogCancel>
-      <AlertDialogAction>Continue</AlertDialogAction>
-    </AlertDialogFooter>
-  </AlertDialogContent>
+    <AlertDialogTrigger>Open</AlertDialogTrigger>
+    <AlertDialogContent>
+        <AlertDialogHeader>
+            <AlertDialogTitle>Are you sure absolutely sure?</AlertDialogTitle>
+            <AlertDialogDescription>
+                This action cannot be undone. This will permanently delete your
+                account and remove your data from our servers.
+            </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction>Continue</AlertDialogAction>
+        </AlertDialogFooter>
+    </AlertDialogContent>
 </AlertDialog>
 ```

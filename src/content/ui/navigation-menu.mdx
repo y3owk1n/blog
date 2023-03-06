@@ -4,12 +4,12 @@ description: A collection of links for navigating websites.
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/navigation-menu
-  api: https://www.radix-ui.com/docs/primitives/components/navigation-menu#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/navigation-menu
+    api: https://www.radix-ui.com/docs/primitives/components/navigation-menu#api-reference
 ---
 
 <ComponentExample src="src/components/examples/NavigationMenuDemo.tsx">
-  <NavigationMenuDemo />
+    <NavigationMenuDemo />
 </ComponentExample>
 
 ## Installation
@@ -25,35 +25,35 @@ npm install @radix-ui/react-navigation-menu
 <ComponentSource src="src/components/ui/NavigationMenu.tsx" />
 
 <Alert variant="outline">
-  This is the `<NavigationMenu />` primitive. You can place it in a file at
-  `components/ui/NavigationMenu.tsx`.
+    This is the `<NavigationMenu />` primitive. You can place it in a file at
+    `components/ui/NavigationMenu.tsx`.
 </Alert>
 
 ## Usage
 
 ```tsx
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/NavigationMenu"
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuIndicator,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    NavigationMenuViewport,
+} from "@/components/ui/NavigationMenu";
 ```
 
 ```tsx
 <NavigationMenu>
-  <NavigationMenuList>
-    <NavigationMenuItem>
-      <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-      <NavigationMenuContent>
-        <NavigationMenuLink>Link</NavigationMenuLink>
-      </NavigationMenuContent>
-    </NavigationMenuItem>
-  </NavigationMenuList>
+    <NavigationMenuList>
+        <NavigationMenuItem>
+            <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+            <NavigationMenuContent>
+                <NavigationMenuLink>Link</NavigationMenuLink>
+            </NavigationMenuContent>
+        </NavigationMenuItem>
+    </NavigationMenuList>
 </NavigationMenu>
 ```
 
@@ -62,16 +62,19 @@ import {
 When using the Next.js `<Link />` component, you can use `navigationMenuTriggerStyle()` to apply the correct styles to the trigger.
 
 ```tsx
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 ```
 
 ```tsx {3-5}
 <NavigationMenuItem>
-  <Link href="/docs" legacyBehavior passHref>
-    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-      Documentation
-    </NavigationMenuLink>
-  </Link>
+    <Link
+        href="/docs"
+        legacyBehavior
+        passHref>
+        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Documentation
+        </NavigationMenuLink>
+    </Link>
 </NavigationMenuItem>
 ```
 

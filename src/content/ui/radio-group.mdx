@@ -4,12 +4,12 @@ description: A set of checkable buttons—known as radio buttons—where no more
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/radio-group
-  api: https://www.radix-ui.com/docs/primitives/components/radio-group#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/radio-group
+    api: https://www.radix-ui.com/docs/primitives/components/radio-group#api-reference
 ---
 
 <ComponentExample src="src/components/examples/RadioGroupDemo.tsx">
-  <RadioGroupDemo />
+    <RadioGroupDemo />
 </ComponentExample>
 
 ## Installation
@@ -25,26 +25,32 @@ npm install @radix-ui/react-radio-group
 <ComponentSource src="src/components/ui/RadioGroup.tsx" />
 
 <Alert variant="outline">
-  This is the `<RadioGroup />` primitive. You can place it in a file at
-  `components/ui/RadioGroup.tsx`.
+    This is the `<RadioGroup />` primitive. You can place it in a file at
+    `components/ui/RadioGroup.tsx`.
 </Alert>
 
 ## Usage
 
 ```tsx
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/RadioGroup"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/RadioGroup";
+import { Label } from "@/components/ui/label";
 ```
 
 ```tsx
 <RadioGroup defaultValue="option-one">
-  <div className="flex items-center space-x-2">
-    <RadioGroupItem value="option-one" id="option-one" />
-    <Label htmlFor="option-one">Option One</Label>
-  </div>
-  <div className="flex items-center space-x-2">
-    <RadioGroupItem value="option-two" id="option-two" />
-    <Label htmlFor="option-two">Option Two</Label>
-  </div>
+    <div className="flex items-center space-x-2">
+        <RadioGroupItem
+            value="option-one"
+            id="option-one"
+        />
+        <Label htmlFor="option-one">Option One</Label>
+    </div>
+    <div className="flex items-center space-x-2">
+        <RadioGroupItem
+            value="option-two"
+            id="option-two"
+        />
+        <Label htmlFor="option-two">Option Two</Label>
+    </div>
 </RadioGroup>
 ```

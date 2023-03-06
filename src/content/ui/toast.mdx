@@ -4,12 +4,12 @@ description: A succinct message that is displayed temporarily.
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/toast
-  api: https://www.radix-ui.com/docs/primitives/components/toast#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/toast
+    api: https://www.radix-ui.com/docs/primitives/components/toast#api-reference
 ---
 
 <ComponentExample src="src/components/examples/ToastDemo.tsx">
-  <ToastDemo />
+    <ToastDemo />
 </ComponentExample>
 
 ## Installation
@@ -25,8 +25,8 @@ npm install @radix-ui/react-toast
 <ComponentSource src="src/components/ui/Toast.tsx" />
 
 <Alert variant="outline">
-  This is the `<Toast />` primitive. You can place it in a file at
-  `components/ui/Toast.tsx`.
+    This is the `<Toast />` primitive. You can place it in a file at
+    `components/ui/Toast.tsx`.
 </Alert>
 
 3. Copy and paste the `<Toaster />` component into your project.
@@ -34,22 +34,22 @@ npm install @radix-ui/react-toast
 <ComponentSource src="src/components/ui/Toaster.tsx" />
 
 <Alert variant="outline">
-  This is the `<Toaster />` primitive. You can place it in a file at
-  `components/ui/Toaster.tsx`.
+    This is the `<Toaster />` primitive. You can place it in a file at
+    `components/ui/Toaster.tsx`.
 </Alert>
 
 4. Add the `<Toaster />` component to your app.
 
 ```tsx title="_app.tsx" {1,7}
-import { Toaster } from "@/components/ui/Toaster"
+import { Toaster } from "@/components/ui/Toaster";
 
 export default function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Component {...pageProps} />
-      <Toaster />
-    </>
-  )
+    return (
+        <>
+            <Component {...pageProps} />
+            <Toaster />
+        </>
+    );
 }
 ```
 
@@ -58,32 +58,31 @@ export default function MyApp({ Component, pageProps }) {
 <ComponentSource src="src/lib/hooks/useToast.ts" />
 
 <Alert variant="outline">
-  You can place the `use-toast` hook in a file at `hooks/useToast.tsx`.
+    You can place the `use-toast` hook in a file at `hooks/useToast.tsx`.
 </Alert>
 
 ## Usage
 
 ```tsx
-import { useToast } from "@/hooks/useToast"
+import { useToast } from "@/hooks/useToast";
 ```
 
 ```tsx {2,8-11}
 export const ToastDemo = () => {
-  const { toast } = useToast()
+    const { toast } = useToast();
 
-  return (
-    <Button
-      onClick={() => {
-        toast({
-          title: "Scheduled: Catch up",
-          description: "Friday, February 10, 2023 at 5:57 PM",
-        })
-      }}
-    >
-      Show Toast
-    </Button>
-  )
-}
+    return (
+        <Button
+            onClick={() => {
+                toast({
+                    title: "Scheduled: Catch up",
+                    description: "Friday, February 10, 2023 at 5:57 PM",
+                });
+            }}>
+            Show Toast
+        </Button>
+    );
+};
 ```
 
 The `<Toaster />` component is where your toasts are displayed. You can place it anywhere in your app, but it's recommended to place it at the root of your app.
@@ -101,23 +100,23 @@ To display multiple toasts at the same time, you can update the `TOAST_LIMIT` in
 ### Simple
 
 <ComponentExample src="src/components/examples/ToastDemo.tsx">
-  <ToastDemo />
+    <ToastDemo />
 </ComponentExample>
 
 ### With title
 
 <ComponentExample src="src/components/examples/ToastWithTitleDemo.tsx">
-  <ToastWithTitleDemo />
+    <ToastWithTitleDemo />
 </ComponentExample>
 
 ### With Action
 
 <ComponentExample src="src/components/examples/ToastWithActionDemo.tsx">
-  <ToastWithActionDemo />
+    <ToastWithActionDemo />
 </ComponentExample>
 
 ### Variant
 
 <ComponentExample src="src/components/examples/ToastWithVariantDemo.tsx">
-  <ToastWithVariantDemo />
+    <ToastWithVariantDemo />
 </ComponentExample>

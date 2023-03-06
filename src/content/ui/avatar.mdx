@@ -4,12 +4,12 @@ description: An image element with a fallback for representing the user.
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/avatar
-  api: https://www.radix-ui.com/docs/primitives/components/avatar#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/avatar
+    api: https://www.radix-ui.com/docs/primitives/components/avatar#api-reference
 ---
 
 <ComponentExample src="src/components/examples/AvatarDemo.tsx">
-  <AvatarDemo />
+    <AvatarDemo />
 </ComponentExample>
 
 ## Installation
@@ -33,12 +33,12 @@ This is the `<Avatar />` primitive. You can place it in a file at `components/ui
 ## Usage
 
 ```tsx
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 ```
 
 ```tsx
 <Avatar>
-  <AvatarImage src="https://github.com/shadcn.png" />
-  <AvatarFallback>CN</AvatarFallback>
+    <AvatarImage src="https://github.com/shadcn.png" />
+    <AvatarFallback>CN</AvatarFallback>
 </Avatar>
 ```

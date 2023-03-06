@@ -4,12 +4,12 @@ description: A visually persistent menu common in desktop applications that prov
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/menubar
-  api: https://www.radix-ui.com/docs/primitives/components/menubar#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/menubar
+    api: https://www.radix-ui.com/docs/primitives/components/menubar#api-reference
 ---
 
 <ComponentExample src="src/components/examples/MenubarDemo.tsx">
-  <MenubarDemo />
+    <MenubarDemo />
 </ComponentExample>
 
 ## Installation
@@ -25,38 +25,38 @@ npm install @radix-ui/react-menubar
 <ComponentSource src="src/components/ui/Menubar.tsx" />
 
 <Alert variant="outline">
-  This is the `<Menubar />` primitive. You can place it in a file at
-  `components/ui/Menubar.tsx`.
+    This is the `<Menubar />` primitive. You can place it in a file at
+    `components/ui/Menubar.tsx`.
 </Alert>
 
 ## Usage
 
 ```tsx
 import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
-} from "@/components/ui/Menubar"
+    Menubar,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarTrigger,
+} from "@/components/ui/Menubar";
 ```
 
 ```tsx
 <Menubar>
-  <MenubarMenu>
-    <MenubarTrigger>File</MenubarTrigger>
-    <MenubarContent>
-      <MenubarItem>
-        New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-      </MenubarItem>
-      <MenubarItem>New Window</MenubarItem>
-      <MenubarSeparator />
-      <MenubarItem>Share</MenubarItem>
-      <MenubarSeparator />
-      <MenubarItem>Print</MenubarItem>
-    </MenubarContent>
-  </MenubarMenu>
+    <MenubarMenu>
+        <MenubarTrigger>File</MenubarTrigger>
+        <MenubarContent>
+            <MenubarItem>
+                New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+            </MenubarItem>
+            <MenubarItem>New Window</MenubarItem>
+            <MenubarSeparator />
+            <MenubarItem>Share</MenubarItem>
+            <MenubarSeparator />
+            <MenubarItem>Print</MenubarItem>
+        </MenubarContent>
+    </MenubarMenu>
 </Menubar>
 ```

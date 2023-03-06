@@ -5,12 +5,12 @@ featured: true
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/dialog
-  api: https://www.radix-ui.com/docs/primitives/components/dialog#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/dialog
+    api: https://www.radix-ui.com/docs/primitives/components/dialog#api-reference
 ---
 
 <ComponentExample src="src/components/examples/DialogDemo.tsx">
-  <DialogDemo />
+    <DialogDemo />
 </ComponentExample>
 
 ## Installation
@@ -35,27 +35,27 @@ This is the `<Dialog />` primitive. You can place it in a file at `components/ui
 
 ```tsx
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/Dialog"
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/Dialog";
 ```
 
 ```tsx
 <Dialog>
-  <DialogTrigger>Open</DialogTrigger>
-  <DialogContent>
-    <DialogHeader>
-      <DialogTitle>Are you sure absolutely sure?</DialogTitle>
-      <DialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </DialogDescription>
-    </DialogHeader>
-  </DialogContent>
+    <DialogTrigger>Open</DialogTrigger>
+    <DialogContent>
+        <DialogHeader>
+            <DialogTitle>Are you sure absolutely sure?</DialogTitle>
+            <DialogDescription>
+                This action cannot be undone. This will permanently delete your
+                account and remove your data from our servers.
+            </DialogDescription>
+        </DialogHeader>
+    </DialogContent>
 </Dialog>
 ```
 
@@ -66,29 +66,29 @@ Dropdown Menu component in the Dialog component. For more information, refer to 
 
 ```tsx
 <Dialog>
-  <ContextMenu>
-    <ContextMenuTrigger>Right click</ContextMenuTrigger>
-    <ContextMenuContent>
-      <ContextMenuItem>Open</ContextMenuItem>
-      <ContextMenuItem>Download</ContextMenuItem>
-      <DialogTrigger asChild>
-        <ContextMenuItem>
-          <span>Delete</span>
-        </ContextMenuItem>
-      </DialogTrigger>
-    </ContextMenuContent>
-  </ContextMenu>
-  <DialogContent>
-    <DialogHeader>
-      <DialogTitle>Are you sure absolutely sure?</DialogTitle>
-      <DialogDescription>
-        This action cannot be undone. Are you sure you want to permanently
-        delete this file from our servers?
-      </DialogDescription>
-    </DialogHeader>
-    <DialogFooter>
-      <Button type="submit">Confirm</Button>
-    </DialogFooter>
-  </DialogContent>
+    <ContextMenu>
+        <ContextMenuTrigger>Right click</ContextMenuTrigger>
+        <ContextMenuContent>
+            <ContextMenuItem>Open</ContextMenuItem>
+            <ContextMenuItem>Download</ContextMenuItem>
+            <DialogTrigger asChild>
+                <ContextMenuItem>
+                    <span>Delete</span>
+                </ContextMenuItem>
+            </DialogTrigger>
+        </ContextMenuContent>
+    </ContextMenu>
+    <DialogContent>
+        <DialogHeader>
+            <DialogTitle>Are you sure absolutely sure?</DialogTitle>
+            <DialogDescription>
+                This action cannot be undone. Are you sure you want to
+                permanently delete this file from our servers?
+            </DialogDescription>
+        </DialogHeader>
+        <DialogFooter>
+            <Button type="submit">Confirm</Button>
+        </DialogFooter>
+    </DialogContent>
 </Dialog>
 ```

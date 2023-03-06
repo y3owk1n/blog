@@ -4,12 +4,12 @@ description: Displays content within a desired ratio.
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/aspect-ratio
-  api: https://www.radix-ui.com/docs/primitives/components/aspect-ratio#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/aspect-ratio
+    api: https://www.radix-ui.com/docs/primitives/components/aspect-ratio#api-reference
 ---
 
 <ComponentExample src="src/components/examples/AspectRatioDemo.tsx">
-  <AspectRatioDemo />
+    <AspectRatioDemo />
 </ComponentExample>
 
 ## Installation
@@ -33,20 +33,20 @@ This is the `<AspectRatio />` primitive. You can place it in a file at `componen
 ## Usage
 
 ```tsx
-import Image from "next/image"
+import Image from "next/image";
 
-import { AspectRatio } from "@/components/ui/AspectRatio"
+import { AspectRatio } from "@/components/ui/AspectRatio";
 ```
 
 ```tsx
 <div className="w-[450px]">
-  <AspectRatio ratio={16 / 9}>
-    <Image
-      src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
-      alt="Photo by Alvaro Pinot"
-      fill
-      className="rounded-md object-cover"
-    />
-  </AspectRatio>
+    <AspectRatio ratio={16 / 9}>
+        <Image
+            src="https://images.unsplash.com/photo-1576075796033-848c2a5f3696?w=800&dpr=2&q=80"
+            alt="Photo by Alvaro Pinot"
+            fill
+            className="rounded-md object-cover"
+        />
+    </AspectRatio>
 </div>
 ```

@@ -13,6 +13,4 @@ public
 
 .yarn/*
 
-*.mdx
-
 .contentlayer/*

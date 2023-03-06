@@ -4,12 +4,12 @@ description: A popup that displays information related to an element when the el
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/tooltip
-  api: https://www.radix-ui.com/docs/primitives/components/tooltip#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/tooltip
+    api: https://www.radix-ui.com/docs/primitives/components/tooltip#api-reference
 ---
 
 <ComponentExample src="src/components/examples/TooltipDemo.tsx">
-  <TooltipDemo />
+    <TooltipDemo />
 </ComponentExample>
 
 ## Installation
@@ -34,20 +34,20 @@ This is the `<Tooltip />` primitive. You can place it in a file at `components/u
 
 ```tsx
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/Tooltip"
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/Tooltip";
 ```
 
 ```tsx
 <TooltipProvider>
-  <Tooltip>
-    <TooltipTrigger>Hover</TooltipTrigger>
-    <TooltipContent>
-      <p>Add to library</p>
-    </TooltipContent>
-  </Tooltip>
+    <Tooltip>
+        <TooltipTrigger>Hover</TooltipTrigger>
+        <TooltipContent>
+            <p>Add to library</p>
+        </TooltipContent>
+    </Tooltip>
 </TooltipProvider>
 ```

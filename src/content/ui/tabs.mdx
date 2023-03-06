@@ -4,12 +4,12 @@ description: A set of layered sections of content—known as tab panels—that a
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/tabs
-  api: https://www.radix-ui.com/docs/primitives/components/tabs#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/tabs
+    api: https://www.radix-ui.com/docs/primitives/components/tabs#api-reference
 ---
 
 <ComponentExample src="src/components/examples/TabsDemo.tsx">
-  <TabsDemo />
+    <TabsDemo />
 </ComponentExample>
 
 ## Installation
@@ -33,24 +33,26 @@ This is the `<Tabs />` primitive. You can place it in a file at `components/ui/T
 ## Usage
 
 ```tsx
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
 ```
 
 ```tsx
-<Tabs defaultValue="account" className="w-[400px]">
-  <TabsList>
-    <TabsTrigger value="account">Account</TabsTrigger>
-    <TabsTrigger value="password">Password</TabsTrigger>
-  </TabsList>
-  <TabsContent value="account">
-    <p className="text-sm text-slate-500 dark:text-slate-400">
-      Make changes to your account here. Click save when you&apos;re done.
-    </p>
-  </TabsContent>
-  <TabsContent value="password">
-    <p className="text-sm text-slate-500 dark:text-slate-400">
-      Change your password here. After saving, you&apos;ll be logged out.
-    </p>
-  </TabsContent>
+<Tabs
+    defaultValue="account"
+    className="w-[400px]">
+    <TabsList>
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password">Password</TabsTrigger>
+    </TabsList>
+    <TabsContent value="account">
+        <p className="text-sm text-slate-500 dark:text-slate-400">
+            Make changes to your account here. Click save when you&apos;re done.
+        </p>
+    </TabsContent>
+    <TabsContent value="password">
+        <p className="text-sm text-slate-500 dark:text-slate-400">
+            Change your password here. After saving, you&apos;ll be logged out.
+        </p>
+    </TabsContent>
 </Tabs>
 ```

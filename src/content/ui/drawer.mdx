@@ -4,12 +4,12 @@ description: Extension of Dialog component that displays content that complement
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/dialog
-  api: https://www.radix-ui.com/docs/primitives/components/dialog#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/dialog
+    api: https://www.radix-ui.com/docs/primitives/components/dialog#api-reference
 ---
 
 <ComponentExample src="src/components/examples/DrawerDemo.tsx">
-  <DrawerDemo />
+    <DrawerDemo />
 </ComponentExample>
 
 ## Installation
@@ -34,27 +34,27 @@ This is the `<Drawer />` primitive. You can place it in a file at `components/ui
 
 ```tsx
 import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/Drawer"
+    Drawer,
+    DrawerContent,
+    DrawerDescription,
+    DrawerHeader,
+    DrawerTitle,
+    DrawerTrigger,
+} from "@/components/ui/Drawer";
 ```
 
 ```tsx
 <Drawer>
-  <DrawerTrigger>Open</DrawerTrigger>
-  <DrawerContent>
-    <DrawerHeader>
-      <DrawerTitle>Are you sure absolutely sure?</DrawerTitle>
-      <DrawerDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </DrawerDescription>
-    </DrawerHeader>
-  </DrawerContent>
+    <DrawerTrigger>Open</DrawerTrigger>
+    <DrawerContent>
+        <DrawerHeader>
+            <DrawerTitle>Are you sure absolutely sure?</DrawerTitle>
+            <DrawerDescription>
+                This action cannot be undone. This will permanently delete your
+                account and remove your data from our servers.
+            </DrawerDescription>
+        </DrawerHeader>
+    </DrawerContent>
 </Drawer>
 ```
 
@@ -65,7 +65,7 @@ import {
 Pass the `position` property to `<DrawerContent />` to indicate the edge of the screen where the component will appear. The values can be `top`, `right`, `bottom` or `left`.
 
 <ComponentExample src="src/components/examples/DrawerPositionDemo.tsx">
-  <DrawerPositionDemo />
+    <DrawerPositionDemo />
 </ComponentExample>
 
 ---
@@ -75,5 +75,5 @@ Pass the `position` property to `<DrawerContent />` to indicate the edge of the 
 Pass the `size` property to `<DrawerContent />` if you need to adjust the size of the sheet. The values can be `sm`, `default`, `lg`, `xl`, `full` or `content`.
 
 <ComponentExample src="src/components/examples/DrawerSizeDemo.tsx">
-  <DrawerSizeDemo />
+    <DrawerSizeDemo />
 </ComponentExample>

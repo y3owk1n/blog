@@ -3,12 +3,12 @@ title: Context Menu
 description: Displays a menu to the user — such as a set of actions or functions — triggered by a button.
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/context-menu
-  api: https://www.radix-ui.com/docs/primitives/components/context-menu#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/context-menu
+    api: https://www.radix-ui.com/docs/primitives/components/context-menu#api-reference
 ---
 
 <ComponentExample src="src/components/examples/ContextMenuDemo.tsx">
-  <ContextMenuDemo />
+    <ContextMenuDemo />
 </ComponentExample>
 
 ## Installation
@@ -24,29 +24,29 @@ npm install @radix-ui/react-context-menu
 <ComponentSource src="src/components/ui/ContextMenu.tsx" />
 
 <Alert variant="outline">
-  This is the `<ContextMenu />` primitive. You can place it in a file at
-  `components/ui/ContextMenu.tsx`.
+    This is the `<ContextMenu />` primitive. You can place it in a file at
+    `components/ui/ContextMenu.tsx`.
 </Alert>
 
 ## Usage
 
 ```tsx
 import {
-  ContextMenu,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuTrigger,
-} from "@/components/ui/ContextMenu"
+    ContextMenu,
+    ContextMenuContent,
+    ContextMenuItem,
+    ContextMenuTrigger,
+} from "@/components/ui/ContextMenu";
 ```
 
 ```tsx
 <ContextMenu>
-  <ContextMenuTrigger>Right click</ContextMenuTrigger>
-  <ContextMenuContent>
-    <ContextMenuItem>Profile</ContextMenuItem>
-    <ContextMenuItem>Billing</ContextMenuItem>
-    <ContextMenuItem>Team</ContextMenuItem>
-    <ContextMenuItem>Subscription</ContextMenuItem>
-  </ContextMenuContent>
+    <ContextMenuTrigger>Right click</ContextMenuTrigger>
+    <ContextMenuContent>
+        <ContextMenuItem>Profile</ContextMenuItem>
+        <ContextMenuItem>Billing</ContextMenuItem>
+        <ContextMenuItem>Team</ContextMenuItem>
+        <ContextMenuItem>Subscription</ContextMenuItem>
+    </ContextMenuContent>
 </ContextMenu>
 ```

@@ -5,12 +5,12 @@ featured: true
 component: true
 tag: Components
 radix:
-  link: https://www.radix-ui.com/docs/primitives/components/dropdown-menu
-  api: https://www.radix-ui.com/docs/primitives/components/dropdown-menu#api-reference
+    link: https://www.radix-ui.com/docs/primitives/components/dropdown-menu
+    api: https://www.radix-ui.com/docs/primitives/components/dropdown-menu#api-reference
 ---
 
 <ComponentExample src="src/components/examples/DropdownMenuDemo.tsx">
-  <DropdownMenuDemo />
+    <DropdownMenuDemo />
 </ComponentExample>
 
 ## Installation
@@ -26,34 +26,34 @@ npm install @radix-ui/react-dropdown-menu
 <ComponentSource src="src/components/ui/DropdownMenu.tsx" />
 
 <Alert variant="outline">
-  This is the `<DropdownMenu />` primitive. You can place it in a file at
-  `components/ui/DropdownMenu.tsx`.
+    This is the `<DropdownMenu />` primitive. You can place it in a file at
+    `components/ui/DropdownMenu.tsx`.
 </Alert>
 
 ## Usage
 
 ```tsx
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/DropdownMenu"
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/DropdownMenu";
 ```
 
 ```tsx
 <DropdownMenu>
-  <DropdownMenuTrigger>Open</DropdownMenuTrigger>
-  <DropdownMenuContent>
-    <DropdownMenuLabel>My Account</DropdownMenuLabel>
-    <DropdownMenuSeparator />
-    <DropdownMenuItem>Profile</DropdownMenuItem>
-    <DropdownMenuItem>Billing</DropdownMenuItem>
-    <DropdownMenuItem>Team</DropdownMenuItem>
-    <DropdownMenuItem>Subscription</DropdownMenuItem>
-  </DropdownMenuContent>
+    <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+    <DropdownMenuContent>
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>Profile</DropdownMenuItem>
+        <DropdownMenuItem>Billing</DropdownMenuItem>
+        <DropdownMenuItem>Team</DropdownMenuItem>
+        <DropdownMenuItem>Subscription</DropdownMenuItem>
+    </DropdownMenuContent>
 </DropdownMenu>
 ```
 
@@ -62,11 +62,11 @@ import {
 ### Checkboxes
 
 <ComponentExample src="src/components/examples/DropdownMenuCheckboxDemo.tsx">
-  <DropdownMenuCheckboxDemo />
+    <DropdownMenuCheckboxDemo />
 </ComponentExample>
 
 ### Radio Group
 
 <ComponentExample src="src/components/examples/DropdownMenuRadioGroupDemo.tsx">
-  <DropdownMenuRadioGroupDemo />
+    <DropdownMenuRadioGroupDemo />
 </ComponentExample>
