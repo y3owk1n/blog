@@ -14,7 +14,7 @@ import { CopyButton, CopyNpmCommandButton } from "./CopyButton";
 import { examples } from "./examples";
 import { Accordion, AccordionItem, AccordionTrigger } from "./ui/Accordion";
 import { Alert } from "./ui/Alert";
-import CImage from "./ui/Image";
+import { ImageWithAspectRatio } from "./ui/ImageWithAspectRatio";
 import { Separator } from "./ui/Separator";
 import { Table, Td, Th, Tr } from "./ui/Table";
 import { Blockquote } from "./ui/typography/Blockquote";
@@ -122,7 +122,7 @@ const components = {
         src,
         ...props
     }: React.ImgHTMLAttributes<HTMLImageElement>) => (
-        <CImage
+        <ImageWithAspectRatio
             aspectRatioProps={{
                 ratio: 16 / 9,
             }}
@@ -197,7 +197,7 @@ const components = {
     },
 
     code: (props: React.HTMLAttributes<HTMLElement>) => <Code {...props} />,
-    CImage,
+    ImageWithAspectRatio,
     Alert,
     Card,
     ComponentExample,

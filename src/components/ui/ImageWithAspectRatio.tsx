@@ -10,16 +10,16 @@ import { AspectRatio } from "@/components/ui/AspectRatio";
 
 type Props = {
     imageProps: ImageProps;
-    aspectRatioProps: AspectRatioProps;
+    aspectRatioProps?: AspectRatioProps;
 };
 
-const Image = ({
+const ImageWithAspectRatio = ({
     imageProps: { className: imageClassName, ...imageProps },
-    aspectRatioProps: { ratio, ...aspectRatioProps },
+    aspectRatioProps,
 }: Props) => {
     return (
         <AspectRatio
-            ratio={ratio}
+            ratio={aspectRatioProps?.ratio}
             {...aspectRatioProps}>
             <NextImage
                 fill
@@ -35,4 +35,4 @@ const Image = ({
     );
 };
 
-export default Image;
+export { ImageWithAspectRatio };
