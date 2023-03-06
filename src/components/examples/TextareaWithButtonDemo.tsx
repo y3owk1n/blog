@@ -2,8 +2,8 @@
 
 import React from "react";
 
-import { Textarea } from "@/components/ui/Textarea";
 import { Button } from "@/components/ui/Button";
+import { Textarea } from "@/components/ui/Textarea";
 
 const TextareaWithButtonDemo = () => {
     return (

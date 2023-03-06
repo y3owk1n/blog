@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { classNames } from "@/lib/classNames";
-import CImage from "@/components/ui/Image";
+import { ImageWithAspectRatio } from "@/components/ui/ImageWithAspectRatio";
 
 type Props = {
     title: string;
@@ -12,7 +12,7 @@ type Props = {
 
 const CoverImage = ({ title, src, slug, isEager = false }: Props) => {
     const image = (
-        <CImage
+        <ImageWithAspectRatio
             aspectRatioProps={{
                 ratio: 2 / 1,
             }}

@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
-import CImage from "@/components/ui/Image";
+
+import { ImageWithAspectRatio } from "@/components/ui/ImageWithAspectRatio";
 
 const AspectRatioDemo = () => {
     return (
         <div className="w-[450px]">
-            <CImage
+            <ImageWithAspectRatio
                 aspectRatioProps={{
                     ratio: 16 / 9,
                 }}

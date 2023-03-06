@@ -26,7 +26,7 @@ npm install @radix-ui/react-toast
 
 <Alert variant="outline">
   This is the `<Toast />` primitive. You can place it in a file at
-  `components/ui/toast.tsx`.
+  `components/ui/Toast.tsx`.
 </Alert>
 
 3. Copy and paste the `<Toaster />` component into your project.
@@ -35,13 +35,13 @@ npm install @radix-ui/react-toast
 
 <Alert variant="outline">
   This is the `<Toaster />` primitive. You can place it in a file at
-  `components/ui/toaster.tsx`.
+  `components/ui/Toaster.tsx`.
 </Alert>
 
 4. Add the `<Toaster />` component to your app.
 
 ```tsx title="_app.tsx" {1,7}
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/Toaster"
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -58,13 +58,13 @@ export default function MyApp({ Component, pageProps }) {
 <ComponentSource src="src/lib/hooks/useToast.ts" />
 
 <Alert variant="outline">
-  You can place the `use-toast` hook in a file at `hooks/ui/use-toast.tsx`.
+  You can place the `use-toast` hook in a file at `hooks/useToast.tsx`.
 </Alert>
 
 ## Usage
 
 ```tsx
-import { useToast } from "@/hooks/use-toast"
+import { useToast } from "@/hooks/useToast"
 ```
 
 ```tsx {2,8-11}
@@ -92,7 +92,7 @@ The `useToast` hook returns a `toast` function that you can use to display a toa
 
 <Alert variant="outline">
 
-To display multiple toasts at the same time, you can update the `TOAST_LIMIT` in `use-toast.tsx`.
+To display multiple toasts at the same time, you can update the `TOAST_LIMIT` in `useToast.tsx`.
 
 </Alert>
 
