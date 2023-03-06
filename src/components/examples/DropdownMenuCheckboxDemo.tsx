@@ -3,7 +3,7 @@
 import * as React from "react";
 import type { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
 
-import { Button } from "../ui/Button";
+import { Button } from "@/components/ui/Button";
 import {
     DropdownMenu,
     DropdownMenuCheckboxItem,
@@ -11,7 +11,7 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "../ui/DropdownMenu";
+} from "@/components/ui/DropdownMenu";
 
 type Checked = DropdownMenuCheckboxItemProps["checked"];
 

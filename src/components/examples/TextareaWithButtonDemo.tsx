@@ -3,7 +3,7 @@
 import React from "react";
 
 import { Textarea } from "@/components/ui/Textarea";
-import { Button } from "../ui/Button";
+import { Button } from "@/components/ui/Button";
 
 const TextareaWithButtonDemo = () => {
     return (

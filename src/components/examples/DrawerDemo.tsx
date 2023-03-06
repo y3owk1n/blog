@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "../ui/Button";
+import { Button } from "@/components/ui/Button";
 import {
     Drawer,
     DrawerContent,
@@ -9,9 +9,9 @@ import {
     DrawerHeader,
     DrawerTitle,
     DrawerTrigger,
-} from "../ui/Drawer";
-import { Input } from "../ui/Input";
-import { Label } from "../ui/Label";
+} from "@/components/ui/Drawer";
+import { Input } from "@/components/ui/Input";
+import { Label } from "@/components/ui/Label";
 
 function DrawerDemo() {
     return (

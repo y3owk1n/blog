@@ -1,5 +1,5 @@
-import { Checkbox } from "../ui/Checkbox";
-import { Label } from "../ui/Label";
+import { Checkbox } from "@/components/ui/Checkbox";
+import { Label } from "@/components/ui/Label";
 
 function LabelDemo() {
     return (

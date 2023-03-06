@@ -2,7 +2,7 @@
 
 import { useToast } from "@/lib/hooks/useToast";
 import { Button } from "@/components/ui/Button";
-import { ToastAction } from "../ui/Toast";
+import { ToastAction } from "@/components/ui/Toast";
 
 const ToastWithVariantDemo = () => {
     const { toast } = useToast();

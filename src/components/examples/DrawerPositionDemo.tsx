@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { Button } from "../ui/Button";
+import { Button } from "@/components/ui/Button";
 import {
     Drawer,
     DrawerContent,
@@ -11,10 +11,10 @@ import {
     DrawerHeader,
     DrawerTitle,
     DrawerTrigger,
-} from "../ui/Drawer";
-import { Input } from "../ui/Input";
-import { Label } from "../ui/Label";
-import { RadioGroup, RadioGroupItem } from "../ui/RadioGroup";
+} from "@/components/ui/Drawer";
+import { Input } from "@/components/ui/Input";
+import { Label } from "@/components/ui/Label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/RadioGroup";
 
 const DRAWER_POSITIONS = ["top", "right", "bottom", "left"] as const;
 

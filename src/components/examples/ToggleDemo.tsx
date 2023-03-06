@@ -2,7 +2,7 @@
 
 import { AiOutlineItalic } from "react-icons/ai";
 
-import { Toggle } from "../ui/Toggle";
+import { Toggle } from "@/components/ui/Toggle";
 
 function ToggleDemo() {
     return (
