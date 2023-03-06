@@ -1,10 +1,11 @@
 "use client";
 
+import React from "react";
+
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/Label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
-import React from "react";
 
 const TabsDemo = () => {
     return (

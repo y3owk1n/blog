@@ -1,7 +1,8 @@
 "use client";
 
-import { classNames } from "@/lib/classNames";
 import * as React from "react";
+
+import { classNames } from "@/lib/classNames";
 import { Button } from "./ui/Button";
 import {
     Collapsible,

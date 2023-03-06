@@ -1,9 +1,10 @@
 "use client";
 
 import * as React from "react";
-import * as MenubarPrimitive from "@radix-ui/react-menubar";
-import { classNames } from "@/lib/classNames";
 import { CheckIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+import * as MenubarPrimitive from "@radix-ui/react-menubar";
+
+import { classNames } from "@/lib/classNames";
 
 const MenubarMenu = MenubarPrimitive.Menu;
 

@@ -1,13 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { Drawer, DrawerContent, DrawerTrigger } from "./ui/Drawer";
-import { Button } from "./ui/Button";
-import { ScrollArea } from "./ui/ScrollArea";
-import { SidebarNav } from "./SidebarNav";
 import { useState } from "react";
-import { allPostsWithTitle, groupUisByTags } from "@/lib/contentlayerApi";
 import { Bars3Icon } from "@heroicons/react/20/solid";
+
+import { allPostsWithTitle, groupUisByTags } from "@/lib/contentlayerApi";
+import { SidebarNav } from "./SidebarNav";
+import { Button } from "./ui/Button";
+import { Drawer, DrawerContent, DrawerTrigger } from "./ui/Drawer";
+import { ScrollArea } from "./ui/ScrollArea";
 
 export function MobileNav() {
     const [open, setOpen] = useState(false);

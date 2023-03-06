@@ -1,6 +1,6 @@
+import { groupUisByTags } from "@/lib/contentlayerApi";
 import { SidebarNav } from "@/components/SidebarNav";
 import { ScrollArea } from "@/components/ui/ScrollArea";
-import { groupUisByTags } from "@/lib/contentlayerApi";
 
 interface UiLayoutProps {
     children: React.ReactNode;

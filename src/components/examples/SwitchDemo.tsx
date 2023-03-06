@@ -1,8 +1,9 @@
 "use client";
 
+import React from "react";
+
 import { Label } from "@/components/ui/Label";
 import { Switch } from "@/components/ui/Switch";
-import React from "react";
 
 const SwitchDemo = () => {
     return (

@@ -1,7 +1,8 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 import React from "react";
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 
 const AvatarDemo = () => {
     return (

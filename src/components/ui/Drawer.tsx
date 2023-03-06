@@ -1,11 +1,11 @@
 "use client";
 
 import * as React from "react";
-import * as DrawerPrimitive from "@radix-ui/react-dialog";
-import type { VariantProps } from "class-variance-authority";
-import { cva } from "class-variance-authority";
-import { classNames } from "@/lib/classNames";
 import { XMarkIcon } from "@heroicons/react/20/solid";
+import * as DrawerPrimitive from "@radix-ui/react-dialog";
+import { cva, type VariantProps } from "class-variance-authority";
+
+import { classNames } from "@/lib/classNames";
 
 const Drawer = DrawerPrimitive.Root;
 

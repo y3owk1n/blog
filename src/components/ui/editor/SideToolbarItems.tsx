@@ -1,6 +1,5 @@
 import type { Editable } from "@editablejs/editor";
-import type { Element, Range } from "@editablejs/models";
-import { Editor } from "@editablejs/models";
+import { Editor, type Element, type Range } from "@editablejs/models";
 import type { SideToolbarItem } from "@editablejs/plugin-toolbar/side";
 import {
     BlockquoteEditor,

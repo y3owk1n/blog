@@ -1,7 +1,8 @@
 "use client";
 
-import { Textarea } from "@/components/ui/Textarea";
 import React from "react";
+
+import { Textarea } from "@/components/ui/Textarea";
 
 const TextareaDisabledDemo = () => {
     return (

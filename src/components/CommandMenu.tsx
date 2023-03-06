@@ -2,9 +2,19 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
+import {
+    CircleStackIcon,
+    FolderIcon,
+    MoonIcon,
+    SunIcon,
+} from "@heroicons/react/20/solid";
 import type { DialogProps } from "@radix-ui/react-alert-dialog";
-import { Button } from "./ui/Button";
+import { useTheme } from "next-themes";
+import { TbDeviceLaptop, TbFileInfo } from "react-icons/tb";
+
 import { classNames } from "@/lib/classNames";
+import { allPostsAndSort, groupUisByTags } from "@/lib/contentlayerApi";
+import { Button } from "./ui/Button";
 import {
     CommandDialog,
     CommandEmpty,
@@ -14,15 +24,6 @@ import {
     CommandList,
     CommandSeparator,
 } from "./ui/Command";
-import {
-    CircleStackIcon,
-    FolderIcon,
-    MoonIcon,
-    SunIcon,
-} from "@heroicons/react/20/solid";
-import { TbDeviceLaptop, TbFileInfo } from "react-icons/tb";
-import { useTheme } from "next-themes";
-import { allPostsAndSort, groupUisByTags } from "@/lib/contentlayerApi";
 
 export function CommandMenu({ ...props }: DialogProps) {
     const router = useRouter();

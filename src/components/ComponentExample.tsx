@@ -1,7 +1,8 @@
 "use client";
 
-import { classNames } from "@/lib/classNames";
 import * as React from "react";
+
+import { classNames } from "@/lib/classNames";
 import { CopyButton, CopyWithClassNames } from "./CopyButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/Tabs";
 

@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+
 import {
     Select,
     SelectContent,
@@ -10,7 +12,6 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/Select";
-import React from "react";
 
 const SelectDemo = () => {
     return (

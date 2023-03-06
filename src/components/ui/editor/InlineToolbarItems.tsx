@@ -2,7 +2,6 @@ import { Editable } from "@editablejs/editor";
 import { Editor, Grid, Range, Transforms } from "@editablejs/models";
 import { TitleEditor } from "@editablejs/plugin-title";
 import type { ToolbarItem } from "@editablejs/plugin-toolbar";
-import type { AlignKeys, MarkFormat } from "@editablejs/plugins";
 import {
     AlignEditor,
     BackgroundColorEditor,
@@ -15,8 +14,11 @@ import {
     TableEditor,
     TaskListEditor,
     UnorderedListEditor,
+    type AlignKeys,
+    type MarkFormat,
 } from "@editablejs/plugins";
 import { Icon } from "@editablejs/ui";
+
 import {
     AlignDropdown,
     defaultBackgroundColor,

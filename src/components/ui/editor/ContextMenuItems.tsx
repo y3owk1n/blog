@@ -1,5 +1,4 @@
-import type { Editable } from "@editablejs/editor";
-import { Hotkey } from "@editablejs/editor";
+import { Hotkey, type Editable } from "@editablejs/editor";
 import { Editor, Grid, Range } from "@editablejs/models";
 import type { ContextMenuItem } from "@editablejs/plugins";
 import { Icon } from "@editablejs/ui";

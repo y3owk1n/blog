@@ -1,10 +1,10 @@
 "use client";
 
 import { CommandMenu } from "./CommandMenu";
+import DarkModeToggle from "./DarkModeToggle";
+import { Logo } from "./Logo";
 import { MainNav } from "./MainNav";
 import { MobileNav } from "./MobileNav";
-import { Logo } from "./Logo";
-import DarkModeToggle from "./DarkModeToggle";
 
 export function SiteHeader() {
     return (

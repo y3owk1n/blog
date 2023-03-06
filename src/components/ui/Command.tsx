@@ -1,11 +1,12 @@
 "use client";
 
 import * as React from "react";
+import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import type { DialogProps } from "@radix-ui/react-dialog";
 import { Command as CommandPrimitive } from "cmdk";
+
 import { classNames } from "@/lib/classNames";
 import { Dialog, DialogContent } from "./Dialog";
-import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 
 const Command = React.forwardRef<
     React.ElementRef<typeof CommandPrimitive>,

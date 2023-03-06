@@ -1,13 +1,14 @@
 "use client";
 
+import React from "react";
+import { PlusIcon } from "@heroicons/react/20/solid";
+
 import { Button } from "@/components/ui/Button";
 import {
     Tooltip,
     TooltipContent,
     TooltipTrigger,
 } from "@/components/ui/Tooltip";
-import { PlusIcon } from "@heroicons/react/20/solid";
-import React from "react";
 
 const TooltipDemo = () => {
     return (

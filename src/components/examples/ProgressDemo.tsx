@@ -1,7 +1,8 @@
 "use client";
 
-import { Progress } from "@/components/ui/Progress";
 import React from "react";
+
+import { Progress } from "@/components/ui/Progress";
 
 const ProgressDemo = () => {
     const [progress, setProgress] = React.useState(13);

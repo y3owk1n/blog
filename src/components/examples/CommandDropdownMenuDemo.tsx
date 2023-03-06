@@ -1,5 +1,14 @@
 "use client";
 
+import * as React from "react";
+import {
+    AdjustmentsVerticalIcon,
+    CalendarIcon,
+    TagIcon,
+    TrashIcon,
+    UserIcon,
+} from "@heroicons/react/20/solid";
+
 import { Button } from "@/components/ui/Button";
 import {
     Command,
@@ -22,14 +31,6 @@ import {
     DropdownMenuSubTrigger,
     DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu";
-import {
-    AdjustmentsVerticalIcon,
-    CalendarIcon,
-    TagIcon,
-    TrashIcon,
-    UserIcon,
-} from "@heroicons/react/20/solid";
-import * as React from "react";
 
 const labels = [
     "feature",

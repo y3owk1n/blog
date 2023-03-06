@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
 import { useToast } from "@/lib/hooks/useToast";
+import { Button } from "@/components/ui/Button";
 import { ToastAction } from "../ui/Toast";
 
 const ToastWithVariantDemo = () => {

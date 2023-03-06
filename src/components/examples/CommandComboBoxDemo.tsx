@@ -1,5 +1,9 @@
 "use client";
 
+import * as React from "react";
+import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+
+import { classNames } from "@/lib/classNames";
 import { Button } from "@/components/ui/Button";
 import {
     Command,
@@ -13,9 +17,6 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/Popover";
-import { classNames } from "@/lib/classNames";
-import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-import * as React from "react";
 
 const frameworks = [
     {

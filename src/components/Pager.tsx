@@ -1,12 +1,13 @@
 "use client";
 
-import type { NavItem, NavItemWithChildren } from "@/config/uiConfig";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
-import type { Ui } from "../../.contentlayer/generated";
-import { buttonVariants } from "./ui/Button";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+
+import type { NavItem, NavItemWithChildren } from "@/config/uiConfig";
 import { classNames } from "@/lib/classNames";
 import { groupUisByTags } from "@/lib/contentlayerApi";
+import type { Ui } from "../../.contentlayer/generated";
+import { buttonVariants } from "./ui/Button";
 
 interface PagerProps {
     content: Ui;

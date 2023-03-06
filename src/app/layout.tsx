@@ -1,9 +1,10 @@
+import { classNames } from "@/lib/classNames";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Toaster } from "@/components/ui/Toaster";
-import { classNames } from "@/lib/classNames";
 import "@/styles/globals.css";
 import { Arapey } from "next/font/google";
+
 import RootProviders from "./RootProviders.client";
 
 export const metadata = {

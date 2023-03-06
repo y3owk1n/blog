@@ -1,7 +1,8 @@
+import Link from "next/link";
+
+import { allPostsAndSort } from "@/lib/contentlayerApi";
 import CoverImage from "@/components/CoverImage";
 import Date from "@/components/Date";
-import Link from "next/link";
-import { allPostsAndSort } from "@/lib/contentlayerApi";
 import { H3 } from "@/components/ui/typography/H3";
 import { Paragraph } from "@/components/ui/typography/Paragraph";
 

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
+
 import { classNames } from "@/lib/classNames";
 
 const ScrollArea = React.forwardRef<

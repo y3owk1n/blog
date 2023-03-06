@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+
 import {
     Menubar,
     MenubarCheckboxItem,
@@ -15,7 +17,6 @@ import {
     MenubarSubTrigger,
     MenubarTrigger,
 } from "@/components/ui/Menubar";
-import React from "react";
 
 const MenubarDemo = () => {
     return (

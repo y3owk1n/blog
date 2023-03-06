@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
+
 import { classNames } from "@/lib/classNames";
 
 const Separator = React.forwardRef<

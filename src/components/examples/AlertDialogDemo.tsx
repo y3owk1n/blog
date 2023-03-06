@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+
 import {
     AlertDialog,
     AlertDialogAction,
@@ -12,7 +14,6 @@ import {
     AlertDialogTrigger,
 } from "@/components/ui/AlertDialog";
 import { Button } from "@/components/ui/Button";
-import React from "react";
 
 const AlertDialogDemo = () => {
     return (

@@ -2,6 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
+
+import { classNames } from "@/lib/classNames";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -11,7 +13,6 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "../ui/NavigationMenu";
-import { classNames } from "@/lib/classNames";
 
 const components: { title: string; href: string; description: string }[] = [
     {

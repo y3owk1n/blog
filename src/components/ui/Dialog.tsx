@@ -1,9 +1,10 @@
 "use client";
 
 import * as React from "react";
-import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { classNames } from "@/lib/classNames";
 import { XMarkIcon } from "@heroicons/react/20/solid";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+
+import { classNames } from "@/lib/classNames";
 
 const Dialog = DialogPrimitive.Root;
 

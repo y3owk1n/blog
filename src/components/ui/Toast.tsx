@@ -1,9 +1,9 @@
 import * as React from "react";
-import * as ToastPrimitives from "@radix-ui/react-toast";
-import type { VariantProps } from "class-variance-authority";
-import { cva } from "class-variance-authority";
-import { classNames } from "@/lib/classNames";
 import { XMarkIcon } from "@heroicons/react/20/solid";
+import * as ToastPrimitives from "@radix-ui/react-toast";
+import { cva, type VariantProps } from "class-variance-authority";
+
+import { classNames } from "@/lib/classNames";
 
 const ToastProvider = ToastPrimitives.Provider;
 

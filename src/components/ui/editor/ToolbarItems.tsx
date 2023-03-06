@@ -1,9 +1,8 @@
-import type { Editable } from "@editablejs/editor";
-import { useEditable } from "@editablejs/editor";
+import { useCallback, type FC } from "react";
+import { useEditable, type Editable } from "@editablejs/editor";
 import { Grid } from "@editablejs/models";
 import { HistoryEditor } from "@editablejs/plugin-history";
 import type { ToolbarItem } from "@editablejs/plugin-toolbar";
-import type { AlignKeys, HeadingType, MarkFormat } from "@editablejs/plugins";
 import {
     AlignEditor,
     BackgroundColorEditor,
@@ -21,11 +20,11 @@ import {
     TableEditor,
     TaskListEditor,
     UnorderedListEditor,
+    type AlignKeys,
+    type HeadingType,
+    type MarkFormat,
 } from "@editablejs/plugins";
-import type { IconMap } from "@editablejs/ui";
-import { Icon } from "@editablejs/ui";
-import type { FC } from "react";
-import { useCallback } from "react";
+import { Icon, type IconMap } from "@editablejs/ui";
 
 export const AlignDropdown: FC = () => {
     const editor = useEditable();

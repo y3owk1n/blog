@@ -1,5 +1,8 @@
 "use client";
 
+import React from "react";
+import { AdjustmentsHorizontalIcon } from "@heroicons/react/20/solid";
+
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/Label";
@@ -8,8 +11,6 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/Popover";
-import { AdjustmentsHorizontalIcon } from "@heroicons/react/20/solid";
-import React from "react";
 
 const PopoverDemo = () => {
     return (

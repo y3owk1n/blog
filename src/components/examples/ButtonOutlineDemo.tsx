@@ -1,7 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
 import React from "react";
+
+import { Button } from "@/components/ui/Button";
 
 const ButtonOutlineDemo = () => {
     return <Button variant="outline">Outline</Button>;

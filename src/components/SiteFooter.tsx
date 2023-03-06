@@ -1,8 +1,9 @@
 "use client";
 
-import { githubProfile } from "@/lib/constants";
 import Link from "next/link";
 import { AiFillGithub } from "react-icons/ai";
+
+import { githubProfile } from "@/lib/constants";
 import { Logo } from "./Logo";
 import { buttonVariants } from "./ui/Button";
 

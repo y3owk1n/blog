@@ -1,9 +1,10 @@
 "use client";
 
-import type { SidebarNavItem } from "@/config/uiConfig";
-import { classNames } from "@/lib/classNames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+import type { SidebarNavItem } from "@/config/uiConfig";
+import { classNames } from "@/lib/classNames";
 
 export interface SidebarNavProps {
     items: SidebarNavItem[];

@@ -1,8 +1,9 @@
-import { checkMarkdownSyntax } from "@/lib/checkMarkdownSyntax";
+import React, { useMemo } from "react";
 import { css } from "@codemirror/lang-css";
 import { html } from "@codemirror/lang-html";
 import { javascript } from "@codemirror/lang-javascript";
 import { HTMLDeserializer } from "@editablejs/deserializer/html";
+import { MarkdownDeserializer } from "@editablejs/deserializer/markdown";
 import {
     ContentEditable,
     EditableProvider,
@@ -11,7 +12,7 @@ import {
     useIsomorphicLayoutEffect,
     withEditable,
 } from "@editablejs/editor";
-import { createEditor, Editor, Range, Transforms } from "@editablejs/models";
+import { Editor, Range, Transforms, createEditor } from "@editablejs/models";
 import { withHistory } from "@editablejs/plugin-history";
 import { TitleEditor, withTitle } from "@editablejs/plugin-title";
 import { withTitleHTMLDeserializerTransform } from "@editablejs/plugin-title/deserializer/html";
@@ -54,12 +55,10 @@ import {
 } from "@editablejs/plugins/serializer/markdown";
 import { withTextSerializerTransform } from "@editablejs/plugins/serializer/text";
 import { HTMLSerializer } from "@editablejs/serializer/html";
-import React, { useMemo } from "react";
 
-import { MarkdownDeserializer } from "@editablejs/deserializer/markdown";
-
-import { createContextMenuItems } from "@/components/ui/editor/ContextMenuItems";
+import { checkMarkdownSyntax } from "@/lib/checkMarkdownSyntax";
 import { createInlineToolbarItems } from "@/components/ui//editor/InlineToolbarItems";
+import { createContextMenuItems } from "@/components/ui/editor/ContextMenuItems";
 import { createSideToolbarItems } from "@/components/ui/editor/SideToolbarItems";
 import { createSlashToolbarItems } from "@/components/ui/editor/SlashToolbarItems";
 import {

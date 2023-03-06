@@ -1,8 +1,9 @@
 "use client";
 
+import React from "react";
+
 import { Checkbox } from "@/components/ui/Checkbox";
 import { Label } from "@/components/ui/Label";
-import React from "react";
 
 const CheckboxDisabledDemo = () => {
     return (

@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import type { VariantProps } from "class-variance-authority";
-import { cva } from "class-variance-authority";
+import { cva, type VariantProps } from "class-variance-authority";
+
 import { classNames } from "@/lib/classNames";
 
 const buttonVariants = cva(

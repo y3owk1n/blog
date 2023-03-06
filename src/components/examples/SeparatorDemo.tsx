@@ -1,7 +1,8 @@
 "use client";
 
-import { Separator } from "@/components/ui/Separator";
 import React from "react";
+
+import { Separator } from "@/components/ui/Separator";
 
 const SeparatorDemo = () => {
     return (

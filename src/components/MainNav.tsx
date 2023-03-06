@@ -2,6 +2,13 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { allUis } from "@/contentlayer/generated";
+
+import { classNames } from "@/lib/classNames";
+import { siteDescription, siteName } from "@/lib/constants";
+import { firstThreePosts } from "@/lib/contentlayerApi";
+import { Logo } from "./Logo";
+import { buttonVariants } from "./ui/Button";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -10,12 +17,6 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
 } from "./ui/NavigationMenu";
-import { siteDescription, siteName } from "@/lib/constants";
-import { classNames } from "@/lib/classNames";
-import { buttonVariants } from "./ui/Button";
-import { allUis } from "@/contentlayer/generated";
-import { firstThreePosts } from "@/lib/contentlayerApi";
-import { Logo } from "./Logo";
 
 export function MainNav() {
     return (

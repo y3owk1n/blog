@@ -1,5 +1,7 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
+
 import {
     CommandDialog,
     CommandEmpty,
@@ -9,7 +11,6 @@ import {
     CommandList,
 } from "@/components/ui/Command";
 import { Paragraph } from "@/components/ui/typography/Paragraph";
-import React, { useEffect, useState } from "react";
 
 const CommandDialogDemo = () => {
     const [open, setOpen] = useState(false);

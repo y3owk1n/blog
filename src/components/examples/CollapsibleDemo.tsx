@@ -1,13 +1,14 @@
 "use client";
 
+import React from "react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+
 import { Button } from "@/components/ui/Button";
 import {
     Collapsible,
     CollapsibleContent,
     CollapsibleTrigger,
 } from "@/components/ui/Collapsible";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import React from "react";
 
 const CollapsibleDemo = () => {
     const [isOpen, setIsOpen] = React.useState(false);

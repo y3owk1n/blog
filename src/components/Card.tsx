@@ -1,5 +1,6 @@
-import { classNames } from "@/lib/classNames";
 import Link from "next/link";
+
+import { classNames } from "@/lib/classNames";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
     href?: string;

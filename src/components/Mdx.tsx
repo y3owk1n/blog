@@ -2,18 +2,20 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { useMDXComponent } from "next-contentlayer/hooks";
-import type { NpmCommands } from "@/types/unist-builder";
-import { Accordion, AccordionItem, AccordionTrigger } from "./ui/Accordion";
 import { AccordionContent } from "@radix-ui/react-accordion";
+import { useMDXComponent } from "next-contentlayer/hooks";
+
+import type { NpmCommands } from "@/types/unist-builder";
 import { classNames } from "@/lib/classNames";
 import { Callout } from "./Callout";
-import { CopyButton, CopyNpmCommandButton } from "./CopyButton";
 import { Card } from "./Card";
+import { CodeBlockWrapper } from "./CodeBlockWrapper";
 import { ComponentExample } from "./ComponentExample";
 import { ComponentSource } from "./ComponentSource";
-import { CodeBlockWrapper } from "./CodeBlockWrapper";
+import { CopyButton, CopyNpmCommandButton } from "./CopyButton";
 import { examples } from "./examples";
+import { Accordion, AccordionItem, AccordionTrigger } from "./ui/Accordion";
+import { Blockquote } from "./ui/typography/Blockquote";
 import { Code } from "./ui/typography/Code";
 import { H1 } from "./ui/typography/H1";
 import { H2 } from "./ui/typography/H2";
@@ -22,9 +24,8 @@ import { H4 } from "./ui/typography/H4";
 import { H5 } from "./ui/typography/H5";
 import { H6 } from "./ui/typography/H6";
 import { LinkTag } from "./ui/typography/LinkTag";
-import { Paragraph } from "./ui/typography/Paragraph";
 import { List } from "./ui/typography/List";
-import { Blockquote } from "./ui/typography/Blockquote";
+import { Paragraph } from "./ui/typography/Paragraph";
 
 const components = {
     Accordion,

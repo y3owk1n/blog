@@ -1,8 +1,9 @@
-import CoverImage from "@/components/CoverImage";
-import { H1 } from "@/components/ui/typography/H1";
-import { allPosts } from "@/contentlayer/generated";
 import { notFound } from "next/navigation";
+import { allPosts } from "@/contentlayer/generated";
+
+import CoverImage from "@/components/CoverImage";
 import { Mdx } from "@/components/Mdx";
+import { H1 } from "@/components/ui/typography/H1";
 
 interface PageProps {
     params: {

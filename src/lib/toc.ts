@@ -1,10 +1,11 @@
-import type { UnistNode } from "@/types/unist-builder";
-import { toc } from "mdast-util-toc";
 import type { BlockContent, DefinitionContent } from "mdast";
+import { toc } from "mdast-util-toc";
 import type { ListItem } from "mdast-util-toc/lib/contents";
 import type { Node } from "mdast-util-toc/lib/search";
 import { remark } from "remark";
 import { visit } from "unist-util-visit";
+
+import type { UnistNode } from "@/types/unist-builder";
 
 const textTypes = ["text", "emphasis", "strong", "inlineCode"];
 

@@ -1,5 +1,16 @@
 "use client";
 
+import * as React from "react";
+import { useState } from "react";
+import {
+    CheckIcon,
+    FolderIcon,
+    FunnelIcon,
+    PlusCircleIcon,
+    XMarkIcon,
+} from "@heroicons/react/20/solid";
+
+import { classNames } from "@/lib/classNames";
 import { Button } from "@/components/ui/Button";
 import {
     Command,
@@ -14,16 +25,6 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/Popover";
-import { classNames } from "@/lib/classNames";
-import {
-    CheckIcon,
-    FolderIcon,
-    FunnelIcon,
-    PlusCircleIcon,
-    XMarkIcon,
-} from "@heroicons/react/20/solid";
-import * as React from "react";
-import { useState } from "react";
 
 type Status = {
     value: string;

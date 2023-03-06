@@ -1,5 +1,6 @@
+import { allPosts, allUis } from "@/contentlayer/generated";
+
 import { groupBy } from "./groupBy";
-import { allUis, allPosts } from "@/contentlayer/generated";
 
 export const groupUisByTags = groupBy(allUis, (ui) => ui.tag).map((ui) => ({
     title: ui.title,

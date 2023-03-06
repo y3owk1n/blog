@@ -1,8 +1,9 @@
 "use client";
 
-import { AspectRatio } from "@/components/ui/AspectRatio";
 import React from "react";
 import Image from "next/image";
+
+import { AspectRatio } from "@/components/ui/AspectRatio";
 
 const AspectRatioDemo = () => {
     return (

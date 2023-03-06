@@ -1,8 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
-import InboxIcon from "@heroicons/react/20/solid/InboxIcon";
 import React from "react";
+import InboxIcon from "@heroicons/react/20/solid/InboxIcon";
+
+import { Button } from "@/components/ui/Button";
 
 const ButtonIconDemo = () => {
     return (

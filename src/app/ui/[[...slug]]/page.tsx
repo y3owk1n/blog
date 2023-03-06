@@ -1,13 +1,14 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { allUis } from "@/contentlayer/generated";
-import { getTableOfContents } from "@/lib/toc";
-import { PageHeader } from "@/components/PageHeader";
-import { Mdx } from "@/components/Mdx";
-import { Separator } from "@/components/ui/Separator";
-import { TableOfContents } from "@/components/TableOfContents";
-import { Pager } from "@/components/Pager";
-import Link from "next/link";
 import { TbBrandRadixUi } from "react-icons/tb";
+
+import { getTableOfContents } from "@/lib/toc";
+import { Mdx } from "@/components/Mdx";
+import { PageHeader } from "@/components/PageHeader";
+import { Pager } from "@/components/Pager";
+import { TableOfContents } from "@/components/TableOfContents";
+import { Separator } from "@/components/ui/Separator";
 
 interface PageProps {
     params: {

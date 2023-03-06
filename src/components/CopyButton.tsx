@@ -1,16 +1,17 @@
 "use client";
 
 import * as React from "react";
+import { CheckIcon, ClipboardIcon } from "@heroicons/react/20/solid";
+import type { DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu";
+
 import type { NpmCommands } from "@/types/unist-builder";
 import { classNames as cx } from "@/lib/classNames";
-import { CheckIcon, ClipboardIcon } from "@heroicons/react/20/solid";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "./ui/DropdownMenu";
-import type { DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu";
 
 interface CopyButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     value: string;

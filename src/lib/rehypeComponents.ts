@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
-import type { UnistNode, UnistTree } from "@/types/unist-builder";
 import { u } from "unist-builder";
 import { visit } from "unist-util-visit";
+
+import type { UnistNode, UnistTree } from "@/types/unist-builder";
 
 export function rehypeComponent() {
     return (tree: UnistTree) => {

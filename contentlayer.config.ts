@@ -1,9 +1,9 @@
 import path from "path";
-import type { ComputedFields } from "contentlayer/source-files";
 import {
     defineDocumentType,
     defineNestedType,
     makeSource,
+    type ComputedFields,
 } from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
@@ -13,9 +13,9 @@ import remarkGfm from "remark-gfm";
 import { getHighlighter, loadTheme } from "shiki";
 import { visit } from "unist-util-visit";
 
+import type { UnistNode, UnistTree } from "@/types/unist-builder";
 import { rehypeComponent } from "./src/lib/rehypeComponents";
 import { rehypeNpmCommand } from "./src/lib/rehypeNpmCommand";
-import type { UnistNode, UnistTree } from "@/types/unist-builder";
 
 const computedFields: ComputedFields = {
     slug: {
