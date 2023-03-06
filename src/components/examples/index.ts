@@ -1,5 +1,8 @@
 import AccordionDemo from "@/components/examples/AccordionDemo";
+import AlertDemo from "@/components/examples/AlertDemo";
+import AlertDestructiveDemo from "@/components/examples/AlertDestructiveDemo";
 import AlertDialogDemo from "@/components/examples/AlertDialogDemo";
+import AlertOutlineDemo from "@/components/examples/AlertOutlineDemo";
 import AspectRatioDemo from "@/components/examples/AspectRatioDemo";
 import AvatarDemo from "@/components/examples/AvatarDemo";
 import ButtonDemo from "@/components/examples/ButtonDemo";
@@ -60,6 +63,9 @@ import TooltipDemo from "@/components/examples/TooltipDemo";
 export const examples = {
     AccordionDemo,
     AlertDialogDemo,
+    AlertDemo,
+    AlertOutlineDemo,
+    AlertDestructiveDemo,
     AspectRatioDemo,
     AvatarDemo,
     ButtonDemo,
