@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import type { SidebarNavItem } from "@/config/uiConfig";
+import type { SidebarNavItem } from "@/types/nav";
 import { classNames } from "@/lib/classNames";
 
 export interface SidebarNavProps {
@@ -20,7 +20,7 @@ export function SidebarNav({ items, onClickCallback }: SidebarNavProps) {
                 <div
                     key={index}
                     className={classNames("pb-6")}>
-                    <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold">
+                    <h4 className="mb-1 rounded-md px-2 py-1 font-serif text-sm font-semibold">
                         {item.title}
                     </h4>
                     {item?.items?.length && (
@@ -73,7 +73,7 @@ export function SidebarNavItems({
                 ) : (
                     <span
                         key={index}
-                        className="flex w-full cursor-not-allowed items-center rounded-md p-2 opacity-60 hover:underline">
+                        className="flex w-full cursor-not-allowed items-center rounded-md p-2 font-serif opacity-60 hover:underline">
                         {item.title}
                     </span>
                 )

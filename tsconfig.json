@@ -13,7 +13,6 @@
             "@/_posts/*": ["_posts/*"],
             "@/_docs/*": ["_docs/*"],
             "@/content/*": ["content/*"],
-            "@/config/*": ["config/*"],
             "@/contentlayer/generated": ["../.contentlayer/generated"]
         },
         "target": "es2017",

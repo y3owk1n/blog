@@ -1,7 +1,7 @@
 import Link from "next/link";
-import CImage from "@/components/ui/Image";
 
 import { classNames } from "@/lib/classNames";
+import CImage from "@/components/ui/Image";
 
 type Props = {
     title: string;

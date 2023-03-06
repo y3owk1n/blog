@@ -1,6 +1,6 @@
+import { cva, type VariantProps } from "class-variance-authority";
+
 import { classNames } from "@/lib/classNames";
-import type { VariantProps } from "class-variance-authority";
-import { cva } from "class-variance-authority";
 
 interface AlertProps
     extends React.HTMLAttributes<HTMLDivElement>,

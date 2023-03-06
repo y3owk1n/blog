@@ -20,19 +20,19 @@ And here I came across this cool tiny tool [postgrest-js-tools](https://www.npmj
 
 First install the package:
 
-```
+```bash
 yarn add postgrest-js-tools
 ```
 
 Import the package into my tRPC router:
 
-```
+```tsx
 import { getShape, getFields } from "postgrest-js-tools";
 ```
 
 Get the shape of a table:
 
-```
+```tsx
 // The shape infer the types for Supabase query and return only the field specified.
 
 const expectedShape = getShape<definition["table"]>()({
@@ -43,7 +43,7 @@ const expectedShape = getShape<definition["table"]>()({
 
 Request for data:
 
-```
+```tsx
 const { data, error } = await supabase
   .from<typeof expectedShape>("table")
   .select(getFields(expectedShape));

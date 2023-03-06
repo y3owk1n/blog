@@ -13,6 +13,10 @@ import { ComponentSource } from "./ComponentSource";
 import { CopyButton, CopyNpmCommandButton } from "./CopyButton";
 import { examples } from "./examples";
 import { Accordion, AccordionItem, AccordionTrigger } from "./ui/Accordion";
+import { Alert } from "./ui/Alert";
+import CImage from "./ui/Image";
+import { Separator } from "./ui/Separator";
+import { Table, Td, Th, Tr } from "./ui/Table";
 import { Blockquote } from "./ui/typography/Blockquote";
 import { Code } from "./ui/typography/Code";
 import { H1 } from "./ui/typography/H1";
@@ -24,11 +28,7 @@ import { H6 } from "./ui/typography/H6";
 import { LinkTag } from "./ui/typography/LinkTag";
 import { List } from "./ui/typography/List";
 import { Paragraph } from "./ui/typography/Paragraph";
-import CImage from "./ui/Image";
-import { Separator } from "./ui/Separator";
-import { Table, Tr, Th, Td } from "./ui/Table";
 import { Pre } from "./ui/typography/Pre";
-import { Alert } from "./ui/Alert";
 
 const components = {
     Accordion,

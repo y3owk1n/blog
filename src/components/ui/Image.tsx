@@ -1,13 +1,12 @@
 "use client";
 
 import React from "react";
-import type { ImageProps } from "next/image";
-import NextImage from "next/image";
-
-import { AspectRatio } from "@/components/ui/AspectRatio";
-import { classNames } from "@/lib/classNames";
+import NextImage, { type ImageProps } from "next/image";
 import type { AspectRatioProps } from "@radix-ui/react-aspect-ratio";
+
+import { classNames } from "@/lib/classNames";
 import { blurDataURL } from "@/lib/constants";
+import { AspectRatio } from "@/components/ui/AspectRatio";
 
 type Props = {
     imageProps: ImageProps;

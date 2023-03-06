@@ -33,8 +33,10 @@ export function TableOfContents({ toc }: TocProps) {
     }
 
     return (
-        <div className="space-y-2">
-            <p className="font-medium">On This Page</p>
+        <div>
+            <p className="mb-1 rounded-md  font-serif text-sm font-semibold">
+                On This Page
+            </p>
             <Tree
                 tree={toc}
                 activeItem={activeHeading}

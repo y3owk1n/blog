@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 
-import type { NavItem, NavItemWithChildren } from "@/config/uiConfig";
+import type { NavItem, NavItemWithChildren } from "@/types/nav";
 import { classNames } from "@/lib/classNames";
 import { groupUisByTags } from "@/lib/contentlayerApi";
 import type { Ui } from "../../.contentlayer/generated";

@@ -102,7 +102,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                             ))}
                         </CommandGroup>
                     ))}
-                    <CommandSeparator />
+                    <CommandSeparator className="mb-4" />
                     <CommandGroup heading="Theme">
                         <CommandItem
                             onSelect={() =>
