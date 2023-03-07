@@ -5,6 +5,10 @@ import AlertDialogDemo from "@/components/examples/AlertDialogDemo";
 import AlertOutlineDemo from "@/components/examples/AlertOutlineDemo";
 import AspectRatioDemo from "@/components/examples/AspectRatioDemo";
 import AvatarDemo from "@/components/examples/AvatarDemo";
+import BadgeDemo from "@/components/examples/BadgeDemo";
+import BadgeIconDemo from "@/components/examples/BadgeIconDemo";
+import BadgeOutlineDemo from "@/components/examples/BadgeOutlineDemo";
+import BadgeOutlineIconDemo from "@/components/examples/BadgeOutlineIconDemo";
 import ButtonDemo from "@/components/examples/ButtonDemo";
 import ButtonGhostDemo from "@/components/examples/ButtonGhostDemo";
 import ButtonIconDemo from "@/components/examples/ButtonIconDemo";
@@ -27,12 +31,20 @@ import DrawerSizeDemo from "@/components/examples/DrawerSizeDemo";
 import DropdownMenuCheckboxDemo from "@/components/examples/DropdownMenuCheckboxDemo";
 import DropdownMenuDemo from "@/components/examples/DropdownMenuDemo";
 import DropdownMenuRadioGroupDemo from "@/components/examples/DropdownMenuRadioGroupDemo";
+import FileInputDemo from "@/components/examples/FileInputDemo";
+import FileInputDisabledDemo from "@/components/examples/FileInputDisabledDemo";
+import FileInputOutlineDemo from "@/components/examples/FileInputOutlineDemo";
+import FileInputOutlineDisabledDemo from "@/components/examples/FileInputOutlineDisabledDemo";
 import HoverCardDemo from "@/components/examples/HoverCardDemo";
 import InputDemo from "@/components/examples/InputDemo";
 import InputDisabledDemo from "@/components/examples/InputDisabledDemo";
 import InputWithButtonDemo from "@/components/examples/InputWithButtonDemo";
 import InputWithHelperDemo from "@/components/examples/InputWithHelperDemo";
 import InputWithLabelDemo from "@/components/examples/InputWithLabelDemo";
+import KbdDemo from "@/components/examples/KbdDemo";
+import KbdModifierDemo from "@/components/examples/KbdModifierDemo";
+import KbdOutlineDemo from "@/components/examples/KbdOutlineDemo";
+import KbdOutlineModifierDemo from "@/components/examples/KbdOutlineModifierDemo";
 import LabelDemo from "@/components/examples/LabelDemo";
 import MenubarDemo from "@/components/examples/MenubarDemo";
 import NavigationMenuDemo from "@/components/examples/NavigationMenuDemo";
@@ -68,6 +80,10 @@ export const examples = {
     AlertDestructiveDemo,
     AspectRatioDemo,
     AvatarDemo,
+    BadgeDemo,
+    BadgeIconDemo,
+    BadgeOutlineDemo,
+    BadgeOutlineIconDemo,
     ButtonDemo,
     ButtonLoadingDemo,
     ButtonGhostDemo,
@@ -87,6 +103,10 @@ export const examples = {
     DropdownMenuDemo,
     DropdownMenuCheckboxDemo,
     DropdownMenuRadioGroupDemo,
+    FileInputDemo,
+    FileInputOutlineDemo,
+    FileInputDisabledDemo,
+    FileInputOutlineDisabledDemo,
     HoverCardDemo,
     InputDemo,
     InputDisabledDemo,
@@ -94,6 +114,10 @@ export const examples = {
     InputWithHelperDemo,
     InputWithLabelDemo,
     LabelDemo,
+    KbdDemo,
+    KbdOutlineDemo,
+    KbdModifierDemo,
+    KbdOutlineModifierDemo,
     MenubarDemo,
     NavigationMenuDemo,
     PopoverDemo,
