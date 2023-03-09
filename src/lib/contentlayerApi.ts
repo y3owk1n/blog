@@ -18,7 +18,7 @@ export const allPostsAndSort = allPosts
         date: content.date,
         description: content.description,
         href: `/posts/${content.slugAsParams}`,
-        coverImage: content.coverImage,
+        rawSlug: content.slugAsParams,
     }))
     .sort((a, b) => (a.date && b.date && a.date > b.date ? -1 : 1));
 
@@ -40,7 +40,7 @@ export const getAllPostsAndSort = () => {
         date: content.date,
         description: content.description,
         href: `/posts/${content.slugAsParams}`,
-        coverImage: content.coverImage,
+        rawSlug: content.slugAsParams,
     }));
 
     const sorted = posts.sort((a, b) =>

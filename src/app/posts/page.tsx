@@ -1,10 +1,39 @@
 import Link from "next/link";
 
+import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
 import { allPostsAndSort } from "@/lib/contentlayerApi";
 import CoverImage from "@/components/CoverImage";
 import Date from "@/components/Date";
 import { H3 } from "@/components/ui/typography/H3";
 import { Paragraph } from "@/components/ui/typography/Paragraph";
+
+const title = "Post List | Kyle Wong";
+const description = `A list for all my blogs and sharings`;
+const image = encodeURI(
+    `${
+        devEnvironment ? DEVDOMAIN : DOMAIN
+    }/api/og-image?text=A list for all my blogs and sharings`
+);
+
+export const metadata = {
+    title,
+    description,
+    openGraph: {
+        title,
+        description,
+        url: DOMAIN,
+        siteName: title,
+        images: [image],
+        locale: "en-US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: [image],
+    },
+};
 
 const Page = () => {
     return (
@@ -15,7 +44,9 @@ const Page = () => {
                         <CoverImage
                             slug={post.href}
                             title={post.title}
-                            src={post.coverImage}
+                            src={`${
+                                devEnvironment ? DEVDOMAIN : DOMAIN
+                            }/api/og-image?slug=${post.rawSlug}&type=post`}
                         />
                     </div>
                     <H3 className="font-serif">

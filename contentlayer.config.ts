@@ -75,6 +75,10 @@ export const Ui = defineDocumentType(() => ({
             default: false,
             required: false,
         },
+        date: {
+            type: "date",
+            required: true,
+        },
     },
     computedFields,
 }));
@@ -94,14 +98,6 @@ export const Post = defineDocumentType(() => ({
         },
         date: {
             type: "date",
-            required: true,
-        },
-        ogImage: {
-            type: "string",
-            required: true,
-        },
-        coverImage: {
-            type: "string",
             required: true,
         },
     },

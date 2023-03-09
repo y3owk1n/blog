@@ -12,19 +12,20 @@ import { Separator } from "@/components/ui/Separator";
 
 interface PageProps {
     params: {
-        slug: string[];
+        slug: string;
     };
 }
 
 export function generateStaticParams(): PageProps["params"][] {
     return allUis.map((content) => ({
-        slug: content.slugAsParams.split("/"),
+        slug: content.slugAsParams,
     }));
 }
 
 export default async function Page({ params }: PageProps) {
-    const slug = params?.slug?.join("/") || "";
-    const content = allUis.find((content) => content.slugAsParams === slug);
+    const content = allUis.find(
+        (content) => content.slugAsParams === params.slug
+    );
 
     if (!content) {
         notFound();
