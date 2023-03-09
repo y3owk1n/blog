@@ -54,3 +54,7 @@ yarn-error.log*
 
 # contentlayer
 .contentlayer/*
+
+# sitemap
+/public/sitemap*.xml
+/public/robots*.txt
