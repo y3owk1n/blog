@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { Toaster } from "@/components/ui/Toaster";
 import "@/styles/globals.css";
 import { Arapey } from "next/font/google";
+import Script from "next/script";
 
 import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
 import RootProviders from "./RootProviders.client";
@@ -89,11 +90,20 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
+    const isDev = process.env.NODE_ENV === "development";
+
     return (
         <html
             lang="en"
             className={arapey.className}
             suppressHydrationWarning>
+            {!isDev && (
+                <Script
+                    src={"https://5oddwdpyqe.kylewong.my/umami.js"}
+                    data-website-id="2732127c-366b-4a69-8067-b750b856bbd4"
+                    strategy="lazyOnload"
+                />
+            )}
             <RootProviders>
                 <body
                     className={classNames(
