@@ -8,11 +8,13 @@ import { Arapey } from "next/font/google";
 import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
 import RootProviders from "./RootProviders.client";
 
-const title = "Kyle Wong - Digital Marketer, developer.";
+const title = "Kyle Wong - Digital Marketer, Web Developer.";
 const description = `Hello, I'm Kyle, a digital marketer and web developer, based in the Malaysia 🇲🇾.`;
-const image = `${
-    devEnvironment ? DEVDOMAIN : DOMAIN
-}/assets/blog/hello/cover.jpg`;
+const image = encodeURI(
+    `${
+        devEnvironment ? DEVDOMAIN : DOMAIN
+    }/api/og-image?text=Kyle Wong - Digital Marketer, Web Developer.`
+);
 
 export const metadata = {
     title,

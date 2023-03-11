@@ -3,7 +3,7 @@ import { classNames } from "@/lib/classNames";
 const LinkTag = ({
     className,
     ...props
-}: React.HTMLAttributes<HTMLAnchorElement>) => {
+}: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
     return (
         <a
             {...props}

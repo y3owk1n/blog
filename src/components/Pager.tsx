@@ -53,7 +53,11 @@ export function Pager({ content }: PagerProps) {
 }
 
 export function getPager(doc: Ui) {
-    const flattenedLinks = [null, ...flatten(groupUisByTags), null];
+    const flattenedLinks = [
+        null,
+        ...flatten(groupUisByTags.sort((a, b) => (a.title > b.title ? -1 : 1))),
+        null,
+    ];
     const activeIndex = flattenedLinks.findIndex(
         (link) => doc.slug === link?.href
     );

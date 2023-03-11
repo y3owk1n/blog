@@ -16,22 +16,24 @@ export function SidebarNav({ items, onClickCallback }: SidebarNavProps) {
 
     return items.length ? (
         <div className="w-full">
-            {items.map((item, index) => (
-                <div
-                    key={index}
-                    className={classNames("pb-6")}>
-                    <h4 className="mb-1 rounded-md px-2 py-1 font-serif text-sm font-semibold">
-                        {item.title}
-                    </h4>
-                    {item?.items?.length && (
-                        <SidebarNavItems
-                            onClickCallback={onClickCallback}
-                            items={item.items}
-                            pathname={pathname}
-                        />
-                    )}
-                </div>
-            ))}
+            {items
+                .sort((a, b) => (a.title > b.title ? -1 : 1))
+                .map((item, index) => (
+                    <div
+                        key={index}
+                        className={classNames("pb-6")}>
+                        <h4 className="mb-1 rounded-md px-2 py-1 font-serif text-sm font-semibold">
+                            {item.title}
+                        </h4>
+                        {item?.items?.length && (
+                            <SidebarNavItems
+                                onClickCallback={onClickCallback}
+                                items={item.items}
+                                pathname={pathname}
+                            />
+                        )}
+                    </div>
+                ))}
         </div>
     ) : null;
 }
