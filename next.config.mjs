@@ -24,6 +24,12 @@ const config = {
             },
             {
                 protocol: "https",
+                hostname: "www.kylewong.my",
+                port: "",
+                pathname: "/**",
+            },
+            {
+                protocol: "https",
                 hostname: "images.unsplash.com",
                 port: "",
                 pathname: "/**",
