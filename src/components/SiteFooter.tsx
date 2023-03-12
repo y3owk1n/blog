@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
-import { githubProfile } from "@/lib/constants";
+import { githubProfile, linkedInProfile } from "@/lib/constants";
 import { Logo } from "./Logo";
 import { buttonVariants } from "./ui/Button";
 
@@ -28,6 +28,20 @@ export function SiteFooter() {
                             })}>
                             <AiFillGithub className="h-5 w-5" />
                             <span className="sr-only">GitHub</span>
+                        </div>
+                    </Link>
+                    <Link
+                        href={linkedInProfile}
+                        target="_blank"
+                        rel="noreferrer">
+                        <div
+                            className={buttonVariants({
+                                size: "sm",
+                                variant: "ghost",
+                                className: "text-slate-700 dark:text-slate-400",
+                            })}>
+                            <AiFillLinkedin className="h-5 w-5" />
+                            <span className="sr-only">LinkedIn</span>
                         </div>
                     </Link>
                 </nav>
