@@ -57,7 +57,7 @@ const Page = () => {
     return (
         <main className="space-y-10">
             <section className="grid place-items-center py-24">
-                <Avatar className="mb-8">
+                <Avatar className="mb-8 h-20 w-20 blur-sm transition-all duration-200 ease-in-out hover:blur-none">
                     <AvatarImage src="https://github.com/y3owk1n.png" />
                     <AvatarFallback>KY</AvatarFallback>
                 </Avatar>

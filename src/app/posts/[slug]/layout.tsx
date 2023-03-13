@@ -50,7 +50,7 @@ interface PostLayoutProps {
 export default function PostLayout({ children }: PostLayoutProps) {
     return (
         <div className="mx-auto max-w-[65ch]">
-            <article className="space-y-4">{children}</article>
+            <article className="space-y-4 py-10">{children}</article>
         </div>
     );
 }
