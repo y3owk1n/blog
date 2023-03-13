@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
+import { siteName } from "@/lib/constants";
 import { CommandMenu } from "./CommandMenu";
 import DarkModeToggle from "./DarkModeToggle";
 import { Logo } from "./Logo";
@@ -23,7 +25,12 @@ export function SiteHeader() {
                         <CommandMenu />
                     </div>
 
-                    <Logo className="h-10 w-10 md:hidden" />
+                    <Link
+                        href="/"
+                        className="mr-6 flex items-center space-x-2 md:hidden">
+                        <Logo className="h-10 w-10 text-black dark:text-white" />
+                        <span className="sr-only">{siteName}</span>
+                    </Link>
                     <DarkModeToggle />
                 </div>
             </div>
