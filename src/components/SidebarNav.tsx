@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { twMerge } from "tailwind-merge";
 
 import type { SidebarNavItem } from "@/types/nav";
-import { classNames } from "@/lib/classNames";
 
 export interface SidebarNavProps {
     items: SidebarNavItem[];
@@ -21,7 +21,7 @@ export function SidebarNav({ items, onClickCallback }: SidebarNavProps) {
                 .map((item, index) => (
                     <div
                         key={index}
-                        className={classNames("pb-6")}>
+                        className={twMerge("pb-6")}>
                         <h4 className="mb-1 rounded-md px-2 py-1 font-serif text-sm font-semibold">
                             {item.title}
                         </h4>
@@ -57,7 +57,7 @@ export function SidebarNavItems({
                         key={index}
                         href={item.href}
                         onClick={onClickCallback}
-                        className={classNames(
+                        className={twMerge(
                             "group flex w-full items-center rounded-md py-1.5 px-2 hover:bg-slate-50 dark:hover:bg-slate-800",
                             item.disabled && "cursor-not-allowed opacity-60",
                             pathname === item.href &&

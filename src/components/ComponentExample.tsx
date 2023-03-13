@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
+import { twMerge } from "tailwind-merge";
 
-import { classNames } from "@/lib/classNames";
 import { CopyButton, CopyWithClassNames } from "./CopyButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/Tabs";
 
@@ -48,7 +48,7 @@ export function ComponentExample({
 
     return (
         <div
-            className={classNames(
+            className={twMerge(
                 "group relative my-4 flex flex-col space-y-2",
                 className
             )}
@@ -75,11 +75,11 @@ export function ComponentExample({
                     value="preview"
                     className="p-0">
                     <div
-                        className={classNames(
+                        className={twMerge(
                             "flex justify-center p-10",
-                            "items-center" && align === "center",
-                            "items-start" && align === "start",
-                            "items-end" && align === "end"
+                            align === "center" ? "items-center" : "",
+                            align === "start" ? "items-start" : "",
+                            align === "end" ? "items-end" : ""
                         )}>
                         {Example}
                     </div>

@@ -1,6 +1,5 @@
 import React from "react";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 interface Props
     extends React.HTMLAttributes<HTMLUListElement | HTMLOListElement> {
@@ -14,7 +13,7 @@ const List = ({ variant = "unordered", className, ...props }: Props) => {
     return (
         <ul
             {...props}
-            className={classNames(
+            className={twMerge(
                 "ml-6 list-disc [&>li]:mt-2",
                 isUl && "list-disc",
                 isOl && "list-decimal",

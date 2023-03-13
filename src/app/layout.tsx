@@ -1,10 +1,10 @@
-import { classNames } from "@/lib/classNames";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Toaster } from "@/components/ui/Toaster";
 import "@/styles/globals.css";
 import { Arapey } from "next/font/google";
 import Script from "next/script";
+import { twMerge } from "tailwind-merge";
 
 import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
 import RootProviders from "./RootProviders.client";
@@ -106,7 +106,7 @@ export default function RootLayout({
             )}
             <RootProviders>
                 <body
-                    className={classNames(
+                    className={twMerge(
                         "min-h-screen bg-white font-sans text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-50"
                     )}>
                     <div className="mx-auto flex min-h-screen flex-col">

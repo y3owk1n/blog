@@ -1,4 +1,4 @@
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 const LinkTag = ({
     className,
@@ -7,9 +7,9 @@ const LinkTag = ({
     return (
         <a
             {...props}
-            className={classNames(
-                className,
-                "font-medium text-slate-900 underline underline-offset-4 dark:text-slate-50"
+            className={twMerge(
+                "font-medium text-slate-900 underline underline-offset-4 dark:text-slate-50",
+                className
             )}
         />
     );

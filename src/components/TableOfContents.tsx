@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
+import { twMerge } from "tailwind-merge";
 
-import { classNames } from "@/lib/classNames";
 import { useMounted } from "@/lib/hooks/useMounted";
 import type { TableOfContents } from "@/lib/toc";
 
@@ -88,15 +88,15 @@ interface TreeProps {
 
 function Tree({ tree, level = 1, activeItem }: TreeProps) {
     return tree?.items?.length && level < 3 ? (
-        <ul className={classNames("m-0 list-none", { "pl-4": level !== 1 })}>
+        <ul className={twMerge("m-0 list-none", level !== 1 && "pl-4")}>
             {tree.items.map((item, index) => {
                 return (
                     <li
                         key={index}
-                        className={classNames("mt-0 pt-2")}>
+                        className={twMerge("mt-0 pt-2")}>
                         <a
                             href={item.url}
-                            className={classNames(
+                            className={twMerge(
                                 "inline-block no-underline",
                                 activeItem
                                     ? item.url === `#${activeItem}`

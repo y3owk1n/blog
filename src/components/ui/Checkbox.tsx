@@ -3,8 +3,7 @@
 import * as React from "react";
 import { CheckIcon } from "@heroicons/react/20/solid";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 const Checkbox = React.forwardRef<
     React.ElementRef<typeof CheckboxPrimitive.Root>,
@@ -12,13 +11,13 @@ const Checkbox = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <CheckboxPrimitive.Root
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "peer h-4 w-4 shrink-0 rounded-sm border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700 dark:text-slate-50 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-900",
             className
         )}
         {...props}>
         <CheckboxPrimitive.Indicator
-            className={classNames("flex items-center justify-center")}>
+            className={twMerge("flex items-center justify-center")}>
             <CheckIcon className="h-4 w-4" />
         </CheckboxPrimitive.Indicator>
     </CheckboxPrimitive.Root>

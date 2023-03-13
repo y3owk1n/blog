@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
-import { classNames } from "@/lib/classNames";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -138,7 +138,7 @@ const ListItem = React.forwardRef<
             <NavigationMenuLink asChild>
                 <a
                     ref={ref}
-                    className={classNames(
+                    className={twMerge(
                         "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 ",
                         className
                     )}

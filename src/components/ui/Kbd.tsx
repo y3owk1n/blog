@@ -1,6 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 interface KbdProps
     extends React.HTMLAttributes<HTMLDivElement>,
@@ -28,7 +27,7 @@ const kbdVariants = cva(
 function Kbd({ children, variant, className, modifier, ...props }: KbdProps) {
     return (
         <kbd
-            className={classNames(kbdVariants({ variant, className }))}
+            className={twMerge(kbdVariants({ variant, className }))}
             {...props}>
             {modifier && <span className="text-xs">{modifier}</span>}
             {children}

@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+import { twMerge } from "tailwind-merge";
 
 import type { NavItem, NavItemWithChildren } from "@/types/nav";
-import { classNames } from "@/lib/classNames";
 import { groupUisByTags } from "@/lib/contentlayerApi";
 import type { Ui } from "../../.contentlayer/generated";
 import { buttonVariants } from "./ui/Button";
@@ -26,7 +26,7 @@ export function Pager({ content }: PagerProps) {
 
     return (
         <div
-            className={classNames(
+            className={twMerge(
                 "flex flex-row items-center",
                 hasBoth && "justify-between",
                 hasPrev && "justify-start",

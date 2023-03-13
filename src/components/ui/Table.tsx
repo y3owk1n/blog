@@ -1,6 +1,5 @@
 import React from "react";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 const Table = ({
     className,
@@ -9,7 +8,7 @@ const Table = ({
     return (
         <div className="my-6 w-full overflow-y-auto">
             <table
-                className={classNames("w-full", className)}
+                className={twMerge("w-full", className)}
                 {...props}
             />
         </div>
@@ -22,7 +21,7 @@ const Tr = ({
 }: React.HTMLAttributes<HTMLTableRowElement>) => {
     return (
         <tr
-            className={classNames(
+            className={twMerge(
                 "m-0 border-t border-slate-300 p-0 even:bg-slate-100",
                 className
             )}
@@ -37,7 +36,7 @@ const Th = ({
 }: React.HTMLAttributes<HTMLTableCellElement>) => {
     return (
         <th
-            className={classNames(
+            className={twMerge(
                 "border border-slate-200 px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
                 className
             )}
@@ -52,7 +51,7 @@ const Td = ({
 }: React.HTMLAttributes<HTMLTableCellElement>) => {
     return (
         <td
-            className={classNames(
+            className={twMerge(
                 "border border-slate-200 px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
                 className
             )}

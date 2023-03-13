@@ -3,9 +3,9 @@
 import * as React from "react";
 import { AccordionContent } from "@radix-ui/react-accordion";
 import { useMDXComponent } from "next-contentlayer/hooks";
+import { twMerge } from "tailwind-merge";
 
 import type { NpmCommands } from "@/types/unist-builder";
-import { classNames } from "@/lib/classNames";
 import { Card } from "./Card";
 import { CodeBlockWrapper } from "./CodeBlockWrapper";
 import { ComponentExample } from "./ComponentExample";
@@ -37,13 +37,13 @@ const components = {
     AccordionTrigger,
     h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <H1
-            className={classNames("mt-2 scroll-m-20", className)}
+            className={twMerge("mt-2 scroll-m-20", className)}
             {...props}
         />
     ),
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <H2
-            className={classNames(
+            className={twMerge(
                 "mt-12 scroll-m-20 border-b border-b-slate-200 pb-2 first:mt-0 dark:border-b-slate-700",
                 className
             )}
@@ -52,25 +52,25 @@ const components = {
     ),
     h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <H3
-            className={classNames("mt-8 scroll-m-20", className)}
+            className={twMerge("mt-8 scroll-m-20", className)}
             {...props}
         />
     ),
     h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <H4
-            className={classNames("mt-8 scroll-m-20", className)}
+            className={twMerge("mt-8 scroll-m-20", className)}
             {...props}
         />
     ),
     h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <H5
-            className={classNames("mt-8 scroll-m-20", className)}
+            className={twMerge("mt-8 scroll-m-20", className)}
             {...props}
         />
     ),
     h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <H6
-            className={classNames("mt-8 scroll-m-20", className)}
+            className={twMerge("mt-8 scroll-m-20", className)}
             {...props}
         />
     ),
@@ -83,27 +83,27 @@ const components = {
     }: React.HTMLAttributes<HTMLParagraphElement>) => (
         <Paragraph
             variant="normal"
-            className={classNames("[&:not(:first-child)]:mt-6", className)}
+            className={twMerge("[&:not(:first-child)]:mt-6", className)}
             {...props}
         />
     ),
     ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
         <List
             variant="unordered"
-            className={classNames("my-6", className)}
+            className={twMerge("my-6", className)}
             {...props}
         />
     ),
     ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
         <List
             variant="ordered"
-            className={classNames("my-6", className)}
+            className={twMerge("my-6", className)}
             {...props}
         />
     ),
     li: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
         <li
-            className={classNames("mt-2", className)}
+            className={twMerge("mt-2", className)}
             {...props}
         />
     ),
@@ -112,7 +112,7 @@ const components = {
         ...props
     }: React.HTMLAttributes<HTMLElement>) => (
         <Blockquote
-            className={classNames("mt-6 ", className)}
+            className={twMerge("mt-6 ", className)}
             {...props}
         />
     ),
@@ -166,14 +166,14 @@ const components = {
         return (
             <div className="relative">
                 <Pre
-                    className={classNames("mt-6 mb-4", className)}
+                    className={twMerge("mt-6 mb-4", className)}
                     {...props}
                 />
                 {__rawString__ && !__npmCommand__ && (
                     <CopyButton
                         value={__rawString__}
                         src={__src__}
-                        className={classNames(
+                        className={twMerge(
                             "absolute top-4 right-4 border-none text-slate-300 opacity-50 hover:bg-transparent hover:opacity-100",
                             __withMeta__ && "top-20"
                         )}
@@ -186,7 +186,7 @@ const components = {
                             __pnpmCommand__,
                             __yarnCommand__,
                         }}
-                        className={classNames(
+                        className={twMerge(
                             "absolute top-4 right-4 border-none text-slate-300 opacity-50 hover:bg-transparent hover:opacity-100",
                             __withMeta__ && "top-20"
                         )}

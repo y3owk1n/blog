@@ -4,8 +4,7 @@ import * as React from "react";
 import { CheckIcon } from "@heroicons/react/20/solid";
 import ChevronRightIcon from "@heroicons/react/20/solid/ChevronRightIcon";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 
@@ -15,7 +14,7 @@ const DropdownMenuTrigger = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <DropdownMenuPrimitive.Trigger
         ref={ref}
-        className={classNames(className)}
+        className={twMerge(className)}
         {...props}
     />
 ));
@@ -38,7 +37,7 @@ const DropdownMenuSubTrigger = React.forwardRef<
 >(({ className, inset, children, ...props }, ref) => (
     <DropdownMenuPrimitive.SubTrigger
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "flex cursor-default select-none items-center rounded-sm py-1.5 px-2 text-sm font-medium outline-none focus:bg-slate-100 data-[state=open]:bg-slate-100 dark:focus:bg-slate-700 dark:data-[state=open]:bg-slate-700",
             inset && "pl-8",
             className
@@ -57,7 +56,7 @@ const DropdownMenuSubContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <DropdownMenuPrimitive.SubContent
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "z-50 min-w-[8rem] overflow-hidden rounded-md border border-slate-100 bg-white p-1 text-slate-700 shadow-md animate-in slide-in-from-left-1 dark:border-slate-800 dark:bg-slate-800 dark:text-slate-400",
             className
         )}
@@ -75,7 +74,7 @@ const DropdownMenuContent = React.forwardRef<
         <DropdownMenuPrimitive.Content
             ref={ref}
             sideOffset={sideOffset}
-            className={classNames(
+            className={twMerge(
                 "z-50 min-w-[8rem] overflow-hidden rounded-md border border-slate-100 bg-white p-1 text-slate-700 shadow-md animate-in data-[side=right]:slide-in-from-left-2 data-[side=left]:slide-in-from-right-2 data-[side=bottom]:slide-in-from-top-2 data-[side=top]:slide-in-from-bottom-2 dark:border-slate-800 dark:bg-slate-800 dark:text-slate-400",
                 className
             )}
@@ -93,7 +92,7 @@ const DropdownMenuItem = React.forwardRef<
 >(({ className, inset, ...props }, ref) => (
     <DropdownMenuPrimitive.Item
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "relative flex cursor-default select-none items-center rounded-sm py-1.5 px-2 text-sm font-medium outline-none focus:bg-slate-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-700",
             inset && "pl-8",
             className
@@ -109,7 +108,7 @@ const DropdownMenuCheckboxItem = React.forwardRef<
 >(({ className, children, checked, ...props }, ref) => (
     <DropdownMenuPrimitive.CheckboxItem
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm font-medium outline-none focus:bg-slate-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-700",
             className
         )}
@@ -132,7 +131,7 @@ const DropdownMenuRadioItem = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
     <DropdownMenuPrimitive.RadioItem
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm font-medium outline-none focus:bg-slate-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-700",
             className
         )}
@@ -155,7 +154,7 @@ const DropdownMenuLabel = React.forwardRef<
 >(({ className, inset, ...props }, ref) => (
     <DropdownMenuPrimitive.Label
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "px-2 py-1.5 text-sm font-semibold text-slate-900 dark:text-slate-300",
             inset && "pl-8",
             className
@@ -171,7 +170,7 @@ const DropdownMenuSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <DropdownMenuPrimitive.Separator
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "-mx-1 my-1 h-px bg-slate-100 dark:bg-slate-800",
             className
         )}
@@ -186,7 +185,7 @@ const DropdownMenuShortcut = ({
 }: React.HTMLAttributes<HTMLSpanElement>) => {
     return (
         <span
-            className={classNames(
+            className={twMerge(
                 "ml-auto text-xs tracking-widest text-slate-500",
                 className
             )}

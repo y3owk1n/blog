@@ -1,6 +1,5 @@
 import Link from "next/link";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
     href?: string;
@@ -16,7 +15,7 @@ export function Card({
 }: CardProps) {
     return (
         <div
-            className={classNames(
+            className={twMerge(
                 "group relative rounded-lg border border-slate-200 bg-transparent p-6 text-slate-900 shadow-md transition-shadow hover:shadow-lg ",
                 disabled && "cursor-not-allowed opacity-60",
                 className

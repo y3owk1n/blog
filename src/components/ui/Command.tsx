@@ -4,8 +4,8 @@ import * as React from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import type { DialogProps } from "@radix-ui/react-dialog";
 import { Command as CommandPrimitive } from "cmdk";
+import { twMerge } from "tailwind-merge";
 
-import { classNames } from "@/lib/classNames";
 import { Dialog, DialogContent } from "./Dialog";
 
 const Command = React.forwardRef<
@@ -14,7 +14,7 @@ const Command = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <CommandPrimitive
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "flex h-full w-full flex-col overflow-hidden rounded-lg bg-white dark:bg-slate-800",
             className
         )}
@@ -47,7 +47,7 @@ const CommandInput = React.forwardRef<
         <MagnifyingGlassIcon className="mr-2 h-4 w-4 shrink-0 opacity-50" />
         <CommandPrimitive.Input
             ref={ref}
-            className={classNames(
+            className={twMerge(
                 "flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-slate-400 disabled:cursor-not-allowed disabled:opacity-50 dark:text-slate-50",
                 className
             )}
@@ -64,7 +64,7 @@ const CommandList = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <CommandPrimitive.List
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "max-h-[300px] overflow-y-auto overflow-x-hidden",
             className
         )}
@@ -93,7 +93,7 @@ const CommandGroup = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <CommandPrimitive.Group
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "overflow-hidden py-3 px-2 text-slate-700 dark:text-slate-400 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:pb-1.5 [&_[cmdk-group-heading]]:font-serif [&_[cmdk-group-heading]]:text-sm [&_[cmdk-group-heading]]:font-semibold [&_[cmdk-group-heading]]:text-slate-900 [&_[cmdk-group-heading]]:dark:text-slate-300",
             className
         )}
@@ -109,7 +109,7 @@ const CommandSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <CommandPrimitive.Separator
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "-mx-1 h-px bg-slate-100 dark:bg-slate-700",
             className
         )}
@@ -124,7 +124,7 @@ const CommandItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <CommandPrimitive.Item
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "relative flex cursor-default select-none items-center rounded-md py-1.5 px-2 text-sm font-medium outline-none aria-selected:bg-slate-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:aria-selected:bg-slate-700",
             className
         )}
@@ -140,7 +140,7 @@ const CommandShortcut = ({
 }: React.HTMLAttributes<HTMLSpanElement>) => {
     return (
         <span
-            className={classNames(
+            className={twMerge(
                 "ml-auto text-xs tracking-widest text-slate-500",
                 className
             )}

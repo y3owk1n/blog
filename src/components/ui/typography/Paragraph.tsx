@@ -1,4 +1,4 @@
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 interface Props extends React.HTMLAttributes<HTMLParagraphElement> {
     variant?: "normal" | "lead" | "large" | "small" | "subtle";
@@ -14,7 +14,7 @@ const Paragraph = ({ variant = "normal", className, ...props }: Props) => {
     return (
         <p
             {...props}
-            className={classNames(
+            className={twMerge(
                 isNormal && "leading-7",
                 isLead && "text-xl text-slate-700",
                 isLarge && "text-lg font-semibold text-slate-900",

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 export interface FileInputProps
     extends React.InputHTMLAttributes<HTMLInputElement>,
@@ -12,11 +11,11 @@ const fileInputVariont = cva(
     {
         variants: {
             variant: {
-                default: classNames(
+                default: twMerge(
                     "file:border-0 file:bg-slate-800 file:text-slate-200 hover:file:bg-slate-600 hover:file:disabled:bg-slate-800",
                     "dark:file:bg-slate-50 dark:file:text-slate-700 dark:hover:file:bg-slate-100 dark:hover:file:disabled:bg-slate-50"
                 ),
-                outline: classNames(
+                outline: twMerge(
                     "file:border file:border-slate-800 file:bg-transparent file:text-slate-800 hover:file:border-slate-600 hover:file:bg-slate-50 hover:file:text-slate-600 hover:file:disabled:border-slate-800 hover:file:disabled:bg-transparent hover:file:disabled:text-slate-800",
                     "dark:file:border-slate-200 dark:file:text-slate-100 dark:hover:file:border-slate-700 dark:hover:file:bg-slate-100 dark:hover:file:text-slate-800  dark:hover:file:disabled:border-slate-200 dark:hover:file:disabled:bg-transparent dark:hover:file:disabled:text-slate-100"
                 ),
@@ -32,7 +31,7 @@ const FileInput = React.forwardRef<HTMLInputElement, FileInputProps>(
     ({ className, variant, ...props }, ref) => {
         return (
             <input
-                className={classNames(
+                className={twMerge(
                     "block w-full text-sm ",
                     "file:mr-4 file:cursor-pointer file:rounded file:py-2 file:px-4 file:text-sm file:font-semibold ",
                     fileInputVariont({ variant, className })

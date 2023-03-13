@@ -1,4 +1,4 @@
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 const H3 = ({
     className,
@@ -7,9 +7,9 @@ const H3 = ({
     return (
         <h3
             {...props}
-            className={classNames(
-                className,
-                "font-serif text-2xl font-semibold tracking-tight"
+            className={twMerge(
+                "font-serif text-2xl font-semibold tracking-tight",
+                className
             )}
         />
     );

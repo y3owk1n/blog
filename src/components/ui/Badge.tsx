@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 interface BadgeProps
     extends React.HTMLAttributes<HTMLDivElement>,
@@ -26,7 +25,7 @@ const badgeVariants = cva("text-xs flex space-x-2 w-fit rounded-md px-2 py-1", {
 function Badge({ children, variant, className, icon, ...props }: BadgeProps) {
     return (
         <div
-            className={classNames(badgeVariants({ variant, className }))}
+            className={twMerge(badgeVariants({ variant, className }))}
             {...props}>
             {icon && icon}
             <div>{children}</div>

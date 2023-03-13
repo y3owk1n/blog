@@ -3,9 +3,9 @@
 import * as React from "react";
 import Link from "next/link";
 import { allUis } from "@/contentlayer/generated";
+import { twMerge } from "tailwind-merge";
 
-import { classNames } from "@/lib/classNames";
-import { siteDescription, siteName } from "@/lib/constants";
+import { siteName } from "@/lib/constants";
 import { firstThreePosts } from "@/lib/contentlayerApi";
 import { Logo } from "./Logo";
 import { buttonVariants } from "./ui/Button";
@@ -59,7 +59,7 @@ export function MainNav() {
                                     passHref
                                     legacyBehavior>
                                     <NavigationMenuLink
-                                        className={classNames(
+                                        className={twMerge(
                                             buttonVariants({
                                                 variant: "outline",
                                             }),
@@ -94,7 +94,7 @@ export function MainNav() {
                                     passHref
                                     legacyBehavior>
                                     <NavigationMenuLink
-                                        className={classNames(
+                                        className={twMerge(
                                             buttonVariants({
                                                 variant: "outline",
                                             }),
@@ -124,7 +124,7 @@ export const ListItem = React.forwardRef<
                 legacyBehavior
                 {...props}>
                 <NavigationMenuLink
-                    className={classNames(
+                    className={twMerge(
                         "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-700 dark:focus:bg-slate-700",
                         className
                     )}>

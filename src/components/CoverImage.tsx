@@ -1,6 +1,6 @@
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
-import { classNames } from "@/lib/classNames";
 import { ImageWithAspectRatio } from "@/components/ui/ImageWithAspectRatio";
 
 type Props = {
@@ -17,7 +17,7 @@ const CoverImage = ({ title, src, slug, isEager = false }: Props) => {
                 ratio: 2 / 1,
             }}
             imageProps={{
-                className: classNames(
+                className: twMerge(
                     "rounded-lg shadow-sm ",
                     slug && "transition-shadow duration-200 hover:shadow-lg"
                 ),

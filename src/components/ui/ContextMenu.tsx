@@ -3,8 +3,7 @@
 import * as React from "react";
 import { CheckIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 const ContextMenu = ContextMenuPrimitive.Root;
 
@@ -26,7 +25,7 @@ const ContextMenuSubTrigger = React.forwardRef<
 >(({ className, inset, children, ...props }, ref) => (
     <ContextMenuPrimitive.SubTrigger
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "flex cursor-default select-none items-center rounded-sm py-1.5 px-2 text-sm font-medium outline-none focus:bg-slate-100 data-[state=open]:bg-slate-100 dark:focus:bg-slate-700 dark:data-[state=open]:bg-slate-700",
             inset && "pl-8",
             className
@@ -44,7 +43,7 @@ const ContextMenuSubContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <ContextMenuPrimitive.SubContent
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "z-50 min-w-[8rem] overflow-hidden rounded-md border border-slate-100 bg-white p-1 shadow-md animate-in slide-in-from-left-1 dark:border-slate-700 dark:bg-slate-800",
             className
         )}
@@ -60,7 +59,7 @@ const ContextMenuContent = React.forwardRef<
     <ContextMenuPrimitive.Portal>
         <ContextMenuPrimitive.Content
             ref={ref}
-            className={classNames(
+            className={twMerge(
                 "z-50 min-w-[8rem] overflow-hidden rounded-md border border-slate-100 bg-white p-1 text-slate-700 shadow-md animate-in fade-in-80 dark:border-slate-800 dark:bg-slate-800 dark:text-slate-400",
                 className
             )}
@@ -78,7 +77,7 @@ const ContextMenuItem = React.forwardRef<
 >(({ className, inset, ...props }, ref) => (
     <ContextMenuPrimitive.Item
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "relative flex cursor-default select-none items-center rounded-sm py-1.5 px-2 text-sm font-medium outline-none focus:bg-slate-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-700",
             inset && "pl-8",
             className
@@ -94,7 +93,7 @@ const ContextMenuCheckboxItem = React.forwardRef<
 >(({ className, children, checked, ...props }, ref) => (
     <ContextMenuPrimitive.CheckboxItem
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm font-medium outline-none focus:bg-slate-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-700",
             className
         )}
@@ -117,7 +116,7 @@ const ContextMenuRadioItem = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
     <ContextMenuPrimitive.RadioItem
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm font-medium outline-none focus:bg-slate-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-700",
             className
         )}
@@ -140,7 +139,7 @@ const ContextMenuLabel = React.forwardRef<
 >(({ className, inset, ...props }, ref) => (
     <ContextMenuPrimitive.Label
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "px-2 py-1.5 text-sm font-semibold text-slate-900 dark:text-slate-300",
             inset && "pl-8",
             className
@@ -156,7 +155,7 @@ const ContextMenuSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <ContextMenuPrimitive.Separator
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "-mx-1 my-1 h-px bg-slate-100 dark:bg-slate-700",
             className
         )}
@@ -171,7 +170,7 @@ const ContextMenuShortcut = ({
 }: React.HTMLAttributes<HTMLSpanElement>) => {
     return (
         <span
-            className={classNames(
+            className={twMerge(
                 "ml-auto text-xs tracking-widest text-slate-500",
                 className
             )}

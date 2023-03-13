@@ -3,8 +3,8 @@
 import React from "react";
 import NextImage, { type ImageProps } from "next/image";
 import type { AspectRatioProps } from "@radix-ui/react-aspect-ratio";
+import { twMerge } from "tailwind-merge";
 
-import { classNames } from "@/lib/classNames";
 import { blurDataURL } from "@/lib/constants";
 import { AspectRatio } from "@/components/ui/AspectRatio";
 
@@ -25,10 +25,7 @@ const ImageWithAspectRatio = ({
                 fill
                 placeholder="blur"
                 blurDataURL={blurDataURL}
-                className={classNames(
-                    "rounded-md object-cover",
-                    imageClassName
-                )}
+                className={twMerge("rounded-md object-cover", imageClassName)}
                 {...imageProps}
             />
         </AspectRatio>

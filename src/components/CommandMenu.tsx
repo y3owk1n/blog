@@ -2,17 +2,12 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import {
-    CircleStackIcon,
-    FolderIcon,
-    MoonIcon,
-    SunIcon,
-} from "@heroicons/react/20/solid";
+import { MoonIcon, SunIcon } from "@heroicons/react/20/solid";
 import type { DialogProps } from "@radix-ui/react-alert-dialog";
 import { useTheme } from "next-themes";
 import { TbDeviceLaptop, TbFileInfo } from "react-icons/tb";
+import { twMerge } from "tailwind-merge";
 
-import { classNames } from "@/lib/classNames";
 import { allPostsAndSort, groupUisByTags } from "@/lib/contentlayerApi";
 import { Button } from "./ui/Button";
 import {
@@ -52,7 +47,7 @@ export function CommandMenu({ ...props }: DialogProps) {
         <>
             <Button
                 variant="outline"
-                className={classNames(
+                className={twMerge(
                     "relative h-9 w-full justify-start text-sm text-slate-500 dark:text-slate-400 sm:pr-12 md:w-40 lg:w-64"
                 )}
                 onClick={() => setOpen(true)}

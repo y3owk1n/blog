@@ -3,9 +3,9 @@
 import * as React from "react";
 import { CheckIcon, ClipboardIcon } from "@heroicons/react/20/solid";
 import type { DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu";
+import { twMerge } from "tailwind-merge";
 
 import type { NpmCommands } from "@/types/unist-builder";
-import { classNames as cx } from "@/lib/classNames";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -49,7 +49,7 @@ export function CopyButton({
 
     return (
         <button
-            className={cx(
+            className={twMerge(
                 "z-20 inline-flex h-8 items-center justify-center rounded-md border border-slate-300 p-2 text-sm font-medium text-slate-300 transition-all hover:bg-slate-50 focus:outline-none dark:border-slate-600 dark:text-slate-600 ",
                 className
             )}
@@ -93,7 +93,7 @@ export function CopyWithClassNames({
     return (
         <DropdownMenu>
             <DropdownMenuTrigger
-                className={cx(
+                className={twMerge(
                     "relative z-20 inline-flex h-8 items-center justify-center rounded-md p-2 text-sm font-medium text-slate-900 transition-all hover:bg-slate-100 focus:outline-none ",
                     className
                 )}
@@ -145,7 +145,7 @@ export function CopyNpmCommandButton({
     return (
         <DropdownMenu>
             <DropdownMenuTrigger
-                className={cx(
+                className={twMerge(
                     " z-20 inline-flex h-8 items-center justify-center rounded-md p-2 text-sm font-medium text-slate-100 transition-all hover:bg-slate-100 focus:outline-none",
                     className
                 )}

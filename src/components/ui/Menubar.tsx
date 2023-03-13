@@ -3,8 +3,7 @@
 import * as React from "react";
 import { CheckIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import * as MenubarPrimitive from "@radix-ui/react-menubar";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 const MenubarMenu = MenubarPrimitive.Menu;
 
@@ -22,7 +21,7 @@ const Menubar = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <MenubarPrimitive.Root
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "flex h-10 items-center space-x-1 rounded-md border border-slate-300 bg-white p-1 dark:border-slate-700 dark:bg-slate-800",
             className
         )}
@@ -37,7 +36,7 @@ const MenubarTrigger = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <MenubarPrimitive.Trigger
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "flex cursor-default select-none items-center rounded-[0.2rem] py-1.5 px-3 text-sm font-medium outline-none focus:bg-slate-100 data-[state=open]:bg-slate-100 dark:focus:bg-slate-700 dark:data-[state=open]:bg-slate-700",
             className
         )}
@@ -54,7 +53,7 @@ const MenubarSubTrigger = React.forwardRef<
 >(({ className, inset, children, ...props }, ref) => (
     <MenubarPrimitive.SubTrigger
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "flex cursor-default select-none items-center rounded-sm py-1.5 px-2 text-sm font-medium outline-none focus:bg-slate-100 data-[state=open]:bg-slate-100 dark:focus:bg-slate-700 dark:data-[state=open]:bg-slate-700",
             inset && "pl-8",
             className
@@ -72,7 +71,7 @@ const MenubarSubContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <MenubarPrimitive.SubContent
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "z-50 min-w-[8rem] overflow-hidden rounded-md border border-slate-100 bg-white p-1 shadow-md animate-in slide-in-from-left-1 dark:border-slate-700 dark:bg-slate-800",
             className
         )}
@@ -101,7 +100,7 @@ const MenubarContent = React.forwardRef<
                 align={align}
                 alignOffset={alignOffset}
                 sideOffset={sideOffset}
-                className={classNames(
+                className={twMerge(
                     "z-50 min-w-[12rem] overflow-hidden rounded-md border border-slate-100 bg-white p-1 text-slate-700 shadow-md animate-in slide-in-from-top-1 dark:border-slate-800 dark:bg-slate-800 dark:text-slate-400",
                     className
                 )}
@@ -120,7 +119,7 @@ const MenubarItem = React.forwardRef<
 >(({ className, inset, ...props }, ref) => (
     <MenubarPrimitive.Item
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "relative flex cursor-default select-none items-center rounded-sm py-1.5 px-2 text-sm font-medium outline-none focus:bg-slate-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-700",
             inset && "pl-8",
             className
@@ -136,7 +135,7 @@ const MenubarCheckboxItem = React.forwardRef<
 >(({ className, children, checked, ...props }, ref) => (
     <MenubarPrimitive.CheckboxItem
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm font-medium outline-none focus:bg-slate-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-700",
             className
         )}
@@ -158,7 +157,7 @@ const MenubarRadioItem = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
     <MenubarPrimitive.RadioItem
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm font-medium outline-none focus:bg-slate-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-700",
             className
         )}
@@ -181,7 +180,7 @@ const MenubarLabel = React.forwardRef<
 >(({ className, inset, ...props }, ref) => (
     <MenubarPrimitive.Label
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "px-2 py-1.5 text-sm font-semibold text-slate-900 dark:text-slate-300",
             inset && "pl-8",
             className
@@ -197,7 +196,7 @@ const MenubarSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <MenubarPrimitive.Separator
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "-mx-1 my-1 h-px bg-slate-100 dark:bg-slate-800",
             className
         )}
@@ -212,7 +211,7 @@ const MenubarShortcut = ({
 }: React.HTMLAttributes<HTMLSpanElement>) => {
     return (
         <span
-            className={classNames(
+            className={twMerge(
                 "ml-auto text-xs tracking-widest text-slate-500",
                 className
             )}

@@ -1,6 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 interface AlertProps
     extends React.HTMLAttributes<HTMLDivElement>,
@@ -26,7 +25,7 @@ const alertVariants = cva("flex items-start rounded-md  p-4", {
 function Alert({ children, variant, className, icon, ...props }: AlertProps) {
     return (
         <div
-            className={classNames(alertVariants({ variant, className }))}
+            className={twMerge(alertVariants({ variant, className }))}
             {...props}>
             {icon && <span className="mr-4 text-2xl">{icon}</span>}
             <div>{children}</div>

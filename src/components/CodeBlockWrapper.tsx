@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
+import { twMerge } from "tailwind-merge";
 
-import { classNames } from "@/lib/classNames";
 import { Button } from "./ui/Button";
 import {
     Collapsible,
@@ -27,16 +27,16 @@ export function CodeBlockWrapper({
             open={isOpened}
             onOpenChange={setIsOpened}>
             <div
-                className={classNames("relative overflow-hidden", className)}
+                className={twMerge("relative overflow-hidden", className)}
                 {...props}>
                 <CollapsibleContent
                     forceMount
-                    className={classNames(
+                    className={twMerge(
                         "overflow-hidden",
                         !isOpened && "max-h-32"
                     )}>
                     <div
-                        className={classNames(
+                        className={twMerge(
                             "[&_pre]:max-h-[650px [&_pre]:my-0 [&_pre]:pb-[100px]",
                             !isOpened
                                 ? "[&_pre]:overflow-hidden"
@@ -46,7 +46,7 @@ export function CodeBlockWrapper({
                     </div>
                 </CollapsibleContent>
                 <div
-                    className={classNames(
+                    className={twMerge(
                         "absolute flex items-center justify-center bg-gradient-to-b from-slate-900/30 to-slate-900/90 p-2",
                         isOpened ? "inset-x-0 bottom-3 h-12" : "inset-0"
                     )}>

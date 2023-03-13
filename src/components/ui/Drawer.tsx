@@ -4,8 +4,7 @@ import * as React from "react";
 import { XMarkIcon } from "@heroicons/react/20/solid";
 import * as DrawerPrimitive from "@radix-ui/react-dialog";
 import { cva, type VariantProps } from "class-variance-authority";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 const Drawer = DrawerPrimitive.Root;
 
@@ -34,7 +33,7 @@ const DrawerPortal = ({
     ...props
 }: DrawerPortalProps) => (
     <DrawerPrimitive.Portal
-        className={classNames(className)}
+        className={twMerge(className)}
         {...props}>
         <div className={portalVariants({ position })}>{children}</div>
     </DrawerPrimitive.Portal>
@@ -46,7 +45,7 @@ const DrawerOverlay = React.forwardRef<
     React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
 >(({ className, children, ...props }, ref) => (
     <DrawerPrimitive.Overlay
-        className={classNames(
+        className={twMerge(
             "fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-all duration-100 data-[state=closed]:animate-out data-[state=open]:fade-in data-[state=closed]:fade-out",
             className
         )}
@@ -156,10 +155,7 @@ const DrawerContent = React.forwardRef<
         <DrawerOverlay />
         <DrawerPrimitive.Content
             ref={ref}
-            className={classNames(
-                drawerVariants({ position, size }),
-                className
-            )}
+            className={twMerge(drawerVariants({ position, size }), className)}
             {...props}>
             {children}
             <DrawerPrimitive.Close className="absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-slate-100 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-900 dark:data-[state=open]:bg-slate-800">
@@ -176,7 +172,7 @@ const DrawerHeader = ({
     ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
     <div
-        className={classNames(
+        className={twMerge(
             "flex flex-col space-y-2 text-center sm:text-left",
             className
         )}
@@ -190,7 +186,7 @@ const DrawerFooter = ({
     ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
     <div
-        className={classNames(
+        className={twMerge(
             "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
             className
         )}
@@ -205,7 +201,7 @@ const DrawerTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <DrawerPrimitive.Title
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "text-lg font-semibold text-slate-900",
 
             "dark:text-slate-50",
@@ -222,7 +218,7 @@ const DrawerDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <DrawerPrimitive.Description
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "text-sm text-slate-500",
             "dark:text-slate-400",
             className

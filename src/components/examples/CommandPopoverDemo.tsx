@@ -9,8 +9,8 @@ import {
     PlusCircleIcon,
     XMarkIcon,
 } from "@heroicons/react/20/solid";
+import { twMerge } from "tailwind-merge";
 
-import { classNames } from "@/lib/classNames";
 import { Button } from "@/components/ui/Button";
 import {
     Command,
@@ -107,7 +107,7 @@ const CommandPopoverDemo = () => {
                                             setOpen(false);
                                         }}>
                                         <status.icon
-                                            className={classNames(
+                                            className={twMerge(
                                                 "mr-2 h-4 w-4",
                                                 status.value ===
                                                     selectedStatus?.value

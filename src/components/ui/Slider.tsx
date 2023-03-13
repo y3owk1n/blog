@@ -2,8 +2,7 @@
 
 import * as React from "react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
-
-import { classNames } from "@/lib/classNames";
+import { twMerge } from "tailwind-merge";
 
 const Slider = React.forwardRef<
     React.ElementRef<typeof SliderPrimitive.Root>,
@@ -11,7 +10,7 @@ const Slider = React.forwardRef<
 >(({ className, value, ...props }, ref) => (
     <SliderPrimitive.Root
         ref={ref}
-        className={classNames(
+        className={twMerge(
             "relative flex w-full touch-none select-none items-center",
             className
         )}
