@@ -15,7 +15,7 @@ const kbdVariants = cva(
                 default:
                     "bg-slate-700 text-slate-100 dark:bg-slate-300 dark:text-slate-700",
                 outline:
-                    "border-slate-100 bg-slate-100 text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400",
+                    "border-slate-200 bg-transparent text-slate-600 dark:border-slate-700  dark:text-slate-400",
             },
         },
         defaultVariants: {

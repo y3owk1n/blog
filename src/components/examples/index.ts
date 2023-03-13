@@ -20,6 +20,7 @@ import CheckboxDemo from "@/components/examples/CheckboxDemo";
 import CheckboxDisabledDemo from "@/components/examples/CheckboxDisabledDemo";
 import CollapsibleDemo from "@/components/examples/CollapsibleDemo";
 import CommandComboBoxDemo from "@/components/examples/CommandComboBoxDemo";
+import CommandDemo from "@/components/examples/CommandDemo";
 import CommandDialogDemo from "@/components/examples/CommandDialogDemo";
 import CommandDropdownMenuDemo from "@/components/examples/CommandDropdownMenuDemo";
 import CommandPopoverDemo from "@/components/examples/CommandPopoverDemo";
@@ -94,6 +95,7 @@ export const examples = {
     CheckboxDemo,
     CheckboxDisabledDemo,
     CollapsibleDemo,
+    CommandDemo,
     CommandDialogDemo,
     CommandPopoverDemo,
     CommandComboBoxDemo,

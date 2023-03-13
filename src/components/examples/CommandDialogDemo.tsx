@@ -11,13 +11,14 @@ import {
     CommandList,
 } from "@/components/ui/Command";
 import { Paragraph } from "@/components/ui/typography/Paragraph";
+import { Kbd } from "../ui/Kbd";
 
 const CommandDialogDemo = () => {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
         const down = (e: KeyboardEvent) => {
-            if (e.key === "k" && e.metaKey) {
+            if (e.key === "j" && e.metaKey) {
                 setOpen((open) => !open);
             }
         };
@@ -27,7 +28,21 @@ const CommandDialogDemo = () => {
 
     return (
         <>
-            <Paragraph>Use command + k to summon command</Paragraph>
+            <Paragraph className="flex items-center">
+                Use
+                <Kbd
+                    variant="outline"
+                    className="mx-2">
+                    ⌘
+                </Kbd>
+                +
+                <Kbd
+                    variant="outline"
+                    className="mx-2">
+                    J
+                </Kbd>
+                to summon command
+            </Paragraph>
             <CommandDialog
                 open={open}
                 onOpenChange={setOpen}>
