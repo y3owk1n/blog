@@ -3,6 +3,7 @@ import { allPosts } from "@/contentlayer/generated";
 
 import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
 import CoverImage from "@/components/CoverImage";
+import Date from "@/components/Date";
 import { Mdx } from "@/components/Mdx";
 import { H1 } from "@/components/ui/typography/H1";
 
@@ -29,6 +30,9 @@ export default function Page({ params }: PageProps) {
     return (
         <>
             <H1 className="font-serif">{content.title}</H1>
+            <div className="my-4 text-sm text-gray-500">
+                <Date dateString={content.date} />
+            </div>
 
             <CoverImage
                 title={content.title}
