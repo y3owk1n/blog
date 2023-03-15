@@ -14,6 +14,7 @@ const Years: React.FC<Props> = ({ year, clickYear }) => {
             {generateArrayNumber(year, year + 11).map((item, index) => (
                 <Button
                     key={index}
+                    variant="subtle"
                     className="py-3"
                     onClick={() => {
                         clickYear(item);

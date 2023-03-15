@@ -18,6 +18,7 @@ const Months: React.FC<Props> = ({ clickMonth }) => {
             {MONTHS.map((item) => (
                 <Button
                     key={item}
+                    variant="subtle"
                     className="py-3"
                     onClick={() => {
                         clickMonth(item);
