@@ -16,9 +16,11 @@ export async function generateMetadata({
 
     const title = `${content.title} | Kyle's Blog`;
     const description = content.description;
-    const image = `${devEnvironment ? DEVDOMAIN : DOMAIN}/api/og-image?slug=${
-        params.slug
-    }&type=post`;
+    const image = encodeURI(
+        `${devEnvironment ? DEVDOMAIN : DOMAIN}/api/og-image?text=${
+            content.description
+        }`
+    );
     const date = new Date(content.date).toISOString();
 
     return {
