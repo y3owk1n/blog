@@ -1,5 +1,6 @@
 "use client";
 
+import { parse } from "path";
 import React, {
     useCallback,
     useContext,
@@ -65,6 +66,8 @@ const CalendarBase: React.FC<Props> = ({
     loadLanguageModule(i18n);
 
     const parsedDate = dayjs(date);
+
+    const parsedYear = parsedDate.year();
 
     // States
     const [showMonths, setShowMonths] = useState(false);
@@ -228,8 +231,8 @@ const CalendarBase: React.FC<Props> = ({
 
     // UseEffects & UseLayoutEffect
     useEffect(() => {
-        setYear(parsedDate.year());
-    }, [parsedDate]);
+        setYear(parsedYear);
+    }, [parsedYear]);
 
     // Variables
     const calendarData = useMemo(() => {
@@ -261,7 +264,7 @@ const CalendarBase: React.FC<Props> = ({
                         <Button
                             variant="ghost"
                             onClick={() => {
-                                setYear(year - 12);
+                                setYear((year) => year - 12);
                             }}>
                             <ChevronDoubleLeftIcon className="h-5 w-5" />
                         </Button>
@@ -297,7 +300,7 @@ const CalendarBase: React.FC<Props> = ({
                         <Button
                             variant="ghost"
                             onClick={() => {
-                                setYear(year + 12);
+                                setYear((year) => year + 12);
                             }}>
                             <ChevronDoubleRightIcon className="h-5 w-5" />
                         </Button>
