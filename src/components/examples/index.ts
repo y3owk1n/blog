@@ -70,6 +70,11 @@ import TextareaDisabledDemo from "@/components/examples/TextareaDisabledDemo";
 import TextareaWithButtonDemo from "@/components/examples/TextareaWithButtonDemo";
 import TextareaWithHelperDemo from "@/components/examples/TextareaWithHelperDemo";
 import TextareaWithLabelDemo from "@/components/examples/TextareaWithLabelDemo";
+import TimeInputDemo from "@/components/examples/TimeInputDemo";
+import TimeInputDisabledDemo from "@/components/examples/TimeInputDisabledDemo";
+import TimeInputSecondsDemo from "@/components/examples/TimeInputSecondsDemo";
+import TimeInputWithHelperDemo from "@/components/examples/TimeInputWithHelperDemo";
+import TimeInputWithLabelDemo from "@/components/examples/TimeInputWithLabelDemo";
 import ToastDemo from "@/components/examples/ToastDemo";
 import ToastWithActionDemo from "@/components/examples/ToastWithActionDemo";
 import ToastWithTitleDemo from "@/components/examples/ToastWithTitleDemo";
@@ -148,6 +153,11 @@ export const examples = {
     SliderDemo,
     SwitchDemo,
     TabsDemo,
+    TimeInputDemo,
+    TimeInputDisabledDemo,
+    TimeInputSecondsDemo,
+    TimeInputWithHelperDemo,
+    TimeInputWithLabelDemo,
     TextareaDemo,
     TextareaDisabledDemo,
     TextareaWithButtonDemo,

@@ -12,7 +12,6 @@ const CalendarRangeDemo = () => {
     });
 
     const handleValueChange = (newValue: DateValueType) => {
-        console.log("newValue:", newValue);
         setValue(newValue);
     };
 

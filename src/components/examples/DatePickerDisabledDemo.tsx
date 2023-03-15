@@ -12,7 +12,6 @@ const DatePickerDisabledDemo = () => {
     });
 
     const handleValueChange = (newValue: DateValueType) => {
-        console.log("newValue:", newValue);
         setValue(newValue);
     };
 
