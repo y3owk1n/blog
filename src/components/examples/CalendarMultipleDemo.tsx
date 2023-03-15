@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 import type { DateValueType } from "@/types/calendar";
-import Calendar from "../ui/calendar/Calendar";
+import Calendar from "@/components/ui/calendar/Calendar";
 
 const CalendarMultipleDemo = () => {
     const [value, setValue] = useState<DateValueType>({

@@ -2,12 +2,6 @@ import { CalendarDaysIcon } from "@heroicons/react/20/solid";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 import { githubProfile, linkedInProfile } from "@/lib/constants";
-import CalendarDemo from "@/components/examples/CalendarDemo";
-import CalendarMultipleDemo from "@/components/examples/CalendarMultiple";
-import CalendarRangeDemo from "@/components/examples/CalendarRangeDemo";
-import DatePickerDemo from "@/components/examples/DatePickerDemo";
-import DatePickerMultipleDemo from "@/components/examples/DatePickerMultipleDemo";
-import DatePickerRangeDemo from "@/components/examples/DatePickerRangeDemo";
 import { Alert } from "@/components/ui/Alert";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 import { Button } from "@/components/ui/Button";

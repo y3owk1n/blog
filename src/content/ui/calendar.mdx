@@ -1,0 +1,127 @@
+---
+title: Calendar
+description: Calendar component for React.
+component: true
+tag: Components
+date: 2023-03-15T16:00:00.000Z
+---
+
+<Alert variant="outline">
+
+The `<Calendar />` component is inspired by [`react-tailwindcss-datepicker`](https://react-tailwindcss-datepicker.vercel.app/) by
+[onesine](https://github.com/onesine).
+
+</Alert>
+
+<ComponentExample src="src/components/examples/CalendarDemo.tsx">
+    <CalendarDemo />
+</ComponentExample>
+
+## Installation
+
+### 1. Initialize types for the calendar component:
+
+<ComponentSource src="src/types/calendar.ts" />
+
+<Alert variant="outline">
+    You can place it in a file at `types/calendar.ts`.
+</Alert>
+
+### 2. Initialize constants for the calendar component:
+
+<ComponentSource src="src/components/ui/calendar/constants.ts" />
+
+<Alert variant="outline">
+    You can place it in a file at `components/ui/calendar/constants.ts`.
+</Alert>
+
+### 3. Initialize helper functions for the calendar component:
+
+<ComponentSource src="src/components/ui/calendar/helpers.ts" />
+
+<Alert variant="outline">
+    You can place it in a file at `components/ui/calendar/helpers.ts`.
+</Alert>
+
+### 4. Create a context for the calendar component:
+
+<ComponentSource src="src/components/ui/calendar/context.tsx" />
+
+<Alert variant="outline">
+    You can place it in a file at `components/ui/calendar/context.tsx`.
+</Alert>
+
+### 5. Create the Days, Months, Weeks and Years components for the calendar component:
+
+<ComponentSource src="src/components/ui/calendar/Days.tsx" />
+
+<Alert variant="outline">
+    You can place it in a file at `components/ui/calendar/Days.tsx`.
+</Alert>
+
+<ComponentSource src="src/components/ui/calendar/Weeks.tsx" />
+
+<Alert variant="outline">
+    You can place it in a file at `components/ui/calendar/Weeks.tsx`.
+</Alert>
+
+<ComponentSource src="src/components/ui/calendar/Months.tsx" />
+
+<Alert variant="outline">
+    You can place it in a file at `components/ui/calendar/Months.tsx`.
+</Alert>
+
+<ComponentSource src="src/components/ui/calendar/Years.tsx" />
+
+<Alert variant="outline">
+    You can place it in a file at `components/ui/calendar/Years.tsx`.
+</Alert>
+
+### 6. Create a Calendar base component:
+
+<ComponentSource src="src/components/ui/calendar/CalendarBase.tsx" />
+
+<Alert variant="outline">
+    You can place it in a file at `components/ui/calendar/CalendarBase.tsx`.
+</Alert>
+
+### 7. Create the actual Calendar component with states:
+
+<ComponentSource src="src/components/ui/calendar/Calendar.tsx" />
+
+<Alert variant="outline">
+    You can place it in a file at `components/ui/calendar/Calendar.tsx`.
+</Alert>
+
+## Usage
+
+```tsx
+import { Calendar } from "@/components/ui/calendar/Calendar";
+```
+
+```tsx
+<Calendar
+    value={value}
+    onChange={handleValueChange}
+/>
+```
+
+## Examples
+
+### Calendar single
+
+<ComponentExample src="src/components/examples/CalendarDemo.tsx">
+    <CalendarDemo />
+</ComponentExample>
+
+### Calendar with range
+
+<ComponentExample src="src/components/examples/CalendarRangeDemo.tsx">
+    <CalendarRangeDemo />
+</ComponentExample>
+
+### Multiple calendars
+
+<ComponentExample src="src/components/examples/CalendarMultipleDemo.tsx">
+    <CalendarMultipleDemo />
+</ComponentExample>

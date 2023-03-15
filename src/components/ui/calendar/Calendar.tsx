@@ -18,7 +18,7 @@ import type {
     DateValueType,
     Period,
 } from "@/types/calendar";
-import CalendarCore from "./CalendarCore";
+import CalendarBase from "./CalendarBase";
 import {
     COLORS,
     DATE_FORMAT,
@@ -320,13 +320,11 @@ const Calendar: React.FC<Props> = ({
                     ref={calendarContainerRef}>
                     <div className="mt-2.5 rounded-lg border border-slate-200 bg-white px-1 py-0.5 dark:border-slate-700 dark:bg-slate-900 dark:text-white">
                         <div className="flex flex-col py-2 lg:flex-row">
-                            {/* {showShortcuts && <Shortcuts />} */}
-
                             <div
                                 className={`flex flex-col items-stretch space-y-4 md:flex-row md:space-y-0 md:space-x-1.5 ${
                                     showShortcuts ? "md:pl-2" : "md:pl-1"
                                 } pr-2 lg:pr-1`}>
-                                <CalendarCore
+                                <CalendarBase
                                     date={firstDate.toDate()}
                                     onClickPrevious={previousMonthFirst}
                                     onClickNext={nextMonthFirst}
@@ -335,26 +333,16 @@ const Calendar: React.FC<Props> = ({
                                 />
 
                                 {useRange && (
-                                    <>
-                                        {/* <div className="flex items-center"> */}
-                                        {/*     <VerticalDash /> */}
-                                        {/* </div> */}
-
-                                        <CalendarCore
-                                            date={secondDate.toDate()}
-                                            onClickPrevious={
-                                                previousMonthSecond
-                                            }
-                                            onClickNext={nextMonthSecond}
-                                            changeMonth={changeSecondMonth}
-                                            changeYear={changeSecondYear}
-                                        />
-                                    </>
+                                    <CalendarBase
+                                        date={secondDate.toDate()}
+                                        onClickPrevious={previousMonthSecond}
+                                        onClickNext={nextMonthSecond}
+                                        changeMonth={changeSecondMonth}
+                                        changeYear={changeSecondYear}
+                                    />
                                 )}
                             </div>
                         </div>
-
-                        {/* {showFooter && <Footer />} */}
                     </div>
                 </div>
             </div>

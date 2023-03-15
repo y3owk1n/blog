@@ -42,7 +42,7 @@ interface Props {
     changeYear: (year: number) => void;
 }
 
-const CalendarCore: React.FC<Props> = ({
+const CalendarBase: React.FC<Props> = ({
     date,
     onClickPrevious,
     onClickNext,
@@ -342,4 +342,4 @@ const CalendarCore: React.FC<Props> = ({
     );
 };
 
-export default CalendarCore;
+export default CalendarBase;

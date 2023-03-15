@@ -16,6 +16,9 @@ import ButtonLinkDemo from "@/components/examples/ButtonLinkDemo";
 import ButtonLoadingDemo from "@/components/examples/ButtonLoadingDemo";
 import ButtonOutlineDemo from "@/components/examples/ButtonOutlineDemo";
 import ButtonSubtleDemo from "@/components/examples/ButtonSubtleDemo";
+import CalendarDemo from "@/components/examples/CalendarDemo";
+import CalendarMultipleDemo from "@/components/examples/CalendarMultipleDemo";
+import CalendarRangeDemo from "@/components/examples/CalendarRangeDemo";
 import CheckboxDemo from "@/components/examples/CheckboxDemo";
 import CheckboxDisabledDemo from "@/components/examples/CheckboxDisabledDemo";
 import CollapsibleDemo from "@/components/examples/CollapsibleDemo";
@@ -25,6 +28,9 @@ import CommandDialogDemo from "@/components/examples/CommandDialogDemo";
 import CommandDropdownMenuDemo from "@/components/examples/CommandDropdownMenuDemo";
 import CommandPopoverDemo from "@/components/examples/CommandPopoverDemo";
 import ContextMenuDemo from "@/components/examples/ContextMenuDemo";
+import DatePickerDemo from "@/components/examples/DatePickerDemo";
+import DatePickerMultipleDemo from "@/components/examples/DatePickerMultipleDemo";
+import DatePickerRangeDemo from "@/components/examples/DatePickerRangeDemo";
 import DialogDemo from "@/components/examples/DialogDemo";
 import DrawerDemo from "@/components/examples/DrawerDemo";
 import DrawerPositionDemo from "@/components/examples/DrawerPositionDemo";
@@ -92,6 +98,9 @@ export const examples = {
     ButtonOutlineDemo,
     ButtonIconDemo,
     ButtonSubtleDemo,
+    CalendarDemo,
+    CalendarMultipleDemo,
+    CalendarRangeDemo,
     CheckboxDemo,
     CheckboxDisabledDemo,
     CollapsibleDemo,
@@ -101,6 +110,9 @@ export const examples = {
     CommandComboBoxDemo,
     CommandDropdownMenuDemo,
     ContextMenuDemo,
+    DatePickerDemo,
+    DatePickerMultipleDemo,
+    DatePickerRangeDemo,
     DialogDemo,
     DropdownMenuDemo,
     DropdownMenuCheckboxDemo,

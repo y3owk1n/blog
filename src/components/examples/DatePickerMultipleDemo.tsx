@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 import type { DateValueType } from "@/types/calendar";
-import DatePicker from "../ui/calendar/DatePicker";
+import DatePicker from "@/components/ui/calendar/DatePicker";
 
 const DatePickerMultipleDemo = () => {
     const [value, setValue] = useState<DateValueType>({
