@@ -29,6 +29,7 @@ import CommandDropdownMenuDemo from "@/components/examples/CommandDropdownMenuDe
 import CommandPopoverDemo from "@/components/examples/CommandPopoverDemo";
 import ContextMenuDemo from "@/components/examples/ContextMenuDemo";
 import DatePickerDemo from "@/components/examples/DatePickerDemo";
+import DatePickerDisabledDemo from "@/components/examples/DatePickerDisabledDemo";
 import DatePickerMultipleDemo from "@/components/examples/DatePickerMultipleDemo";
 import DatePickerRangeDemo from "@/components/examples/DatePickerRangeDemo";
 import DialogDemo from "@/components/examples/DialogDemo";
@@ -111,6 +112,7 @@ export const examples = {
     CommandDropdownMenuDemo,
     ContextMenuDemo,
     DatePickerDemo,
+    DatePickerDisabledDemo,
     DatePickerMultipleDemo,
     DatePickerRangeDemo,
     DialogDemo,
