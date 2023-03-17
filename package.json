@@ -89,7 +89,7 @@
         "mdast-util-toc": "^6.1.1",
         "postcss": "^8.4.21",
         "prettier": "^2.8.4",
-        "prettier-plugin-tailwindcss": "^0.2.4",
+        "prettier-plugin-tailwindcss": "^0.2.5",
         "rehype-autolink-headings": "^6.1.1",
         "rehype-pretty-code": "^0.9.4",
         "rehype-slug": "^5.1.0",
@@ -99,7 +99,7 @@
         "shiki": "^0.14.1",
         "tailwindcss": "^3.2.7",
         "tailwindcss-bg-patterns": "^0.2.0",
-        "typescript": "^4.9.5",
+        "typescript": "^5.0.2",
         "unist-builder": "^3.0.1",
         "unist-util-visit": "^4.1.2"
     },
