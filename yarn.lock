@@ -740,15 +740,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hookform/resolvers@npm:^2.9.11":
-  version: 2.9.11
-  resolution: "@hookform/resolvers@npm:2.9.11"
-  peerDependencies:
-    react-hook-form: ^7.0.0
-  checksum: 977ea038bb94457ac9f6c7ca65438ce8fcd0cf7643b9925d8bc4d66df6faa0f49ad642bee7362f86a4d3ff7ff53d18b7aea0597085993971cae00e86bf6eda73
-  languageName: node
-  linkType: hard
-
 "@humanwhocodes/config-array@npm:^0.11.8":
   version: 0.11.8
   resolution: "@humanwhocodes/config-array@npm:0.11.8"
@@ -8709,15 +8700,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.43.6":
-  version: 7.43.6
-  resolution: "react-hook-form@npm:7.43.6"
-  peerDependencies:
-    react: ^16.8.0 || ^17 || ^18
-  checksum: fec9547294c58ebcbfe2e614451799c1371e4c438a44757b2392b5a48142bfe886aaefdb00b9c9c192a24fd414ab76c57a2e3adc710de55015accf5a9b9e6e8b
-  languageName: node
-  linkType: hard
-
 "react-icons@npm:^4.8.0":
   version: 4.8.0
   resolution: "react-icons@npm:4.8.0"
@@ -9999,7 +9981,6 @@ __metadata:
   resolution: "ui@workspace:."
   dependencies:
     "@heroicons/react": ^2.0.16
-    "@hookform/resolvers": ^2.9.11
     "@ianvs/prettier-plugin-sort-imports": ^3.7.1
     "@next/eslint-plugin-next": ^13.2.4
     "@radix-ui/react-accordion": ^1.1.1
@@ -10070,7 +10051,6 @@ __metadata:
     prettier-plugin-tailwindcss: ^0.2.4
     react: 18.2.0
     react-dom: 18.2.0
-    react-hook-form: ^7.43.6
     react-icons: ^4.8.0
     rehype-autolink-headings: ^6.1.1
     rehype-pretty-code: ^0.9.4
@@ -10088,6 +10068,7 @@ __metadata:
     unist-builder: ^3.0.1
     unist-util-visit: ^4.1.2
     zod: ^3.21.4
+    zod-validation-error: ^1.0.1
   languageName: unknown
   linkType: soft
 
@@ -10600,6 +10581,15 @@ __metadata:
   version: 0.3.2
   resolution: "yoga-wasm-web@npm:0.3.2"
   checksum: 3f00606968eb7ea38c8affd6b43239d6ac4cd53e705dc61e61b3da53bf76728fb8e80f93de7ce42fc89893374340f2ae8799d485ff001320cde8a9502a7900c6
+  languageName: node
+  linkType: hard
+
+"zod-validation-error@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "zod-validation-error@npm:1.0.1"
+  peerDependencies:
+    zod: ^3.18.0
+  checksum: 0ad705b9eab062e06171b9f118fa2e36a8ccb9dda496bb5c65eefc0d665706e296587bf7fafb77b274e401f82029d403de689e5f58b9a5b627a254e4bd4bddac
   languageName: node
   linkType: hard
 
