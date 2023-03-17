@@ -740,6 +740,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hookform/resolvers@npm:^2.9.11":
+  version: 2.9.11
+  resolution: "@hookform/resolvers@npm:2.9.11"
+  peerDependencies:
+    react-hook-form: ^7.0.0
+  checksum: 977ea038bb94457ac9f6c7ca65438ce8fcd0cf7643b9925d8bc4d66df6faa0f49ad642bee7362f86a4d3ff7ff53d18b7aea0597085993971cae00e86bf6eda73
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.8":
   version: 0.11.8
   resolution: "@humanwhocodes/config-array@npm:0.11.8"
@@ -2393,6 +2402,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tailwindcss/forms@npm:^0.5.3":
+  version: 0.5.3
+  resolution: "@tailwindcss/forms@npm:0.5.3"
+  dependencies:
+    mini-svg-data-uri: ^1.2.3
+  peerDependencies:
+    tailwindcss: ">=3.0.0 || >= 3.0.0-alpha.1"
+  checksum: 9eddb4dbd06d01b1068138ff52a54ed0e35a28e7bfd3c72e226fc28658ecd92a9c078c4abe9c83db090984672040644d7ae2e035933fb619dd703df1d87aa275
+  languageName: node
+  linkType: hard
+
 "@tailwindcss/line-clamp@npm:^0.4.2":
   version: 0.4.2
   resolution: "@tailwindcss/line-clamp@npm:0.4.2"
@@ -2462,6 +2482,17 @@ __metadata:
   peerDependencies:
     "@tiptap/core": ^2.0.0-beta.209
   checksum: 12467c5d26721a27e44192a0142ab8b6915a25293f73154b392f1957069973afd0661a512cf223d7a4556d00a64e6139d0a36588d8a088e6123e98cce1e5e5e7
+  languageName: node
+  linkType: hard
+
+"@tiptap/extension-code-block-lowlight@npm:^2.0.0-beta.220":
+  version: 2.0.0-beta.220
+  resolution: "@tiptap/extension-code-block-lowlight@npm:2.0.0-beta.220"
+  peerDependencies:
+    "@tiptap/core": ^2.0.0-beta.209
+    "@tiptap/extension-code-block": ^2.0.0-beta.209
+    "@tiptap/pm": ^2.0.0-beta.209
+  checksum: db71d79dded2d063efe34545450bb4a5a21a71bb2170ad2ab819806c16a57a22007ffb951d64f0fc9fb70b0a7bfe4a1e0676632f49a02f0d7e6035ed565252ff
   languageName: node
   linkType: hard
 
@@ -2572,6 +2603,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tiptap/extension-link@npm:^2.0.0-beta.220":
+  version: 2.0.0-beta.220
+  resolution: "@tiptap/extension-link@npm:2.0.0-beta.220"
+  dependencies:
+    linkifyjs: ^4.1.0
+  peerDependencies:
+    "@tiptap/core": ^2.0.0-beta.209
+    "@tiptap/pm": ^2.0.0-beta.209
+  checksum: a6d403d63cd0cef5ceb4940e2bfbd971890314e036a2db62131c07511413d0ac88a69532029e927e5fbc141e8a5b9bf69dea4041afe3d78e2b8816d04944dc6c
+  languageName: node
+  linkType: hard
+
 "@tiptap/extension-list-item@npm:^2.0.0-beta.220":
   version: 2.0.0-beta.220
   resolution: "@tiptap/extension-list-item@npm:2.0.0-beta.220"
@@ -2599,6 +2642,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tiptap/extension-placeholder@npm:^2.0.0-beta.220":
+  version: 2.0.0-beta.220
+  resolution: "@tiptap/extension-placeholder@npm:2.0.0-beta.220"
+  peerDependencies:
+    "@tiptap/core": ^2.0.0-beta.209
+    "@tiptap/pm": ^2.0.0-beta.209
+  checksum: 58bb459a4879bc0cf2824f893b1efd7d0ed1aba7012a282e142fd870a27494a157e406bb34a8d007e1f254440c345f04fdc0c997b38133dffad772a2337e2faf
+  languageName: node
+  linkType: hard
+
 "@tiptap/extension-strike@npm:^2.0.0-beta.220":
   version: 2.0.0-beta.220
   resolution: "@tiptap/extension-strike@npm:2.0.0-beta.220"
@@ -2608,12 +2661,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tiptap/extension-text-align@npm:^2.0.0-beta.220":
+  version: 2.0.0-beta.220
+  resolution: "@tiptap/extension-text-align@npm:2.0.0-beta.220"
+  peerDependencies:
+    "@tiptap/core": ^2.0.0-beta.209
+  checksum: 82a443a976e9e2027170935452cf5bd77ce8ba0b021c83aa6b233eeaa999a1004de4dd15b3e22a4a73cd3138c42625466f88dd931b199a3547c836deb5b7307f
+  languageName: node
+  linkType: hard
+
+"@tiptap/extension-text-style@npm:^2.0.0-beta.220":
+  version: 2.0.0-beta.220
+  resolution: "@tiptap/extension-text-style@npm:2.0.0-beta.220"
+  peerDependencies:
+    "@tiptap/core": ^2.0.0-beta.209
+  checksum: 4347df2cebc03876b3af207d2fe823289529a939e0f7e3e65847be0dab22be14035c5c78854472e77e4a92f9568fc75bfb773a7b003d6921ce5f8501aeee5bd7
+  languageName: node
+  linkType: hard
+
 "@tiptap/extension-text@npm:^2.0.0-beta.220":
   version: 2.0.0-beta.220
   resolution: "@tiptap/extension-text@npm:2.0.0-beta.220"
   peerDependencies:
     "@tiptap/core": ^2.0.0-beta.209
   checksum: f463bdd57014aed30e028b7580e57a3b901846ee5b2275a267d307aaf2167c5912c8d316e7f4947ef90861b7d86e0791405808f94334f70b75c877540a4836d1
+  languageName: node
+  linkType: hard
+
+"@tiptap/extension-underline@npm:^2.0.0-beta.220":
+  version: 2.0.0-beta.220
+  resolution: "@tiptap/extension-underline@npm:2.0.0-beta.220"
+  peerDependencies:
+    "@tiptap/core": ^2.0.0-beta.209
+  checksum: 08c1996f9f9e3ac83103acb3600b0263ea8715e795904b417c6030d6e372c40abce0a2ed930df2060839668500953d15a32f81a136429d16050f393f7529012f
   languageName: node
   linkType: hard
 
@@ -5586,6 +5666,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"highlight.js@npm:~11.7.0":
+  version: 11.7.0
+  resolution: "highlight.js@npm:11.7.0"
+  checksum: 19e3fb8b56f4b361b057a8523b989dfeb6479bbd1e29cec3fac6fa5c78d09927d5fa61b7dba6631fdb57cfdca9b3084aa4da49405ceaf4a67f67beae2ed5b77d
+  languageName: node
+  linkType: hard
+
 "html-tags@npm:^3.1.0":
   version: 3.2.0
   resolution: "html-tags@npm:3.2.0"
@@ -6316,6 +6403,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"linkifyjs@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "linkifyjs@npm:4.1.0"
+  checksum: 290931a320052a26bd3b28ccb7794c8b6b607d639a3c987e63b28cf2885e67bc748a87c390316c4786dc6e3e0acf59385345df1b03fb6206dcaff18c04382fa8
+  languageName: node
+  linkType: hard
+
 "locate-path@npm:^6.0.0":
   version: 6.0.0
   resolution: "locate-path@npm:6.0.0"
@@ -6412,6 +6506,17 @@ __metadata:
   dependencies:
     tslib: ^2.0.3
   checksum: 83a0a5f159ad7614bee8bf976b96275f3954335a84fad2696927f609ddae902802c4f3312d86668722e668bef41400254807e1d3a7f2e8c3eede79691aa1f010
+  languageName: node
+  linkType: hard
+
+"lowlight@npm:^2.8.1":
+  version: 2.8.1
+  resolution: "lowlight@npm:2.8.1"
+  dependencies:
+    "@types/hast": ^2.0.0
+    fault: ^2.0.0
+    highlight.js: ~11.7.0
+  checksum: cc9051c62e6513ac23487c5e55b1cc12262bcd199759f9c5ed7178a704a54ebca9c6ae1fa7a85b868c9eac4ab7fc01399f566a03ec37c305884ff4c84f2e4a6b
   languageName: node
   linkType: hard
 
@@ -7250,6 +7355,15 @@ __metadata:
   version: 1.0.1
   resolution: "min-indent@npm:1.0.1"
   checksum: bfc6dd03c5eaf623a4963ebd94d087f6f4bbbfd8c41329a7f09706b0cb66969c4ddd336abeb587bc44bc6f08e13bf90f0b374f9d71f9f01e04adc2cd6f083ef1
+  languageName: node
+  linkType: hard
+
+"mini-svg-data-uri@npm:^1.2.3":
+  version: 1.4.4
+  resolution: "mini-svg-data-uri@npm:1.4.4"
+  bin:
+    mini-svg-data-uri: cli.js
+  checksum: 997f1fbd8d59a70f03761e18626d335197a3479cb9d1ff75678e4b64b864d32a0b8fc18115eabde035e5299b8b4a354a78e57dd6ac10f9d604162a6170898d09
   languageName: node
   linkType: hard
 
@@ -8595,6 +8709,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-hook-form@npm:^7.43.6":
+  version: 7.43.6
+  resolution: "react-hook-form@npm:7.43.6"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: fec9547294c58ebcbfe2e614451799c1371e4c438a44757b2392b5a48142bfe886aaefdb00b9c9c192a24fd414ab76c57a2e3adc710de55015accf5a9b9e6e8b
+  languageName: node
+  linkType: hard
+
 "react-icons@npm:^4.8.0":
   version: 4.8.0
   resolution: "react-icons@npm:4.8.0"
@@ -9876,6 +9999,7 @@ __metadata:
   resolution: "ui@workspace:."
   dependencies:
     "@heroicons/react": ^2.0.16
+    "@hookform/resolvers": ^2.9.11
     "@ianvs/prettier-plugin-sort-imports": ^3.7.1
     "@next/eslint-plugin-next": ^13.2.4
     "@radix-ui/react-accordion": ^1.1.1
@@ -9902,10 +10026,20 @@ __metadata:
     "@radix-ui/react-toast": ^1.1.3
     "@radix-ui/react-toggle": ^1.0.2
     "@radix-ui/react-tooltip": ^1.0.5
+    "@tailwindcss/forms": ^0.5.3
     "@tailwindcss/line-clamp": ^0.4.2
     "@tailwindcss/typography": ^0.5.9
     "@tiptap/extension-bubble-menu": ^2.0.0-beta.220
+    "@tiptap/extension-code-block-lowlight": ^2.0.0-beta.220
+    "@tiptap/extension-document": ^2.0.0-beta.220
     "@tiptap/extension-floating-menu": ^2.0.0-beta.220
+    "@tiptap/extension-link": ^2.0.0-beta.220
+    "@tiptap/extension-paragraph": ^2.0.0-beta.220
+    "@tiptap/extension-placeholder": ^2.0.0-beta.220
+    "@tiptap/extension-text": ^2.0.0-beta.220
+    "@tiptap/extension-text-align": ^2.0.0-beta.220
+    "@tiptap/extension-text-style": ^2.0.0-beta.220
+    "@tiptap/extension-underline": ^2.0.0-beta.220
     "@tiptap/pm": ^2.0.0-beta.220
     "@tiptap/react": ^2.0.0-beta.220
     "@tiptap/starter-kit": ^2.0.0-beta.220
@@ -9924,6 +10058,7 @@ __metadata:
     dayjs: ^1.11.7
     eslint: ^8.36.0
     eslint-config-next: 13.2.4
+    lowlight: ^2.8.1
     mdast-util-toc: ^6.1.1
     next: 13.2.4
     next-contentlayer: ^0.3.0
@@ -9935,6 +10070,7 @@ __metadata:
     prettier-plugin-tailwindcss: ^0.2.4
     react: 18.2.0
     react-dom: 18.2.0
+    react-hook-form: ^7.43.6
     react-icons: ^4.8.0
     rehype-autolink-headings: ^6.1.1
     rehype-pretty-code: ^0.9.4
