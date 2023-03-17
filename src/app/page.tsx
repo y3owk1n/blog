@@ -15,7 +15,6 @@ import { H1 } from "@/components/ui/typography/H1";
 import { H3 } from "@/components/ui/typography/H3";
 import { LinkTag } from "@/components/ui/typography/LinkTag";
 import { Paragraph } from "@/components/ui/typography/Paragraph";
-import TiptapDemo from "./TiptapDemo";
 
 const TraworldHover = () => {
     return (
@@ -57,7 +56,6 @@ const TraworldHover = () => {
 const Page = () => {
     return (
         <main className="space-y-10">
-            <TiptapDemo />
             <section className="grid place-items-center py-24">
                 <Avatar className="mb-8 h-20 w-20">
                     <AvatarImage src="https://github.com/y3owk1n.png" />
