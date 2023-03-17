@@ -35,18 +35,41 @@ const buttonVariants = cva(
 
 export interface ButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-        VariantProps<typeof buttonVariants> {}
+        VariantProps<typeof buttonVariants> {
+    loading?: boolean;
+    leftIcon?: React.ReactNode;
+    rightIcon?: React.ReactNode;
+}
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-    ({ className, variant, size, ...props }, ref) => {
+    (
+        {
+            className,
+            children,
+            variant,
+            size,
+            leftIcon,
+            rightIcon,
+            loading = false,
+            ...props
+        },
+        ref
+    ) => {
         return (
             <button
                 className={twMerge(
                     buttonVariants({ variant, size, className })
                 )}
+                disabled={loading || props.disabled}
                 ref={ref}
-                {...props}
-            />
+                {...props}>
+                {leftIcon && <span className="mr-2">{leftIcon}</span>}
+                {loading && (
+                    <span className="mr-2 block h-4 w-4 animate-spin rounded-full border-2 border-t-transparent " />
+                )}
+                {children}
+                {rightIcon && <span className="ml-2">{rightIcon}</span>}
+            </button>
         );
     }
 );

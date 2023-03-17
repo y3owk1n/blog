@@ -7,9 +7,14 @@ import { Button } from "@/components/ui/Button";
 
 const ButtonIconDemo = () => {
     return (
-        <Button>
-            <InboxIcon className="mr-2 h-4 w-4" /> Login with Email
-        </Button>
+        <div className="flex gap-2">
+            <Button leftIcon={<InboxIcon className="h-4 w-4" />}>
+                Login with Email
+            </Button>
+            <Button rightIcon={<InboxIcon className="h-4 w-4" />}>
+                Signup with Email
+            </Button>
+        </div>
     );
 };
 
