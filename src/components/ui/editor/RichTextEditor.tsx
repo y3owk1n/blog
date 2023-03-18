@@ -3,11 +3,8 @@
 import "@/styles/tiptap.css";
 import React, { useEffect } from "react";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
-import Document from "@tiptap/extension-document";
 import Link from "@tiptap/extension-link";
-import Paragraph from "@tiptap/extension-paragraph";
 import Placeholder from "@tiptap/extension-placeholder";
-import Text from "@tiptap/extension-text";
 import TextAlign from "@tiptap/extension-text-align";
 import TextStyle from "@tiptap/extension-text-style";
 import Underline from "@tiptap/extension-underline";
@@ -87,9 +84,6 @@ const RichTextEditor = ({
                     levels: headingsArray,
                 },
             }),
-            Document,
-            Paragraph,
-            Text,
             Underline,
             TextStyle,
             Link.configure({
