@@ -9,6 +9,7 @@ import { TbDeviceLaptop, TbFileInfo } from "react-icons/tb";
 import { twMerge } from "tailwind-merge";
 
 import { allPostsAndSort, groupUisByTags } from "@/lib/contentlayerApi";
+import { useHotkeys } from "@/lib/hooks/useHotkeys";
 import { Button } from "./ui/Button";
 import {
     CommandDialog,
@@ -26,17 +27,7 @@ export function CommandMenu({ ...props }: DialogProps) {
 
     const { setTheme } = useTheme();
 
-    React.useEffect(() => {
-        const down = (e: KeyboardEvent) => {
-            if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-                e.preventDefault();
-                setOpen((open) => !open);
-            }
-        };
-
-        document.addEventListener("keydown", down);
-        return () => document.removeEventListener("keydown", down);
-    }, []);
+    useHotkeys([["/", () => setOpen((open) => !open)]]);
 
     const runCommand = React.useCallback((command: () => unknown) => {
         setOpen(false);
@@ -57,7 +48,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                 </span>
                 <span className="inline-flex lg:hidden">Search...</span>
                 <kbd className="pointer-events-none absolute top-2 right-1.5 hidden h-5 select-none items-center gap-1 rounded border border-slate-100 bg-slate-100 px-1.5 font-mono text-[10px] font-medium text-slate-600 opacity-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400 sm:flex">
-                    <span className="text-xs">⌘</span>K
+                    /
                 </kbd>
             </Button>
             <CommandDialog

@@ -5,6 +5,7 @@ import { MdLink } from "react-icons/md";
 import { z } from "zod";
 import { fromZodError } from "zod-validation-error";
 
+import { getHotkeyHandler } from "@/lib/hooks/useHotkeys";
 import { Button } from "@/components/ui/Button";
 import {
     Dialog,
@@ -62,18 +63,6 @@ const SetLinkButton = ({ editor }: { editor: Editor }) => {
         [editor]
     );
 
-    React.useEffect(() => {
-        const down = (e: KeyboardEvent) => {
-            if (e.key === "Enter") {
-                e.preventDefault();
-                handleSubmit(url);
-            }
-        };
-
-        document.addEventListener("keydown", down);
-        return () => document.removeEventListener("keydown", down);
-    }, [handleSubmit, url]);
-
     const handleOpen = (open: boolean) => {
         setError("");
         if (!open) setOpen(!open);
@@ -116,6 +105,9 @@ const SetLinkButton = ({ editor }: { editor: Editor }) => {
                             value={url}
                             onChange={(e) => setUrl(e.target.value)}
                             className="col-span-3"
+                            onKeyDown={getHotkeyHandler([
+                                ["Enter", () => handleSubmit(url)],
+                            ])}
                         />
                         {error && error.length > 0 && (
                             <CParagraph
