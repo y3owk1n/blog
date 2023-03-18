@@ -121,13 +121,13 @@ const RichTextEditor = ({
 
     if (!editor)
         return (
-            <div className="grid place-items-center rounded-md border border-slate-200 py-20  dark:border-slate-700">
+            <div className="grid w-full place-items-center rounded-md border border-slate-200 py-20  dark:border-slate-700">
                 <Loader />
             </div>
         );
 
     return (
-        <div>
+        <div className="w-full">
             {config.bubbleMenu && bubbleMenuToolbar && (
                 <BubbleMenu
                     className="flex w-full flex-wrap items-center gap-2 rounded-md bg-slate-50 p-2 drop-shadow-lg dark:bg-slate-900"
