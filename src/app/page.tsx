@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CalendarDaysIcon } from "@heroicons/react/20/solid";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
@@ -30,7 +31,7 @@ const TraworldHover = () => {
             <HoverCardContent className="w-80">
                 <div className="flex justify-between space-x-4 text-left">
                     <Avatar>
-                        <AvatarImage src="https://scontent-sin6-3.xx.fbcdn.net/v/t39.30808-6/326749122_575940394058060_2190219092938663307_n.png?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=v5EcmhEN5C0AX80TiOu&_nc_ht=scontent-sin6-3.xx&oh=00_AfDnQenJV-etxFQ4ceTE9GqdFHBLYHXChCMdWJzhivIDhQ&oe=64119BA6" />
+                        <AvatarImage src="https://media.licdn.com/dms/image/C560BAQFQ1ApI7-kHfw/company-logo_200_200/0/1619433974628?e=1687392000&v=beta&t=JBM3Vg-YGs9EGqKrkVodf6GwgihBpQmskXZacDDGqC0" />
                         <AvatarFallback>TW</AvatarFallback>
                     </Avatar>
                     <div className="space-y-1">
@@ -56,16 +57,18 @@ const TraworldHover = () => {
 const Page = () => {
     return (
         <main className="space-y-10">
-            <section className="grid place-items-center py-24">
-                <Avatar className="mb-8 h-20 w-20">
-                    <AvatarImage src="https://github.com/y3owk1n.png" />
-                    <AvatarFallback>KY</AvatarFallback>
-                </Avatar>
-                <H1>Kyle Wong</H1>
-                <Paragraph>Kuala Lumpur, Malaysia</Paragraph>
-                <Paragraph variant="subtle">
-                    Digital Marketer, Web Developer
-                </Paragraph>
+            <section className="grid place-items-center gap-4 py-24">
+                <div className="flex flex-col items-center">
+                    <Avatar className="mb-8 h-20 w-20">
+                        <AvatarImage src="https://github.com/y3owk1n.png" />
+                        <AvatarFallback>KY</AvatarFallback>
+                    </Avatar>
+                    <H1>Kyle Wong</H1>
+                    <Paragraph>Kuala Lumpur, Malaysia</Paragraph>
+                    <Paragraph variant="subtle">
+                        Digital Marketer, Web Developer
+                    </Paragraph>
+                </div>
                 <Alert
                     variant="outline"
                     className="mt-10 max-w-lg text-center">
@@ -74,6 +77,19 @@ const Page = () => {
                     where my team helps to build brand, strategies and
                     conversions for the brand.
                 </Alert>
+
+                <div className="flex justify-center gap-4">
+                    <Link
+                        className="no-underline"
+                        href="/posts">
+                        <Button variant="subtle">View Blog Posts</Button>
+                    </Link>
+                    <Link
+                        className="no-underline"
+                        href="/ui/introduction">
+                        <Button variant="default">View UI Components</Button>
+                    </Link>
+                </div>
             </section>
             <Separator />
             <section className="mx-auto max-w-lg space-y-4 py-24 ">
