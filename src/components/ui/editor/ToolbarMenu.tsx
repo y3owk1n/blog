@@ -20,7 +20,7 @@ import {
     TbBlockquote,
     TbBold,
     TbCode,
-    TbItalic,
+    TbItalic,TbSubscript,TbSuperscript
 } from "react-icons/tb";
 
 import { Button } from "@/components/ui/Button";
@@ -349,6 +349,46 @@ const ToolbarMenu = ({
                                 }>
                                 <MdOutlineStrikethroughS
                                     aria-label="Strikethrough"
+                                    className="h-4 w-4"
+                                />
+                            </Button>
+                        </TooltipWrapper>
+                    )}
+
+                    {toolbarConfig.subscript && (
+                        <TooltipWrapper tooltipContent="Subscript">
+                            <Button
+                                variant={
+                                    editor.isActive("subscript")
+                                        ? "subtle"
+                                        : "outline"
+                                }
+                                size="sm"
+                                onClick={() =>
+                                    editor.chain().focus().toggleSubscript().run()
+                                }>
+                                <TbSubscript
+                                    aria-label="Subscript"
+                                    className="h-4 w-4"
+                                />
+                            </Button>
+                        </TooltipWrapper>
+                    )}
+
+                    {toolbarConfig.superscript && (
+                        <TooltipWrapper tooltipContent="Superscript">
+                            <Button
+                                variant={
+                                    editor.isActive("superscript")
+                                        ? "subtle"
+                                        : "outline"
+                                }
+                                size="sm"
+                                onClick={() =>
+                                    editor.chain().focus().toggleSuperscript().run()
+                                }>
+                                <TbSuperscript
+                                    aria-label="Superscript"
                                     className="h-4 w-4"
                                 />
                             </Button>

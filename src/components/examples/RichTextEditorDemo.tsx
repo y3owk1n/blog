@@ -32,6 +32,8 @@ const RichTextEditorDemo = () => {
                 underline: true,
                 italic: true,
                 strike: true,
+                subscript: true,
+                superscript: true,
                 textLeftAlign: true,
                 textRightAlign: true,
                 textCenterAlign: true,

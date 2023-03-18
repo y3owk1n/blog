@@ -5,6 +5,8 @@ import React, { useEffect } from "react";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import Link from "@tiptap/extension-link";
 import Placeholder from "@tiptap/extension-placeholder";
+import Subscript from "@tiptap/extension-subscript";
+import Superscript from "@tiptap/extension-superscript";
 import TextAlign from "@tiptap/extension-text-align";
 import TextStyle from "@tiptap/extension-text-style";
 import Underline from "@tiptap/extension-underline";
@@ -36,6 +38,8 @@ export interface RichTextEditorConfig {
 export interface RichTextEditorToolbar {
     undo?: boolean;
     redo?: boolean;
+    subscript?: boolean;
+    superscript?: boolean;
     codeBlock?: boolean;
     horizontalRule?: boolean;
     blockquote?: boolean;
@@ -86,6 +90,8 @@ const RichTextEditor = ({
             }),
             Underline,
             TextStyle,
+            Subscript,
+            Superscript,
             Link.configure({
                 openOnClick: false,
             }),

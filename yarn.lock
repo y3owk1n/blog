@@ -2652,6 +2652,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tiptap/extension-subscript@npm:^2.0.0-beta.220":
+  version: 2.0.0-beta.220
+  resolution: "@tiptap/extension-subscript@npm:2.0.0-beta.220"
+  peerDependencies:
+    "@tiptap/core": ^2.0.0-beta.209
+  checksum: 16fb3961d0338698ed2d7b7763019b46b22615bda9b2b39b7dee8524d48f8c161d6a5086452d1936143fc60781afe4dc4bdb09e11c47fd58ff4aa2ab6ea7781c
+  languageName: node
+  linkType: hard
+
+"@tiptap/extension-superscript@npm:^2.0.0-beta.220":
+  version: 2.0.0-beta.220
+  resolution: "@tiptap/extension-superscript@npm:2.0.0-beta.220"
+  peerDependencies:
+    "@tiptap/core": ^2.0.0-beta.209
+  checksum: 40e0316f1aef1f41f2ef0a80d51bc3f32a15b81ead13b67f85cc042548d104d34857d759a960562e810518d5590977823342b6db8b1b10d39a4490a4da442177
+  languageName: node
+  linkType: hard
+
 "@tiptap/extension-text-align@npm:^2.0.0-beta.220":
   version: 2.0.0-beta.220
   resolution: "@tiptap/extension-text-align@npm:2.0.0-beta.220"
@@ -10024,6 +10042,8 @@ __metadata:
     "@tiptap/extension-floating-menu": ^2.0.0-beta.220
     "@tiptap/extension-link": ^2.0.0-beta.220
     "@tiptap/extension-placeholder": ^2.0.0-beta.220
+    "@tiptap/extension-subscript": ^2.0.0-beta.220
+    "@tiptap/extension-superscript": ^2.0.0-beta.220
     "@tiptap/extension-text-align": ^2.0.0-beta.220
     "@tiptap/extension-text-style": ^2.0.0-beta.220
     "@tiptap/extension-underline": ^2.0.0-beta.220
