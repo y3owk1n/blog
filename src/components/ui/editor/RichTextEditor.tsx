@@ -22,6 +22,7 @@ import js from "highlight.js/lib/languages/javascript";
 import ts from "highlight.js/lib/languages/typescript";
 import html from "highlight.js/lib/languages/xml";
 import { lowlight } from "lowlight";
+import { twMerge } from "tailwind-merge";
 
 import { Loader } from "@/components/ui/Loader";
 import ToolbarMenu from "@/components/ui/editor/ToolbarMenu";
@@ -113,7 +114,9 @@ const RichTextEditor = ({
         },
         editorProps: {
             attributes: {
-                class: "prose max-w-none dark:prose-invert m-5 focus:outline-none",
+                class: twMerge(
+                    "prose max-w-none dark:prose-invert m-5 focus:outline-none"
+                ),
             },
         },
     });
