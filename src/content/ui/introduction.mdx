@@ -1,6 +1,6 @@
 ---
 title: UI Introduction
-description: UI library for myself
+description: UI library for myself.
 tag: Introduction
 date: 2023-03-05T16:00:00.000Z
 ---
@@ -10,6 +10,238 @@ date: 2023-03-05T16:00:00.000Z
 This UI library page is heavily inspired by [@shadcn](https://twitter.com/shadcn), please follow him instead.
 
 </Alert>
+
+## My setups for this ui library
+
+Here's how my `package.json` looks like:
+
+```json
+{
+    "name": "blog",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "format": "yarn prettier -w .",
+        "dev": "next dev",
+        "lint": "next lint",
+        "start": "next start",
+        "build": "next build && next-sitemap && yarn format"
+    },
+    "dependencies": {
+        "@heroicons/react": "^2.0.16",
+        "@radix-ui/react-accordion": "^1.1.1",
+        "@radix-ui/react-alert-dialog": "^1.0.3",
+        "@radix-ui/react-aspect-ratio": "^1.0.2",
+        "@radix-ui/react-avatar": "^1.0.2",
+        "@radix-ui/react-checkbox": "^1.0.3",
+        "@radix-ui/react-collapsible": "^1.0.2",
+        "@radix-ui/react-context-menu": "^2.1.3",
+        "@radix-ui/react-dropdown-menu": "^2.0.4",
+        "@radix-ui/react-hover-card": "^1.0.5",
+        "@radix-ui/react-label": "^2.0.1",
+        "@radix-ui/react-menubar": "^1.0.2",
+        "@radix-ui/react-navigation-menu": "^1.1.2",
+        "@radix-ui/react-popover": "^1.0.5",
+        "@radix-ui/react-progress": "^1.0.2",
+        "@radix-ui/react-radio-group": "^1.1.2",
+        "@radix-ui/react-scroll-area": "^1.0.3",
+        "@radix-ui/react-select": "^1.2.1",
+        "@radix-ui/react-separator": "^1.0.2",
+        "@radix-ui/react-slider": "^1.1.1",
+        "@radix-ui/react-switch": "^1.0.2",
+        "@radix-ui/react-tabs": "^1.0.3",
+        "@radix-ui/react-toast": "^1.1.3",
+        "@radix-ui/react-toggle": "^1.0.2",
+        "@radix-ui/react-tooltip": "^1.0.5",
+        "@tiptap/extension-bubble-menu": "^2.0.0-beta.220",
+        "@tiptap/extension-code-block-lowlight": "^2.0.0-beta.220",
+        "@tiptap/extension-floating-menu": "^2.0.0-beta.220",
+        "@tiptap/extension-link": "^2.0.0-beta.220",
+        "@tiptap/extension-placeholder": "^2.0.0-beta.220",
+        "@tiptap/extension-subscript": "^2.0.0-beta.220",
+        "@tiptap/extension-superscript": "^2.0.0-beta.220",
+        "@tiptap/extension-text-align": "^2.0.0-beta.220",
+        "@tiptap/extension-text-style": "^2.0.0-beta.220",
+        "@tiptap/extension-underline": "^2.0.0-beta.220",
+        "@tiptap/pm": "^2.0.0-beta.220",
+        "@tiptap/react": "^2.0.0-beta.220",
+        "@tiptap/starter-kit": "^2.0.0-beta.220",
+        "@vercel/og": "^0.4.0",
+        "class-variance-authority": "^0.4.0",
+        "cmdk": "^0.2.0",
+        "contentlayer": "^0.3.0",
+        "dayjs": "^1.11.7",
+        "lowlight": "^2.8.1",
+        "next": "13.2.4",
+        "next-contentlayer": "^0.3.0",
+        "next-mdx-remote": "^4.4.1",
+        "next-sitemap": "^4.0.5",
+        "next-themes": "^0.2.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-hook-form": "^7.43.7",
+        "react-icons": "^4.8.0",
+        "sharp": "^0.31.3",
+        "tailwind-merge": "^1.10.0",
+        "tailwindcss-animate": "^1.0.5",
+        "zod": "^3.21.4",
+        "zod-validation-error": "^1.0.1"
+    },
+    "devDependencies": {
+        "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
+        "@next/eslint-plugin-next": "^13.2.4",
+        "@tailwindcss/forms": "^0.5.3",
+        "@tailwindcss/line-clamp": "^0.4.2",
+        "@tailwindcss/typography": "^0.5.9",
+        "@types/node": "^18.15.3",
+        "@types/prettier": "^2.7.2",
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
+        "@types/unist": "^2.0.6",
+        "@typescript-eslint/eslint-plugin": "^5.55.0",
+        "@typescript-eslint/parser": "^5.55.0",
+        "autoprefixer": "^10.4.14",
+        "eslint": "^8.36.0",
+        "eslint-config-next": "13.2.4",
+        "mdast-util-toc": "^6.1.1",
+        "postcss": "^8.4.21",
+        "prettier": "^2.8.4",
+        "prettier-plugin-tailwindcss": "^0.2.5",
+        "rehype-autolink-headings": "^6.1.1",
+        "rehype-pretty-code": "^0.9.4",
+        "rehype-slug": "^5.1.0",
+        "remark": "^14.0.2",
+        "remark-code-import": "^1.1.1",
+        "remark-gfm": "^3.0.1",
+        "shiki": "^0.14.1",
+        "tailwindcss": "^3.2.7",
+        "tailwindcss-bg-patterns": "^0.2.0",
+        "typescript": "^5.0.2",
+        "unist-builder": "^3.0.1",
+        "unist-util-visit": "^4.1.2"
+    },
+    "ct3aMetadata": {
+        "initVersion": "7.3.2"
+    },
+    "packageManager": "yarn@3.4.1"
+}
+```
+
+Here's how my `next.config.mjs` looks like:
+
+```js
+import { withContentlayer } from "next-contentlayer";
+
+// @ts-check
+/**
+ * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
+ * This is especially useful for Docker builds.
+ */
+!process.env.SKIP_ENV_VALIDATION && (await import("./src/env/server.mjs"));
+
+/** @type {import("next").NextConfig} */
+const config = {
+    swcMinify: true,
+    reactStrictMode: true,
+    experimental: {
+        appDir: true,
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: "http",
+                hostname: "localhost",
+                port: "3000",
+                pathname: "/**",
+            },
+            {
+                protocol: "https",
+                hostname: "www.kylewong.my",
+                port: "",
+                pathname: "/**",
+            },
+            {
+                protocol: "https",
+                hostname: "images.unsplash.com",
+                port: "",
+                pathname: "/**",
+            },
+        ],
+    },
+};
+
+export default withContentlayer(config);
+```
+
+Here's how my `tailwind.config.cjs` looks like:
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    darkMode: "class",
+    content: ["./src/**/*.{js,ts,jsx,tsx}"],
+    theme: {
+        patterns: {
+            opacities: {
+                100: "1",
+                80: ".80",
+                60: ".60",
+                40: ".40",
+                20: ".20",
+                10: ".10",
+                5: ".05",
+            },
+            sizes: {
+                1: "0.25rem",
+                2: "0.5rem",
+                4: "1rem",
+                6: "1.5rem",
+                8: "2rem",
+                16: "4rem",
+                20: "5rem",
+                24: "6rem",
+                32: "8rem",
+            },
+        },
+        extend: {
+            keyframes: {
+                "accordion-down": {
+                    from: { height: 0 },
+                    to: { height: "var(--radix-accordion-content-height)" },
+                },
+                "accordion-up": {
+                    from: { height: "var(--radix-accordion-content-height)" },
+                    to: { height: 0 },
+                },
+            },
+            animation: {
+                "accordion-down": "accordion-down 0.2s ease-out",
+                "accordion-up": "accordion-up 0.2s ease-out",
+            },
+        },
+    },
+    plugins: [
+        require("tailwindcss-animate"),
+        require("@tailwindcss/forms"),
+        require("@tailwindcss/typography"),
+        require("@tailwindcss/line-clamp"),
+        require("tailwindcss-bg-patterns"),
+    ],
+};
+```
+
+Here's how my `postcss.config.cjs` looks like:
+
+```js
+module.exports = {
+    plugins: {
+        "tailwindcss/nesting": {},
+        tailwindcss: {},
+        autoprefixer: {},
+    },
+};
+```
 
 ## What's next?
 
