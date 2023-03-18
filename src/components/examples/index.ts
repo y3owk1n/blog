@@ -11,6 +11,7 @@ import BadgeOutlineDemo from "@/components/examples/BadgeOutlineDemo";
 import BadgeOutlineIconDemo from "@/components/examples/BadgeOutlineIconDemo";
 import ButtonDemo from "@/components/examples/ButtonDemo";
 import ButtonGhostDemo from "@/components/examples/ButtonGhostDemo";
+import ButtonGroupDemo from "@/components/examples/ButtonGroupDemo";
 import ButtonIconDemo from "@/components/examples/ButtonIconDemo";
 import ButtonLinkDemo from "@/components/examples/ButtonLinkDemo";
 import ButtonLoadingDemo from "@/components/examples/ButtonLoadingDemo";
@@ -59,6 +60,9 @@ import NavigationMenuDemo from "@/components/examples/NavigationMenuDemo";
 import PopoverDemo from "@/components/examples/PopoverDemo";
 import ProgressDemo from "@/components/examples/ProgressDemo";
 import RadioGroupDemo from "@/components/examples/RadioGroupDemo";
+import RichTextEditorDemo from "@/components/examples/RichTextEditorDemo";
+import RichTextEditorDisabledDemo from "@/components/examples/RichTextEditorDisabledDemo";
+import RichTextEditorWithReactHookFormDemo from "@/components/examples/RichTextEditorWithReactHookFormDemo";
 import ScrollAreaDemo from "@/components/examples/ScrollAreaDemo";
 import SelectDemo from "@/components/examples/SelectDemo";
 import SeparatorDemo from "@/components/examples/SeparatorDemo";
@@ -97,6 +101,7 @@ export const examples = {
     BadgeIconDemo,
     BadgeOutlineDemo,
     BadgeOutlineIconDemo,
+    ButtonGroupDemo,
     ButtonDemo,
     ButtonLoadingDemo,
     ButtonGhostDemo,
@@ -144,6 +149,9 @@ export const examples = {
     PopoverDemo,
     ProgressDemo,
     RadioGroupDemo,
+    RichTextEditorDemo,
+    RichTextEditorWithReactHookFormDemo,
+    RichTextEditorDisabledDemo,
     ScrollAreaDemo,
     SelectDemo,
     SeparatorDemo,

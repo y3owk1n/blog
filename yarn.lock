@@ -8700,6 +8700,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-hook-form@npm:^7.43.7":
+  version: 7.43.7
+  resolution: "react-hook-form@npm:7.43.7"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: c1679fc5119f3f910f30424b846f9a05ecbc9cce1c7408e4e8eb907aa5a4366d5228a7b41d818868c85017f2be4e1854a1536ba5c1cddf2c27818bd045df9589
+  languageName: node
+  linkType: hard
+
 "react-icons@npm:^4.8.0":
   version: 4.8.0
   resolution: "react-icons@npm:4.8.0"
@@ -10051,6 +10060,7 @@ __metadata:
     prettier-plugin-tailwindcss: ^0.2.5
     react: 18.2.0
     react-dom: 18.2.0
+    react-hook-form: ^7.43.7
     react-icons: ^4.8.0
     rehype-autolink-headings: ^6.1.1
     rehype-pretty-code: ^0.9.4
