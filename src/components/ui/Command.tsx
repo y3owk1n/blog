@@ -45,14 +45,17 @@ const CommandInput = React.forwardRef<
         className="flex items-center border-b border-b-slate-100 px-4 dark:border-b-slate-700"
         cmdk-input-wrapper="">
         <MagnifyingGlassIcon className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-        <CommandPrimitive.Input
-            ref={ref}
-            className={twMerge(
-                "flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-slate-400 disabled:cursor-not-allowed disabled:opacity-50 dark:text-slate-50",
-                className
-            )}
-            {...props}
-        />
+        <div className="w-full py-2 px-3">
+            <CommandPrimitive.Input
+                ref={ref}
+                className={twMerge(
+                    "flex w-full rounded-md border-none bg-transparent  text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+                    "dark:border-slate-700 dark:text-slate-50 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-900",
+                    className
+                )}
+                {...props}
+            />
+        </div>
     </div>
 ));
 
