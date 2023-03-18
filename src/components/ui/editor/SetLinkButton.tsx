@@ -1,5 +1,6 @@
 import "@/styles/tiptap.css";
 import React, { useCallback, useState } from "react";
+import type { CheckedState } from "@radix-ui/react-checkbox";
 import { type Editor } from "@tiptap/react";
 import { MdLink } from "react-icons/md";
 import { z } from "zod";
@@ -18,11 +19,13 @@ import {
 import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/Label";
 import { Paragraph as CParagraph } from "@/components/ui/typography/Paragraph";
+import { Checkbox } from "../Checkbox";
 
 const SetLinkButton = ({ editor }: { editor: Editor }) => {
     const [open, setOpen] = useState(false);
 
     const [url, setUrl] = useState("");
+    const [newTab, setNewTab] = useState<CheckedState>(true);
     const [error, setError] = useState("");
 
     const getPreviousUrl = useCallback(() => {
@@ -37,7 +40,7 @@ const SetLinkButton = ({ editor }: { editor: Editor }) => {
     }, [editor]);
 
     const handleSubmit = useCallback(
-        (url: string) => {
+        (url: string, newTab: boolean) => {
             const urlSchema = z.string().url();
             setError("");
 
@@ -53,8 +56,9 @@ const SetLinkButton = ({ editor }: { editor: Editor }) => {
                 .chain()
                 .focus()
                 .extendMarkRange("link")
-                .setLink({ href: url })
+                .setLink({ href: url, target: newTab ? "_blank" : null })
                 .run();
+
             setUrl("");
             setError("");
             setOpen(false);
@@ -106,9 +110,26 @@ const SetLinkButton = ({ editor }: { editor: Editor }) => {
                             onChange={(e) => setUrl(e.target.value)}
                             className="col-span-3"
                             onKeyDown={getHotkeyHandler([
-                                ["Enter", () => handleSubmit(url)],
+                                [
+                                    "Enter",
+                                    () => handleSubmit(url, newTab as boolean),
+                                ],
                             ])}
                         />
+                        <div className="flex gap-4">
+                            <div className="items-top flex space-x-2">
+                                <Checkbox
+                                    id="newTab"
+                                    checked={newTab}
+                                    onCheckedChange={(e) => setNewTab(e)}
+                                />
+                                <div className="grid gap-1.5 leading-none">
+                                    <Label htmlFor="newTab">
+                                        Open in new tab
+                                    </Label>
+                                </div>
+                            </div>
+                        </div>
                         {error && error.length > 0 && (
                             <CParagraph
                                 variant="small"
@@ -120,7 +141,9 @@ const SetLinkButton = ({ editor }: { editor: Editor }) => {
                     <DialogFooter>
                         <Button
                             type="button"
-                            onClick={() => handleSubmit(url)}>
+                            onClick={() =>
+                                handleSubmit(url, newTab as boolean)
+                            }>
                             Set
                         </Button>
                     </DialogFooter>

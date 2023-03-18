@@ -20,7 +20,9 @@ import {
     TbBlockquote,
     TbBold,
     TbCode,
-    TbItalic,TbSubscript,TbSuperscript
+    TbItalic,
+    TbSubscript,
+    TbSuperscript,
 } from "react-icons/tb";
 
 import { Button } from "@/components/ui/Button";
@@ -365,7 +367,11 @@ const ToolbarMenu = ({
                                 }
                                 size="sm"
                                 onClick={() =>
-                                    editor.chain().focus().toggleSubscript().run()
+                                    editor
+                                        .chain()
+                                        .focus()
+                                        .toggleSubscript()
+                                        .run()
                                 }>
                                 <TbSubscript
                                     aria-label="Subscript"
@@ -385,7 +391,11 @@ const ToolbarMenu = ({
                                 }
                                 size="sm"
                                 onClick={() =>
-                                    editor.chain().focus().toggleSuperscript().run()
+                                    editor
+                                        .chain()
+                                        .focus()
+                                        .toggleSuperscript()
+                                        .run()
                                 }>
                                 <TbSuperscript
                                     aria-label="Superscript"
