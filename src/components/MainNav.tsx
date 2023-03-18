@@ -90,7 +90,7 @@ export function MainNav() {
                             </ul>
                             <div className="p-4 pt-0">
                                 <Link
-                                    href="/ui/accordion"
+                                    href="/ui/introduction"
                                     passHref
                                     legacyBehavior>
                                     <NavigationMenuLink
