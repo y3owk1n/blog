@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/Button";
 const AlertDialogDemo = () => {
     return (
         <AlertDialog>
-            <AlertDialogTrigger>
+            <AlertDialogTrigger asChild>
                 <Button>Open Dialog</Button>
             </AlertDialogTrigger>
             <AlertDialogContent>
