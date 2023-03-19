@@ -16,39 +16,40 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
     {
-        title: "Alert Dialog",
-        href: "/ui/alert-dialog",
+        title: "Item 1",
+        href: "#",
         description:
-            "A modal dialog that interrupts the user with important content and expects a response.",
+            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
     },
     {
-        title: "Hover Card",
-        href: "/ui/hover-card",
+        title: "Item 2",
+        href: "#",
         description:
-            "For sighted users to preview content available behind a link.",
+            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
     },
     {
-        title: "Progress",
-        href: "/ui/progress",
+        title: "Item 3",
+        href: "#",
         description:
-            "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
     },
     {
-        title: "Scroll-area",
-        href: "/ui/scroll-area",
-        description: "Visually or semantically separates content.",
+        title: "Item 4",
+        href: "#",
+        description:
+            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
     },
     {
-        title: "Tabs",
-        href: "/ui/tabs",
+        title: "Item 5",
+        href: "#",
         description:
-            "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
     },
     {
-        title: "Tooltip",
-        href: "/ui/tooltip",
+        title: "Item 6",
+        href: "#",
         description:
-            "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
     },
 ];
 
@@ -65,35 +66,39 @@ function NavigationMenuDemo() {
                             <li className="row-span-3">
                                 <NavigationMenuLink asChild>
                                     <a
-                                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-rose-500 to-indigo-700 p-6 no-underline outline-none focus:shadow-md"
+                                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-white to-slate-200 p-6 no-underline outline-none focus:shadow-md dark:from-slate-200 dark:to-slate-800"
                                         href="/">
-                                        <div className="mt-4 mb-2 text-lg font-medium text-white">
-                                            shadcn/ui
+                                        <div className="mt-4 mb-2 text-lg font-medium text-black dark:text-white">
+                                            Title
                                         </div>
-                                        <p className="text-sm leading-tight text-white/90">
-                                            Beautifully designed components
-                                            built with Radix UI and Tailwind
-                                            CSS.
+                                        <p className="text-sm leading-tight text-black/90 dark:text-white/90">
+                                            Lorem ipsum dolor sit amet, qui
+                                            minim labore adipisicing minim sint
+                                            cillum sint consectetur cupidatat.
                                         </p>
                                     </a>
                                 </NavigationMenuLink>
                             </li>
                             <ListItem
-                                href="/docs"
-                                title="Introduction">
-                                Re-usable components built using Radix UI and
-                                Tailwind CSS.
+                                href="#"
+                                title="Title 1">
+                                Lorem ipsum dolor sit amet, qui minim labore
+                                adipisicing minim sint cillum sint consectetur
+                                cupidatat.
                             </ListItem>
                             <ListItem
-                                href="/docs/installation"
-                                title="Installation">
-                                How to install dependencies and structure your
-                                app.
+                                href="#"
+                                title="Title 2">
+                                Lorem ipsum dolor sit amet, qui minim labore
+                                adipisicing minim sint cillum sint consectetur
+                                cupidatat.
                             </ListItem>
                             <ListItem
-                                href="/docs/primitives/typography"
-                                title="Typography">
-                                Styles for headings, paragraphs, lists...etc
+                                href="#"
+                                title="Title 3">
+                                Lorem ipsum dolor sit amet, qui minim labore
+                                adipisicing minim sint cillum sint consectetur
+                                cupidatat.
                             </ListItem>
                         </ul>
                     </NavigationMenuContent>
@@ -115,7 +120,7 @@ function NavigationMenuDemo() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <Link
-                        href="/docs"
+                        href="#"
                         legacyBehavior
                         passHref>
                         <NavigationMenuLink
