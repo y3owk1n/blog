@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import { type Editor } from "@tiptap/react";
 import {
     AiOutlineOrderedList,
@@ -27,26 +26,9 @@ import {
 
 import { Button } from "@/components/ui/Button";
 import { ButtonGroup } from "@/components/ui/ButtonGroup";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../Tooltip";
+import { Toggle } from "@/components/ui/Toggle";
 import type { Level, RichTextEditorToolbar } from "./RichTextEditor";
 import SetLinkButton from "./SetLinkButton";
-
-const TooltipWrapper = ({
-    children,
-    tooltipContent,
-}: {
-    children: ReactNode;
-    tooltipContent: string;
-}) => {
-    return (
-        <Tooltip>
-            <TooltipTrigger asChild>{children}</TooltipTrigger>
-            <TooltipContent>
-                <p>{tooltipContent}</p>
-            </TooltipContent>
-        </Tooltip>
-    );
-};
 
 const ToolbarMenu = ({
     editor,
@@ -62,61 +44,48 @@ const ToolbarMenu = ({
             {(toolbarConfig.redo || toolbarConfig.undo) && (
                 <ButtonGroup>
                     {toolbarConfig.redo && (
-                        <TooltipWrapper tooltipContent="Undo">
-                            <Button
-                                variant="outline"
-                                size="sm"
-                                onClick={() =>
-                                    editor.chain().focus().undo().run()
-                                }>
-                                <AiOutlineUndo
-                                    aria-label="Undo"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => editor.chain().focus().undo().run()}>
+                            <AiOutlineUndo
+                                aria-label="Undo"
+                                className="h-4 w-4"
+                            />
+                        </Button>
                     )}
 
                     {toolbarConfig.undo && (
-                        <TooltipWrapper tooltipContent="Redo">
-                            <Button
-                                variant="outline"
-                                size="sm"
-                                onClick={() =>
-                                    editor.chain().focus().redo().run()
-                                }>
-                                <AiOutlineRedo
-                                    aria-label="Redo"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => editor.chain().focus().redo().run()}>
+                            <AiOutlineRedo
+                                aria-label="Redo"
+                                className="h-4 w-4"
+                            />
+                        </Button>
                     )}
                 </ButtonGroup>
             )}
 
             <ButtonGroup>
                 {headingsArray.map((level) => (
-                    <TooltipWrapper
+                    <Toggle
                         key={level}
-                        tooltipContent={`Heading ${level}`}>
-                        <Button
-                            variant={
-                                editor.isActive("heading", { level })
-                                    ? "subtle"
-                                    : "outline"
-                            }
-                            size="sm"
-                            onClick={() =>
-                                editor
-                                    .chain()
-                                    .focus()
-                                    .toggleHeading({ level })
-                                    .run()
-                            }>
-                            {`H${level}`}
-                        </Button>
-                    </TooltipWrapper>
+                        pressed={editor.isActive("heading", { level })}
+                        variant="outline"
+                        size="sm"
+                        aria-label={`Toggle Heading ${level}`}
+                        onPressedChange={() =>
+                            editor
+                                .chain()
+                                .focus()
+                                .toggleHeading({ level })
+                                .run()
+                        }>
+                        {`H${level}`}
+                    </Toggle>
                 ))}
             </ButtonGroup>
 
@@ -125,71 +94,43 @@ const ToolbarMenu = ({
                 toolbarConfig.blockquote) && (
                 <ButtonGroup>
                     {toolbarConfig.codeBlock && (
-                        <TooltipWrapper tooltipContent="Code Block">
-                            <Button
-                                variant={
-                                    editor.isActive("codeBlock")
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .toggleCodeBlock()
-                                        .run()
-                                }>
-                                <TbCode
-                                    aria-label="Code Block"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive("codeBlock")}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Code Block"
+                            onPressedChange={() =>
+                                editor.chain().focus().toggleCodeBlock().run()
+                            }>
+                            <TbCode className="h-4 w-4" />
+                        </Toggle>
                     )}
 
                     {toolbarConfig.horizontalRule && (
-                        <TooltipWrapper tooltipContent="Horizontal Line">
-                            <Button
-                                variant="outline"
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .setHorizontalRule()
-                                        .run()
-                                }>
-                                <MdHorizontalRule
-                                    aria-label="Horizontal Rule"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() =>
+                                editor.chain().focus().setHorizontalRule().run()
+                            }>
+                            <MdHorizontalRule
+                                aria-label="Horizontal Rule"
+                                className="h-4 w-4"
+                            />
+                        </Button>
                     )}
 
                     {toolbarConfig.blockquote && (
-                        <TooltipWrapper tooltipContent="Blockquote">
-                            <Button
-                                variant={
-                                    editor.isActive("blockquote")
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .toggleBlockquote()
-                                        .run()
-                                }>
-                                <TbBlockquote
-                                    aria-label="Blockquote"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive("blockquote")}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Blockquote"
+                            onPressedChange={() =>
+                                editor.chain().focus().toggleBlockquote().run()
+                            }>
+                            <TbBlockquote className="h-4 w-4" />
+                        </Toggle>
                     )}
                 </ButtonGroup>
             )}
@@ -197,74 +138,48 @@ const ToolbarMenu = ({
             {(toolbarConfig.bulletList || toolbarConfig.orderedList) && (
                 <ButtonGroup>
                     {toolbarConfig.bulletList && (
-                        <TooltipWrapper tooltipContent="Bullet List">
-                            <Button
-                                variant={
-                                    editor.isActive("bulletList")
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .toggleBulletList()
-                                        .run()
-                                }>
-                                <AiOutlineUnorderedList
-                                    aria-label="Bullet List"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive("bulletList")}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Bullet List"
+                            onPressedChange={() =>
+                                editor.chain().focus().toggleBulletList().run()
+                            }>
+                            <AiOutlineUnorderedList className="h-4 w-4" />
+                        </Toggle>
                     )}
 
                     {toolbarConfig.orderedList && (
-                        <TooltipWrapper tooltipContent="Ordered List">
-                            <Button
-                                variant={
-                                    editor.isActive("orderedList")
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .toggleOrderedList()
-                                        .run()
-                                }>
-                                <AiOutlineOrderedList
-                                    aria-label="Ordered List"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive("orderedList")}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Ordered List"
+                            onPressedChange={() =>
+                                editor.chain().focus().toggleOrderedList().run()
+                            }>
+                            <AiOutlineOrderedList className="h-4 w-4" />
+                        </Toggle>
                     )}
                 </ButtonGroup>
             )}
             {toolbarConfig.link && (
                 <ButtonGroup>
-                    <TooltipWrapper tooltipContent="Set Link">
-                        <SetLinkButton editor={editor} />
-                    </TooltipWrapper>
+                    <SetLinkButton editor={editor} />
 
-                    <TooltipWrapper tooltipContent="Remove Link">
-                        <Button
-                            variant="outline"
-                            disabled={!editor.isActive("link")}
-                            size="sm"
-                            onClick={() =>
-                                editor.chain().focus().unsetLink().run()
-                            }>
-                            <MdLinkOff
-                                aria-label="Unset Link"
-                                className="h-4 w-4"
-                            />
-                        </Button>
-                    </TooltipWrapper>
+                    <Button
+                        variant="outline"
+                        disabled={!editor.isActive("link")}
+                        size="sm"
+                        onClick={() =>
+                            editor.chain().focus().unsetLink().run()
+                        }>
+                        <MdLinkOff
+                            aria-label="Unset Link"
+                            className="h-4 w-4"
+                        />
+                    </Button>
                 </ButtonGroup>
             )}
 
@@ -274,135 +189,81 @@ const ToolbarMenu = ({
                 toolbarConfig.strike) && (
                 <ButtonGroup>
                     {toolbarConfig.bold && (
-                        <TooltipWrapper tooltipContent="Bold">
-                            <Button
-                                variant={
-                                    editor.isActive("bold")
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor.chain().focus().toggleBold().run()
-                                }>
-                                <TbBold
-                                    aria-label="Bold"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive("bold")}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Bold"
+                            onPressedChange={() =>
+                                editor.chain().focus().toggleBold().run()
+                            }>
+                            <TbBold className="h-4 w-4" />
+                        </Toggle>
                     )}
 
                     {toolbarConfig.underline && (
-                        <TooltipWrapper tooltipContent="Underline">
-                            <Button
-                                variant={
-                                    editor.isActive("underline")
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .toggleUnderline()
-                                        .run()
-                                }>
-                                <AiOutlineUnderline
-                                    aria-label="Underline"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive("underline")}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Underline"
+                            onPressedChange={() =>
+                                editor.chain().focus().toggleUnderline().run()
+                            }>
+                            <AiOutlineUnderline className="h-4 w-4" />
+                        </Toggle>
                     )}
 
                     {toolbarConfig.italic && (
-                        <TooltipWrapper tooltipContent="Italic">
-                            <Button
-                                variant={
-                                    editor.isActive("italic")
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor.chain().focus().toggleItalic().run()
-                                }>
-                                <TbItalic
-                                    aria-label="Italic"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive("italic")}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Italic"
+                            onPressedChange={() =>
+                                editor.chain().focus().toggleItalic().run()
+                            }>
+                            <TbItalic className="h-4 w-4" />
+                        </Toggle>
                     )}
 
                     {toolbarConfig.strike && (
-                        <TooltipWrapper tooltipContent="Strikethrough">
-                            <Button
-                                variant={
-                                    editor.isActive("strike")
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor.chain().focus().toggleStrike().run()
-                                }>
-                                <MdOutlineStrikethroughS
-                                    aria-label="Strikethrough"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive("strike")}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Strikethrough"
+                            onPressedChange={() =>
+                                editor.chain().focus().toggleStrike().run()
+                            }>
+                            <MdOutlineStrikethroughS className="h-4 w-4" />
+                        </Toggle>
                     )}
 
                     {toolbarConfig.subscript && (
-                        <TooltipWrapper tooltipContent="Subscript">
-                            <Button
-                                variant={
-                                    editor.isActive("subscript")
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .toggleSubscript()
-                                        .run()
-                                }>
-                                <TbSubscript
-                                    aria-label="Subscript"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive("subscript")}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Subscript"
+                            onPressedChange={() =>
+                                editor.chain().focus().toggleSubscript().run()
+                            }>
+                            <TbSubscript className="h-4 w-4" />
+                        </Toggle>
                     )}
 
                     {toolbarConfig.superscript && (
-                        <TooltipWrapper tooltipContent="Superscript">
-                            <Button
-                                variant={
-                                    editor.isActive("superscript")
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .toggleSuperscript()
-                                        .run()
-                                }>
-                                <TbSuperscript
-                                    aria-label="Superscript"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive("superscript")}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Superscript"
+                            onPressedChange={() =>
+                                editor.chain().focus().toggleSuperscript().run()
+                            }>
+                            <TbSuperscript className="h-4 w-4" />
+                        </Toggle>
                     )}
                 </ButtonGroup>
             )}
@@ -413,99 +274,71 @@ const ToolbarMenu = ({
                 toolbarConfig.textLeftAlign) && (
                 <ButtonGroup>
                     {toolbarConfig.textLeftAlign && (
-                        <TooltipWrapper tooltipContent="Align Left">
-                            <Button
-                                variant={
-                                    editor.isActive({ textAlign: "left" })
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .setTextAlign("left")
-                                        .run()
-                                }>
-                                <TbAlignLeft
-                                    aria-label="Left Align"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive({ textAlign: "left" })}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Text Align Left"
+                            onPressedChange={() =>
+                                editor
+                                    .chain()
+                                    .focus()
+                                    .setTextAlign("left")
+                                    .run()
+                            }>
+                            <TbAlignLeft className="h-4 w-4" />
+                        </Toggle>
                     )}
 
                     {toolbarConfig.textCenterAlign && (
-                        <TooltipWrapper tooltipContent="Align Center">
-                            <Button
-                                variant={
-                                    editor.isActive({ textAlign: "center" })
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .setTextAlign("center")
-                                        .run()
-                                }>
-                                <TbAlignCenter
-                                    aria-label="Center Align"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive({ textAlign: "center" })}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Text Align Center"
+                            onPressedChange={() =>
+                                editor
+                                    .chain()
+                                    .focus()
+                                    .setTextAlign("center")
+                                    .run()
+                            }>
+                            <TbAlignCenter className="h-4 w-4" />
+                        </Toggle>
                     )}
 
                     {toolbarConfig.textRightAlign && (
-                        <TooltipWrapper tooltipContent="Align Right">
-                            <Button
-                                variant={
-                                    editor.isActive({ textAlign: "right" })
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .setTextAlign("right")
-                                        .run()
-                                }>
-                                <TbAlignRight
-                                    aria-label="Right Align"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive({ textAlign: "right" })}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Text Align Right"
+                            onPressedChange={() =>
+                                editor
+                                    .chain()
+                                    .focus()
+                                    .setTextAlign("right")
+                                    .run()
+                            }>
+                            <TbAlignRight className="h-4 w-4" />
+                        </Toggle>
                     )}
 
                     {toolbarConfig.textJustifyAlign && (
-                        <TooltipWrapper tooltipContent="Align Justify">
-                            <Button
-                                variant={
-                                    editor.isActive({ textAlign: "justify" })
-                                        ? "subtle"
-                                        : "outline"
-                                }
-                                size="sm"
-                                onClick={() =>
-                                    editor
-                                        .chain()
-                                        .focus()
-                                        .setTextAlign("justify")
-                                        .run()
-                                }>
-                                <TbAlignJustified
-                                    aria-label="Justify Align"
-                                    className="h-4 w-4"
-                                />
-                            </Button>
-                        </TooltipWrapper>
+                        <Toggle
+                            pressed={editor.isActive({ textAlign: "justify" })}
+                            variant="outline"
+                            size="sm"
+                            aria-label="Toggle Text Align Justify"
+                            onPressedChange={() =>
+                                editor
+                                    .chain()
+                                    .focus()
+                                    .setTextAlign("justify")
+                                    .run()
+                            }>
+                            <TbAlignJustified className="h-4 w-4" />
+                        </Toggle>
                     )}
                 </ButtonGroup>
             )}
