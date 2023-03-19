@@ -47,6 +47,7 @@ const ToolbarMenu = ({
                         <Button
                             variant="outline"
                             size="sm"
+                            disabled={!editor.can().undo()}
                             onClick={() => editor.chain().focus().undo().run()}>
                             <AiOutlineUndo
                                 aria-label="Undo"
@@ -59,6 +60,7 @@ const ToolbarMenu = ({
                         <Button
                             variant="outline"
                             size="sm"
+                            disabled={!editor.can().redo()}
                             onClick={() => editor.chain().focus().redo().run()}>
                             <AiOutlineRedo
                                 aria-label="Redo"
