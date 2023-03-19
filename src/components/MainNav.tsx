@@ -36,7 +36,10 @@ export function MainNav() {
                         <NavigationMenuContent>
                             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                 <li className="row-span-3">
-                                    <Link href="/">
+                                    <Link
+                                        href="/"
+                                        passHref
+                                        legacyBehavior>
                                         <NavigationMenuLink
                                             className="grid h-full w-full select-none items-center justify-center 
                      space-y-2 rounded-md bg-gradient-to-b from-white to-slate-200 p-6 no-underline outline-none focus:shadow-md dark:from-slate-200 dark:to-slate-800">
