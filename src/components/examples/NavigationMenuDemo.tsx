@@ -125,7 +125,7 @@ function NavigationMenuDemo() {
                         passHref>
                         <NavigationMenuLink
                             className={navigationMenuTriggerStyle()}>
-                            Documentation
+                            Single Link
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
