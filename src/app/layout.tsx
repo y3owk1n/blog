@@ -99,17 +99,18 @@ export default function RootLayout({
             suppressHydrationWarning>
             {!isDev && (
                 <Script
+                    async
                     src={"https://5oddwdpyqe.kylewong.my/umami.js"}
                     data-website-id="2732127c-366b-4a69-8067-b750b856bbd4"
                     strategy="lazyOnload"
                 />
             )}
-            <RootProviders>
-                <body
-                    className={twMerge(
-                        "min-h-screen bg-slate-50 font-sans text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-50",
-                        "pattern-dots pattern-bg-transparent pattern-slate-100 pattern-opacity-100 pattern-size-2 dark:pattern-slate-800"
-                    )}>
+            <body
+                className={twMerge(
+                    "min-h-screen bg-slate-50 font-sans text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-50",
+                    "pattern-dots pattern-bg-transparent pattern-slate-100 pattern-opacity-100 pattern-size-2 dark:pattern-slate-800"
+                )}>
+                <RootProviders>
                     <div className="mx-auto flex min-h-screen flex-col">
                         <Toaster />
                         <SiteHeader />
@@ -118,8 +119,8 @@ export default function RootLayout({
                         </div>
                         <SiteFooter />
                     </div>
-                </body>
-            </RootProviders>
+                </RootProviders>
+            </body>
         </html>
     );
 }
