@@ -75,7 +75,7 @@ const MenubarDemo = () => {
             <MenubarMenu>
                 <MenubarTrigger>View</MenubarTrigger>
                 <MenubarContent>
-                    <MenubarCheckboxItem>
+                    <MenubarCheckboxItem disabled>
                         Always Show Bookmarks Bar
                     </MenubarCheckboxItem>
                     <MenubarCheckboxItem checked>
@@ -104,7 +104,11 @@ const MenubarDemo = () => {
                         <MenubarRadioItem value="benoit">
                             Benoit
                         </MenubarRadioItem>
-                        <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
+                        <MenubarRadioItem
+                            value="Luis"
+                            disabled>
+                            Luis
+                        </MenubarRadioItem>
                     </MenubarRadioGroup>
                     <MenubarSeparator />
                     <MenubarItem inset>Edit...</MenubarItem>
