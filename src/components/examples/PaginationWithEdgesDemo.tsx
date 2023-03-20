@@ -6,7 +6,7 @@ import { Pagination } from "@/components/ui/Pagination";
 
 const total = 10;
 
-const PaginationWithEdgesLastDemo = () => {
+const PaginationWithEdgesDemo = () => {
     const [page, onChange] = useState(5);
 
     return (
@@ -19,4 +19,4 @@ const PaginationWithEdgesLastDemo = () => {
     );
 };
 
-export default PaginationWithEdgesLastDemo;
+export default PaginationWithEdgesDemo;

@@ -11,8 +11,7 @@ const PaginationBoundariesDemo = () => {
 
     return (
         <Pagination
-            allowFirstLast
-            boundaries={0}
+            boundaries={3}
             total={total}
             page={page}
             onChange={onChange}

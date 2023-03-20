@@ -57,6 +57,12 @@ import KbdOutlineModifierDemo from "@/components/examples/KbdOutlineModifierDemo
 import LabelDemo from "@/components/examples/LabelDemo";
 import MenubarDemo from "@/components/examples/MenubarDemo";
 import NavigationMenuDemo from "@/components/examples/NavigationMenuDemo";
+import PaginationDemo from "@/components/examples/PaginationDemo";
+import PaginationSiblingsDemo from "@/components/examples/PaginationSiblingsDemo";
+import PaginationWithEdgesDemo from "@/components/examples/PaginationWithEdgesDemo";
+import PaginationBoundariesDemo from "@/components/examples/PaginationBoundariesDemo";
+import PaginationNoBoundariesDemo from "@/components/examples/PaginationNoBoundariesDemo";
+import PaginationWithControlsDemo from "@/components/examples/PaginationWithControlsDemo";
 import PopoverDemo from "@/components/examples/PopoverDemo";
 import ProgressDemo from "@/components/examples/ProgressDemo";
 import RadioGroupDemo from "@/components/examples/RadioGroupDemo";
@@ -129,6 +135,9 @@ export const examples = {
     DropdownMenuDemo,
     DropdownMenuCheckboxDemo,
     DropdownMenuRadioGroupDemo,
+    DrawerDemo,
+    DrawerSizeDemo,
+    DrawerPositionDemo,
     FileInputDemo,
     FileInputOutlineDemo,
     FileInputDisabledDemo,
@@ -146,6 +155,12 @@ export const examples = {
     KbdOutlineModifierDemo,
     MenubarDemo,
     NavigationMenuDemo,
+    PaginationDemo,
+    PaginationSiblingsDemo,
+    PaginationWithEdgesDemo,
+    PaginationBoundariesDemo,
+    PaginationNoBoundariesDemo,
+    PaginationWithControlsDemo,
     PopoverDemo,
     ProgressDemo,
     RadioGroupDemo,
@@ -155,9 +170,6 @@ export const examples = {
     ScrollAreaDemo,
     SelectDemo,
     SeparatorDemo,
-    DrawerDemo,
-    DrawerSizeDemo,
-    DrawerPositionDemo,
     SliderDemo,
     SwitchDemo,
     TabsDemo,

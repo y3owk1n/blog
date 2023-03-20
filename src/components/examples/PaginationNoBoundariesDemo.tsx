@@ -4,19 +4,19 @@ import React, { useState } from "react";
 
 import { Pagination } from "@/components/ui/Pagination";
 
-const total = 10;
+const total = 100;
 
-const PaginationWithControlsLastDemo = () => {
-    const [page, onChange] = useState(5);
+const PaginationNoBoundariesDemo = () => {
+    const [page, onChange] = useState(35);
 
     return (
         <Pagination
+            boundaries={0}
             total={total}
-            withControls
             page={page}
             onChange={onChange}
         />
     );
 };
 
-export default PaginationWithControlsLastDemo;
+export default PaginationNoBoundariesDemo;
