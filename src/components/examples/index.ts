@@ -63,6 +63,12 @@ import PaginationNoBoundariesDemo from "@/components/examples/PaginationNoBounda
 import PaginationSiblingsDemo from "@/components/examples/PaginationSiblingsDemo";
 import PaginationWithControlsDemo from "@/components/examples/PaginationWithControlsDemo";
 import PaginationWithEdgesDemo from "@/components/examples/PaginationWithEdgesDemo";
+import PinInputAlphaNumericDemo from "@/components/examples/PinInputAlphaNumericDemo";
+import PinInputAutoFocusDemo from "@/components/examples/PinInputAutoFocusDemo";
+import PinInputDemo from "@/components/examples/PinInputDemo";
+import PinInputDisabledDemo from "@/components/examples/PinInputDisabledDemo";
+import PinInputMaskDemo from "@/components/examples/PinInputMaskDemo";
+import PinInputWithReactHookFormDemo from "@/components/examples/PinInputWithReactHookFormDemo";
 import PopoverDemo from "@/components/examples/PopoverDemo";
 import ProgressDemo from "@/components/examples/ProgressDemo";
 import RadioGroupDemo from "@/components/examples/RadioGroupDemo";
@@ -161,6 +167,12 @@ export const examples = {
     PaginationBoundariesDemo,
     PaginationNoBoundariesDemo,
     PaginationWithControlsDemo,
+    PinInputDemo,
+    PinInputMaskDemo,
+    PinInputDisabledDemo,
+    PinInputAutoFocusDemo,
+    PinInputAlphaNumericDemo,
+    PinInputWithReactHookFormDemo,
     PopoverDemo,
     ProgressDemo,
     RadioGroupDemo,
