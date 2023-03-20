@@ -107,7 +107,7 @@ export default function RootLayout({
             )}
             <body
                 className={twMerge(
-                    "min-h-screen bg-slate-50 font-sans text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-50",
+                    "min-h-screen scroll-smooth bg-slate-50 font-sans text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-50",
                     "pattern-dots pattern-bg-transparent pattern-slate-100 pattern-opacity-100 pattern-size-2 dark:pattern-slate-800"
                 )}>
                 <RootProviders>
