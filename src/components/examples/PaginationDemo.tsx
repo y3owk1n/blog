@@ -11,7 +11,8 @@ const PaginationDemo = () => {
 
     return (
         <Pagination
-            allowFirstLast
+            withEdges
+            withControls
             total={total}
             page={page}
             onChange={onChange}

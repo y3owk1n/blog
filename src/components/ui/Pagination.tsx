@@ -13,11 +13,12 @@ import {
     usePagination,
     type PaginationParams,
 } from "@/lib/hooks/usePagination";
+import { Button } from "@/components/ui/Button";
 import { Toggle } from "@/components/ui/Toggle";
-import { Button } from "./Button";
 
 interface PaginationProps extends PaginationParams {
-    allowFirstLast?: boolean;
+    withEdges?: boolean;
+    withControls?: boolean;
 }
 
 const Pagination = ({
@@ -27,7 +28,8 @@ const Pagination = ({
     page,
     initialPage,
     onChange,
-    allowFirstLast = false,
+    withEdges = false,
+    withControls = false,
 }: PaginationProps) => {
     const pagination = usePagination({
         total,
@@ -42,55 +44,61 @@ const Pagination = ({
 
     return (
         <div className="flex flex-wrap items-center gap-2">
-            {allowFirstLast && (
+            {withEdges && (
                 <Button
                     size="icon"
                     variant="outline"
                     disabled={pagination.active === 1}
-                    aria-label={`First page`}
+                    aria-label={`first page button aria-label`}
                     onClick={() => pagination.first()}>
                     <ChevronDoubleLeftIcon className="h-4 w-4" />
                 </Button>
             )}
-            <Button
-                size="icon"
-                variant="outline"
-                disabled={pagination.active === 1}
-                aria-label={`Previous page`}
-                onClick={() => pagination.previous()}>
-                <ChevronLeftIcon className="h-4 w-4" />
-            </Button>
+            {withControls && (
+                <Button
+                    size="icon"
+                    variant="outline"
+                    disabled={pagination.active === 1}
+                    aria-label={`previous page button aria-label`}
+                    onClick={() => pagination.previous()}>
+                    <ChevronLeftIcon className="h-4 w-4" />
+                </Button>
+            )}
             {pagination.range.map((page, idx) =>
                 page === "separator" ? (
-                    <div key={idx}>
-                        <BsThreeDots className="h-4 w-4" />
-                    </div>
+                    <BsThreeDots
+                        key={idx}
+                        aria-label="dots element aria-label"
+                        className="h-4 w-4"
+                    />
                 ) : (
                     <Toggle
                         variant="outline"
                         disabled={pagination.active === page}
                         pressed={pagination.active === page}
-                        aria-label={`Go to page ${page}`}
+                        aria-label={`${page} item aria-label`}
                         onPressedChange={() => pagination.setPage(page)}
                         key={idx}>
                         {page}
                     </Toggle>
                 )
             )}
-            <Button
-                size="icon"
-                variant="outline"
-                disabled={pagination.active === total}
-                aria-label={`Next page`}
-                onClick={() => pagination.next()}>
-                <ChevronRightIcon className="h-4 w-4" />
-            </Button>
-            {allowFirstLast && (
+            {withControls && (
                 <Button
                     size="icon"
                     variant="outline"
                     disabled={pagination.active === total}
-                    aria-label={`Last page`}
+                    aria-label={`next page button aria-label`}
+                    onClick={() => pagination.next()}>
+                    <ChevronRightIcon className="h-4 w-4" />
+                </Button>
+            )}
+            {withEdges && (
+                <Button
+                    size="icon"
+                    variant="outline"
+                    disabled={pagination.active === total}
+                    aria-label={`last page button aria-label`}
                     onClick={() => pagination.last()}>
                     <ChevronDoubleRightIcon className="h-4 w-4" />
                 </Button>
