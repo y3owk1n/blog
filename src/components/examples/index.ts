@@ -57,12 +57,12 @@ import KbdOutlineModifierDemo from "@/components/examples/KbdOutlineModifierDemo
 import LabelDemo from "@/components/examples/LabelDemo";
 import MenubarDemo from "@/components/examples/MenubarDemo";
 import NavigationMenuDemo from "@/components/examples/NavigationMenuDemo";
-import PaginationDemo from "@/components/examples/PaginationDemo";
-import PaginationSiblingsDemo from "@/components/examples/PaginationSiblingsDemo";
-import PaginationWithEdgesDemo from "@/components/examples/PaginationWithEdgesDemo";
 import PaginationBoundariesDemo from "@/components/examples/PaginationBoundariesDemo";
+import PaginationDemo from "@/components/examples/PaginationDemo";
 import PaginationNoBoundariesDemo from "@/components/examples/PaginationNoBoundariesDemo";
+import PaginationSiblingsDemo from "@/components/examples/PaginationSiblingsDemo";
 import PaginationWithControlsDemo from "@/components/examples/PaginationWithControlsDemo";
+import PaginationWithEdgesDemo from "@/components/examples/PaginationWithEdgesDemo";
 import PopoverDemo from "@/components/examples/PopoverDemo";
 import ProgressDemo from "@/components/examples/ProgressDemo";
 import RadioGroupDemo from "@/components/examples/RadioGroupDemo";
