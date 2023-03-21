@@ -74,7 +74,7 @@ const Page = () => {
                     className="mt-10 max-w-lg text-center">
                     Hey, I&apos;m Kyle. I&apos;m the{" "}
                     <strong>Head Of Marketing</strong> at <TraworldHover />,
-                    where my team helps to build brand, strategies and
+                    where my team helps to build, manage strategies and
                     conversions for the brand.
                 </Alert>
 
