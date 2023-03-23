@@ -52,7 +52,17 @@ export function Pager({ content }: PagerProps) {
     );
 }
 
-export function getPager(doc: Ui) {
+interface GetPagerReturn {
+    prev: NavItem | null | undefined;
+    next: NavItem | null | undefined;
+}
+
+/**
+ * Function to get the previous and next navigation items
+ * @param {Ui} doc - The current UI element
+ * @returns {GetPagerReturn} - An object containing the previous and next navigation items
+ */
+export function getPager(doc: Ui): GetPagerReturn {
     const flattenedLinks = [
         null,
         ...flatten(groupUisByTags.sort((a, b) => (a.title > b.title ? -1 : 1))),
@@ -72,6 +82,11 @@ export function getPager(doc: Ui) {
     };
 }
 
+/**
+ * Function to flatten a nested array of navigation items
+ * @param {NavItemWithChildren[]} links - An array of navigation items with children
+ * @returns {NavItem[]} - A flattened array of navigation items
+ */
 export function flatten(links: NavItemWithChildren[]): NavItem[] {
     return links.reduce<NavItem[]>((flat, link) => {
         return flat.concat(link.items?.length ? flatten(link.items) : link);

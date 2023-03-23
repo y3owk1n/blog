@@ -2,7 +2,13 @@ import { useMemo } from "react";
 
 import { useUncontrolled } from "@/lib/hooks/useUncontrolled";
 
-export function range(start: number, end: number) {
+/**
+ * Function to generate a range of numbers
+ * @param {number} start - The starting number of the range
+ * @param {number} end - The ending number of the range
+ * @returns {number[]} - An array of numbers from start to end
+ */
+export function range(start: number, end: number): number[] {
     const length = end - start + 1;
     return Array.from({ length }, (_, index) => index + start);
 }
@@ -29,6 +35,21 @@ export interface PaginationParams {
     onChange?: (page: number) => void;
 }
 
+/**
+ * Custom hook to create a pagination component
+ * @param {PaginationParams} params - The parameters for the pagination
+ * @returns {PaginationReturn} - The pagination range, active page, and functions to control the pagination
+ */
+export interface PaginationReturn {
+    range: Array<number | "separator">;
+    active: number;
+    setPage: (pageNumber: number) => void;
+    next: () => void;
+    previous: () => void;
+    first: () => void;
+    last: () => void;
+}
+
 export function usePagination({
     total,
     siblings = 1,
@@ -36,7 +57,7 @@ export function usePagination({
     page,
     initialPage = 1,
     onChange,
-}: PaginationParams) {
+}: PaginationParams): PaginationReturn {
     const _total = Math.max(Math.trunc(total), 0);
     const [activePage, setActivePage] = useUncontrolled({
         value: page,

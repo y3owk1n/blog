@@ -18,6 +18,11 @@ interface CopyButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     src?: string;
 }
 
+/**
+ * Function to copy a string to the clipboard with optional meta data
+ * @param {string} value - The string to be copied
+ * @param {Record<string, unknown>} [meta] - Optional meta data
+ */
 async function copyToClipboardWithMeta(
     value: string,
     meta?: Record<string, unknown>

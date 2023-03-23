@@ -2,7 +2,30 @@ import { allPosts, allUis } from "@/contentlayer/generated";
 
 import { groupBy } from "./groupBy";
 
-export const groupUisByTags = groupBy(allUis, (ui) => ui.tag).map((ui) => ({
+interface AllPosts {
+    slug: string;
+    title: string;
+    date: string;
+    description: string;
+    href: string;
+    rawSlug: string;
+}
+
+interface NestedGroup {
+    title: string;
+    items: NestedItem[];
+}
+
+interface NestedItem {
+    title: string;
+    href: string;
+    items: NestedItem[];
+}
+
+export const groupUisByTags: Array<NestedGroup> = groupBy(
+    allUis,
+    (ui) => ui.tag
+).map((ui) => ({
     title: ui.title,
     items: ui.items.map((item) => ({
         title: item.title,
@@ -11,7 +34,7 @@ export const groupUisByTags = groupBy(allUis, (ui) => ui.tag).map((ui) => ({
     })),
 }));
 
-export const allPostsAndSort = allPosts
+export const allPostsAndSort: Array<AllPosts> = allPosts
     .map((content) => ({
         slug: content.slug,
         title: content.title,
@@ -22,7 +45,7 @@ export const allPostsAndSort = allPosts
     }))
     .sort((a, b) => (a.date && b.date && a.date > b.date ? -1 : 1));
 
-export const allPostsWithTitle = [
+export const allPostsWithTitle: Array<NestedGroup> = [
     {
         title: "Posts",
         items: allPostsAndSort.map((item) => ({
@@ -33,7 +56,11 @@ export const allPostsWithTitle = [
     },
 ];
 
-export const getAllPostsAndSort = () => {
+/**
+ * Function to get all posts and sort them by date
+ * @returns {Array} - An array of posts sorted by date
+ */
+export const getAllPostsAndSort = (): Array<AllPosts> => {
     const posts = allPosts.map((content) => ({
         slug: content.slug,
         title: content.title,
@@ -50,4 +77,7 @@ export const getAllPostsAndSort = () => {
     return sorted;
 };
 
-export const firstThreePosts = getAllPostsAndSort().slice(0, 3);
+export const firstThreePosts: Array<AllPosts> = getAllPostsAndSort().slice(
+    0,
+    3
+);

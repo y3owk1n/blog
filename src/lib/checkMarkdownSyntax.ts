@@ -1,5 +1,10 @@
-// Check if text contains markdown syntax
-export const checkMarkdownSyntax = (text: string, html: string) => {
+/**
+ * Function to check if a text contains valid markdown syntax
+ * @param {string} text - The text to check
+ * @param {string} html - The html generated from the text
+ * @returns {boolean} - Whether the text contains valid markdown syntax
+ */
+export const checkMarkdownSyntax = (text: string, html: string): boolean => {
     if (!text) return false;
     if (!html) return true;
     // Split text into paragraphs
@@ -60,5 +65,7 @@ export const checkMarkdownSyntax = (text: string, html: string) => {
     // Return true if more than half of the paragraphs contain markdown syntax
     if (validCount > 0 && (rowCount === 0 || validCount / rowCount > 0.5)) {
         return true;
+    } else {
+        return false;
     }
 };

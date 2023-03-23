@@ -12,15 +12,17 @@ export interface UnistNode extends Node {
         className?: string[];
         [key: string]: unknown;
     } & NpmCommands;
-    attributes?: {
-        name: string;
-        value: unknown;
-        type?: string;
-    }[];
+    attributes?: UnistNodeAttributes[];
     children?: UnistNode[];
     __rawString__?: string;
     __src__?: string;
 }
+
+export type UnistNodeAttributes = {
+    name: string;
+    value: unknown;
+    type?: string;
+};
 
 export interface UnistTree extends Node {
     children: UnistNode[];
