@@ -125,6 +125,7 @@ export const ListItem = React.forwardRef<
                 href={href}
                 passHref
                 legacyBehavior
+                ref={ref}
                 {...props}>
                 <NavigationMenuLink
                     className={twMerge(

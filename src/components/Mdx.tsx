@@ -120,7 +120,6 @@ const components = {
         className,
         alt,
         src,
-        ...props
     }: React.ImgHTMLAttributes<HTMLImageElement>) => (
         <ImageWithAspectRatio
             aspectRatioProps={{

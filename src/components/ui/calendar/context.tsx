@@ -3,7 +3,6 @@ import { createContext } from "react";
 import type dayjs from "dayjs";
 
 import type {
-    ClassNameParam,
     ClassNamesTypeProp,
     Configs,
     DateRangeType,
@@ -58,16 +57,13 @@ const DatepickerContext = createContext<DatepickerStore>({
     calendarContainer: null,
     hideDatepicker: () => Object,
     period: { start: null, end: null },
-    changePeriod: (period) => Object,
+    changePeriod: () => Object,
     dayHover: null,
-    changeDayHover: (day: string | null) => Object,
+    changeDayHover: () => Object,
     inputText: "",
-    changeInputText: (text) => Object,
-    updateFirstDate: (date) => Object,
-    changeDatepickerValue: (
-        value: DateValueType,
-        e: HTMLInputElement | null | undefined
-    ) => Object,
+    changeInputText: () => Object,
+    updateFirstDate: () => Object,
+    changeDatepickerValue: () => Object,
     showFooter: false,
     value: null,
     i18n: LANGUAGE,

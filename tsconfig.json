@@ -10,8 +10,6 @@
             "@/utils/*": ["utils/*"],
             "@/components/*": ["components/*"],
             "@/lib/*": ["lib/*"],
-            "@/_posts/*": ["_posts/*"],
-            "@/_docs/*": ["_docs/*"],
             "@/content/*": ["content/*"],
             "@/contentlayer/generated": ["../.contentlayer/generated"]
         },
@@ -42,6 +40,7 @@
         "**/*.tsx",
         "**/*.cjs",
         "**/*.mjs",
+        "next-sitemap.config.js",
         ".next/types/**/*.ts",
         ".contentlayer/generated",
         "/Users/kyle/Dev/ui/.next/types/**/*.ts"
