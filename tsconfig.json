@@ -43,7 +43,6 @@
         "**/*.cjs",
         "**/*.mjs",
         ".next/types/**/*.ts",
-        ".contentlayer/generated",
         "/Users/kyle/Dev/ui/.next/types/**/*.ts"
     ],
     "exclude": ["node_modules"]
