@@ -28,6 +28,8 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: "yarn"
 
+            - uses: jongwooo/next-cache@v1
+
             - run: yarn install --immutable
             - run: yarn ci --if-present
             - run: yarn format
