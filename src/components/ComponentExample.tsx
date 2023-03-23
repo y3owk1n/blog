@@ -24,7 +24,6 @@ interface Element extends React.ReactElement {
 export function ComponentExample({
     children,
     className,
-    extractClassname,
     extractedClassNames,
     align = "center",
     ...props

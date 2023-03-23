@@ -256,7 +256,7 @@ const Calendar: React.FC<Props> = ({
             dayHover,
             changeDayHover: (newDay: string | null) => setDayHover(newDay),
             inputText: "",
-            changeInputText: (newText: string) => Object,
+            changeInputText: () => Object,
             updateFirstDate: (newDate: dayjs.Dayjs) => firstGotoDate(newDate),
             changeDatepickerValue: onChange,
             showFooter,

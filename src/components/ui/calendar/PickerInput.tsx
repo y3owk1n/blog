@@ -2,7 +2,6 @@ import React, { useCallback, useContext, useEffect, useRef } from "react";
 import dayjs from "dayjs";
 import { twMerge } from "tailwind-merge";
 
-import { Input } from "../Input";
 import PickerToggleButton from "./PickerToggleButton";
 import { BORDER_COLOR, DATE_FORMAT, RING_COLOR } from "./constants";
 import DatepickerContext from "./context";
