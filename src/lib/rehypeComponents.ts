@@ -3,7 +3,11 @@ import path from "path";
 import { u } from "unist-builder";
 import { visit } from "unist-util-visit";
 
-import type { UnistNode, UnistTree } from "@/types/unist-builder";
+import type {
+    UnistNode,
+    UnistNodeAttributes,
+    UnistTree,
+} from "@/types/unist-builder";
 
 export function rehypeComponent() {
     return (tree: UnistTree) => {
@@ -204,11 +208,25 @@ export function rehypeComponent() {
     };
 }
 
-function getNodeAttributeByName(node: UnistNode, name: string) {
+/**
+ * Function to get a node attribute by name
+ * @param {UnistNode} node - The node to search
+ * @param {string} name - The name of the attribute to search for
+ * @returns {UnistNodeAttributes | undefined} - The attribute found or undefined if not found
+ */
+function getNodeAttributeByName(
+    node: UnistNode,
+    name: string
+): UnistNodeAttributes | undefined {
     return node.attributes?.find((attribute) => attribute.name === name);
 }
 
-function getComponentSourceFileContent(node: UnistNode) {
+/**
+ * Function to get the content of a component source file
+ * @param {UnistNode} node - The node containing the source file
+ * @returns {string | null} - The content of the source file or null if no source file is found
+ */
+function getComponentSourceFileContent(node: UnistNode): string | null {
     const src = getNodeAttributeByName(node, "src")?.value as string;
 
     if (!src) {

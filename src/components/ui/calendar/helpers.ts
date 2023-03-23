@@ -2,7 +2,12 @@ import dayjs from "dayjs";
 
 import { DATE_FORMAT, LANGUAGE } from "./constants";
 
-export function getTextColorByPrimaryColor(color: string) {
+/**
+ * Function to get the text color based on the primary color
+ * @param {string} color - The primary color
+ * @returns {string} - The text color based on the primary color
+ */
+export function getTextColorByPrimaryColor(color: string): string {
     switch (color) {
         case "blue":
             return "text-blue-500";
@@ -43,7 +48,13 @@ export function getTextColorByPrimaryColor(color: string) {
     }
 }
 
-export function generateArrayNumber(start = 0, end = 0) {
+/**
+ * Function to generate an array of numbers
+ * @param start - The starting number of the array
+ * @param end - The ending number of the array
+ * @returns {number[]} - An array of numbers
+ */
+export function generateArrayNumber(start = 0, end = 0): number[] {
     const array = [];
     for (let i = start; i <= end; i++) {
         array.push(i);
@@ -52,19 +63,50 @@ export function generateArrayNumber(start = 0, end = 0) {
     return array;
 }
 
-export function shortString(value: string, limit = 3) {
+/**
+ * Function to return a shortened version of a string
+ * @param {string} value - The string to be shortened
+ * @param [limit=3] - The maximum length of the shortened string
+ * @returns {string} - The shortened string
+ */
+export function shortString(value: string, limit = 3): string {
     return value.slice(0, limit);
 }
 
-export function ucFirst(value: string) {
+/**
+ * Function to capitalize the first letter of a string
+ * @param {string} value - The string to capitalize
+ * @returns {string} - The string with the first letter capitalized
+ */
+export function ucFirst(value: string): string {
     return `${value.slice(0, 1).toUpperCase()}${value.slice(1, value.length)}`;
 }
 
-export function formatDate(date: dayjs.Dayjs, format = DATE_FORMAT) {
+/**
+ * Function to format a date
+ * @param {dayjs.Dayjs} date - The date to format
+ * @param {string} [format=DATE_FORMAT] - The format to use
+ * @returns {string} - The formatted date
+ */
+export function formatDate(
+    date: dayjs.Dayjs,
+    format: string = DATE_FORMAT
+): string {
     return date.format(format);
 }
 
-export function getFirstDayInMonth(date: string | dayjs.Dayjs) {
+interface GetDaysInMonth {
+    ddd: string;
+    basic: string;
+    object: dayjs.Dayjs;
+}
+
+/**
+ * Function to get the first day of the month
+ * @param {string|dayjs.Dayjs} date - The date to get the first day of the month from
+ * @returns {GetDaysInMonth} - An object containing the first day of the month in different formats
+ */
+export function getFirstDayInMonth(date: string | dayjs.Dayjs): GetDaysInMonth {
     return {
         ddd: formatDate(dayjs(date).startOf("month"), "ddd"),
         basic: formatDate(dayjs(date).startOf("month")),
@@ -72,7 +114,12 @@ export function getFirstDayInMonth(date: string | dayjs.Dayjs) {
     };
 }
 
-export function getLastDayInMonth(date: string) {
+/**
+ * Function to get the last day of the month
+ * @param {string} date - The date to get the last day of the month from
+ * @returns {GetDaysInMonth} - An object containing the last day of the month in different formats
+ */
+export function getLastDayInMonth(date: string): object {
     return {
         ddd: formatDate(dayjs(date).endOf("month"), "ddd"),
         basic: formatDate(dayjs(date).endOf("month")),
@@ -80,14 +127,24 @@ export function getLastDayInMonth(date: string) {
     };
 }
 
-export function getDaysInMonth(date: string | dayjs.Dayjs) {
+/**
+ * Function to get the number of days in a month
+ * @param {string | dayjs.Dayjs} date - The date to get the days from
+ * @returns {number[]} - An array of numbers representing the days in the month
+ */
+export function getDaysInMonth(date: string | dayjs.Dayjs): number[] {
     if (!isNaN(dayjs(date).daysInMonth())) {
         return [...generateArrayNumber(1, dayjs(date).daysInMonth())];
     }
     return [];
 }
 
-export function nextMonth(date: dayjs.Dayjs) {
+/**
+ * Function to get the date of the next month
+ * @param {dayjs.Dayjs} date - The current date
+ * @returns {dayjs.Dayjs} - The date of the next month
+ */
+export function nextMonth(date: dayjs.Dayjs): dayjs.Dayjs {
     return date
         .date(1)
         .hour(0)
@@ -96,7 +153,12 @@ export function nextMonth(date: dayjs.Dayjs) {
         .month(date.month() + 1);
 }
 
-export function previousMonth(date: dayjs.Dayjs) {
+/**
+ * Function to get the first day of the previous month
+ * @param {dayjs.Dayjs} date - The current date
+ * @returns {dayjs.Dayjs} - The first day of the previous month
+ */
+export function previousMonth(date: dayjs.Dayjs): dayjs.Dayjs {
     return date
         .date(1)
         .hour(0)
@@ -105,11 +167,29 @@ export function previousMonth(date: dayjs.Dayjs) {
         .month(date.month() - 1);
 }
 
-export function getFirstElementsInArray(array: number[] = [], size = 0) {
+/**
+ * Function to get the first elements of an array
+ * @param {number[]} array - The array to get elements from
+ * @param size - The number of elements to get
+ * @returns {number[]} - The first elements of the array
+ */
+export function getFirstElementsInArray(
+    array: number[] = [],
+    size = 0
+): number[] {
     return array.slice(0, size);
 }
 
-export function getLastElementsInArray(array: number[] = [], size = 0) {
+/**
+ * Function to get the last elements of an array
+ * @param {number[]} array - The array to get the elements from
+ * @param size - The number of elements to get
+ * @returns {number[]} - The last elements of the array
+ */
+export function getLastElementsInArray(
+    array: number[] = [],
+    size = 0
+): number[] {
     const result: number[] = [];
     if (Array.isArray(array) && size > 0) {
         if (size >= array.length) {
@@ -125,6 +205,12 @@ export function getLastElementsInArray(array: number[] = [], size = 0) {
     return result.reverse();
 }
 
+/**
+ * Function to get the number of the day in the week
+ * @param {string} dayString - The day of the week
+ * @param {string} [startWeekOn] - The day the week starts on (optional)
+ * @returns {number} - The number of the day in the week
+ */
 export function getNumberOfDay(
     dayString: string,
     startWeekOn?: string | null | undefined
@@ -178,15 +264,37 @@ export function getNumberOfDay(
     return number;
 }
 
-export function getLastDaysInMonth(date: dayjs.Dayjs | string, size = 0) {
+/**
+ * Function to get the last days in a month
+ * @param {dayjs.Dayjs | string} date - The date to get the last days from
+ * @param [size=0] - The number of days to get
+ * @returns {number[]} - An array of the last days in the month
+ */
+export function getLastDaysInMonth(
+    date: dayjs.Dayjs | string,
+    size = 0
+): number[] {
     return getLastElementsInArray(getDaysInMonth(date), size);
 }
 
-export function getFirstDaysInMonth(date: string | dayjs.Dayjs, size = 0) {
+/**
+ * Function to get the first days of a month
+ * @param {string | dayjs.Dayjs} date - The date to get the first days of the month from
+ * @param [size=0] - The number of days to return
+ * @returns {number[]} - An array of the first days of the month
+ */
+export function getFirstDaysInMonth(
+    date: string | dayjs.Dayjs,
+    size = 0
+): number[] {
     return getFirstElementsInArray(getDaysInMonth(date), size);
 }
 
-export function loadLanguageModule(language = LANGUAGE) {
+/**
+ * Function to load a language module for Day.js
+ * @param {string} language - The language to be loaded
+ */
+export function loadLanguageModule(language: string = LANGUAGE) {
     switch (language) {
         case "af":
             import("dayjs/locale/af");
@@ -619,6 +727,11 @@ export function loadLanguageModule(language = LANGUAGE) {
     }
 }
 
-export function dateIsValid(date: Date | number) {
+/**
+ * Function to check if a date is valid
+ * @param {Date | number} date - The date to be checked
+ * @returns {boolean} - Whether the date is valid or not
+ */
+export function dateIsValid(date: Date | number): boolean {
     return date instanceof Date && !isNaN(date.getTime());
 }

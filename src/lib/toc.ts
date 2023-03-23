@@ -9,7 +9,12 @@ import type { UnistNode } from "@/types/unist-builder";
 
 const textTypes = ["text", "emphasis", "strong", "inlineCode"];
 
-function flattenNode(node: UnistNode) {
+/**
+ * Function to flatten a UnistNode into a string
+ * @param {UnistNode} node - The UnistNode to flatten
+ * @returns {string} - The flattened string
+ */
+function flattenNode(node: UnistNode): string {
     const p: string[] = [];
     visit(node, (node) => {
         if (!textTypes.includes(node.type) || !node.value) return;
@@ -32,6 +37,12 @@ interface Items {
     items?: Item[];
 }
 
+/**
+ * Function to get items from a list
+ * @param {ListItem | UnistNode | BlockContent | DefinitionContent | undefined} node - The node to get items from
+ * @param {Item} current - The current item
+ * @returns {Item} - The item
+ */
 function getItems(
     node: ListItem | UnistNode | BlockContent | DefinitionContent | undefined,
     current: Item
@@ -100,6 +111,11 @@ const getToc = () => (node: Node, file: File) => {
 
 export type TableOfContents = Items;
 
+/**
+ * Asynchronously generate a table of contents from a given content string
+ * @param {string} content - The content string to generate the table of contents from
+ * @returns {Promise<TableOfContents>} - The generated table of contents
+ */
 export async function getTableOfContents(
     content: string
 ): Promise<TableOfContents> {

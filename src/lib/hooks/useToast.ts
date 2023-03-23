@@ -23,7 +23,11 @@ const actionTypes = {
 
 let count = 0;
 
-function genId() {
+/**
+ * Function to generate a unique id
+ * @returns {string} - A unique id
+ */
+function genId(): string {
     count = (count + 1) % Number.MAX_VALUE;
     return count.toString();
 }
@@ -54,6 +58,10 @@ interface State {
 
 const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>();
 
+/**
+ * Function to add a toast to the remove queue
+ * @param {string} toastId - The id of the toast to be removed
+ */
 const addToRemoveQueue = (toastId: string) => {
     if (toastTimeouts.has(toastId)) {
         return;
@@ -70,6 +78,12 @@ const addToRemoveQueue = (toastId: string) => {
     toastTimeouts.set(toastId, timeout);
 };
 
+/**
+ * Reducer function to manage the state of the toasts
+ * @param {State} state - The current state of the toasts
+ * @param {Action} action - The action to be performed on the state
+ * @returns {State} - The updated state of the toasts
+ */
 export const reducer = (state: State, action: Action): State => {
     switch (action.type) {
         case "ADD_TOAST":
@@ -128,6 +142,10 @@ const listeners: Array<(state: State) => void> = [];
 
 let memoryState: State = { toasts: [] };
 
+/**
+ * Function to dispatch an action to the reducer and update the state
+ * @param {Action} action - The action to be dispatched
+ */
 function dispatch(action: Action) {
     memoryState = reducer(memoryState, action);
     listeners.forEach((listener) => {
@@ -137,7 +155,18 @@ function dispatch(action: Action) {
 
 type Toast = Omit<ToasterToast, "id">;
 
-function toast({ ...props }: Toast) {
+type ToastReturn = {
+    id: string;
+    dismiss: () => void;
+    update: (props: ToasterToast) => void;
+};
+
+/**
+ * Function to create a toast notification
+ * @param {Toast} props - The properties of the toast
+ * @returns {ToastReturn} - An object containing the toast id, dismiss function and update function
+ */
+function toast({ ...props }: Toast): ToastReturn {
     const id = genId();
 
     const update = (props: ToasterToast) =>
@@ -166,7 +195,17 @@ function toast({ ...props }: Toast) {
     };
 }
 
-function useToast() {
+interface UseToastReturn {
+    toast: ({ ...props }: Toast) => ToastReturn;
+    dismiss: (toastId?: string) => void;
+    toasts: ToasterToast[];
+}
+
+/**
+ * Custom hook to manage toasts
+ * @returns {UseToastReturn} - An object containing the toast, dismiss and toasts functions
+ */
+function useToast(): UseToastReturn {
     const [state, setState] = React.useState<State>(memoryState);
 
     React.useEffect(() => {

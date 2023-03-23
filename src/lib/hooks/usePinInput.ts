@@ -130,6 +130,11 @@ export interface PinInputFieldProps {
     onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
 }
 
+/**
+ * React hook to create a pin input component
+ * @param {UsePinInputProps} props - Props for the pin input component
+ * @returns - Returns an object containing the fields, clear and isFocused properties
+ */
 export function usePinInput({
     values: valuesProp,
     onChange: onChangeProp,

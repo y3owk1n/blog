@@ -14,6 +14,14 @@ interface UseUncontrolledInput<T> {
     onChange?(value: T): void;
 }
 
+/**
+ * Custom hook to manage uncontrolled and controlled state
+ * @param {T} value - Value for controlled state
+ * @param  defaultValue - Initial value for uncontrolled state
+ * @param  finalValue - Final value for uncontrolled state when value and defaultValue are not provided
+ * @param  onChange - Controlled state onChange handler
+ * @returns {[T, (value: T) => void, boolean]} - [value, onChange, isControlled]
+ */
 export function useUncontrolled<T>({
     value,
     defaultValue,
