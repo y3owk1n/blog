@@ -40,9 +40,9 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
             - run: yarn install --immutable
-            - run: yarn typecheck --if-present
-            - run: yarn lint --if-present
-            - run: yarn sitemap --if-present
+            - run: yarn typecheck
+            - run: yarn lint
+            - run: yarn sitemap
             - run: yarn format
 
             - name: Commit changes
