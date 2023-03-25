@@ -13,4 +13,6 @@ public
 
 .yarn/*
 
+*.yml
+
 .contentlayer/*
