@@ -23,6 +23,7 @@ jobs:
             - run: yarn install --immutable
             - run: yarn ci --if-present
             - run: yarn format
+
             - name: Commit changes
               uses: stefanzweifel/git-auto-commit-action@v4
               with:
