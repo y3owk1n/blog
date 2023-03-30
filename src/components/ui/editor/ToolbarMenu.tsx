@@ -31,11 +31,13 @@ import type { Level, RichTextEditorToolbar } from "./RichTextEditor";
 import SetLinkButton from "./SetLinkButton";
 
 const ToolbarMenu = ({
+    disabled,
     editor,
     toolbarConfig,
     headingsArray,
 }: {
     editor: Editor;
+    disabled: boolean;
     toolbarConfig: RichTextEditorToolbar;
     headingsArray: Level[];
 }) => {
@@ -47,7 +49,7 @@ const ToolbarMenu = ({
                         <Button
                             variant="outline"
                             size="sm"
-                            disabled={!editor.can().undo()}
+                            disabled={!editor.can().undo() || disabled}
                             onClick={() => editor.chain().focus().undo().run()}>
                             <AiOutlineUndo
                                 aria-label="Undo"
@@ -60,7 +62,7 @@ const ToolbarMenu = ({
                         <Button
                             variant="outline"
                             size="sm"
-                            disabled={!editor.can().redo()}
+                            disabled={!editor.can().redo() || disabled}
                             onClick={() => editor.chain().focus().redo().run()}>
                             <AiOutlineRedo
                                 aria-label="Redo"
@@ -77,6 +79,7 @@ const ToolbarMenu = ({
                         key={level}
                         pressed={editor.isActive("heading", { level })}
                         variant="outline"
+                        disabled={disabled}
                         size="sm"
                         aria-label={`Toggle Heading ${level}`}
                         onPressedChange={() =>
@@ -100,6 +103,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive("codeBlock")}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Code Block"
                             onPressedChange={() =>
                                 editor.chain().focus().toggleCodeBlock().run()
@@ -112,6 +116,7 @@ const ToolbarMenu = ({
                         <Button
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             onClick={() =>
                                 editor.chain().focus().setHorizontalRule().run()
                             }>
@@ -127,6 +132,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive("blockquote")}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Blockquote"
                             onPressedChange={() =>
                                 editor.chain().focus().toggleBlockquote().run()
@@ -144,6 +150,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive("bulletList")}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Bullet List"
                             onPressedChange={() =>
                                 editor.chain().focus().toggleBulletList().run()
@@ -157,6 +164,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive("orderedList")}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Ordered List"
                             onPressedChange={() =>
                                 editor.chain().focus().toggleOrderedList().run()
@@ -168,11 +176,14 @@ const ToolbarMenu = ({
             )}
             {toolbarConfig.link && (
                 <ButtonGroup>
-                    <SetLinkButton editor={editor} />
+                    <SetLinkButton
+                        disabled={disabled}
+                        editor={editor}
+                    />
 
                     <Button
                         variant="outline"
-                        disabled={!editor.isActive("link")}
+                        disabled={!editor.isActive("link") || disabled}
                         size="sm"
                         onClick={() =>
                             editor.chain().focus().unsetLink().run()
@@ -195,6 +206,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive("bold")}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Bold"
                             onPressedChange={() =>
                                 editor.chain().focus().toggleBold().run()
@@ -208,6 +220,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive("underline")}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Underline"
                             onPressedChange={() =>
                                 editor.chain().focus().toggleUnderline().run()
@@ -220,6 +233,7 @@ const ToolbarMenu = ({
                         <Toggle
                             pressed={editor.isActive("italic")}
                             variant="outline"
+                            disabled={disabled}
                             size="sm"
                             aria-label="Toggle Italic"
                             onPressedChange={() =>
@@ -234,6 +248,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive("strike")}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Strikethrough"
                             onPressedChange={() =>
                                 editor.chain().focus().toggleStrike().run()
@@ -247,6 +262,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive("subscript")}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Subscript"
                             onPressedChange={() =>
                                 editor.chain().focus().toggleSubscript().run()
@@ -260,6 +276,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive("superscript")}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Superscript"
                             onPressedChange={() =>
                                 editor.chain().focus().toggleSuperscript().run()
@@ -280,6 +297,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive({ textAlign: "left" })}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Text Align Left"
                             onPressedChange={() =>
                                 editor
@@ -297,6 +315,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive({ textAlign: "center" })}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Text Align Center"
                             onPressedChange={() =>
                                 editor
@@ -314,6 +333,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive({ textAlign: "right" })}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Text Align Right"
                             onPressedChange={() =>
                                 editor
@@ -331,6 +351,7 @@ const ToolbarMenu = ({
                             pressed={editor.isActive({ textAlign: "justify" })}
                             variant="outline"
                             size="sm"
+                            disabled={disabled}
                             aria-label="Toggle Text Align Justify"
                             onPressedChange={() =>
                                 editor
