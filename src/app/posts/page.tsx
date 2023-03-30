@@ -46,7 +46,7 @@ const Page = () => {
                             title={post.title}
                             src={`${
                                 devEnvironment ? DEVDOMAIN : DOMAIN
-                            }/api/og-image?slug=${post.rawSlug}&type=post`}
+                            }/api/og-image?text=${post.title}`}
                         />
                     </div>
                     <H3 className="font-serif">

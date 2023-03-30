@@ -38,7 +38,7 @@ export default function Page({ params }: PageProps) {
                 title={content.title}
                 src={`${
                     devEnvironment ? DEVDOMAIN : DOMAIN
-                }/api/og-image?slug=${content.slugAsParams}&type=post`}
+                }/api/og-image?text=${content.title}`}
                 isEager
             />
 
