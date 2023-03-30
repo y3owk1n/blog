@@ -12,7 +12,7 @@ const description = `A list for all my blogs and sharings`;
 const image = encodeURI(
     `${
         devEnvironment ? DEVDOMAIN : DOMAIN
-    }/api/og-image?text=A list for all my blogs and sharings`
+    }/api/og-image/A list for all my blogs and sharings`
 );
 
 export const metadata = {
@@ -46,7 +46,10 @@ const Page = () => {
                             title={post.title}
                             src={`${
                                 devEnvironment ? DEVDOMAIN : DOMAIN
-                            }/api/og-image?text=${post.title}`}
+                            }/api/og-image/${post.title}`}
+                            // src={`${
+                            //     devEnvironment ? DEVDOMAIN : DOMAIN
+                            // }/api/og-image?text=${post.title}`}
                         />
                     </div>
                     <H3 className="font-serif">

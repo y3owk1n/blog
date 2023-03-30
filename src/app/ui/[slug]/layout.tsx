@@ -20,9 +20,7 @@ export async function generateMetadata({
     const title = `${content.title} | Kyle's UIs`;
     const description = content.description;
     const image = encodeURI(
-        `${devEnvironment ? DEVDOMAIN : DOMAIN}/api/og-image?text=${
-            content.description
-        }`
+        `${devEnvironment ? DEVDOMAIN : DOMAIN}/api/og-image/${content.title}`
     );
     const date = new Date(content.date).toISOString();
 

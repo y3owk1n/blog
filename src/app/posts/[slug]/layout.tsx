@@ -17,9 +17,7 @@ export async function generateMetadata({
     const title = `${content.title} | Kyle's Blog`;
     const description = content.description;
     const image = encodeURI(
-        `${devEnvironment ? DEVDOMAIN : DOMAIN}/api/og-image?text=${
-            content.title
-        }`
+        `${devEnvironment ? DEVDOMAIN : DOMAIN}/api/og-image/${content.title}`
     );
     const date = new Date(content.date).toISOString();
 
