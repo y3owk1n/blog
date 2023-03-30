@@ -14,7 +14,7 @@ const description = `Hello, I'm Kyle, a digital marketer and web developer, base
 const image = encodeURI(
     `${
         devEnvironment ? DEVDOMAIN : DOMAIN
-    }/api/og-image?text=Kyle Wong - Digital Marketer, Web Developer.`
+    }/api/og-image/Kyle Wong - Digital Marketer, Web Developer.`
 );
 
 export const metadata = {

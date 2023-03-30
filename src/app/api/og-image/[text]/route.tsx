@@ -3,9 +3,11 @@ import { ImageResponse } from "@vercel/og";
 export const runtime = "edge";
 
 // eslint-disable-next-line @typescript-eslint/require-await
-export async function GET(request: Request) {
-    const { searchParams } = new URL(request.url);
-    const text = searchParams.get("text");
+export async function GET(
+    request: Request,
+    { params }: { params: { text?: string } }
+) {
+    const text = params.text;
 
     return new ImageResponse(
         (
