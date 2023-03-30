@@ -165,7 +165,7 @@ const components = {
         return (
             <div className="relative">
                 <Pre
-                    className={twMerge("mt-6 mb-4", className)}
+                    className={twMerge("mb-4 mt-6", className)}
                     {...props}
                 />
                 {__rawString__ && !__npmCommand__ && (
@@ -173,7 +173,7 @@ const components = {
                         value={__rawString__}
                         src={__src__}
                         className={twMerge(
-                            "absolute top-4 right-4 border-none text-slate-300 opacity-50 hover:bg-transparent hover:opacity-100",
+                            "absolute right-4 top-4 border-none text-slate-300 opacity-50 hover:bg-transparent hover:opacity-100",
                             __withMeta__ && "top-20"
                         )}
                     />
@@ -186,7 +186,7 @@ const components = {
                             __yarnCommand__,
                         }}
                         className={twMerge(
-                            "absolute top-4 right-4 border-none text-slate-300 opacity-50 hover:bg-transparent hover:opacity-100",
+                            "absolute right-4 top-4 border-none text-slate-300 opacity-50 hover:bg-transparent hover:opacity-100",
                             __withMeta__ && "top-20"
                         )}
                     />

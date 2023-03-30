@@ -384,7 +384,7 @@ const DatePicker: React.FC<Props> = ({
                     <div className="mt-2.5 rounded-lg border border-slate-200 bg-white px-1 py-0.5 dark:border-slate-700 dark:bg-slate-900 dark:text-white">
                         <div className="flex flex-col py-2 lg:flex-row">
                             <div
-                                className={`flex flex-col items-stretch space-y-4 md:flex-row md:space-y-0 md:space-x-1.5 ${
+                                className={`flex flex-col items-stretch space-y-4 md:flex-row md:space-x-1.5 md:space-y-0 ${
                                     showShortcuts ? "md:pl-2" : "md:pl-1"
                                 } pr-2 lg:pr-1`}>
                                 <CalendarBase

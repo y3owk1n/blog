@@ -135,7 +135,7 @@ export const ListItem = React.forwardRef<
                     <div className="font-serif  font-medium leading-none">
                         {title}
                     </div>
-                    <p className="text-sm leading-snug text-slate-500 line-clamp-2 dark:text-slate-400 ">
+                    <p className="line-clamp-2 text-sm leading-snug text-slate-500 dark:text-slate-400 ">
                         {children}
                     </p>
                 </NavigationMenuLink>

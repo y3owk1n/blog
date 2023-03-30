@@ -33,7 +33,7 @@ const FileInput = React.forwardRef<HTMLInputElement, FileInputProps>(
             <input
                 className={twMerge(
                     "block w-full text-sm ",
-                    "file:cursor-pointer file:rounded file:py-2 file:px-4 file:text-sm file:font-semibold ",
+                    "file:cursor-pointer file:rounded file:px-4 file:py-2 file:text-sm file:font-semibold ",
                     fileInputVariont({ variant, className })
                 )}
                 ref={ref}

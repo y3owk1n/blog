@@ -68,7 +68,7 @@ function NavigationMenuDemo() {
                                     <a
                                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-white to-slate-200 p-6 no-underline outline-none focus:shadow-md dark:from-slate-200 dark:to-slate-800"
                                         href="/">
-                                        <div className="mt-4 mb-2 text-lg font-medium text-black dark:text-white">
+                                        <div className="mb-2 mt-4 text-lg font-medium text-black dark:text-white">
                                             Title
                                         </div>
                                         <p className="text-sm leading-tight text-black/90 dark:text-white/90">
@@ -151,7 +151,7 @@ const ListItem = React.forwardRef<
                     <div className="text-sm font-medium leading-none">
                         {title}
                     </div>
-                    <p className="text-sm leading-snug text-slate-500 line-clamp-2 ">
+                    <p className="line-clamp-2 text-sm leading-snug text-slate-500 ">
                         {children}
                     </p>
                 </a>
