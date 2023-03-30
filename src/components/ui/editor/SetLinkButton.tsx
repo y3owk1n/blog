@@ -21,7 +21,13 @@ import { Label } from "@/components/ui/Label";
 import { Paragraph as CParagraph } from "@/components/ui/typography/Paragraph";
 import { Checkbox } from "../Checkbox";
 
-const SetLinkButton = ({ editor }: { editor: Editor }) => {
+const SetLinkButton = ({
+    editor,
+    disabled,
+}: {
+    editor: Editor;
+    disabled: boolean;
+}) => {
     const [open, setOpen] = useState(false);
 
     const [url, setUrl] = useState("");
@@ -87,9 +93,12 @@ const SetLinkButton = ({ editor }: { editor: Editor }) => {
             <Dialog
                 open={open}
                 onOpenChange={handleOpen}>
-                <DialogTrigger asChild>
+                <DialogTrigger
+                    disabled={disabled}
+                    asChild>
                     <Button
                         size="sm"
+                        disabled={disabled}
                         variant="outline">
                         <MdLink
                             aria-label="Link"

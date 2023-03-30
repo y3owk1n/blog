@@ -61,7 +61,7 @@ const Page = () => {
                 <div className="flex flex-col items-center">
                     <Avatar className="mb-8 h-20 w-20">
                         <AvatarImage src="https://github.com/y3owk1n.png" />
-                        <AvatarFallback>KY</AvatarFallback>
+                        <AvatarFallback>Kw</AvatarFallback>
                     </Avatar>
                     <H1>Kyle Wong</H1>
                     <Paragraph>Kuala Lumpur, Malaysia</Paragraph>

@@ -58,7 +58,7 @@ export function SidebarNavItems({
                         href={item.href}
                         onClick={onClickCallback}
                         className={twMerge(
-                            "group flex w-full items-center rounded-md py-1.5 px-2 hover:bg-slate-50 dark:hover:bg-slate-800",
+                            "group flex w-full items-center rounded-md px-2 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800",
                             item.disabled && "cursor-not-allowed opacity-60",
                             pathname === item.href &&
                                 "bg-slate-100 dark:bg-slate-800"

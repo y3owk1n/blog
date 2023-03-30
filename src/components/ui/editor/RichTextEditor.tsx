@@ -143,6 +143,7 @@ const RichTextEditor = ({
                     editor={editor}
                     tippyOptions={{ duration: 100 }}>
                     <ToolbarMenu
+                        disabled={disabled}
                         editor={editor}
                         headingsArray={headingsArray}
                         toolbarConfig={bubbleMenuToolbar}
@@ -156,6 +157,7 @@ const RichTextEditor = ({
                     editor={editor}
                     tippyOptions={{ duration: 100 }}>
                     <ToolbarMenu
+                        disabled={disabled}
                         editor={editor}
                         headingsArray={headingsArray}
                         toolbarConfig={floatingMenuToolbar}
@@ -166,6 +168,7 @@ const RichTextEditor = ({
             <div className="mt-2 rounded-md border border-slate-200  dark:border-slate-700">
                 <div className="flex flex-wrap items-center gap-2 rounded-t-md bg-slate-50 p-2 drop-shadow dark:bg-slate-900">
                     <ToolbarMenu
+                        disabled={disabled}
                         editor={editor}
                         headingsArray={headingsArray}
                         toolbarConfig={toolbar}

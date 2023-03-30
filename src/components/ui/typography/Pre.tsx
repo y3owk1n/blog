@@ -6,7 +6,7 @@ const Pre = ({ className, ...props }: React.HTMLAttributes<HTMLPreElement>) => {
         <pre
             {...props}
             className={twMerge(
-                "overflow-x-auto rounded-lg border border-slate-900 bg-slate-900 py-4 px-2 dark:border-slate-700 dark:bg-black",
+                "overflow-x-auto rounded-lg border border-slate-900 bg-slate-900 px-2 py-4 dark:border-slate-700 dark:bg-black",
                 className
             )}
         />
