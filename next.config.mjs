@@ -25,8 +25,6 @@ const config = {
             {
                 protocol: "https",
                 hostname: "www.kylewong.my",
-                port: "",
-                pathname: "/**",
             },
             {
                 protocol: "https",
