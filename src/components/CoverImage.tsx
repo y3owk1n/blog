@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-import { ImageWithAspectRatio } from "@/components/ui/ImageWithAspectRatio";
+import { AspectRatio } from "./ui/AspectRatio";
 
 type Props = {
     title: string;
@@ -11,33 +11,33 @@ type Props = {
 };
 
 const CoverImage = ({ title, src, slug, isEager = false }: Props) => {
-    const image = (
-        <ImageWithAspectRatio
-            aspectRatioProps={{
-                ratio: 2 / 1,
-            }}
-            imageProps={{
-                className: twMerge(
+    const image2 = (
+        <AspectRatio ratio={2 / 1}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+                loading={isEager ? "eager" : "lazy"}
+                className={twMerge(
+                    "rounded-md object-cover",
                     "rounded-lg shadow-sm ",
                     slug && "transition-shadow duration-200 hover:shadow-lg"
-                ),
-                loading: isEager ? "eager" : "lazy",
-                alt: `Cover Image for ${title}`,
-                src: src,
-            }}
-        />
+                )}
+                alt={`Cover Image for ${title}`}
+                src={src}
+            />
+        </AspectRatio>
     );
+
     return (
-        <div className="sm:mx-0">
+        <div className="pb-4 sm:mx-0">
             {slug ? (
                 <Link
                     href={slug}
                     passHref
                     aria-label={title}>
-                    {image}
+                    {image2}
                 </Link>
             ) : (
-                image
+                image2
             )}
         </div>
     );

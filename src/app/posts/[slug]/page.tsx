@@ -36,9 +36,11 @@ export default function Page({ params }: PageProps) {
 
             <CoverImage
                 title={content.title}
-                src={`${devEnvironment ? DEVDOMAIN : DOMAIN}/api/og-image/${
-                    content.title
-                }`}
+                src={encodeURI(
+                    `${devEnvironment ? DEVDOMAIN : DOMAIN}/api/og-image/${
+                        content.title
+                    }`
+                )}
                 isEager
             />
 
