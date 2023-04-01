@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { allPosts } from "@/contentlayer/generated";
 
-import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
 import CoverImage from "@/components/CoverImage";
 import Date from "@/components/Date";
 import { Mdx } from "@/components/Mdx";
@@ -36,11 +35,7 @@ export default function Page({ params }: PageProps) {
 
             <CoverImage
                 title={content.title}
-                src={encodeURI(
-                    `${devEnvironment ? DEVDOMAIN : DOMAIN}/api/og-image/${
-                        content.title
-                    }`
-                )}
+                src={content.coverImage}
                 isEager
             />
 

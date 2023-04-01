@@ -44,14 +44,7 @@ const Page = () => {
                         <CoverImage
                             slug={post.href}
                             title={post.title}
-                            src={encodeURI(
-                                `${
-                                    devEnvironment ? DEVDOMAIN : DOMAIN
-                                }/api/og-image/${post.title}`
-                            )}
-                            // src={`${
-                            //     devEnvironment ? DEVDOMAIN : DOMAIN
-                            // }/api/og-image?text=${post.title}`}
+                            src={post.cover}
                         />
                     </div>
                     <H3 className="font-serif">

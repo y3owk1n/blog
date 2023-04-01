@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
@@ -11,10 +12,10 @@ type Props = {
 };
 
 const CoverImage = ({ title, src, slug, isEager = false }: Props) => {
-    const image2 = (
+    const image = (
         <AspectRatio ratio={2 / 1}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
+                fill
                 loading={isEager ? "eager" : "lazy"}
                 className={twMerge(
                     "rounded-md object-cover",
@@ -34,10 +35,10 @@ const CoverImage = ({ title, src, slug, isEager = false }: Props) => {
                     href={slug}
                     passHref
                     aria-label={title}>
-                    {image2}
+                    {image}
                 </Link>
             ) : (
-                image2
+                image
             )}
         </div>
     );

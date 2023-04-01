@@ -9,6 +9,7 @@ interface AllPosts {
     description: string;
     href: string;
     rawSlug: string;
+    cover: string;
 }
 
 interface NestedGroup {
@@ -42,6 +43,7 @@ export const allPostsAndSort: Array<AllPosts> = allPosts
         description: content.description,
         href: `/posts/${content.slugAsParams}`,
         rawSlug: content.slugAsParams,
+        cover: content.coverImage,
     }))
     .sort((a, b) => (a.date && b.date && a.date > b.date ? -1 : 1));
 
@@ -68,6 +70,7 @@ export const getAllPostsAndSort = (): Array<AllPosts> => {
         description: content.description,
         href: `/posts/${content.slugAsParams}`,
         rawSlug: content.slugAsParams,
+        cover: content.coverImage,
     }));
 
     const sorted = posts.sort((a, b) =>

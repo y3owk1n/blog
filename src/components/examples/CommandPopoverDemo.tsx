@@ -29,7 +29,7 @@ import {
 type Status = {
     value: string;
     label: string;
-    icon: React.ForwardRefExoticComponent<React.SVGProps<SVGSVGElement>>;
+    icon: typeof FolderIcon;
 };
 
 const statuses: Status[] = [
