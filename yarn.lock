@@ -2953,14 +2953,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.0.31":
-  version: 18.0.31
-  resolution: "@types/react@npm:18.0.31"
+"@types/react@npm:^18.0.32":
+  version: 18.0.32
+  resolution: "@types/react@npm:18.0.32"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 6befbd5587e266905b50fd6bbd7c1cacd557bddf99e6a9862ca2f1d06df3dca71b9d485a37d010479730f021aab93b852d417c714de5efc2f41be0ff4c09b4db
+  checksum: c8dbce83c455e520e75f3649988f46100e3a3c0bf7241281ea5bd9067a0368290f0d7c6102e12e6ec9d649134b29a3ef4c421f376ec5aa06ed78cbdd8c144b4c
   languageName: node
   linkType: hard
 
@@ -3617,14 +3617,14 @@ __metadata:
     "@tiptap/starter-kit": ^2.0.1
     "@types/node": ^18.15.11
     "@types/prettier": ^2.7.2
-    "@types/react": ^18.0.31
+    "@types/react": ^18.0.32
     "@types/react-dom": ^18.0.11
     "@types/unist": ^2.0.6
     "@typescript-eslint/eslint-plugin": ^5.57.0
     "@typescript-eslint/parser": ^5.57.0
     "@vercel/og": ^0.5.0
     autoprefixer: ^10.4.14
-    class-variance-authority: ^0.4.0
+    class-variance-authority: ^0.5.1
     cmdk: ^0.2.0
     contentlayer: ^0.3.1
     dayjs: ^1.11.7
@@ -3907,15 +3907,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"class-variance-authority@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "class-variance-authority@npm:0.4.0"
+"class-variance-authority@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "class-variance-authority@npm:0.5.1"
   peerDependencies:
-    typescript: ">= 4.5.5 < 5"
+    typescript: ">= 4.5.5 < 6"
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 86037e5baa231a0c36a6dc2f260f6c18daa66bdccb6f4c1baee7112abd3dd2a11f412cfb3a0377b65357cc41ec6cb2f9cc70e9f64275109703fd6839ed50a450
+  checksum: a39ecc776d5a1f704d9533bfc24be66fa65be7c4efe825b529a6e3319d3c42c4eddf53f83ddab13bd44491e57bcc2ef1362293cfc5485d0094d3036f936e7348
   languageName: node
   linkType: hard
 
