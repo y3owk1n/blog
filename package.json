@@ -69,7 +69,7 @@
         "react-hook-form": "^7.43.9",
         "react-icons": "^4.8.0",
         "sharp": "^0.32.0",
-        "tailwind-merge": "^1.11.0",
+        "tailwind-merge": "^1.12.0",
         "tailwindcss-animate": "^1.0.5",
         "zod": "^3.21.4",
         "zod-validation-error": "^1.2.1"
@@ -93,7 +93,7 @@
         "mdast-util-toc": "^6.1.1",
         "postcss": "^8.4.21",
         "prettier": "^2.8.7",
-        "prettier-plugin-tailwindcss": "^0.2.6",
+        "prettier-plugin-tailwindcss": "^0.2.7",
         "rehype-autolink-headings": "^6.1.1",
         "rehype-pretty-code": "^0.9.4",
         "rehype-slug": "^5.1.0",
