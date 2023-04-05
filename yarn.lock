@@ -907,7 +907,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:13.2.4":
+"@next/env@npm:13.2.4, @next/env@npm:^13.2.4":
   version: 13.2.4
   resolution: "@next/env@npm:13.2.4"
   checksum: 4123e08a79e66d6144006972027a9ceb8f3fdd782c4a869df1eb3b91b59ad9f4a44082d3f8e421f4df5214c6bc7190b52b94881369452d65eb4580485f33b9e6
@@ -2953,14 +2953,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.0.32":
-  version: 18.0.32
-  resolution: "@types/react@npm:18.0.32"
+"@types/react@npm:^18.0.33":
+  version: 18.0.33
+  resolution: "@types/react@npm:18.0.33"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: c8dbce83c455e520e75f3649988f46100e3a3c0bf7241281ea5bd9067a0368290f0d7c6102e12e6ec9d649134b29a3ef4c421f376ec5aa06ed78cbdd8c144b4c
+  checksum: 4fbd2b2b6a26378bdfde121081a6406ec2d39e4ba87ea5f6897ab7bb2198713165e6fd703ad4ed7ba1d4f23ef54a4c9f108f3105c7ed8e136411ee6bdebc5669
   languageName: node
   linkType: hard
 
@@ -3574,6 +3574,7 @@ __metadata:
   dependencies:
     "@heroicons/react": ^2.0.17
     "@ianvs/prettier-plugin-sort-imports": ^3.7.2
+    "@next/env": ^13.2.4
     "@next/eslint-plugin-next": ^13.2.4
     "@radix-ui/react-accordion": ^1.1.1
     "@radix-ui/react-alert-dialog": ^1.0.3
@@ -3602,7 +3603,9 @@ __metadata:
     "@tailwindcss/forms": ^0.5.3
     "@tailwindcss/line-clamp": ^0.4.4
     "@tailwindcss/typography": ^0.5.9
+    "@tiptap/core": ^2.0.2
     "@tiptap/extension-bubble-menu": ^2.0.2
+    "@tiptap/extension-code-block": ^2.0.2
     "@tiptap/extension-code-block-lowlight": ^2.0.2
     "@tiptap/extension-floating-menu": ^2.0.2
     "@tiptap/extension-link": ^2.0.2
@@ -3617,7 +3620,7 @@ __metadata:
     "@tiptap/starter-kit": ^2.0.2
     "@types/node": ^18.15.11
     "@types/prettier": ^2.7.2
-    "@types/react": ^18.0.32
+    "@types/react": ^18.0.33
     "@types/react-dom": ^18.0.11
     "@types/unist": ^2.0.6
     "@typescript-eslint/eslint-plugin": ^5.57.1
@@ -3660,7 +3663,7 @@ __metadata:
     unist-builder: ^3.0.1
     unist-util-visit: ^4.1.2
     zod: ^3.21.4
-    zod-validation-error: ^1.1.0
+    zod-validation-error: ^1.2.1
   languageName: unknown
   linkType: soft
 
@@ -10743,12 +10746,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod-validation-error@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "zod-validation-error@npm:1.1.0"
+"zod-validation-error@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "zod-validation-error@npm:1.2.1"
   peerDependencies:
     zod: ^3.18.0
-  checksum: 4850e8bd88823a6365acc6efffdfa4372193ae1e5dbea2685388c5aed4de6f678c52119aef84d6ca1158b42146372119a296dcb47e34109a14850d5e799c2e5e
+  checksum: 6882e68773a08a194e34480a0b1dcf500002b0de505617c06b6d0af7236051fae9cfdcd0530283b5ae27ebe40e55faf5f10138ae28b87edcf35cf0ec36ee2c5e
   languageName: node
   linkType: hard
 
