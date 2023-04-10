@@ -32,7 +32,7 @@ const TraworldHover = () => {
                 <div className="flex justify-between space-x-4 text-left">
                     <Avatar>
                         <AvatarImage src="https://media.licdn.com/dms/image/C560BAQFQ1ApI7-kHfw/company-logo_200_200/0/1619433974628?e=1687392000&v=beta&t=JBM3Vg-YGs9EGqKrkVodf6GwgihBpQmskXZacDDGqC0" />
-                        <AvatarFallback>TW</AvatarFallback>
+                        <AvatarFallback>TR</AvatarFallback>
                     </Avatar>
                     <div className="space-y-1">
                         <h4 className="text-sm font-semibold">Traworld</h4>
