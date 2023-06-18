@@ -3,6 +3,8 @@ import { CalendarDaysIcon } from "@heroicons/react/20/solid";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 import { githubProfile, linkedInProfile } from "@/lib/constants";
+import { projects } from "@/lib/projects";
+import CoverImage from "@/components/CoverImage";
 import { Alert } from "@/components/ui/Alert";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 import { Button } from "@/components/ui/Button";
@@ -14,6 +16,7 @@ import {
 import { Separator } from "@/components/ui/Separator";
 import { H1 } from "@/components/ui/typography/H1";
 import { H3 } from "@/components/ui/typography/H3";
+import { H4 } from "@/components/ui/typography/H4";
 import { LinkTag } from "@/components/ui/typography/LinkTag";
 import { Paragraph } from "@/components/ui/typography/Paragraph";
 
@@ -82,12 +85,7 @@ const Page = () => {
                     <Link
                         className="no-underline"
                         href="/posts">
-                        <Button variant="subtle">View Blog Posts</Button>
-                    </Link>
-                    <Link
-                        className="no-underline"
-                        href="/ui/introduction">
-                        <Button variant="default">View UI Components</Button>
+                        <Button>View Blog Posts</Button>
                     </Link>
                 </div>
             </section>
@@ -155,6 +153,55 @@ const Page = () => {
                             LinkedIn
                         </Button>
                     </LinkTag>
+                </div>
+            </section>
+            <Separator />
+            <section className="space-y-4 py-24 ">
+                <H3 className="text-center">Projects in Dev</H3>
+
+                <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    {projects.map((post, index) => (
+                        <div key={`${post.name}-${index}`}>
+                            <div className="mb-5 grid gap-4">
+                                <CoverImage
+                                    title={post.name}
+                                    src={post.image}
+                                />
+
+                                <div>
+                                    <H4 className="text-center font-serif">
+                                        {post.name}
+                                    </H4>
+                                    <Paragraph className="text-center">
+                                        {post.description}
+                                    </Paragraph>
+                                </div>
+
+                                <div className="flex items-center justify-center gap-4">
+                                    <LinkTag
+                                        className="no-underline"
+                                        href={post.link}
+                                        target="_blank"
+                                        rel="noreferrer">
+                                        <Button variant="outline">
+                                            Website
+                                        </Button>
+                                    </LinkTag>
+                                    {post.githubLink && (
+                                        <LinkTag
+                                            className="no-underline"
+                                            href={post.githubLink}
+                                            target="_blank"
+                                            rel="noreferrer">
+                                            <Button variant="outline">
+                                                Github Link
+                                            </Button>
+                                        </LinkTag>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </section>
         </main>
