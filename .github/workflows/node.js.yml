@@ -2,30 +2,29 @@
 name: Node.js CI
 # yamllint disable-line rule:truthy
 on:
-    pull_request:
-        branches: ["main"]
+  pull_request:
+    branches: ["main"]
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        permissions:
-            contents: write
-        strategy:
-            matrix:
-                node-version: [18.x]
-        steps:
-            - uses: actions/checkout@v3
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v3
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: "yarn"
-            - uses: jongwooo/next-cache@v1
-            - run: yarn install --immutable
-            - run: yarn ci --if-present
-            - run: yarn format
-
-            - name: Commit changes
-              uses: stefanzweifel/git-auto-commit-action@v4
-              with:
-                  commit_message: Apply formatting & yarn cache changes
-                  branch: ${{ github.head_ref }}
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+      - uses: jongwooo/next-cache@v1
+      - run: yarn install --immutable
+      - run: yarn ci --if-present
+      - run: yarn format
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply formatting & pnpm cache changes
+          branch: ${{ github.head_ref }}
