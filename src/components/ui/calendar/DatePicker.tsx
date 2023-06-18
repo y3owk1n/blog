@@ -20,7 +20,6 @@ import type {
 } from "@/types/calendar";
 import useOnClickOutside from "@/lib/hooks/useClickOutside";
 import CalendarBase from "./CalendarBase";
-import PickerInput from "./PickerInput";
 import {
     COLORS,
     DATE_FORMAT,
@@ -30,6 +29,7 @@ import {
 } from "./constants";
 import DatepickerContext from "./context";
 import { formatDate, nextMonth, previousMonth } from "./helpers";
+import PickerInput from "./PickerInput";
 
 interface Props {
     primaryColor?: ColorType;

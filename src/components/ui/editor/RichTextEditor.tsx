@@ -1,6 +1,7 @@
 "use client";
 
 import "@/styles/tiptap.css";
+
 import React, { useEffect } from "react";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import Link from "@tiptap/extension-link";
@@ -24,8 +25,8 @@ import html from "highlight.js/lib/languages/xml";
 import { lowlight } from "lowlight";
 import { twMerge } from "tailwind-merge";
 
-import { Loader } from "@/components/ui/Loader";
 import ToolbarMenu from "@/components/ui/editor/ToolbarMenu";
+import { Loader } from "@/components/ui/Loader";
 
 export type Level = 1 | 2 | 3 | 4 | 5 | 6;
 

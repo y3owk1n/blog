@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import { TbDeviceLaptop, TbFileInfo } from "react-icons/tb";
 import { twMerge } from "tailwind-merge";
 
-import { allPostsAndSort, groupUisByTags } from "@/lib/contentlayerApi";
+import { allPostsAndSort } from "@/lib/contentlayerApi";
 import { useHotkeys } from "@/lib/hooks/useHotkeys";
 import { Button } from "./ui/Button";
 import {
@@ -70,24 +70,6 @@ export function CommandMenu({ ...props }: DialogProps) {
                         ))}
                     </CommandGroup>
 
-                    {groupUisByTags.map((navItem) => (
-                        <CommandGroup
-                            key={navItem.title}
-                            heading={navItem.title}>
-                            {navItem.items.map((subItem) => (
-                                <CommandItem
-                                    key={subItem.href}
-                                    onSelect={() => {
-                                        runCommand(() =>
-                                            router.push(subItem.href)
-                                        );
-                                    }}>
-                                    <TbFileInfo className="mr-2 h-4 w-4" />
-                                    {subItem.title}
-                                </CommandItem>
-                            ))}
-                        </CommandGroup>
-                    ))}
                     <CommandSeparator className="mb-4" />
                     <CommandGroup heading="Theme">
                         <CommandItem

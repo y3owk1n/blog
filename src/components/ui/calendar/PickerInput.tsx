@@ -2,10 +2,10 @@ import React, { useCallback, useContext, useEffect, useRef } from "react";
 import dayjs from "dayjs";
 import { twMerge } from "tailwind-merge";
 
-import PickerToggleButton from "./PickerToggleButton";
 import { BORDER_COLOR, DATE_FORMAT, RING_COLOR } from "./constants";
 import DatepickerContext from "./context";
 import { dateIsValid } from "./helpers";
+import PickerToggleButton from "./PickerToggleButton";
 
 type Props = {
     setContextRef?: (ref: React.RefObject<HTMLInputElement>) => void;

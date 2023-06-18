@@ -1,18 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { AccordionContent } from "@radix-ui/react-accordion";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { twMerge } from "tailwind-merge";
 
-import type { NpmCommands } from "@/types/unist-builder";
-import { Card } from "./Card";
-import { CodeBlockWrapper } from "./CodeBlockWrapper";
-import { ComponentExample } from "./ComponentExample";
-import { ComponentSource } from "./ComponentSource";
-import { CopyButton, CopyNpmCommandButton } from "./CopyButton";
-import { examples } from "./examples";
-import { Accordion, AccordionItem, AccordionTrigger } from "./ui/Accordion";
 import { Alert } from "./ui/Alert";
 import { ImageWithAspectRatio } from "./ui/ImageWithAspectRatio";
 import { Separator } from "./ui/Separator";
@@ -31,10 +22,6 @@ import { Paragraph } from "./ui/typography/Paragraph";
 import { Pre } from "./ui/typography/Pre";
 
 const components = {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
     h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <H1
             className={twMerge("mt-2 scroll-m-20", className)}
@@ -148,49 +135,13 @@ const components = {
     td: (props: React.HTMLAttributes<HTMLTableCellElement>) => (
         <Td {...props} />
     ),
-    pre: ({
-        className,
-        __rawString__,
-        __npmCommand__,
-        __pnpmCommand__,
-        __yarnCommand__,
-        __withMeta__,
-        __src__,
-        ...props
-    }: React.HTMLAttributes<HTMLPreElement> & {
-        __rawString__?: string;
-        __withMeta__?: boolean;
-        __src__?: string;
-    } & NpmCommands) => {
+    pre: ({ className, ...props }: React.HTMLAttributes<HTMLPreElement>) => {
         return (
             <div className="relative">
                 <Pre
                     className={twMerge("mb-4 mt-6", className)}
                     {...props}
                 />
-                {__rawString__ && !__npmCommand__ && (
-                    <CopyButton
-                        value={__rawString__}
-                        src={__src__}
-                        className={twMerge(
-                            "absolute right-4 top-4 border-none text-slate-300 opacity-50 hover:bg-transparent hover:opacity-100",
-                            __withMeta__ && "top-20"
-                        )}
-                    />
-                )}
-                {__npmCommand__ && __yarnCommand__ && __pnpmCommand__ && (
-                    <CopyNpmCommandButton
-                        commands={{
-                            __npmCommand__,
-                            __pnpmCommand__,
-                            __yarnCommand__,
-                        }}
-                        className={twMerge(
-                            "absolute right-4 top-4 border-none text-slate-300 opacity-50 hover:bg-transparent hover:opacity-100",
-                            __withMeta__ && "top-20"
-                        )}
-                    />
-                )}
             </div>
         );
     },
@@ -198,16 +149,6 @@ const components = {
     code: (props: React.HTMLAttributes<HTMLElement>) => <Code {...props} />,
     ImageWithAspectRatio,
     Alert,
-    Card,
-    ComponentExample,
-    ComponentSource,
-    CodeBlockWrapper: ({ ...props }) => (
-        <CodeBlockWrapper
-            className="rounded-md border border-slate-100"
-            {...props}
-        />
-    ),
-    ...examples,
 };
 
 interface MdxProps {

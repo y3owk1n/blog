@@ -1,12 +1,14 @@
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Toaster } from "@/components/ui/Toaster";
+
 import "@/styles/globals.css";
+
 import { Arapey } from "next/font/google";
 import Script from "next/script";
 import { twMerge } from "tailwind-merge";
 
-import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
+import { DEVDOMAIN, devEnvironment, DOMAIN } from "@/lib/constants";
 import RootProviders from "./RootProviders.client";
 
 const title = "Kyle Wong - Digital Marketer, Web Developer.";
@@ -18,6 +20,7 @@ const image = encodeURI(
 );
 
 export const metadata = {
+    metadataBase: new URL("https://kylewong.my"),
     title,
     description,
     openGraph: {
