@@ -16,12 +16,9 @@ import {
 import dayjs from "dayjs";
 
 import { Button } from "../Button";
-import Days from "./Days";
-import Months from "./Months";
-import Weeks from "./Weeks";
-import Years from "./Years";
 import { CALENDAR_SIZE } from "./constants";
 import DatepickerContext from "./context";
+import Days from "./Days";
 import {
     formatDate,
     getDaysInMonth,
@@ -33,6 +30,9 @@ import {
     nextMonth,
     previousMonth,
 } from "./helpers";
+import Months from "./Months";
+import Weeks from "./Weeks";
+import Years from "./Years";
 
 interface Props {
     date: Date;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
+import { DEVDOMAIN, devEnvironment, DOMAIN } from "@/lib/constants";
 import { allPostsAndSort } from "@/lib/contentlayerApi";
 import CoverImage from "@/components/CoverImage";
 import Date from "@/components/Date";

@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { allUis } from "@/contentlayer/generated";
 import { twMerge } from "tailwind-merge";
 
 import { siteName } from "@/lib/constants";
@@ -69,41 +68,6 @@ export function MainNav() {
                                             "w-full "
                                         )}>
                                         Browse all posts
-                                    </NavigationMenuLink>
-                                </Link>
-                            </div>
-                        </NavigationMenuContent>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuTrigger className="h-9">
-                            UI
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                            <ul className="grid w-[600px] grid-cols-2 gap-3 p-4">
-                                {allUis
-                                    .filter((content) => content.featured)
-                                    .map((content) => (
-                                        <ListItem
-                                            key={content._id}
-                                            title={content.title}
-                                            href={content.slug}>
-                                            {content.description}
-                                        </ListItem>
-                                    ))}
-                            </ul>
-                            <div className="p-4 pt-0">
-                                <Link
-                                    href="/ui/introduction"
-                                    passHref
-                                    legacyBehavior>
-                                    <NavigationMenuLink
-                                        className={twMerge(
-                                            buttonVariants({
-                                                variant: "outline",
-                                            }),
-                                            "w-full "
-                                        )}>
-                                        More UIs
                                     </NavigationMenuLink>
                                 </Link>
                             </div>

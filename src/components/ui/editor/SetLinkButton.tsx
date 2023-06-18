@@ -1,4 +1,5 @@
 import "@/styles/tiptap.css";
+
 import React, { useCallback, useState } from "react";
 import type { CheckedState } from "@radix-ui/react-checkbox";
 import { type Editor } from "@tiptap/react";

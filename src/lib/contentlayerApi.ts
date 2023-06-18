@@ -1,6 +1,4 @@
-import { allPosts, allUis } from "@/contentlayer/generated";
-
-import { groupBy } from "./groupBy";
+import { allPosts } from "@/contentlayer/generated";
 
 interface AllPosts {
     slug: string;
@@ -22,18 +20,6 @@ interface NestedItem {
     href: string;
     items: NestedItem[];
 }
-
-export const groupUisByTags: Array<NestedGroup> = groupBy(
-    allUis,
-    (ui) => ui.tag
-).map((ui) => ({
-    title: ui.title,
-    items: ui.items.map((item) => ({
-        title: item.title,
-        href: item.slug,
-        items: [],
-    })),
-}));
 
 export const allPostsAndSort: Array<AllPosts> = allPosts
     .map((content) => ({

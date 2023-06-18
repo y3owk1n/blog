@@ -4,7 +4,7 @@ import * as React from "react";
 import { useState } from "react";
 import { Bars3Icon } from "@heroicons/react/20/solid";
 
-import { allPostsWithTitle, groupUisByTags } from "@/lib/contentlayerApi";
+import { allPostsWithTitle } from "@/lib/contentlayerApi";
 import { SidebarNav } from "./SidebarNav";
 import { Button } from "./ui/Button";
 import { Drawer, DrawerContent, DrawerTrigger } from "./ui/Drawer";
@@ -32,10 +32,6 @@ export function MobileNav() {
                 <ScrollArea className="h-[calc(100vh-4vh)]">
                     <SidebarNav
                         items={allPostsWithTitle}
-                        onClickCallback={() => setOpen(false)}
-                    />
-                    <SidebarNav
-                        items={groupUisByTags}
                         onClickCallback={() => setOpen(false)}
                     />
                 </ScrollArea>

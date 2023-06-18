@@ -4,7 +4,7 @@ export const runtime = "edge";
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export async function GET(
-    request: Request,
+    _request: Request,
     { params }: { params: { text?: string } }
 ) {
     const text = params.text;

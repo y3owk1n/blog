@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allPosts } from "@/contentlayer/generated";
 
-import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
+import { DEVDOMAIN, devEnvironment, DOMAIN } from "@/lib/constants";
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export async function generateMetadata({

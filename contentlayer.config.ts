@@ -1,21 +1,15 @@
-import path from "path";
 import {
     defineDocumentType,
-    defineNestedType,
     makeSource,
     type ComputedFields,
 } from "contentlayer/source-files";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import { codeImport } from "remark-code-import";
 import remarkGfm from "remark-gfm";
-import { getHighlighter, loadTheme } from "shiki";
 import { visit } from "unist-util-visit";
 
 import type { UnistNode, UnistTree } from "@/types/unist-builder";
-import { rehypeComponent } from "./src/lib/rehypeComponents";
-import { rehypeNpmCommand } from "./src/lib/rehypeNpmCommand";
 
 const computedFields: ComputedFields = {
     slug: {
@@ -27,61 +21,6 @@ const computedFields: ComputedFields = {
         resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
     },
 };
-
-const RadixProperties = defineNestedType(() => ({
-    name: "RadixProperties",
-    fields: {
-        link: {
-            type: "string",
-        },
-        api: {
-            type: "string",
-        },
-    },
-}));
-
-export const Ui = defineDocumentType(() => ({
-    name: "Ui",
-    filePathPattern: `ui/**/*.mdx`,
-    contentType: "mdx",
-    fields: {
-        title: {
-            type: "string",
-            required: true,
-        },
-        description: {
-            type: "string",
-            required: true,
-        },
-        published: {
-            type: "boolean",
-            default: true,
-        },
-        tag: {
-            type: "string",
-            required: true,
-        },
-        radix: {
-            type: "nested",
-            of: RadixProperties,
-        },
-        featured: {
-            type: "boolean",
-            default: false,
-            required: false,
-        },
-        component: {
-            type: "boolean",
-            default: false,
-            required: false,
-        },
-        date: {
-            type: "date",
-            required: true,
-        },
-    },
-    computedFields,
-}));
 
 export const Post = defineDocumentType(() => ({
     name: "Post",
@@ -110,12 +49,11 @@ export const Post = defineDocumentType(() => ({
 
 export default makeSource({
     contentDirPath: "./src/content",
-    documentTypes: [Ui, Post],
+    documentTypes: [Post],
     mdx: {
         remarkPlugins: [remarkGfm, codeImport],
         rehypePlugins: [
             rehypeSlug,
-            rehypeComponent,
             () => (tree: UnistTree) => {
                 visit(tree, (node: UnistNode) => {
                     if (node?.type === "element" && node?.tagName === "pre") {
@@ -135,12 +73,6 @@ export default makeSource({
             [
                 rehypePrettyCode,
                 {
-                    getHighlighter: async () => {
-                        const theme = await loadTheme(
-                            path.join(process.cwd(), "src/lib/vscodeTheme.json")
-                        );
-                        return await getHighlighter({ theme });
-                    },
                     onVisitLine(node: UnistNode) {
                         // Prevent lines from collapsing in `display: grid` mode, and allow empty
                         // lines to be copy/pasted
@@ -198,16 +130,6 @@ export default makeSource({
                     }
                 });
             },
-            rehypeNpmCommand,
-            [
-                rehypeAutolinkHeadings,
-                {
-                    properties: {
-                        className: ["subheading-anchor"],
-                        ariaLabel: "Link to section",
-                    },
-                },
-            ],
         ],
     },
 });
