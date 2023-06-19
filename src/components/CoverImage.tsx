@@ -18,8 +18,8 @@ const CoverImage = ({ title, src, slug, isEager = false }: Props) => {
                 fill
                 loading={isEager ? "eager" : "lazy"}
                 className={twMerge(
-                    "rounded-md object-cover",
-                    "rounded-lg shadow-sm ",
+                    "object-cover",
+                    "rounded-md shadow-sm ",
                     slug && "transition-shadow duration-200 hover:shadow-lg"
                 )}
                 alt={`Cover Image for ${title}`}

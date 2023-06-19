@@ -6,7 +6,7 @@ const Code = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
         <code
             {...props}
             className={twMerge(
-                "relative rounded bg-slate-900 px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-slate-200 dark:bg-black dark:text-slate-400",
+                "relative rounded bg-background px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground",
                 className
             )}
         />

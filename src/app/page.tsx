@@ -1,98 +1,26 @@
 import Link from "next/link";
-import { CalendarDaysIcon } from "@heroicons/react/20/solid";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { TbExternalLink } from "react-icons/tb";
+import { twMerge } from "tailwind-merge";
 
-import { githubProfile, linkedInProfile } from "@/lib/constants";
+import { linkedInProfile } from "@/lib/constants";
+import { firstThreePosts } from "@/lib/contentlayerApi";
+import { experiences } from "@/lib/experiences";
 import { projects } from "@/lib/projects";
 import CoverImage from "@/components/CoverImage";
-import { Alert } from "@/components/ui/Alert";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
-import { Button } from "@/components/ui/Button";
-import {
-    HoverCard,
-    HoverCardContent,
-    HoverCardTrigger,
-} from "@/components/ui/HoverCard";
-import { Separator } from "@/components/ui/Separator";
-import { H1 } from "@/components/ui/typography/H1";
-import { H3 } from "@/components/ui/typography/H3";
-import { H4 } from "@/components/ui/typography/H4";
+import TraworldHover from "@/components/TraworldHover";
+import { Badge } from "@/components/ui/Badge";
 import { LinkTag } from "@/components/ui/typography/LinkTag";
-import { Paragraph } from "@/components/ui/typography/Paragraph";
-
-const TraworldHover = () => {
-    return (
-        <HoverCard>
-            <HoverCardTrigger asChild>
-                <LinkTag
-                    href="https://www.traworld.com"
-                    target="_blank"
-                    rel="noreferrer">
-                    Traworld
-                </LinkTag>
-            </HoverCardTrigger>
-            <HoverCardContent className="w-80">
-                <div className="flex justify-between space-x-4 text-left">
-                    <Avatar>
-                        <AvatarImage src="https://media.licdn.com/dms/image/C560BAQFQ1ApI7-kHfw/company-logo_200_200/0/1619433974628?e=1687392000&v=beta&t=JBM3Vg-YGs9EGqKrkVodf6GwgihBpQmskXZacDDGqC0" />
-                        <AvatarFallback>TW</AvatarFallback>
-                    </Avatar>
-                    <div className="space-y-1">
-                        <h4 className="text-sm font-semibold">Traworld</h4>
-                        <p className="text-sm">
-                            Traworld is a one-stop e-commerce travel platform
-                            with a wide range of services for you to explore,
-                            plan and book with ease and convenience.
-                        </p>
-                        <div className="flex items-center pt-2">
-                            <CalendarDaysIcon className="mr-2 h-4 w-4 opacity-70" />
-                            <span className="text-xs text-slate-500">
-                                Joined April 2021
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </HoverCardContent>
-        </HoverCard>
-    );
-};
 
 const Page = () => {
     return (
-        <main className="space-y-10">
-            <section className="grid place-items-center gap-4 py-24">
-                <div className="flex flex-col items-center">
-                    <Avatar className="mb-8 h-20 w-20">
-                        <AvatarImage src="https://github.com/y3owk1n.png" />
-                        <AvatarFallback>Kw</AvatarFallback>
-                    </Avatar>
-                    <H1>Kyle Wong</H1>
-                    <Paragraph>Kuala Lumpur, Malaysia</Paragraph>
-                    <Paragraph variant="subtle">
-                        Digital Marketer, Web Developer
-                    </Paragraph>
-                </div>
-                <Alert
-                    variant="outline"
-                    className="mt-10 max-w-lg text-center">
-                    Hey, I&apos;m Kyle. I&apos;m the{" "}
-                    <strong>Head Of Marketing</strong> at <TraworldHover />,
-                    where my team helps to build, manage strategies and
-                    conversions for the brand.
-                </Alert>
-
-                <div className="flex justify-center gap-4">
-                    <Link
-                        className="no-underline"
-                        href="/posts">
-                        <Button>View Blog Posts</Button>
-                    </Link>
-                </div>
-            </section>
-            <Separator />
-            <section className="mx-auto max-w-lg space-y-4 py-24 ">
-                <H3 className="text-center">About Me</H3>
-                <Paragraph>
+        <>
+            <section className="space-y-4">
+                <h2
+                    id="about"
+                    className="scroll-m-20 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                    About
+                </h2>
+                <p className="text-justify">
                     Hi there! I&apos;m a 31-year-old technology enthusiast
                     who&apos;s currently single. I have a real passion for
                     combining marketing and technology to create amazing
@@ -102,109 +30,170 @@ const Page = () => {
                     growth across a range of industries. Most recently,
                     I&apos;ve been working with <TraworldHover />, a
                     fast-growing Malaysia-based Travel E-Commerce startup.
-                </Paragraph>
-                <Paragraph>
+                </p>
+                <p className="text-justify">
                     My approach to marketing is to take a full-funnel and
                     holistic view of things. I use marketing technology,
                     automation, and analytics to optimize the customer
                     experience throughout their entire lifecycle. This allows me
                     to deliver 1:1 hyper-personalized campaigns at scale.
-                </Paragraph>
-                <Paragraph>
+                </p>
+                <p className="text-justify">
                     As part of my work, I lead the marketing team that&apos;s
                     focused on driving incremental and continual improvements.
                     We&apos;re always experimenting to improve key metrics like
                     LTV, CAC, ROAS, Products Per Customer, Retention, and more.
                     It&apos;s a challenging and exciting field, and I love every
                     minute of it!
-                </Paragraph>
-                <Separator />
-                <Paragraph>
+                </p>
+                <p className="text-justify">
                     When I&apos;m not working, I&apos;m usually indulging in my
                     creative pursuits. I&apos;m really passionate about music,
                     singing, and programming.
-                </Paragraph>
-                <Paragraph>
+                </p>
+                <p className="text-justify">
                     There&apos;s something about building for the web that I
                     find incredibly rewarding. Whether it&apos;s starting with a
                     simple HTML file or working on a complex Next.js
                     application, there&apos;s always a sense of excitement and
                     possibility. That&apos;s because the web is such an amazing
                     platform.
-                </Paragraph>
-                <div className="flex justify-center gap-4">
-                    <LinkTag
-                        className="no-underline"
-                        href={githubProfile}
-                        target="_blank"
-                        rel="noreferrer">
-                        <Button variant="outline">
-                            <AiFillGithub className="mr-2 h-4 w-4" />
-                            Github
-                        </Button>
-                    </LinkTag>
-                    <LinkTag
-                        className="no-underline"
-                        href={linkedInProfile}
-                        target="_blank"
-                        rel="noreferrer">
-                        <Button variant="outline">
-                            <AiFillLinkedin className="mr-2 h-4 w-4" />
-                            LinkedIn
-                        </Button>
-                    </LinkTag>
-                </div>
+                </p>
             </section>
-            <Separator />
-            <section className="space-y-4 py-24 ">
-                <H3 className="text-center">Projects in Dev</H3>
 
-                <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-                    {projects.map((post, index) => (
-                        <div key={`${post.name}-${index}`}>
-                            <div className="mb-5 grid gap-4">
-                                <CoverImage
-                                    title={post.name}
-                                    src={post.image}
-                                />
-
-                                <div>
-                                    <H4 className="text-center font-serif">
-                                        {post.name}
-                                    </H4>
-                                    <Paragraph className="text-center">
-                                        {post.description}
-                                    </Paragraph>
+            <section className="space-y-4">
+                <h2
+                    id="experiences"
+                    className="mb-10 scroll-m-20 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                    Experiences
+                </h2>
+                <ol className="group/container">
+                    {experiences.map((experience) => (
+                        <li
+                            key={experience.position}
+                            className="mb-12 transition-all duration-100 lg:hover:!opacity-100 lg:group-hover/container:opacity-50 ">
+                            <a
+                                href={experience.link}
+                                className="group/list relative grid rounded sm:grid-cols-12 md:gap-4 ">
+                                <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded-md transition-all md:-inset-x-6 md:-inset-y-4 lg:block lg:group-hover/list:bg-foreground/5 lg:group-hover/list:backdrop-blur-md"></span>
+                                <header
+                                    className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground sm:col-span-4"
+                                    aria-label={experience.date}>
+                                    {experience.date}
+                                </header>
+                                <div className="z-10 space-y-4 sm:col-span-8">
+                                    <div className="space-y-2">
+                                        <p className="font-medium leading-snug text-foreground">
+                                            {experience.position}
+                                        </p>
+                                        <p className="text-justify">
+                                            {experience.description}
+                                        </p>
+                                    </div>
+                                    <div className="flex flex-wrap gap-2">
+                                        {experience.tags.map((tag) => (
+                                            <Badge
+                                                key={tag}
+                                                variant="outline">
+                                                {tag}
+                                            </Badge>
+                                        ))}
+                                    </div>
                                 </div>
-
-                                <div className="flex items-center justify-center gap-4">
-                                    <LinkTag
-                                        className="no-underline"
-                                        href={post.link}
-                                        target="_blank"
-                                        rel="noreferrer">
-                                        <Button variant="outline">
-                                            Website
-                                        </Button>
-                                    </LinkTag>
-                                    {post.githubLink && (
-                                        <LinkTag
-                                            className="no-underline"
-                                            href={post.githubLink}
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            <Button variant="outline">
-                                                Github Link
-                                            </Button>
-                                        </LinkTag>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
+                            </a>
+                        </li>
                     ))}
-                </div>
+                </ol>
+
+                <LinkTag
+                    className="flex items-center gap-2"
+                    href={linkedInProfile}
+                    target="_blank"
+                    rel="noreferrer">
+                    View More at LinkedIn
+                    <TbExternalLink className="h-4 w-4 transition-all duration-100 group-hover:translate-x-4" />
+                </LinkTag>
             </section>
-        </main>
+            <section className="space-y-4">
+                <h2
+                    id="projects"
+                    className="mb-10 scroll-m-20 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                    Projects
+                </h2>
+                <ol className="group/container">
+                    {projects.map((project) => (
+                        <li
+                            key={project.name}
+                            className="mb-12 transition-all duration-100 lg:hover:!opacity-100 lg:group-hover/container:opacity-50 ">
+                            <a
+                                href={project.link}
+                                className="group/list relative grid rounded sm:grid-cols-12 md:gap-4 ">
+                                <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded-md transition-all md:-inset-x-6 md:-inset-y-4 lg:block lg:group-hover/list:bg-foreground/5 lg:group-hover/list:backdrop-blur-md"></span>
+                                <header
+                                    className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground sm:col-span-4"
+                                    aria-label={project.name}>
+                                    <CoverImage
+                                        title={project.name}
+                                        src={project.image}
+                                    />
+                                </header>
+                                <div className="z-10 space-y-4 sm:col-span-8">
+                                    <div className="space-y-2">
+                                        <p className="font-medium leading-snug text-foreground">
+                                            {project.name}
+                                        </p>
+                                        <p className="text-justify">
+                                            {project.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    ))}
+                </ol>
+            </section>
+            <section className="space-y-4">
+                <h2
+                    id="posts"
+                    className="mb-10 scroll-m-20 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                    Posts
+                </h2>
+                <ol className="group/container">
+                    {firstThreePosts.map((post) => (
+                        <li
+                            key={post.slug}
+                            className="mb-12 transition-all duration-100 lg:hover:!opacity-100 lg:group-hover/container:opacity-50 ">
+                            <Link
+                                href={post.href}
+                                className="group/list relative grid rounded ">
+                                <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded-md transition-all md:-inset-x-6 md:-inset-y-4 lg:block lg:group-hover/list:bg-foreground/5 lg:group-hover/list:backdrop-blur-md"></span>
+                                <div className="z-10 space-y-4 ">
+                                    <div className="space-y-2">
+                                        <p className="font-medium leading-snug text-foreground">
+                                            {post.title}
+                                        </p>
+                                        <p className="text-justify">
+                                            {post.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            </Link>
+                        </li>
+                    ))}
+                </ol>
+
+                <Link
+                    className="group flex items-center gap-2 font-medium text-foreground"
+                    href="/posts">
+                    <span
+                        className={twMerge(
+                            "transition-all group-hover:underline group-hover:underline-offset-4 "
+                        )}>
+                        More Posts
+                    </span>
+                </Link>
+            </section>
+        </>
     );
 };
 

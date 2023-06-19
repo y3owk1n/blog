@@ -1,36 +1,38 @@
-import type { ReactNode } from "react";
+import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-interface BadgeProps
-    extends React.HTMLAttributes<HTMLDivElement>,
-        VariantProps<typeof badgeVariants> {
-    icon?: ReactNode;
-}
-
-const badgeVariants = cva("text-xs flex space-x-2 w-fit rounded-md px-2 py-1", {
-    variants: {
-        variant: {
-            default:
-                "bg-slate-700 text-slate-100 dark:bg-slate-300 dark:text-slate-700",
-            outline:
-                "bg-transparent border border-slate-200  dark:border-slate-700 dark:text-slate-100",
+const badgeVariants = cva(
+    "inline-flex items-center border rounded-md px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+    {
+        variants: {
+            variant: {
+                default:
+                    "bg-primary hover:bg-primary/80 border-transparent text-primary-foreground",
+                secondary:
+                    "bg-secondary hover:bg-secondary/80 border-transparent text-secondary-foreground",
+                destructive:
+                    "bg-destructive hover:bg-destructive/80 border-transparent text-destructive-foreground",
+                outline: "text-foreground",
+            },
         },
-    },
-    defaultVariants: {
-        variant: "default",
-    },
-});
+        defaultVariants: {
+            variant: "default",
+        },
+    }
+);
 
-function Badge({ children, variant, className, icon, ...props }: BadgeProps) {
+export interface BadgeProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+        VariantProps<typeof badgeVariants> {}
+
+function Badge({ className, variant, ...props }: BadgeProps) {
     return (
         <div
-            className={twMerge(badgeVariants({ variant, className }))}
-            {...props}>
-            {icon && icon}
-            <div>{children}</div>
-        </div>
+            className={twMerge(badgeVariants({ variant }), className)}
+            {...props}
+        />
     );
 }
 
-export { Badge };
+export { Badge, badgeVariants };
