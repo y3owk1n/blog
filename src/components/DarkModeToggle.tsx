@@ -1,10 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { MoonIcon, SunIcon } from "@heroicons/react/20/solid";
-import { useTheme } from "next-themes";
-import { TbDeviceLaptop } from "react-icons/tb";
-
 import { Button } from "./ui/Button";
 import {
     DropdownMenu,
@@ -12,6 +8,9 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "./ui/DropdownMenu";
+import { MoonIcon, SunIcon } from "@heroicons/react/20/solid";
+import { useTheme } from "next-themes";
+import { TbDeviceLaptop } from "react-icons/tb";
 
 function DarkModeToggle() {
     const { setTheme } = useTheme();

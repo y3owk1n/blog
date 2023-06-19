@@ -1,3 +1,4 @@
+import type { UnistNode, UnistTree } from "@/types/unist-builder";
 import {
     defineDocumentType,
     makeSource,
@@ -8,8 +9,6 @@ import rehypeSlug from "rehype-slug";
 import { codeImport } from "remark-code-import";
 import remarkGfm from "remark-gfm";
 import { visit } from "unist-util-visit";
-
-import type { UnistNode, UnistTree } from "@/types/unist-builder";
 
 const computedFields: ComputedFields = {
     slug: {

@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { ChevronLeftIcon } from "@heroicons/react/20/solid";
-import { twMerge } from "tailwind-merge";
-
 import { DEVDOMAIN, devEnvironment, DOMAIN } from "@/lib/constants";
 import { allPostsAndSort } from "@/lib/contentlayerApi";
+import { ChevronLeftIcon } from "@heroicons/react/20/solid";
+import { twMerge } from "tailwind-merge";
 
 const title = "Post List | Kyle Wong";
 const description = `A list for all my blogs and sharings`;

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allPosts } from "@/contentlayer/generated";
-
 import { DEVDOMAIN, devEnvironment, DOMAIN } from "@/lib/constants";
 
 // eslint-disable-next-line @typescript-eslint/require-await

@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Date from "@/components/Date";
+import { Mdx } from "@/components/Mdx";
 import { allPosts } from "@/contentlayer/generated";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { twMerge } from "tailwind-merge";
-
-import Date from "@/components/Date";
-import { Mdx } from "@/components/Mdx";
 
 interface PageProps {
     params: {
