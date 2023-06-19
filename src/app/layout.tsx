@@ -1,11 +1,12 @@
-import "@/styles/globals.css";
-
 import { Inter as FontSans } from "next/font/google";
 import Link from "next/link";
 import Script from "next/script";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { twMerge } from "tailwind-merge";
-
+import RootProviders from "./RootProviders.client";
+import CustomCursor from "@/components/CustomCursor";
+import DarkModeToggle from "@/components/DarkModeToggle";
+import TraworldHover from "@/components/TraworldHover";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+import { buttonVariants } from "@/components/ui/Button";
 import {
     DEVDOMAIN,
     devEnvironment,
@@ -13,12 +14,9 @@ import {
     githubProfile,
     linkedInProfile,
 } from "@/lib/constants";
-import CustomCursor from "@/components/CustomCursor";
-import DarkModeToggle from "@/components/DarkModeToggle";
-import TraworldHover from "@/components/TraworldHover";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
-import { buttonVariants } from "@/components/ui/Button";
-import RootProviders from "./RootProviders.client";
+import "@/styles/globals.css";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { twMerge } from "tailwind-merge";
 
 const title = "Kyle Wong - Digital Marketer, Web Developer.";
 const description = `Hello, I'm Kyle, a digital marketer and web developer, based in the Malaysia 🇲🇾.`;

@@ -1,9 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { useMDXComponent } from "next-contentlayer/hooks";
-import { twMerge } from "tailwind-merge";
-
 import { ImageWithAspectRatio } from "./ui/ImageWithAspectRatio";
 import { Separator } from "./ui/Separator";
 import { Blockquote } from "./ui/typography/Blockquote";
@@ -11,6 +8,8 @@ import { Code } from "./ui/typography/Code";
 import { LinkTag } from "./ui/typography/LinkTag";
 import { List } from "./ui/typography/List";
 import { Pre } from "./ui/typography/Pre";
+import { useMDXComponent } from "next-contentlayer/hooks";
+import { twMerge } from "tailwind-merge";
 
 const components = {
     h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (

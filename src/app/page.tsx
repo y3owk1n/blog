@@ -1,15 +1,14 @@
 import Link from "next/link";
-import { TbExternalLink } from "react-icons/tb";
-import { twMerge } from "tailwind-merge";
-
-import { linkedInProfile } from "@/lib/constants";
-import { firstThreePosts } from "@/lib/contentlayerApi";
-import { experiences } from "@/lib/experiences";
-import { projects } from "@/lib/projects";
 import CoverImage from "@/components/CoverImage";
 import TraworldHover from "@/components/TraworldHover";
 import { Badge } from "@/components/ui/Badge";
 import { LinkTag } from "@/components/ui/typography/LinkTag";
+import { linkedInProfile } from "@/lib/constants";
+import { firstThreePosts } from "@/lib/contentlayerApi";
+import { experiences } from "@/lib/experiences";
+import { projects } from "@/lib/projects";
+import { TbExternalLink } from "react-icons/tb";
+import { twMerge } from "tailwind-merge";
 
 const Page = () => {
     return (

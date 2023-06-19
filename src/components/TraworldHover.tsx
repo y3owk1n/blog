@@ -1,5 +1,3 @@
-import { CalendarDaysIcon } from "@heroicons/react/20/solid";
-
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
 import {
     HoverCard,
@@ -7,6 +5,7 @@ import {
     HoverCardTrigger,
 } from "@/components/ui/HoverCard";
 import { LinkTag } from "@/components/ui/typography/LinkTag";
+import { CalendarDaysIcon } from "@heroicons/react/20/solid";
 
 const TraworldHover = () => {
     return (

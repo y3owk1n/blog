@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { twMerge } from "tailwind-merge";
-
 import { AspectRatio } from "./ui/AspectRatio";
+import { twMerge } from "tailwind-merge";
 
 type Props = {
     title: string;
