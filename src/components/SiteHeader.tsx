@@ -1,4 +1,3 @@
-import Link from "next/link";
 import DarkModeToggle from "./DarkModeToggle";
 import SiteNav from "./SiteNav";
 import TraworldHover from "./TraworldHover";
