@@ -26,11 +26,10 @@ const CustomCursor = () => {
 
     const style = {
         transform: "translate(-50%, -50%)",
-        width: "600px",
-        height: "600px",
+        width: "800px",
+        height: "800px",
         borderRadius: "100%",
         filter: " blur(20px)",
-        backgroundColor: "rgb(255, 67, 75)",
         background:
             "radial-gradient(rgba(29, 78, 216, 0.15), transparent 80%);)",
         opacity: 1,
@@ -39,8 +38,8 @@ const CustomCursor = () => {
 
     const variants = {
         default: {
-            x: mousePosition.x - 300,
-            y: mousePosition.y - 300,
+            x: mousePosition.x - 400,
+            y: mousePosition.y - 400,
         },
     };
 
