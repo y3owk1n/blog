@@ -14,7 +14,7 @@ const TraworldHover = () => {
                 <LinkTag
                     href="https://www.traworld.com"
                     target="_blank"
-                    rel="noreferrer">
+                    rel="noreferrer noopener">
                     Traworld
                 </LinkTag>
             </HoverCardTrigger>
