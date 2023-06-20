@@ -8,7 +8,6 @@ import { firstThreePosts } from "@/lib/contentlayerApi";
 import { experiences } from "@/lib/experiences";
 import { projects } from "@/lib/projects";
 import { TbExternalLink } from "react-icons/tb";
-import { twMerge } from "tailwind-merge";
 
 const Page = () => {
     return (
