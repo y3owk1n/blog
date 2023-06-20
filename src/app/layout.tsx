@@ -21,6 +21,24 @@ export const metadata = {
     metadataBase: new URL("https://kylewong.my"),
     title,
     description,
+    keywords: [
+        "Digital Marketing",
+        "Web Development",
+        "Programming",
+        "Portfolia",
+        "Kyle Wong",
+    ],
+    authors: [
+        {
+            name: "kyle",
+            url: "https://kylewong.my",
+        },
+    ],
+    creator: "kyle",
+    themeColor: [
+        { media: "(prefers-color-scheme: light)", color: "white" },
+        { media: "(prefers-color-scheme: dark)", color: "black" },
+    ],
     openGraph: {
         title,
         description,
@@ -77,6 +95,11 @@ export const metadata = {
         title,
         description,
         images: [image],
+    },
+    formatDetection: {
+        email: false,
+        address: false,
+        telephone: false,
     },
 };
 
