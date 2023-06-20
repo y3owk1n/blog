@@ -1,6 +1,6 @@
-import React from "react";
 import Link from "next/link";
 import DarkModeToggle from "./DarkModeToggle";
+import SiteNav from "./SiteNav";
 import TraworldHover from "./TraworldHover";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/Avatar";
 import { buttonVariants } from "./ui/Button";
@@ -29,48 +29,7 @@ const SiteHeader = () => {
                 </p>
             </div>
 
-            <nav
-                className="hidden lg:block"
-                aria-label="In-page jump links">
-                <ul className="mt-16 grid gap-4">
-                    <li>
-                        <Link
-                            className="group font-medium text-foreground transition-all duration-300 ease-in-out "
-                            href="/#about">
-                            <span className="bg-gradient-to-r from-foreground to-foreground bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
-                                About
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            className="group font-medium text-foreground transition-all duration-300 ease-in-out "
-                            href="/#experiences">
-                            <span className="bg-gradient-to-r from-foreground to-foreground bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
-                                Experiences
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            className="group font-medium text-foreground transition-all duration-300 ease-in-out "
-                            href="/#projects">
-                            <span className="bg-gradient-to-r from-foreground to-foreground bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
-                                Projects
-                            </span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            className="group font-medium text-foreground transition-all duration-300 ease-in-out "
-                            href="/#posts">
-                            <span className="bg-gradient-to-r from-foreground to-foreground bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
-                                Posts
-                            </span>
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+            <SiteNav />
 
             <ul className="mt-10 flex items-center gap-2">
                 <li className="text-xs">
