@@ -9,6 +9,12 @@ import { experiences } from "@/lib/experiences";
 import { projects } from "@/lib/projects";
 import { TbExternalLink } from "react-icons/tb";
 
+export const metadata = {
+    alternates: {
+        canonical: "/",
+    },
+};
+
 const Page = () => {
     return (
         <>
