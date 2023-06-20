@@ -9,3 +9,4 @@ export const devEnvironment = process.env.NODE_ENV === "development";
 export const githubProfile = "https://www.github.com/y3owk1n";
 export const linkedInProfile =
     "https://www.linkedin.com/in/kyle-wong-958a58115/";
+export const githubRepo = "https://github.com/y3owk1n/blog";

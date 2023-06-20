@@ -72,6 +72,8 @@ const Page = () => {
                             key={experience.position}
                             className="mb-12 transition-all duration-100 lg:hover:!opacity-100 lg:group-hover/container:opacity-50 ">
                             <a
+                                target="_blank"
+                                rel="noreferrer noopener"
                                 href={experience.link}
                                 className="group/list relative grid rounded sm:grid-cols-12 md:gap-4 ">
                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded-md transition-all md:-inset-x-6 md:-inset-y-4 lg:block lg:group-hover/list:bg-foreground/5 lg:group-hover/list:backdrop-blur-md"></span>
@@ -93,7 +95,7 @@ const Page = () => {
                                         {experience.tags.map((tag) => (
                                             <Badge
                                                 key={tag}
-                                                variant="outline">
+                                                variant="secondary">
                                                 {tag}
                                             </Badge>
                                         ))}
@@ -108,7 +110,7 @@ const Page = () => {
                     className="flex items-center gap-2"
                     href={linkedInProfile}
                     target="_blank"
-                    rel="noreferrer">
+                    rel="noreferrer noopener">
                     View More at LinkedIn
                     <TbExternalLink className="h-4 w-4 transition-all duration-100 group-hover:translate-x-4" />
                 </LinkTag>
@@ -125,6 +127,8 @@ const Page = () => {
                             key={project.name}
                             className="mb-12 transition-all duration-100 lg:hover:!opacity-100 lg:group-hover/container:opacity-50 ">
                             <a
+                                target="_blank"
+                                rel="noreferrer noopener"
                                 href={project.link}
                                 className="group/list relative grid rounded sm:grid-cols-12 md:gap-4 ">
                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded-md transition-all md:-inset-x-6 md:-inset-y-4 lg:block lg:group-hover/list:bg-foreground/5 lg:group-hover/list:backdrop-blur-md"></span>
@@ -182,12 +186,9 @@ const Page = () => {
                 </ol>
 
                 <Link
-                    className="group flex items-center gap-2 font-medium text-foreground"
+                    className="group font-medium text-foreground transition-all duration-300 ease-in-out "
                     href="/posts">
-                    <span
-                        className={twMerge(
-                            "transition-all group-hover:underline group-hover:underline-offset-4 "
-                        )}>
+                    <span className="bg-gradient-to-r from-foreground to-foreground bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
                         More Posts
                     </span>
                 </Link>
