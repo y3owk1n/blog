@@ -21,7 +21,7 @@ const TraworldHover = () => {
             <HoverCardContent className="w-80">
                 <div className="flex justify-between space-x-4 text-left">
                     <Avatar>
-                        <AvatarImage src="https://media.licdn.com/dms/image/C560BAQFQ1ApI7-kHfw/company-logo_200_200/0/1619433974628?e=1687392000&v=beta&t=JBM3Vg-YGs9EGqKrkVodf6GwgihBpQmskXZacDDGqC0" />
+                        <AvatarImage src="https://scontent.fkul8-3.fna.fbcdn.net/v/t39.30808-6/326749122_575940394058060_2190219092938663307_n.png?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=b1FJTFFXHlQAX81f_i5&_nc_ht=scontent.fkul8-3.fna&oh=00_AfBLOwQvF8793GmiRTDvoWvFojrJCzNomelVJnslEX74yg&oe=649FFDA6" />
                         <AvatarFallback>TW</AvatarFallback>
                     </Avatar>
                     <div className="space-y-1">
