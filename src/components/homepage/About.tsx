@@ -1,6 +1,6 @@
 import config from "../../../keystatic.config";
+import DocumentRendererWrapper from "../DocumentRendererWrapper";
 import { createReader } from "@keystatic/core/reader";
-import { DocumentRenderer } from "@keystatic/core/renderer";
 
 const reader = createReader(process.cwd(), config);
 
@@ -18,9 +18,7 @@ const About = async () => {
             </h2>
 
             {aboutData && aboutData.description && (
-                <div className="prose text-justify">
-                    <DocumentRenderer document={aboutData.description} />
-                </div>
+                <DocumentRendererWrapper content={aboutData.description} />
             )}
         </section>
     );

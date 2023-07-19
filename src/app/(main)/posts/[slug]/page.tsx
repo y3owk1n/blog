@@ -2,9 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import config from "../../../../../keystatic.config";
 import Date from "@/components/Date";
+import DocumentRendererWrapper from "@/components/DocumentRendererWrapper";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { createReader } from "@keystatic/core/reader";
-import { DocumentRenderer } from "@keystatic/core/renderer";
 import { twMerge } from "tailwind-merge";
 
 interface PageProps {
@@ -55,9 +55,7 @@ export default async function Page({ params }: PageProps) {
                 </div>
             )}
 
-            <div className="prose">
-                <DocumentRenderer document={post.content} />
-            </div>
+            <DocumentRendererWrapper content={post.content} />
         </>
     );
 }
