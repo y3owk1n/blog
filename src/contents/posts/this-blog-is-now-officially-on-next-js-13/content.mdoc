@@ -1,0 +1,19 @@
+So,&nbsp;[**Vercel**](https://vercel.com/)&nbsp;announced&nbsp;[**Next.JS 13**](https://nextjs.org/blog/next-13)&nbsp;on 26/10/2022 and there's a lot of exciting new features were announced. To me, the biggest changes during the upgrade that I did for this blog is the&nbsp;[**experimental app dir**](https://beta.nextjs.org/docs/routing/fundamentals).
+
+The&nbsp;[**new beta docs for the upgrade guide to Next.JS 13**](https://beta.nextjs.org/docs/upgrade-guide)&nbsp;come in handy. TLDR, here's what i did for my blog migration.
+
+- Upgrade all my Next.JS packages to the latest
+- Using codemods provided by Next.JS for my&nbsp;`<Image/>`&nbsp;and&nbsp;`<Link/>`&nbsp;components
+- Migrate my&nbsp;`_app.tsx`&nbsp;and&nbsp;`_document.tsx`&nbsp;to&nbsp;`/app/layout.tsx`
+- Rewrite data fetching logic from&nbsp;`GetStaticProps`&nbsp;to just functions to be called with async components.
+- Migrate all of my&nbsp;`pages`&nbsp;to the new&nbsp;`app directory`
+- Migrate all the components to sit right beside my pages
+- Commit and deploy
+
+Fortunately, my blog is way too simple and can be run fully on the server without any client interaction and the migration process was quite smooth. In terms of the speed of the website, it's still blazingly fast! Here's the&nbsp;[**GTMetrix Result**](https://gtmetrix.com/reports/www.kylewong.my/l7sE9d9z/)&nbsp;and a quick preview down below.
+
+![Latest GTMetrix Result Preview](/keystatic/posts/_images/this-blog-is-now-officially-on-next-js-13/gt-metrix-kyle-wong-blog.jpg)
+
+This is not a tutorial post, rather it is just an update for the tech stacks on this blog site. I think the new layout RFC makes a lot of sense, while it's not perfect, enabling me to do a fetch directly within my components turns me on. Nice stuffs!
+
+> *Here's my&nbsp;*[***git repository for this blog***](https://github.com/y3owk1n/blog)*.*

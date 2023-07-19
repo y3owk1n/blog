@@ -1,0 +1,6 @@
+name: Herlia® Naturals
+link: https://www.herlianaturals.com/
+image: /keystatic/projects/herlia-naturals/image.jpg
+githubLink:
+    discriminant: false
+description: Ecommerce site for Herlia Naturals that built on top of swell.js and Next.JS

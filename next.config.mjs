@@ -1,5 +1,3 @@
-import { withContentlayer } from "next-contentlayer";
-
 // @ts-check
 /**
  * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.
@@ -36,4 +34,4 @@ const config = {
     },
 };
 
-export default withContentlayer(config);
+export default config;
