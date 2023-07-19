@@ -45,8 +45,8 @@ dependencies:
         specifier: ^4.1.1
         version: 4.1.1(prettier@3.0.0)
     "@vercel/og":
-        specifier: ^0.5.8
-        version: 0.5.8
+        specifier: ^0.5.9
+        version: 0.5.9
     class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -4012,10 +4012,10 @@ packages:
             - graphql
         dev: false
 
-    /@vercel/og@0.5.8:
+    /@vercel/og@0.5.9:
         resolution:
             {
-                integrity: sha512-WlY5q96e2OmQEUsgqKZrCljNHiD05aErsa7u2z2+pkxyoVSWPHXLYFwHPtp7+IubU4gt4JYfgSbzGQg7n6xeAQ==,
+                integrity: sha512-CtjaV/BVHtNCjRtxGqn8Q6AKFLqcG34Byxr91+mY+4eqyp/09LVe9jEeY9WXjbaKvu8syWPMteTpY+YQUQYzSg==,
             }
         engines: { node: ">=16" }
         dependencies:
