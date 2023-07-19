@@ -1,66 +1,28 @@
 import Link from "next/link";
-import config from "../../../../keystatic.config";
-import { DEVDOMAIN, devEnvironment, DOMAIN } from "@/lib/constants";
-import { ChevronLeftIcon } from "@heroicons/react/20/solid";
+import config from "../../../keystatic.config";
 import { createReader } from "@keystatic/core/reader";
 import dayjs from "dayjs";
-import { twMerge } from "tailwind-merge";
-
-const title = "Post List | Kyle Wong";
-const description = `A list for all my blogs and sharings`;
-const image = encodeURI(
-    `${
-        devEnvironment ? DEVDOMAIN : DOMAIN
-    }/api/og-image/A list for all my blogs and sharings`
-);
-
-export const metadata = {
-    title,
-    description,
-    openGraph: {
-        title,
-        description,
-        url: DOMAIN,
-        siteName: title,
-        images: [image],
-        locale: "en-US",
-        type: "website",
-    },
-    twitter: {
-        card: "summary_large_image",
-        title,
-        description,
-        images: [image],
-    },
-};
 
 const reader = createReader(process.cwd(), config);
 
-const Page = async () => {
+const Posts = async () => {
     const postsData = await reader.collections.posts.all();
 
     const sortedPostsData = postsData.sort((a, b) =>
         dayjs(b.entry.date).diff(dayjs(a.entry.date))
     );
-    return (
-        <section
-            id="posts"
-            className="space-y-4">
-            <Link
-                className="group mb-10 flex items-center gap-2 font-medium text-foreground"
-                href="/">
-                <ChevronLeftIcon className="h-4 w-4" />
-                <span
-                    className={twMerge(
-                        "transition-all group-hover:underline group-hover:underline-offset-4 "
-                    )}>
-                    Back
-                </span>
-            </Link>
 
-            <h2 className="sr-only">Posts</h2>
+    const firstThreePosts = sortedPostsData.slice(0, 3);
+
+    return (
+        <section className="space-y-4">
+            <h2
+                id="posts"
+                className="mb-10 scroll-m-20 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                Posts
+            </h2>
             <ol className="group/container">
-                {sortedPostsData.map((post) => (
+                {firstThreePosts.map((post) => (
                     <li
                         key={post.slug}
                         className="mb-12 transition-all duration-100 lg:hover:!opacity-100 lg:group-hover/container:opacity-50 ">
@@ -82,8 +44,16 @@ const Page = async () => {
                     </li>
                 ))}
             </ol>
+
+            <Link
+                className="group font-medium text-foreground transition-all duration-300 ease-in-out "
+                href="/posts">
+                <span className="bg-gradient-to-r from-foreground to-foreground bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
+                    More Posts
+                </span>
+            </Link>
         </section>
     );
 };
 
-export default Page;
+export default Posts;
