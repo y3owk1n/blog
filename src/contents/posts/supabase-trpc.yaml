@@ -1,0 +1,7 @@
+title: Supabase + tRPC = ❤️
+coverImage: /keystatic/posts/supabase-trpc/coverImage.png
+description: >-
+    Next.js is amazing and Typescript made development even more amazing! The
+    entire time i was finding a way to have end-to-end type safety solution until
+    i met tRPC, almost perfect there.
+date: "2022-07-24"
