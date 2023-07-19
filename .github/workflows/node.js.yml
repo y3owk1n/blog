@@ -6,6 +6,11 @@ on:
     branches: ["main"]
 jobs:
   build:
+    env:
+      KEYSTATIC_GITHUB_CLIENT_ID: ${{ vars.KEYSTATIC_GITHUB_CLIENT_ID }}
+      KEYSTATIC_GITHUB_CLIENT_SECRET: ${{ vars.KEYSTATIC_GITHUB_CLIENT_SECRET }}
+      KEYSTATIC_SECRET: ${{ vars.KEYSTATIC_SECRET }}
+      NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG: ${{ vars.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
