@@ -54,8 +54,8 @@ dependencies:
         specifier: ^1.11.9
         version: 1.11.9
     framer-motion:
-        specifier: ^10.12.22
-        version: 10.12.22(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^10.13.0
+        version: 10.13.0(react-dom@18.2.0)(react@18.2.0)
     lucide-react:
         specifier: ^0.261.0
         version: 0.261.0(react@18.2.0)
@@ -5669,10 +5669,10 @@ packages:
             }
         dev: true
 
-    /framer-motion@10.12.22(react-dom@18.2.0)(react@18.2.0):
+    /framer-motion@10.13.0(react-dom@18.2.0)(react@18.2.0):
         resolution:
             {
-                integrity: sha512-bBGYPOxvxcfzS7/py9MEqDucmXBkVl2g42HNlXXPieSTSGGkr8L7+MilCnrU6uX3HrNk/tcB++1SkWE8BosHFw==,
+                integrity: sha512-xKhw9VCizmwEHbopOfluaoVunGHSZyMztGbTvsgOYqCjaKu6qtlwWY1J+6GhL41NY1P157JgEikjDm67XCFnvQ==,
             }
         peerDependencies:
             react: ^18.0.0
