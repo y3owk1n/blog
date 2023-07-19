@@ -55,7 +55,7 @@ export default async function Page({ params }: PageProps) {
                 </div>
             )}
 
-            <div className="prose text-justify">
+            <div className="prose">
                 <DocumentRenderer document={post.content} />
             </div>
         </>
