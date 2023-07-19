@@ -100,7 +100,7 @@ export interface HotkeyItemOptions {
 type HotkeyItem = [
     string,
     (event: React.KeyboardEvent<HTMLElement> | KeyboardEvent) => void,
-    HotkeyItemOptions?
+    HotkeyItemOptions?,
 ];
 
 /**
