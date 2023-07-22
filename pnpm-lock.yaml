@@ -42,8 +42,8 @@ dependencies:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.2.15)(react@18.2.0)
     "@trivago/prettier-plugin-sort-imports":
-        specifier: ^4.1.1
-        version: 4.1.1(prettier@3.0.0)
+        specifier: ^4.2.0
+        version: 4.2.0(prettier@3.0.0)
     "@vercel/og":
         specifier: ^0.5.9
         version: 0.5.9
@@ -135,7 +135,7 @@ devDependencies:
         version: 3.0.0
     prettier-plugin-tailwindcss:
         specifier: ^0.4.1
-        version: 0.4.1(@trivago/prettier-plugin-sort-imports@4.1.1)(prettier@3.0.0)
+        version: 0.4.1(@trivago/prettier-plugin-sort-imports@4.2.0)(prettier@3.0.0)
     shiki:
         specifier: ^0.14.3
         version: 0.14.3
@@ -235,10 +235,10 @@ packages:
             "@babel/types": 7.22.5
         dev: false
 
-    /@babel/helper-split-export-declaration@7.22.5:
+    /@babel/helper-split-export-declaration@7.22.6:
         resolution:
             {
-                integrity: sha512-thqK5QFghPKWLhAV321lxF95yCg2K3Ob5yw+M3VHWfdia0IkPXUtoLH8x/6Fh486QUvzhb8YOWHChTVen2/PoQ==,
+                integrity: sha512-AsUnxuLhRYsisFiaJwvp1QF+I3KjD5FOxut14q/GzovUe6orHLesW2C7d754kRm53h5gqrz6sFl6sxc4BVtE/g==,
             }
         engines: { node: ">=6.9.0" }
         dependencies:
@@ -269,10 +269,10 @@ packages:
             chalk: 2.4.2
             js-tokens: 4.0.0
 
-    /@babel/parser@7.22.5:
+    /@babel/parser@7.22.7:
         resolution:
             {
-                integrity: sha512-DFZMC9LJUG9PLOclRC32G63UXwzqS2koQC8dkx+PLdmt1xSePYpbT/NbsrJy8Q/muXz7o/h/d4A7Fuyixm559Q==,
+                integrity: sha512-7NF8pOkHP5o2vpmGgNGcfAeCvOYhGLyA3Z4eBQkT1RJlWu47n63bCs93QfJ2hIAFCil7L5P2IWhs1oToVgrL0Q==,
             }
         engines: { node: ">=6.0.0" }
         hasBin: true
@@ -306,7 +306,7 @@ packages:
         engines: { node: ">=6.9.0" }
         dependencies:
             "@babel/code-frame": 7.22.5
-            "@babel/parser": 7.22.5
+            "@babel/parser": 7.22.7
             "@babel/types": 7.22.5
 
     /@babel/traverse@7.17.3:
@@ -321,8 +321,8 @@ packages:
             "@babel/helper-environment-visitor": 7.22.5
             "@babel/helper-function-name": 7.22.5
             "@babel/helper-hoist-variables": 7.22.5
-            "@babel/helper-split-export-declaration": 7.22.5
-            "@babel/parser": 7.22.5
+            "@babel/helper-split-export-declaration": 7.22.6
+            "@babel/parser": 7.22.7
             "@babel/types": 7.17.0
             debug: 4.3.4
             globals: 11.12.0
@@ -3547,20 +3547,20 @@ packages:
             tailwindcss: 3.3.3
         dev: true
 
-    /@trivago/prettier-plugin-sort-imports@4.1.1(prettier@3.0.0):
+    /@trivago/prettier-plugin-sort-imports@4.2.0(prettier@3.0.0):
         resolution:
             {
-                integrity: sha512-dQ2r2uzNr1x6pJsuh/8x0IRA3CBUB+pWEW3J/7N98axqt7SQSm+2fy0FLNXvXGg77xEDC7KHxJlHfLYyi7PDcw==,
+                integrity: sha512-YBepjbt+ZNBVmN3ev1amQH3lWCmHyt5qTbLCp/syXJRu/Kw2koXh44qayB1gMRxcL/gV8egmjN5xWSrYyfUtyw==,
             }
         peerDependencies:
             "@vue/compiler-sfc": 3.x
-            prettier: 2.x
+            prettier: 2.x - 3.x
         peerDependenciesMeta:
             "@vue/compiler-sfc":
                 optional: true
         dependencies:
             "@babel/generator": 7.17.7
-            "@babel/parser": 7.22.5
+            "@babel/parser": 7.22.7
             "@babel/traverse": 7.17.3
             "@babel/types": 7.17.0
             javascript-natural-sort: 0.7.1
@@ -7543,7 +7543,7 @@ packages:
         engines: { node: ">= 0.8.0" }
         dev: true
 
-    /prettier-plugin-tailwindcss@0.4.1(@trivago/prettier-plugin-sort-imports@4.1.1)(prettier@3.0.0):
+    /prettier-plugin-tailwindcss@0.4.1(@trivago/prettier-plugin-sort-imports@4.2.0)(prettier@3.0.0):
         resolution:
             {
                 integrity: sha512-hwn2EiJmv8M+AW4YDkbjJ6HlZCTzLyz1QlySn9sMuKV/Px0fjwldlB7tol8GzdgqtkdPtzT3iJ4UzdnYXP25Ag==,
@@ -7598,7 +7598,7 @@ packages:
             prettier-plugin-twig-melody:
                 optional: true
         dependencies:
-            "@trivago/prettier-plugin-sort-imports": 4.1.1(prettier@3.0.0)
+            "@trivago/prettier-plugin-sort-imports": 4.2.0(prettier@3.0.0)
             prettier: 3.0.0
         dev: true
 
