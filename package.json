@@ -30,7 +30,7 @@
         "class-variance-authority": "^0.7.0",
         "dayjs": "^1.11.9",
         "framer-motion": "^10.13.0",
-        "lucide-react": "^0.263.0",
+        "lucide-react": "^0.263.1",
         "next": "13.4.12",
         "next-sitemap": "^4.1.8",
         "next-themes": "^0.2.1",
