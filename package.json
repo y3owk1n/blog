@@ -4,13 +4,13 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "format": "pnpm prettier -w .",
+        "format": "bun run prettier -w .",
         "dev": "next dev",
         "lint": "next lint",
         "start": "next start",
         "find-deadcode": "ts-prune | (! grep -v 'used in module')",
         "ci": "next build && next-sitemap",
-        "build": "next build && next-sitemap && pnpm format"
+        "build": "next build && next-sitemap && bun run format"
     },
     "dependencies": {
         "@heroicons/react": "^2.0.18",
