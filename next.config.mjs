@@ -9,9 +9,6 @@
 const config = {
     swcMinify: true,
     reactStrictMode: true,
-    experimental: {
-        appDir: true,
-    },
     images: {
         remotePatterns: [
             {
