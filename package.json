@@ -10,7 +10,7 @@
 		"lint": "next lint",
 		"start": "next start",
 		"find-deadcode": "ts-prune | (! grep -v 'used in module')",
-		"ci": "next build && next-sitemap && pnpm format",
+		"ci": "next build && next-sitemap && bun run format",
 		"build": "next build && next-sitemap"
 	},
 	"dependencies": {

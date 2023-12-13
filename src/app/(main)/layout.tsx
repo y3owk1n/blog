@@ -4,11 +4,11 @@ import SiteHeader from "@/components/SiteHeader";
 import SkipToContent from "@/components/SkipToContent";
 import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
 import "@/styles/globals.css";
+import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import Script from "next/script";
 import { twMerge } from "tailwind-merge";
 import RootProviders from "./RootProviders.client";
-import type { Metadata } from "next";
 
 const title = "Kyle Wong - Digital Marketer, Web Developer.";
 const description = `Hello, I'm Kyle, a digital marketer and web developer, based in the Malaysia 🇲🇾.`;
