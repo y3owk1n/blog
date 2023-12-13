@@ -4,20 +4,20 @@ import Posts from "@/components/homepage/Posts";
 import Projects from "@/components/homepage/Projects";
 
 export const metadata = {
-    alternates: {
-        canonical: "/",
-    },
+	alternates: {
+		canonical: "/",
+	},
 };
 
 const Page = () => {
-    return (
-        <>
-            <About />
-            <Experiences />
-            <Projects />
-            <Posts />
-        </>
-    );
+	return (
+		<>
+			<About />
+			<Experiences />
+			<Projects />
+			<Posts />
+		</>
+	);
 };
 
 export default Page;

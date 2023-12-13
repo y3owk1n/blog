@@ -4,5 +4,5 @@
  * @returns {string} - A single string of class names
  */
 export const classNames = (...classes: string[]): string => {
-    return classes.filter(Boolean).join(" ");
+	return classes.filter(Boolean).join(" ");
 };

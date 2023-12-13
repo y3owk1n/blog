@@ -1,0 +1,58 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.4.1/schema.json",
+	"organizeImports": {
+		"enabled": true,
+		"ignore": [
+			"node_modules/**",
+			".next/**",
+			"public/**",
+			"dist/**",
+			"next-env.d.ts",
+			"*.lock",
+			"*.log",
+			".gitignore",
+			".npmignore",
+			".DS_store",
+			".eslintignore"
+		]
+	},
+	"formatter": {
+		"enabled": true,
+		"formatWithErrors": true,
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineWidth": 80,
+		"ignore": [
+			"node_modules/**",
+			".next/**",
+			"public/**",
+			"dist/**",
+			"next-env.d.ts",
+			"*.lock",
+			"*.log",
+			".gitignore",
+			".npmignore",
+			".DS_store",
+			".eslintignore"
+		]
+	},
+	"linter": {
+		"enabled": true,
+		"ignore": [
+			"node_modules/**",
+			".next/**",
+			"public/**",
+			"dist/**",
+			"next-env.d.ts",
+			"*.lock",
+			"*.log",
+			".gitignore",
+			".npmignore",
+			".DS_store",
+			".eslintignore"
+		],
+		"rules": {
+			"recommended": true
+		}
+	}
+}

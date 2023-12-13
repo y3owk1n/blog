@@ -1,15 +1,15 @@
 import dayjs from "dayjs";
 
 type Props = {
-    dateString: string;
+	dateString: string;
 };
 
-const Date = ({ dateString }: Props) => {
-    const date = dayjs(dateString);
+const PublishedDate = ({ dateString }: Props) => {
+	const date = dayjs(dateString);
 
-    const formattedDate = date.format("MMMM D, YYYY");
+	const formattedDate = date.format("MMMM D, YYYY");
 
-    return <time dateTime={dateString}>{formattedDate}</time>;
+	return <time dateTime={dateString}>{formattedDate}</time>;
 };
 
-export default Date;
+export default PublishedDate;
