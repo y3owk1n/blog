@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/cn";
 
 interface Props {
 	className?: string;
@@ -8,7 +8,7 @@ export const Logo = ({ className }: Props) => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		data-name="Layer 1"
-		className={twMerge(className)}
+		className={cn(className)}
 		fill="currentColor"
 		viewBox="0 0 2000 2000"
 	>

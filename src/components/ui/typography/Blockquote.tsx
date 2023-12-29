@@ -1,5 +1,5 @@
+import { cn } from "@/lib/cn";
 import React from "react";
-import { twMerge } from "tailwind-merge";
 
 const Blockquote = ({
 	className,
@@ -8,7 +8,7 @@ const Blockquote = ({
 	return (
 		<blockquote
 			{...props}
-			className={twMerge("mt-6 border-l-2 pl-6 italic", className)}
+			className={cn("mt-6 border-l-2 pl-6 italic", className)}
 		/>
 	);
 };

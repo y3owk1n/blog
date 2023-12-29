@@ -1,9 +1,9 @@
 "use client";
 
+import { cn } from "@/lib/cn";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { twMerge } from "tailwind-merge";
 
 const nav = [
 	{ fragment: "#about", label: "About" },
@@ -30,7 +30,7 @@ const SiteNav = () => {
 							href={`/${item.fragment}`}
 						>
 							<span
-								className={twMerge(
+								className={cn(
 									"bg-gradient-to-r from-muted-foreground to-muted-foreground bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 text-muted-foreground transition-all duration-500 ease-out  group-hover:bg-[length:100%_2px]",
 									hash === item.fragment &&
 										"from-foreground to-foreground text-foreground",

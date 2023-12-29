@@ -3,8 +3,8 @@ import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { createReader } from "@keystatic/core/reader";
 import dayjs from "dayjs";
 import Link from "next/link";
-import { twMerge } from "tailwind-merge";
 import config from "../../../../keystatic.config";
+import { cn } from "@/lib/cn";
 
 const title = "Post List | Kyle Wong";
 const description = "A list for all my blogs and sharings";
@@ -50,7 +50,7 @@ const Page = async () => {
 			>
 				<ChevronLeftIcon className="h-4 w-4" />
 				<span
-					className={twMerge(
+					className={cn(
 						"transition-all group-hover:underline group-hover:underline-offset-4 ",
 					)}
 				>

@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/cn";
 
 const LinkTag = ({
 	className,
@@ -8,12 +8,12 @@ const LinkTag = ({
 	return (
 		<a
 			{...props}
-			className={twMerge(
+			className={cn(
 				"group font-medium text-foreground transition-all duration-300 ease-in-out",
 			)}
 		>
 			<span
-				className={twMerge(
+				className={cn(
 					"w-fit bg-gradient-to-r from-foreground to-foreground bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]",
 					className,
 				)}

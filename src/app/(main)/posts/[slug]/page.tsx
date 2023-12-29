@@ -4,8 +4,8 @@ import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { createReader } from "@keystatic/core/reader";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { twMerge } from "tailwind-merge";
 import config from "../../../../../keystatic.config";
+import { cn } from "@/lib/cn";
 
 interface PageProps {
 	params: {
@@ -41,7 +41,7 @@ export default async function Page({ params }: PageProps) {
 			>
 				<ChevronLeftIcon className="h-4 w-4" />
 				<span
-					className={twMerge(
+					className={cn(
 						"transition-all group-hover:underline group-hover:underline-offset-4 ",
 					)}
 				>

@@ -1,8 +1,8 @@
 "use client";
 
+import { cn } from "@/lib/cn";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
 import * as React from "react";
-import { twMerge } from "tailwind-merge";
 
 const HoverCard = HoverCardPrimitive.Root;
 
@@ -16,7 +16,7 @@ const HoverCardContent = React.forwardRef<
 		ref={ref}
 		align={align}
 		sideOffset={sideOffset}
-		className={twMerge(
+		className={cn(
 			"z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none animate-in zoom-in-90",
 			className,
 		)}

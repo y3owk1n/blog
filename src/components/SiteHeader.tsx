@@ -1,11 +1,11 @@
 import { githubProfile, linkedInProfile } from "@/lib/constants";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { twMerge } from "tailwind-merge";
 import DarkModeToggle from "./DarkModeToggle";
 import SiteNav from "./SiteNav";
 import TraworldHover from "./TraworldHover";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/Avatar";
 import { buttonVariants } from "./ui/Button";
+import { cn } from "@/lib/cn";
 
 const SiteHeader = () => {
 	return (
@@ -36,7 +36,7 @@ const SiteHeader = () => {
 						href={linkedInProfile}
 						target="_blank"
 						rel="noreferrer noopener"
-						className={twMerge(
+						className={cn(
 							"block hover:text-foreground",
 							buttonVariants({
 								variant: "ghost",
@@ -53,7 +53,7 @@ const SiteHeader = () => {
 						href={githubProfile}
 						target="_blank"
 						rel="noreferrer noopener"
-						className={twMerge(
+						className={cn(
 							"block hover:text-foreground",
 							buttonVariants({
 								variant: "ghost",

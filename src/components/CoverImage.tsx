@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { twMerge } from "tailwind-merge";
 import { AspectRatio } from "./ui/AspectRatio";
+import { cn } from "@/lib/cn";
 
 type Props = {
 	title: string;
@@ -16,7 +16,7 @@ const CoverImage = ({ title, src, slug, isEager = false }: Props) => {
 			<Image
 				fill
 				loading={isEager ? "eager" : "lazy"}
-				className={twMerge(
+				className={cn(
 					"object-cover",
 					"rounded-md shadow-sm ",
 					slug && "transition-shadow duration-200 hover:shadow-lg",
