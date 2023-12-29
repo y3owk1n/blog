@@ -1,3 +1,4 @@
+import { cn } from "@/lib/cn";
 import { githubProfile, linkedInProfile } from "@/lib/constants";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import DarkModeToggle from "./DarkModeToggle";
@@ -5,7 +6,6 @@ import SiteNav from "./SiteNav";
 import TraworldHover from "./TraworldHover";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/Avatar";
 import { buttonVariants } from "./ui/Button";
-import { cn } from "@/lib/cn";
 
 const SiteHeader = () => {
 	return (

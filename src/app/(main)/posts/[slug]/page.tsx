@@ -1,11 +1,11 @@
 import PublishedDate from "@/components/Date";
 import DocumentRendererWrapper from "@/components/DocumentRendererWrapper";
+import { cn } from "@/lib/cn";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { createReader } from "@keystatic/core/reader";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import config from "../../../../../keystatic.config";
-import { cn } from "@/lib/cn";
 
 interface PageProps {
 	params: {

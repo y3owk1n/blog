@@ -1,7 +1,7 @@
+import { cn } from "@/lib/cn";
 import Image from "next/image";
 import Link from "next/link";
 import { AspectRatio } from "./ui/AspectRatio";
-import { cn } from "@/lib/cn";
 
 type Props = {
 	title: string;
