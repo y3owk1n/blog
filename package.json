@@ -28,7 +28,7 @@
 		"@radix-ui/react-slot": "^1.0.2",
 		"@vercel/og": "^0.6.1",
 		"class-variance-authority": "^0.7.0",
-		"clsx": "^2.0.0",
+		"clsx": "^2.1.0",
 		"dayjs": "^1.11.10",
 		"framer-motion": "^10.16.16",
 		"lucide-react": "^0.303.0",
