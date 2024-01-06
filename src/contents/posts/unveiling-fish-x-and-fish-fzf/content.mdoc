@@ -1,0 +1,30 @@
+Embarking on a recent journey from Zsh to Fish shell has been nothing short of transformative. The allure of Fish shell's user-friendly syntax, auto-suggestions, and scripting prowess captivated me, leading to the creation of two plugins that have become integral to my command-line experience: [fish-x](https://github.com/y3owk1n/fish-x) and fish-fzf.
+
+## From Zsh to Fish: A Personal Transition
+
+As a devoted Zsh user, the transition to [Fish](https://fishshell.com/) shell felt like entering uncharted waters. Fish's straightforward syntax and auto-suggestions resonated with me, offering a more intuitive and enjoyable user experience. The comparison with Zsh went beyond syntax, with Fish's "just works" philosophy aligning seamlessly with my desire for a smooth and efficient shell experience.
+
+## Introducing fish-x: Elevating Everyday Commands
+
+Motivated by the desire to enhance my everyday commands, I embarked on the creation of [fish-x](https://github.com/y3owk1n/fish-x), a Fish shell plugin designed to add an extra layer of functionality to common commands. By simply appending an 'x' to traditional commands, fish-x introduces features like automatic directory changes after creating a new one with **`mkdirx`**, opening a newly touched file in the preferred editor with **`touchx`**, and seamlessly cloning and changing into a Git repository with **`gclx`**.
+
+Why [fish-x](https://github.com/y3owk1n/fish-x)? It's about those small but meaningful improvements in your command-line life, without disrupting the familiarity of the commands you use every day.
+
+## Enter fish-fzf: Your Unopinionated FZF Companion
+
+As a fan of FZF's efficiency, I created [fish-fzf](https://github.com/y3owk1n/fish-fzf) to seamlessly integrate it into my Fish shell workflow. Unlike other plugins with predefined key bindings, fish-fzf provides unopinionated FZF functions. With three key functions, including command history search, directory picking, and file selection, fish-fzf lets users define their workflow and shape their Fish shell experience according to personal preferences.
+
+1. **Command History Search with** **`_fzf_cmd_history`\*\*\*\*:**
+   - Search and select commands from your history using FZF.
+   - Replace the current command line with the selected command.
+   - Optionally, execute the selected command immediately.
+1. **Directory Picker with** **`_fzf_directory_picker`\*\*\*\*:**
+   - Navigate and select directories using FZF.
+   - Optionally, change the current directory or replace the current token with the selected directory path.
+   - Supports recursive depth and custom prompts.
+1. **File Picker with** **`_fzf_file_picker`\*\*\*\*:**
+   - Browse and select files and directories using FZF.
+   - Respects .gitignore by default and allows searching all files with **`--show-hidden-files`**.
+   - Optionally, open the selected file in your preferred editor or replace the current token with the selected file path.
+
+The transition from Zsh to Fish shell has been an exciting adventure, marked by the discovery of a shell that aligns seamlessly with my preference for simplicity and efficiency. As we navigate the depths of Fish shell, let's celebrate the simplicity, innovation, and personalization it brings to the command-line environment. Join me in embracing the wonders of Fish shell, where every interaction becomes an opportunity for exploration and improvement, making the command line not just a tool but a canvas for creativity and efficiency.
