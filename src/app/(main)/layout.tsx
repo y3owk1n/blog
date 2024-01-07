@@ -11,7 +11,7 @@ import Script from "next/script";
 import RootProviders from "./RootProviders.client";
 
 const title = "Kyle Wong - Digital Marketer, Web Developer.";
-const description = `Hello, I'm Kyle, a digital marketer and web developer, based in the Malaysia 🇲🇾.`;
+const description = `Hello, I'm Kyle, a digital marketer and web developer, based in the Malaysia 🇲.`;
 const image = encodeURI(
 	`${
 		devEnvironment ? DEVDOMAIN : DOMAIN
@@ -111,8 +111,10 @@ export default function RootLayout({
 			{!isDev && (
 				<Script
 					async
-					src={"https://5oddwdpyqe.kylewong.my/umami.js"}
-					data-website-id="2732127c-366b-4a69-8067-b750b856bbd4"
+					src={
+						"https://umami-production-dc37.up.railway.app/script.js"
+					}
+					data-website-id="420ddc93-aa75-44aa-89a8-096469720716"
 					strategy="lazyOnload"
 				/>
 			)}
