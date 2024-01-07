@@ -111,9 +111,7 @@ export default function RootLayout({
 			{!isDev && (
 				<Script
 					async
-					src={
-						"https://umami-production-dc37.up.railway.app/script.js"
-					}
+					src={"https://5oddwdpyqe.kylewong.my/script.js"}
 					data-website-id="420ddc93-aa75-44aa-89a8-096469720716"
 					strategy="lazyOnload"
 				/>
