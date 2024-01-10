@@ -13,7 +13,7 @@ export function groupBy<T>(
 		array.reduce(
 			(result, item) => {
 				const group = key(item);
-				result[group] = result[group] || [];
+				result[group] = result[group] ?? [];
 				result[group]?.push(item);
 				return result;
 			},

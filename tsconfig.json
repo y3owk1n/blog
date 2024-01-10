@@ -1,51 +1,73 @@
 {
     "compilerOptions": {
-        "baseUrl": "src",
+        "baseUrl": ".",
         "paths": {
-            "@/env/*": ["env/*"],
-            "@/hooks/*": ["hooks/*"],
-            "@/server/*": ["server/*"],
-            "@/styles/*": ["styles/*"],
-            "@/types/*": ["types/*"],
-            "@/utils/*": ["utils/*"],
-            "@/components/*": ["components/*"],
-            "@/lib/*": ["lib/*"],
-            "@/content/*": ["content/*"],
-            "@/contentlayer/generated": ["../.contentlayer/generated"]
+            "@/hooks/*": [
+                "./src/hooks/*"
+            ],
+            "@/server/*": [
+                "./src/server/*"
+            ],
+            "@/styles/*": [
+                "./src/styles/*"
+            ],
+            "@/types/*": [
+                "./src/types/*"
+            ],
+            "@/utils/*": [
+                "./src/utils/*"
+            ],
+            "@/components/*": [
+                "./src/components/*"
+            ],
+            "@/lib/*": [
+                "./src/lib/*"
+            ],
+            "@/content/*": [
+                "./src/content/*"
+            ],
+            "@/contentlayer/generated": [
+                ".contentlayer/generated"
+            ]
         },
-        "target": "es2017",
-        "lib": ["dom", "dom.iterable", "esnext"],
-        "allowJs": true,
-        "skipLibCheck": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "noEmit": true,
         "esModuleInterop": true,
-        "module": "esnext",
-        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "target": "es2022",
+        "allowJs": true,
         "resolveJsonModule": true,
+        "moduleDetection": "force",
         "isolatedModules": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "jsx": "preserve",
-        "incremental": true,
+        "strict": true,
         "noUncheckedIndexedAccess": true,
+        "checkJs": true,
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "ES2022"
+        ],
+        "noEmit": true,
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "jsx": "preserve",
         "plugins": [
             {
                 "name": "next"
             }
-        ]
+        ],
+        "incremental": true
     },
     "include": [
+        ".eslintrc.cjs",
         "next-env.d.ts",
         "**/*.ts",
         "**/*.tsx",
         "**/*.cjs",
-        "**/*.mjs",
-        "next-sitemap.config.js",
+        "**/*.js",
         ".next/types/**/*.ts",
-        ".contentlayer/generated",
-        "/Users/kyle/Dev/ui/.next/types/**/*.ts"
+        "next-sitemap.config.js",
+        ".contentlayer/generated"
     ],
-    "exclude": ["node_modules"]
+    "exclude": [
+        "node_modules"
+    ]
 }
