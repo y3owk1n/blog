@@ -63,6 +63,7 @@
         "**/*.tsx",
         "**/*.cjs",
         "**/*.js",
+        "**/*.json",
         ".next/types/**/*.ts",
         "next-sitemap.config.js",
         ".contentlayer/generated"
