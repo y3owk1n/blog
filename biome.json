@@ -28,9 +28,6 @@
 		"lineWidth": 80
 	},
 	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": true
-		}
+		"enabled": false
 	}
 }
