@@ -57,8 +57,8 @@ dependencies:
     specifier: ^10.18.0
     version: 10.18.0(react-dom@18.2.0)(react@18.2.0)
   lucide-react:
-    specifier: ^0.310.0
-    version: 0.310.0(react@18.2.0)
+    specifier: ^0.312.0
+    version: 0.312.0(react@18.2.0)
   next:
     specifier: ^14.1.0
     version: 14.1.0(react-dom@18.2.0)(react@18.2.0)
@@ -5167,8 +5167,8 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /lucide-react@0.310.0(react@18.2.0):
-    resolution: {integrity: sha512-7VPkNlMQaZx+eE2aYVf4SIja12IPNBOnvyuLPNnn4DLy+RfWxYGCLK+WnBBy7cRJ3u4PLfqfrycfCpDiNDcfZA==}
+  /lucide-react@0.312.0(react@18.2.0):
+    resolution: {integrity: sha512-3UZsqyswRXjW4t+nw+InICewSimjPKHuSxiFYqTshv9xkK3tPPntXk/lvXc9pKlXIxm3v9WKyoxcrB6YHhP+dg==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
