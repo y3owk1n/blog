@@ -1,74 +1,50 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "@/hooks/*": [
-                "./src/hooks/*"
-            ],
-            "@/server/*": [
-                "./src/server/*"
-            ],
-            "@/styles/*": [
-                "./src/styles/*"
-            ],
-            "@/types/*": [
-                "./src/types/*"
-            ],
-            "@/utils/*": [
-                "./src/utils/*"
-            ],
-            "@/components/*": [
-                "./src/components/*"
-            ],
-            "@/lib/*": [
-                "./src/lib/*"
-            ],
-            "@/content/*": [
-                "./src/content/*"
-            ],
-            "@/contentlayer/generated": [
-                ".contentlayer/generated"
-            ]
-        },
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "target": "es2022",
-        "allowJs": true,
-        "resolveJsonModule": true,
-        "moduleDetection": "force",
-        "isolatedModules": true,
-        "strict": true,
-        "noUncheckedIndexedAccess": true,
-        "checkJs": true,
-        "lib": [
-            "dom",
-            "dom.iterable",
-            "ES2022"
-        ],
-        "noEmit": true,
-        "module": "ESNext",
-        "moduleResolution": "Bundler",
-        "jsx": "preserve",
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ],
-        "incremental": true
-    },
-    "include": [
-        ".eslintrc.cjs",
-        "next-env.d.ts",
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.cjs",
-        "**/*.js",
-        "**/*.json",
-        ".next/types/**/*.ts",
-        "next-sitemap.config.js",
-        ".contentlayer/generated"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/hooks/*": ["./src/hooks/*"],
+			"@/server/*": ["./src/server/*"],
+			"@/styles/*": ["./src/styles/*"],
+			"@/types/*": ["./src/types/*"],
+			"@/utils/*": ["./src/utils/*"],
+			"@/components/*": ["./src/components/*"],
+			"@/lib/*": ["./src/lib/*"],
+			"@/content/*": ["./src/content/*"],
+			"@/contentlayer/generated": [".contentlayer/generated"]
+		},
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"target": "es2022",
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"isolatedModules": true,
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"checkJs": true,
+		"lib": ["dom", "dom.iterable", "ES2022"],
+		"noEmit": true,
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"jsx": "preserve",
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"incremental": true
+	},
+	"include": [
+		".eslintrc.cjs",
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"**/*.cjs",
+		"**/*.js",
+		"**/*.json",
+		".next/types/**/*.ts",
+		"next-sitemap.config.js",
+		".contentlayer/generated"
+	],
+	"exclude": ["node_modules"]
 }
