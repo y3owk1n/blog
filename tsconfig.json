@@ -1,4 +1,6 @@
 {
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Default",
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
@@ -12,30 +14,34 @@
 			"@/content/*": ["./src/content/*"],
 			"@/contentlayer/generated": [".contentlayer/generated"]
 		},
+		"composite": false,
 		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"target": "es2022",
-		"allowJs": true,
-		"resolveJsonModule": true,
-		"moduleDetection": "force",
+		"forceConsistentCasingInFileNames": true,
+		"allowImportingTsExtensions": true,
+		"inlineSources": false,
 		"isolatedModules": true,
-		"strict": true,
-		"noUncheckedIndexedAccess": true,
-		"checkJs": true,
-		"lib": ["dom", "dom.iterable", "ES2022"],
-		"noEmit": true,
-		"module": "ESNext",
 		"moduleResolution": "Bundler",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"preserveWatchOutput": true,
+		"skipLibCheck": true,
+		"allowJs": true,
+		"checkJs": true,
+		"noUncheckedIndexedAccess": true,
+		"strictNullChecks": true,
+		"plugins": [{ "name": "next" }],
+		"declaration": false,
+		"declarationMap": false,
+		"incremental": true,
 		"jsx": "preserve",
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
-		"incremental": true
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"module": "esnext",
+		"noEmit": true,
+		"resolveJsonModule": true,
+		"strict": true,
+		"target": "ES6"
 	},
 	"include": [
-		".eslintrc.cjs",
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
