@@ -1,9 +1,9 @@
+import { siteConfig } from "@/lib/config";
+import { generateCustomMetadata } from "@/lib/generate-custom-metadata";
 import { createReader } from "@keystatic/core/reader";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import config from "../../../../../keystatic.config";
-import { siteConfig } from "@/lib/config";
-import { generateCustomMetadata } from "@/lib/generate-custom-metadata";
 
 const reader = createReader(process.cwd(), config);
 

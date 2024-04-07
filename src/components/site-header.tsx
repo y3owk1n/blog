@@ -1,11 +1,11 @@
 import { cn } from "@/lib/cn";
+import { siteConfig } from "@/lib/config";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import DarkModeToggle from "./dark-mode-toggle";
 import SiteNav from "./site-nav";
 import TraworldHover from "./traworld-hover";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { buttonVariants } from "./ui/button";
-import { siteConfig } from "@/lib/config";
 
 function SiteHeader(): JSX.Element {
 	return (
