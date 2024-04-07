@@ -3,13 +3,13 @@ import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import SkipToContent from "@/components/skip-to-content";
 import { cn } from "@/lib/cn";
+import { siteConfig } from "@/lib/config";
+import { getBaseUrl } from "@/lib/get-base-url";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import Script from "next/script";
 import RootProviders from "./root-providers";
-import { siteConfig } from "@/lib/config";
-import { getBaseUrl } from "@/lib/get-base-url";
 
 export const viewport = {
 	themeColor: [

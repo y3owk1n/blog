@@ -1,11 +1,11 @@
 import { cn } from "@/lib/cn";
+import { siteConfig } from "@/lib/config";
+import { generateCustomMetadata } from "@/lib/generate-custom-metadata";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { createReader } from "@keystatic/core/reader";
 import dayjs from "dayjs";
 import Link from "next/link";
 import config from "../../../../keystatic.config";
-import { siteConfig } from "@/lib/config";
-import { generateCustomMetadata } from "@/lib/generate-custom-metadata";
 
 const title = "Post List";
 const description = "A list for all my blogs and sharings";
