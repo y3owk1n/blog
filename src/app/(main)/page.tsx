@@ -3,12 +3,6 @@ import Experiences from "@/components/homepage/experiences";
 import Posts from "@/components/homepage/posts";
 import Projects from "@/components/homepage/projects";
 
-export const metadata = {
-	alternates: {
-		canonical: "/",
-	},
-};
-
 function Page(): JSX.Element {
 	return (
 		<>

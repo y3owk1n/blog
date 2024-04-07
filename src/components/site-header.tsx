@@ -1,11 +1,11 @@
 import { cn } from "@/lib/cn";
-import { githubProfile, linkedInProfile } from "@/lib/constants";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import DarkModeToggle from "./dark-mode-toggle";
 import SiteNav from "./site-nav";
 import TraworldHover from "./traworld-hover";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { buttonVariants } from "./ui/button";
+import { siteConfig } from "@/lib/config";
 
 function SiteHeader(): JSX.Element {
 	return (
@@ -33,7 +33,7 @@ function SiteHeader(): JSX.Element {
 			<ul className="mt-10 flex items-center gap-2">
 				<li className="text-xs">
 					<a
-						href={linkedInProfile}
+						href={siteConfig.links.linkedin}
 						target="_blank"
 						rel="noreferrer noopener"
 						className={cn(
@@ -50,7 +50,7 @@ function SiteHeader(): JSX.Element {
 				</li>
 				<li className="text-xs">
 					<a
-						href={githubProfile}
+						href={siteConfig.links.github}
 						target="_blank"
 						rel="noreferrer noopener"
 						className={cn(

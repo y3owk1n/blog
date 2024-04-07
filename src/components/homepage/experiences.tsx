@@ -1,11 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 import { LinkTag } from "@/components/ui/typography/link-tag";
-import { linkedInProfile } from "@/lib/constants";
 import { formatDateRange } from "@/lib/dates";
 import { createReader } from "@keystatic/core/reader";
 import dayjs from "dayjs";
 import { TbExternalLink } from "react-icons/tb";
 import config from "../../../keystatic.config";
+import { siteConfig } from "@/lib/config";
 
 const reader = createReader(process.cwd(), config);
 
@@ -73,7 +73,7 @@ async function Experiences(): Promise<JSX.Element> {
 
 			<LinkTag
 				className="flex items-center gap-2"
-				href={linkedInProfile}
+				href={siteConfig.links.linkedin}
 				target="_blank"
 				rel="noreferrer noopener"
 			>
