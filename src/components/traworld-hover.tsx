@@ -1,13 +1,13 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
 	HoverCard,
 	HoverCardContent,
 	HoverCardTrigger,
-} from "@/components/ui/HoverCard";
-import { LinkTag } from "@/components/ui/typography/LinkTag";
+} from "@/components/ui/hover-card";
+import { LinkTag } from "@/components/ui/typography/link-tag";
 import { CalendarDaysIcon } from "@heroicons/react/20/solid";
 
-const TraworldHover = () => {
+function TraworldHover(): JSX.Element {
 	return (
 		<HoverCard>
 			<HoverCardTrigger asChild>
@@ -43,6 +43,6 @@ const TraworldHover = () => {
 			</HoverCardContent>
 		</HoverCard>
 	);
-};
+}
 
 export default TraworldHover;

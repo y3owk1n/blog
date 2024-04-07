@@ -6,7 +6,6 @@ import config from "../../../../../keystatic.config";
 
 const reader = createReader(process.cwd(), config);
 
-// eslint-disable-next-line @typescript-eslint/require-await
 export async function generateMetadata({
 	params,
 }: {
@@ -53,7 +52,7 @@ interface PostLayoutProps {
 	children: React.ReactNode;
 }
 
-export default function PostLayout({ children }: PostLayoutProps) {
+export default function PostLayout({ children }: PostLayoutProps): JSX.Element {
 	return (
 		<div className="">
 			<article className="space-y-6">{children}</article>

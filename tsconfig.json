@@ -2,17 +2,13 @@
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"display": "Default",
 	"compilerOptions": {
-		"baseUrl": ".",
+		"baseUrl": "src",
 		"paths": {
-			"@/hooks/*": ["./src/hooks/*"],
-			"@/server/*": ["./src/server/*"],
-			"@/styles/*": ["./src/styles/*"],
-			"@/types/*": ["./src/types/*"],
-			"@/utils/*": ["./src/utils/*"],
-			"@/components/*": ["./src/components/*"],
-			"@/lib/*": ["./src/lib/*"],
-			"@/content/*": ["./src/content/*"],
-			"@/contentlayer/generated": [".contentlayer/generated"]
+			"@/components/*": ["./components/*"],
+			"@/contents/*": ["./contents/*"],
+			"@/lib/*": ["./lib/*"],
+			"@/styles/*": ["./styles/*"],
+			"@/types/*": ["./types/*"]
 		},
 		"composite": false,
 		"esModuleInterop": true,

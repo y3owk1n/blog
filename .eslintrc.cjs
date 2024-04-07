@@ -1,3 +1,7 @@
+const { resolve } = require("node:path");
+
+const project = resolve(__dirname, "tsconfig.json");
+
 /** @type {import("eslint").Linter.Config} */
 const config = {
 	root: true,
@@ -9,6 +13,16 @@ const config = {
 		"@vercel/style-guide/eslint/react",
 		"@vercel/style-guide/eslint/next",
 	].map(require.resolve),
+	parserOptions: {
+		project,
+	},
+	settings: {
+		"import/resolver": {
+			typescript: {
+				project,
+			},
+		},
+	},
 	globals: {
 		React: true,
 		JSX: true,
@@ -22,11 +36,6 @@ const config = {
 		"node_modules/",
 		"dist/",
 	],
-	parser: "@typescript-eslint/parser",
-	parserOptions: {
-		project: true,
-		extraFileExtensions: [".json"],
-	},
 	rules: {
 		"import/no-default-export": "off",
 		"import/order": "off",

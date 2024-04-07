@@ -1,6 +1,6 @@
 import KeystaticApp from "./keystatic";
 
-export default function RootLayout() {
+export default function RootLayout(): JSX.Element {
 	return (
 		<>
 			<head />

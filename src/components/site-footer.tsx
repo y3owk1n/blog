@@ -1,7 +1,7 @@
 import { githubProfile, githubRepo } from "@/lib/constants";
 import React from "react";
 
-const SiteFooter = () => {
+function SiteFooter(): JSX.Element {
 	return (
 		<footer>
 			<p className="text-center text-sm leading-loose md:text-left">
@@ -42,6 +42,6 @@ const SiteFooter = () => {
 			</p>
 		</footer>
 	);
-};
+}
 
 export default SiteFooter;

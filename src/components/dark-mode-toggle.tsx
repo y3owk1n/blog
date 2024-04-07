@@ -4,15 +4,15 @@ import { MoonIcon, SunIcon } from "@heroicons/react/20/solid";
 import { useTheme } from "next-themes";
 import * as React from "react";
 import { TbDeviceLaptop } from "react-icons/tb";
-import { Button } from "./ui/Button";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
-} from "./ui/DropdownMenu";
+} from "./ui/dropdown-menu";
+import { Button } from "./ui/button";
 
-function DarkModeToggle() {
+function DarkModeToggle(): React.JSX.Element {
 	const { setTheme } = useTheme();
 
 	return (
@@ -25,15 +25,27 @@ function DarkModeToggle() {
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align="end">
-				<DropdownMenuItem onClick={() => setTheme("light")}>
+				<DropdownMenuItem
+					onClick={() => {
+						setTheme("light");
+					}}
+				>
 					<SunIcon className="mr-2 h-4 w-4" />
 					<span>Light</span>
 				</DropdownMenuItem>
-				<DropdownMenuItem onClick={() => setTheme("dark")}>
+				<DropdownMenuItem
+					onClick={() => {
+						setTheme("dark");
+					}}
+				>
 					<MoonIcon className="mr-2 h-4 w-4" />
 					<span>Dark</span>
 				</DropdownMenuItem>
-				<DropdownMenuItem onClick={() => setTheme("system")}>
+				<DropdownMenuItem
+					onClick={() => {
+						setTheme("system");
+					}}
+				>
 					<TbDeviceLaptop className="mr-2 h-4 w-4" />
 					<span>System</span>
 				</DropdownMenuItem>

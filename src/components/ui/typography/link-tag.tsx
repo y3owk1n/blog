@@ -1,10 +1,10 @@
 import { cn } from "@/lib/cn";
 
-const LinkTag = ({
+function LinkTag({
 	className,
 	children,
 	...props
-}: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+}: React.AnchorHTMLAttributes<HTMLAnchorElement>): JSX.Element {
 	return (
 		<a
 			{...props}
@@ -22,6 +22,6 @@ const LinkTag = ({
 			</span>
 		</a>
 	);
-};
+}
 
 export { LinkTag };

@@ -1,14 +1,14 @@
-import CustomCursor from "@/components/CustomCursor";
-import SiteFooter from "@/components/SiteFooter";
-import SiteHeader from "@/components/SiteHeader";
-import SkipToContent from "@/components/SkipToContent";
+import CustomCursor from "@/components/custom-cursor";
+import SiteFooter from "@/components/site-footer";
+import SiteHeader from "@/components/site-header";
+import SkipToContent from "@/components/skip-to-content";
 import { cn } from "@/lib/cn";
 import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import Script from "next/script";
-import RootProviders from "./RootProviders.client";
+import RootProviders from "./root-providers";
 
 const title = "Kyle Wong - Digital Marketer, Web Developer.";
 const description = `Hello, I'm Kyle, a digital marketer and web developer, based in the Malaysia 🇲.`;
@@ -103,7 +103,7 @@ export default function RootLayout({
 	children,
 }: {
 	children: React.ReactNode;
-}) {
+}): JSX.Element {
 	const isDev = process.env.NODE_ENV === "development";
 
 	return (
@@ -111,7 +111,7 @@ export default function RootLayout({
 			{!isDev && (
 				<Script
 					async
-					src={"https://5oddwdpyqe.kylewong.my/script.js"}
+					src="https://5oddwdpyqe.kylewong.my/script.js"
 					data-website-id="420ddc93-aa75-44aa-89a8-096469720716"
 					strategy="lazyOnload"
 				/>

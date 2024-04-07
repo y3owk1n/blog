@@ -1,21 +1,21 @@
 "use client";
 
-import { AspectRatio } from "@/components/ui/AspectRatio";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/lib/cn";
 import { blurDataURL } from "@/lib/constants";
 import type { AspectRatioProps } from "@radix-ui/react-aspect-ratio";
 import NextImage, { type ImageProps } from "next/image";
 import React from "react";
 
-type Props = {
+interface ImageWithAspectRatioProps {
 	imageProps: ImageProps;
 	aspectRatioProps?: AspectRatioProps;
-};
+}
 
-const ImageWithAspectRatio = ({
+function ImageWithAspectRatio({
 	imageProps: { className: imageClassName, ...imageProps },
 	aspectRatioProps,
-}: Props) => {
+}: ImageWithAspectRatioProps): React.JSX.Element {
 	return (
 		<AspectRatio ratio={aspectRatioProps?.ratio} {...aspectRatioProps}>
 			<NextImage
@@ -27,6 +27,6 @@ const ImageWithAspectRatio = ({
 			/>
 		</AspectRatio>
 	);
-};
+}
 
 export { ImageWithAspectRatio };
