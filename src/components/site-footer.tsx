@@ -1,4 +1,5 @@
-import { githubProfile, githubRepo } from "@/lib/constants";
+import { siteConfig } from "@/lib/config";
+import { githubRepo } from "@/lib/constants";
 import React from "react";
 
 function SiteFooter(): JSX.Element {
@@ -7,7 +8,7 @@ function SiteFooter(): JSX.Element {
 			<p className="text-center text-sm leading-loose md:text-left">
 				Built by{" "}
 				<a
-					href={githubProfile}
+					href={siteConfig.links.github}
 					target="_blank"
 					rel="noreferrer noopener"
 					className="group font-medium text-foreground transition-all duration-300 ease-in-out "

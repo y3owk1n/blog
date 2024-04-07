@@ -3,20 +3,13 @@ import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import SkipToContent from "@/components/skip-to-content";
 import { cn } from "@/lib/cn";
-import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
+import { siteConfig } from "@/lib/config";
+import { getBaseUrl } from "@/lib/get-base-url";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import Script from "next/script";
 import RootProviders from "./root-providers";
-
-const title = "Kyle Wong - Digital Marketer, Web Developer.";
-const description = `Hello, I'm Kyle, a digital marketer and web developer, based in the Malaysia 🇲.`;
-const image = encodeURI(
-	`${
-		devEnvironment ? DEVDOMAIN : DOMAIN
-	}/api/og-image/Kyle Wong - Digital Marketer, Web Developer.`,
-);
 
 export const viewport = {
 	themeColor: [
@@ -26,9 +19,12 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://kylewong.my"),
-	title,
-	description,
+	metadataBase: new URL(siteConfig.url),
+	title: {
+		default: `${siteConfig.name} - Digital Marketer, Web Developer.`,
+		template: `%s - ${siteConfig.name} - Digital Marketer, Web Developer.`,
+	},
+	description: siteConfig.description,
 	keywords: [
 		"Digital Marketing",
 		"Web Development",
@@ -38,54 +34,50 @@ export const metadata: Metadata = {
 	],
 	authors: [
 		{
-			name: "kyle",
-			url: "https://kylewong.my",
+			name: siteConfig.name,
+			url: siteConfig.url,
 		},
 	],
+	robots: {
+		index: true,
+		follow: true,
+		nocache: false,
+	},
 	creator: "kyle",
 	openGraph: {
-		title,
-		description,
-		url: DOMAIN,
-		siteName: title,
-		images: [image],
-		locale: "en-US",
 		type: "website",
+		locale: "en_US",
+		url: getBaseUrl(siteConfig.url),
+		title: siteConfig.name,
+		description: siteConfig.description,
+		siteName: siteConfig.name,
+		images: [
+			{
+				url: siteConfig.ogImage,
+				width: 1200,
+				height: 628,
+				alt: siteConfig.name,
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: siteConfig.name,
+		description: siteConfig.description,
+		images: [siteConfig.ogImage],
 	},
 	icons: {
-		icon: [
-			{
-				url: "/favicon/favicon-32x32.png",
-				sizes: "32x32",
-				type: "image/png",
-			},
-			{
-				url: "/favicon/favicon-16x16.png",
-				sizes: "16x16",
-				type: "image/png",
-			},
-		],
-		shortcut: ["/favicon/favicon.ico"],
-		apple: [
-			{
-				url: "/favicon/apple-touch-icon.png",
-				sizes: "180x180",
-				type: "image/png",
-			},
-		],
 		other: [
 			{
 				rel: "mask-icon",
-				url: "/favicon/safari-pinned-tab.svg",
+				url: "/safari-pinned-tab.svg",
+				color: "#274b50",
 			},
 		],
 	},
-	manifest: "/favicon/site.webmanifest",
-	twitter: {
-		card: "summary_large_image",
-		title,
-		description,
-		images: [image],
+	manifest: "/site.webmanifest",
+	alternates: {
+		canonical: getBaseUrl(siteConfig.url),
 	},
 	formatDetection: {
 		email: false,

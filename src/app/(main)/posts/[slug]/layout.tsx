@@ -1,4 +1,5 @@
-import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
+import { siteConfig } from "@/lib/config";
+import { generateCustomMetadata } from "@/lib/generate-custom-metadata";
 import { createReader } from "@keystatic/core/reader";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -17,35 +18,17 @@ export async function generateMetadata({
 	//
 	if (!post) return notFound();
 
-	const title = `${post.title} | Kyle's Blog`;
+	const title = post.title;
 	const description = post.description;
-	const image = encodeURI(
-		`${devEnvironment ? DEVDOMAIN : DOMAIN}/api/og-image/${post.title}`,
-	);
-	const date = post.date
-		? new Date(post.date).toISOString()
-		: new Date().toISOString();
-
-	return {
-		title,
-		description,
-		openGraph: {
-			title,
-			description,
-			url: `${DOMAIN}/posts/${params.slug}`,
-			siteName: title,
-			images: [image],
-			locale: "en-US",
-			type: "article",
-			publishedTime: date,
-		},
-		twitter: {
-			card: "summary_large_image",
-			title,
-			description,
-			images: [image],
-		},
-	};
+	const slug = `/posts/${params.slug}`;
+	const image = encodeURI(`${siteConfig.url}/api/og-image/${post.title}`);
+	return generateCustomMetadata({
+		mainTitle: title,
+		maybeSeoTitle: title,
+		maybeSeoDescription: description,
+		ogImage: image,
+		slug,
+	});
 }
 
 interface PostLayoutProps {

@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { LinkTag } from "@/components/ui/typography/link-tag";
-import { linkedInProfile } from "@/lib/constants";
+import { siteConfig } from "@/lib/config";
 import { formatDateRange } from "@/lib/dates";
 import { createReader } from "@keystatic/core/reader";
 import dayjs from "dayjs";
@@ -73,7 +73,7 @@ async function Experiences(): Promise<JSX.Element> {
 
 			<LinkTag
 				className="flex items-center gap-2"
-				href={linkedInProfile}
+				href={siteConfig.links.linkedin}
 				target="_blank"
 				rel="noreferrer noopener"
 			>

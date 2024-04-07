@@ -1,38 +1,26 @@
 import { cn } from "@/lib/cn";
-import { DEVDOMAIN, DOMAIN, devEnvironment } from "@/lib/constants";
+import { siteConfig } from "@/lib/config";
+import { generateCustomMetadata } from "@/lib/generate-custom-metadata";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { createReader } from "@keystatic/core/reader";
 import dayjs from "dayjs";
 import Link from "next/link";
 import config from "../../../../keystatic.config";
 
-const title = "Post List | Kyle Wong";
+const title = "Post List";
 const description = "A list for all my blogs and sharings";
 const image = encodeURI(
-	`${
-		devEnvironment ? DEVDOMAIN : DOMAIN
-	}/api/og-image/A list for all my blogs and sharings`,
+	`${siteConfig.url}/api/og-image/A list for all my blogs and sharings`,
 );
+const slug = "/posts";
 
-export const metadata = {
-	title,
-	description,
-	openGraph: {
-		title,
-		description,
-		url: DOMAIN,
-		siteName: title,
-		images: [image],
-		locale: "en-US",
-		type: "website",
-	},
-	twitter: {
-		card: "summary_large_image",
-		title,
-		description,
-		images: [image],
-	},
-};
+export const metadata = generateCustomMetadata({
+	mainTitle: title,
+	maybeSeoTitle: title,
+	maybeSeoDescription: description,
+	ogImage: image,
+	slug,
+});
 
 const reader = createReader(process.cwd(), config);
 
