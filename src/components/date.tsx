@@ -1,15 +1,15 @@
 import dayjs from "dayjs";
 
-type Props = {
+interface PublishedDateProps {
 	dateString: string;
-};
+}
 
-const PublishedDate = ({ dateString }: Props) => {
+function PublishedDate({ dateString }: PublishedDateProps): JSX.Element {
 	const date = dayjs(dateString);
 
 	const formattedDate = date.format("MMMM D, YYYY");
 
 	return <time dateTime={dateString}>{formattedDate}</time>;
-};
+}
 
 export default PublishedDate;

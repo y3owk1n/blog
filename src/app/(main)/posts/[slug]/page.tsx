@@ -1,5 +1,5 @@
-import PublishedDate from "@/components/Date";
-import DocumentRendererWrapper from "@/components/DocumentRendererWrapper";
+import PublishedDate from "@/components/date";
+import DocumentRendererWrapper from "@/components/document-renderer-wrapper";
 import { cn } from "@/lib/cn";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { createReader } from "@keystatic/core/reader";
@@ -23,7 +23,9 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
 	}));
 }
 
-export default async function Page({ params }: PageProps) {
+export default async function Page({
+	params,
+}: PageProps): Promise<JSX.Element> {
 	const slug = params.slug;
 	const post = await reader.collections.posts.read(slug, {
 		resolveLinkedFiles: true,
@@ -51,11 +53,11 @@ export default async function Page({ params }: PageProps) {
 			<h3 className="mt-3 text-xl font-bold tracking-tight text-foreground sm:text-2xl">
 				{post.title}
 			</h3>
-			{post.date && (
+			{post.date ? (
 				<div className="my-4 text-sm text-muted-foreground">
 					<PublishedDate dateString={post.date} />
 				</div>
-			)}
+			) : null}
 
 			<DocumentRendererWrapper content={post.content} />
 		</>

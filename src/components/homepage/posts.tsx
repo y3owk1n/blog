@@ -5,7 +5,7 @@ import config from "../../../keystatic.config";
 
 const reader = createReader(process.cwd(), config);
 
-const Posts = async () => {
+async function Posts(): Promise<JSX.Element> {
 	const postsData = await reader.collections.posts.all();
 
 	const sortedPostsData = postsData.sort((a, b) =>
@@ -58,6 +58,6 @@ const Posts = async () => {
 			</Link>
 		</section>
 	);
-};
+}
 
 export default Posts;

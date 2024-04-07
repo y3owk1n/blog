@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/Badge";
-import { LinkTag } from "@/components/ui/typography/LinkTag";
+import { Badge } from "@/components/ui/badge";
+import { LinkTag } from "@/components/ui/typography/link-tag";
 import { linkedInProfile } from "@/lib/constants";
 import { formatDateRange } from "@/lib/dates";
 import { createReader } from "@keystatic/core/reader";
@@ -9,7 +9,7 @@ import config from "../../../keystatic.config";
 
 const reader = createReader(process.cwd(), config);
 
-const Experiences = async () => {
+async function Experiences(): Promise<JSX.Element> {
 	const experiencesData = await reader.collections.experiences.all();
 
 	const sortedExperiencesDataByDate = experiencesData.sort((a, b) =>
@@ -82,6 +82,5 @@ const Experiences = async () => {
 			</LinkTag>
 		</section>
 	);
-};
-
+}
 export default Experiences;

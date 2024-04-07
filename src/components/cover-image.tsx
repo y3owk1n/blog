@@ -1,16 +1,21 @@
 import { cn } from "@/lib/cn";
 import Image from "next/image";
 import Link from "next/link";
-import { AspectRatio } from "./ui/AspectRatio";
+import { AspectRatio } from "./ui/aspect-ratio";
 
-type Props = {
+interface CoverImageProps {
 	title: string;
 	src: string;
 	slug?: string;
 	isEager?: boolean;
-};
+}
 
-const CoverImage = ({ title, src, slug, isEager = false }: Props) => {
+function CoverImage({
+	title,
+	src,
+	slug,
+	isEager = false,
+}: CoverImageProps): JSX.Element {
 	const image = (
 		<AspectRatio ratio={2 / 1}>
 			<Image
@@ -38,6 +43,6 @@ const CoverImage = ({ title, src, slug, isEager = false }: Props) => {
 			)}
 		</div>
 	);
-};
+}
 
 export default CoverImage;

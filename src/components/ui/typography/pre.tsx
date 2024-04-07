@@ -1,7 +1,9 @@
 import { cn } from "@/lib/cn";
-import React from "react";
 
-const Pre = ({ className, ...props }: React.HTMLAttributes<HTMLPreElement>) => {
+function Pre({
+	className,
+	...props
+}: React.HTMLAttributes<HTMLPreElement>): JSX.Element {
 	return (
 		<pre
 			{...props}
@@ -11,6 +13,6 @@ const Pre = ({ className, ...props }: React.HTMLAttributes<HTMLPreElement>) => {
 			)}
 		/>
 	);
-};
+}
 
 export { Pre };

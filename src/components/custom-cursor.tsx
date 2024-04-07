@@ -3,19 +3,19 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const CustomCursor = () => {
+function CustomCursor(): JSX.Element {
 	const [mousePosition, setMousePosition] = useState({
 		x: 0,
 		y: 0,
 	});
 
 	useEffect(() => {
-		const updateMousePosition = (e: MouseEvent) => {
+		function updateMousePosition(e: MouseEvent): void {
 			setMousePosition({
 				x: e.clientX,
 				y: e.clientY,
 			});
-		};
+		}
 
 		window.addEventListener("mousemove", updateMousePosition);
 
@@ -45,12 +45,12 @@ const CustomCursor = () => {
 
 	return (
 		<motion.div
-			className={"fixed left-0 top-0"}
+			className="fixed left-0 top-0"
 			style={style}
 			variants={variants}
 			animate="default"
 		/>
 	);
-};
+}
 
 export default CustomCursor;

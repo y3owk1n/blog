@@ -1,10 +1,10 @@
-import CoverImage from "@/components/CoverImage";
+import CoverImage from "@/components/cover-image";
 import { createReader } from "@keystatic/core/reader";
 import config from "../../../keystatic.config";
 
 const reader = createReader(process.cwd(), config);
 
-const Projects = async () => {
+async function Projects(): Promise<JSX.Element> {
 	const projectsData = await reader.collections.projects.all();
 
 	return (
@@ -32,12 +32,12 @@ const Projects = async () => {
 								className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground sm:col-span-4"
 								aria-label={project.entry.name}
 							>
-								{project.entry.image && (
+								{project.entry.image ? (
 									<CoverImage
 										title={project.entry.name}
 										src={project.entry.image}
 									/>
-								)}
+								) : null}
 							</header>
 							<div className="z-10 space-y-4 sm:col-span-8">
 								<div className="space-y-2">
@@ -55,6 +55,6 @@ const Projects = async () => {
 			</ol>
 		</section>
 	);
-};
+}
 
 export default Projects;

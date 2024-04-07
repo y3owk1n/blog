@@ -3,21 +3,21 @@ import { useEffect } from "react";
 
 /**
  * Custom hook to detect clicks outside of a given element
- * @param {React.RefObject<HTMLDivElement>} ref - The reference to the element
- * @param {(e?: MouseEvent | TouchEvent) => void} handler - The function to be called when a click outside of the element is detected
+ * @param  ref - The reference to the element
+ * @param  handler - The function to be called when a click outside of the element is detected
  */
 export default function useOnClickOutside(
 	ref: React.RefObject<HTMLDivElement>,
 	handler: (e?: MouseEvent | TouchEvent) => void,
-) {
+): void {
 	useEffect(() => {
-		const listener = (event: MouseEvent | TouchEvent) => {
+		function listener(event: MouseEvent | TouchEvent): void {
 			if (!ref.current || ref.current.contains(event.target as Node)) {
 				return;
 			}
 
 			handler(event);
-		};
+		}
 
 		document.addEventListener("mousedown", listener);
 		document.addEventListener("touchstart", listener);

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const SkipToContent = () => {
+function SkipToContent(): JSX.Element {
 	return (
 		<Link
 			href="/#content"
@@ -10,6 +10,6 @@ const SkipToContent = () => {
 			Skip to Content
 		</Link>
 	);
-};
+}
 
 export default SkipToContent;

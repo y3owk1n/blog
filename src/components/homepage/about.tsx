@@ -1,10 +1,10 @@
 import { createReader } from "@keystatic/core/reader";
 import config from "../../../keystatic.config";
-import DocumentRendererWrapper from "../DocumentRendererWrapper";
+import DocumentRendererWrapper from "../document-renderer-wrapper";
 
 const reader = createReader(process.cwd(), config);
 
-const About = async () => {
+async function About(): Promise<JSX.Element> {
 	const aboutData = await reader.singletons.about.read({
 		resolveLinkedFiles: true,
 	});
@@ -18,11 +18,11 @@ const About = async () => {
 				About
 			</h2>
 
-			{aboutData?.description && (
+			{aboutData?.description ? (
 				<DocumentRendererWrapper content={aboutData.description} />
-			)}
+			) : null}
 		</section>
 	);
-};
+}
 
 export default About;

@@ -12,11 +12,10 @@ const nav = [
 	{ fragment: "#posts", label: "Posts" },
 ];
 
-const SiteNav = () => {
+function SiteNav(): JSX.Element {
 	const [hash, setHash] = useState("");
 	const params = useParams();
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		setHash(window.location.hash);
 	}, [params]);
@@ -44,6 +43,6 @@ const SiteNav = () => {
 			</ul>
 		</nav>
 	);
-};
+}
 
 export default SiteNav;

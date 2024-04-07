@@ -1,7 +1,10 @@
 import { cn } from "@/lib/cn";
 import React from "react";
 
-const Code = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
+function Code({
+	className,
+	...props
+}: React.HTMLAttributes<HTMLElement>): JSX.Element {
 	return (
 		<code
 			{...props}
@@ -11,6 +14,6 @@ const Code = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
 			)}
 		/>
 	);
-};
+}
 
 export { Code };

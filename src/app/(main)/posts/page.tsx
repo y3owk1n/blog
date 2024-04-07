@@ -36,7 +36,7 @@ export const metadata = {
 
 const reader = createReader(process.cwd(), config);
 
-const Page = async () => {
+async function Page(): Promise<JSX.Element> {
 	const postsData = await reader.collections.posts.all();
 
 	const sortedPostsData = postsData.sort((a, b) =>
@@ -86,6 +86,6 @@ const Page = async () => {
 			</ol>
 		</section>
 	);
-};
+}
 
 export default Page;

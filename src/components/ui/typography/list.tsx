@@ -1,12 +1,16 @@
 import { cn } from "@/lib/cn";
-import React from "react";
+import { type HTMLAttributes } from "react";
 
-interface Props
-	extends React.HTMLAttributes<HTMLUListElement | HTMLOListElement> {
+interface ListProps
+	extends HTMLAttributes<HTMLUListElement | HTMLOListElement> {
 	variant?: "unordered" | "ordered";
 }
 
-const List = ({ variant = "unordered", className, ...props }: Props) => {
+function List({
+	variant = "unordered",
+	className,
+	...props
+}: ListProps): JSX.Element {
 	const isUl = variant === "unordered";
 	const isOl = variant === "ordered";
 
@@ -21,6 +25,6 @@ const List = ({ variant = "unordered", className, ...props }: Props) => {
 			)}
 		/>
 	);
-};
+}
 
 export { List };

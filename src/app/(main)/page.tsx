@@ -1,7 +1,7 @@
-import About from "@/components/homepage/About";
-import Experiences from "@/components/homepage/Experiences";
-import Posts from "@/components/homepage/Posts";
-import Projects from "@/components/homepage/Projects";
+import About from "@/components/homepage/about";
+import Experiences from "@/components/homepage/experiences";
+import Posts from "@/components/homepage/posts";
+import Projects from "@/components/homepage/projects";
 
 export const metadata = {
 	alternates: {
@@ -9,7 +9,7 @@ export const metadata = {
 	},
 };
 
-const Page = () => {
+function Page(): JSX.Element {
 	return (
 		<>
 			<About />
@@ -18,6 +18,6 @@ const Page = () => {
 			<Posts />
 		</>
 	);
-};
+}
 
 export default Page;

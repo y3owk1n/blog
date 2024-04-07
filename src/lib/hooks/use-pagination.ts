@@ -1,11 +1,11 @@
-import { useUncontrolled } from "@/lib/hooks/useUncontrolled";
+import { useUncontrolled } from "@/lib/hooks/use-uncontrolled";
 import { useMemo } from "react";
 
 /**
  * Function to generate a range of numbers
- * @param {number} start - The starting number of the range
- * @param {number} end - The ending number of the range
- * @returns {number[]} - An array of numbers from start to end
+ * @param  start - The starting number of the range
+ * @param  end - The ending number of the range
+ * @returns - An array of numbers from start to end
  */
 export function range(start: number, end: number): number[] {
 	const length = end - start + 1;
@@ -36,11 +36,11 @@ export interface PaginationParams {
 
 /**
  * Custom hook to create a pagination component
- * @param {PaginationParams} params - The parameters for the pagination
- * @returns {PaginationReturn} - The pagination range, active page, and functions to control the pagination
+ * @param  params - The parameters for the pagination
+ * @returns  - The pagination range, active page, and functions to control the pagination
  */
 export interface PaginationReturn {
-	range: Array<number | "separator">;
+	range: (number | "separator")[];
 	active: number;
 	setPage: (pageNumber: number) => void;
 	next: () => void;
@@ -65,7 +65,7 @@ export function usePagination({
 		finalValue: initialPage,
 	});
 
-	const setPage = (pageNumber: number) => {
+	function setPage(pageNumber: number): void {
 		if (pageNumber <= 0) {
 			setActivePage(1);
 		} else if (pageNumber > _total) {
@@ -73,12 +73,20 @@ export function usePagination({
 		} else {
 			setActivePage(pageNumber);
 		}
-	};
+	}
 
-	const next = () => setPage(activePage + 1);
-	const previous = () => setPage(activePage - 1);
-	const first = () => setPage(1);
-	const last = () => setPage(_total);
+	function next(): void {
+		setPage(activePage + 1);
+	}
+	function previous(): void {
+		setPage(activePage - 1);
+	}
+	function first(): void {
+		setPage(1);
+	}
+	function last(): void {
+		setPage(_total);
+	}
 
 	const paginationRange = useMemo((): (number | "separator")[] => {
 		const totalPageNumbers = siblings * 2 + 3 + boundaries * 2;

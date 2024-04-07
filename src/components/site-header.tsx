@@ -1,13 +1,13 @@
 import { cn } from "@/lib/cn";
 import { githubProfile, linkedInProfile } from "@/lib/constants";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import DarkModeToggle from "./DarkModeToggle";
-import SiteNav from "./SiteNav";
-import TraworldHover from "./TraworldHover";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/Avatar";
-import { buttonVariants } from "./ui/Button";
+import DarkModeToggle from "./dark-mode-toggle";
+import SiteNav from "./site-nav";
+import TraworldHover from "./traworld-hover";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { buttonVariants } from "./ui/button";
 
-const SiteHeader = () => {
+function SiteHeader(): JSX.Element {
 	return (
 		<header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
 			<div>
@@ -71,6 +71,6 @@ const SiteHeader = () => {
 			</ul>
 		</header>
 	);
-};
+}
 
 export default SiteHeader;
