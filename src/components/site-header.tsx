@@ -1,5 +1,5 @@
-import { cn } from "@/lib/cn";
 import { siteConfig } from "@/lib/config";
+import { cn } from "@/utils/cn";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import DarkModeToggle from "./dark-mode-toggle";
 import SiteNav from "./site-nav";

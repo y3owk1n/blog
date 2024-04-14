@@ -8,7 +8,8 @@
 			"@/contents/*": ["./contents/*"],
 			"@/lib/*": ["./lib/*"],
 			"@/styles/*": ["./styles/*"],
-			"@/types/*": ["./types/*"]
+			"@/types/*": ["./types/*"],
+			"@/utils/*": ["./utils/*"]
 		},
 		"composite": false,
 		"esModuleInterop": true,
@@ -44,9 +45,7 @@
 		"**/*.cjs",
 		"**/*.js",
 		"**/*.json",
-		".next/types/**/*.ts",
-		"next-sitemap.config.js",
-		".contentlayer/generated"
+		".next/types/**/*.ts"
 	],
 	"exclude": ["node_modules"]
 }

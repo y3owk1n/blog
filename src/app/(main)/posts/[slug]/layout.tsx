@@ -1,5 +1,5 @@
 import { siteConfig } from "@/lib/config";
-import { generateCustomMetadata } from "@/lib/generate-custom-metadata";
+import { generateCustomMetadata } from "@/utils/generate-custom-metadata";
 import { createReader } from "@keystatic/core/reader";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";

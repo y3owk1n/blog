@@ -1,8 +1,8 @@
 "use client";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { cn } from "@/lib/cn";
 import { blurDataURL } from "@/lib/constants";
+import { cn } from "@/utils/cn";
 import type { AspectRatioProps } from "@radix-ui/react-aspect-ratio";
 import NextImage, { type ImageProps } from "next/image";
 import React from "react";

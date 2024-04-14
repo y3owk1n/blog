@@ -1,11 +1,13 @@
 import PublishedDate from "@/components/date";
 import DocumentRendererWrapper from "@/components/document-renderer-wrapper";
-import { cn } from "@/lib/cn";
+import { cn } from "@/utils/cn";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { createReader } from "@keystatic/core/reader";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import config from "../../../../../keystatic.config";
+
+// export const runtime = "edge";
 
 interface PageProps {
 	params: {
