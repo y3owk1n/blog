@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { LinkTag } from "@/components/ui/typography/link-tag";
 import { siteConfig } from "@/lib/config";
-import { formatDateRange } from "@/lib/dates";
+import { formatDateRange } from "@/utils/dates";
 import { createReader } from "@keystatic/core/reader";
 import dayjs from "dayjs";
 import { TbExternalLink } from "react-icons/tb";
