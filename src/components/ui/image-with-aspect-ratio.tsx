@@ -5,7 +5,7 @@ import { blurDataURL } from "@/lib/constants";
 import { cn } from "@/utils/cn";
 import type { AspectRatioProps } from "@radix-ui/react-aspect-ratio";
 import NextImage, { type ImageProps } from "next/image";
-import React from "react";
+import type React from "react";
 
 interface ImageWithAspectRatioProps {
 	imageProps: ImageProps;

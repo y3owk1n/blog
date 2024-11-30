@@ -11,7 +11,7 @@ function SiteFooter(): JSX.Element {
 					href={siteConfig.links.github}
 					target="_blank"
 					rel="noreferrer noopener"
-					className="group font-medium text-foreground transition-all duration-300 ease-in-out "
+					className="group font-medium text-foreground transition-all duration-300 ease-in-out"
 				>
 					<span className="bg-gradient-to-r from-foreground to-foreground bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
 						Kyle
@@ -22,7 +22,7 @@ function SiteFooter(): JSX.Element {
 					href="https://vercel.com"
 					target="_blank"
 					rel="noreferrer noopener"
-					className="group font-medium text-foreground transition-all duration-300 ease-in-out "
+					className="group font-medium text-foreground transition-all duration-300 ease-in-out"
 				>
 					<span className="bg-gradient-to-r from-foreground to-foreground bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
 						Vercel
@@ -33,7 +33,7 @@ function SiteFooter(): JSX.Element {
 					href={githubRepo}
 					target="_blank"
 					rel="noreferrer noopener"
-					className="group font-medium text-foreground transition-all duration-300 ease-in-out "
+					className="group font-medium text-foreground transition-all duration-300 ease-in-out"
 				>
 					<span className="bg-gradient-to-r from-foreground to-foreground bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
 						GitHub

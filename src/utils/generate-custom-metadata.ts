@@ -1,5 +1,5 @@
 import { siteConfig } from "@/lib/config";
-import { type Metadata } from "next";
+import type { Metadata } from "next";
 import { getBaseUrl } from "./get-base-url";
 
 export function generateCustomMetadata({

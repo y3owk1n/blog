@@ -23,7 +23,7 @@ function CoverImage({
 				loading={isEager ? "eager" : "lazy"}
 				className={cn(
 					"object-cover",
-					"rounded-md shadow-sm ",
+					"rounded-md shadow-sm",
 					slug && "transition-shadow duration-200 hover:shadow-lg",
 				)}
 				alt={`Cover Image for ${title}`}

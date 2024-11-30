@@ -46,7 +46,7 @@ export default async function Page({
 				<ChevronLeftIcon className="h-4 w-4" />
 				<span
 					className={cn(
-						"transition-all group-hover:underline group-hover:underline-offset-4 ",
+						"transition-all group-hover:underline group-hover:underline-offset-4",
 					)}
 				>
 					Back

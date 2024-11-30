@@ -5,7 +5,7 @@ export default function RootLayout({
 }): JSX.Element {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			{children}
+			<body>{children}</body>
 		</html>
 	);
 }

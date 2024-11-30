@@ -1,5 +1,10 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.6.3/schema.json",
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"vcs": {
+		"enabled": false,
+		"clientKind": "git",
+		"useIgnoreFile": false
+	},
 	"files": {
 		"ignoreUnknown": true,
 		"ignore": [
@@ -28,6 +33,12 @@
 		"lineWidth": 80
 	},
 	"linter": {
-		"enabled": false
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"a11y": {
+				"noSvgWithoutTitle": "off"
+			}
+		}
 	}
 }

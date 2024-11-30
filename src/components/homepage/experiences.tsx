@@ -28,13 +28,13 @@ async function Experiences(): Promise<JSX.Element> {
 				{sortedExperiencesDataByDate.map((experience) => (
 					<li
 						key={experience.slug}
-						className="mb-12 transition-all duration-100 lg:hover:!opacity-100 lg:group-hover/container:opacity-50 "
+						className="mb-12 transition-all duration-100 lg:hover:!opacity-100 lg:group-hover/container:opacity-50"
 					>
 						<a
 							target="_blank"
 							rel="noreferrer noopener"
 							href={experience.entry.link ?? undefined}
-							className="group/list relative grid rounded sm:grid-cols-12 md:gap-4 "
+							className="group/list relative grid rounded sm:grid-cols-12 md:gap-4"
 						>
 							<span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded-md transition-all md:-inset-x-6 md:-inset-y-4 lg:block lg:group-hover/list:bg-foreground/5 lg:group-hover/list:backdrop-blur-md" />
 							<header
