@@ -108,7 +108,7 @@ export default function RootLayout({
 					strategy="lazyOnload"
 				/>
 			)}
-			<body
+			<div
 				className={cn(
 					"min-h-screen scroll-smooth bg-background font-sans text-muted-foreground antialiased",
 					fontSans.variable,
@@ -132,7 +132,7 @@ export default function RootLayout({
 						</div>
 					</div>
 				</RootProviders>
-			</body>
+			</div>
 		</>
 	);
 }

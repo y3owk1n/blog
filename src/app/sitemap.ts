@@ -1,4 +1,4 @@
-import { type MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 import config from "../../keystatic.config";
 
 import { createReader } from "@keystatic/core/reader";

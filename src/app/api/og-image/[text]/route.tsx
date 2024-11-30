@@ -2,7 +2,6 @@ import { ImageResponse } from "@vercel/og";
 
 export const runtime = "edge";
 
-// eslint-disable-next-line @typescript-eslint/require-await --- its fine
 export async function GET(
 	_request: Request,
 	{ params }: { params: { text?: string } },
@@ -24,7 +23,6 @@ export async function GET(
 				flexDirection: "column",
 			}}
 		>
-			{/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				style={{

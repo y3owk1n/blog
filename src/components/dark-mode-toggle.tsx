@@ -2,7 +2,7 @@
 
 import { MoonIcon, SunIcon } from "@heroicons/react/20/solid";
 import { useTheme } from "next-themes";
-import * as React from "react";
+import type * as React from "react";
 import { TbDeviceLaptop } from "react-icons/tb";
 import { Button } from "./ui/button";
 import {
