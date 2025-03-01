@@ -1,0 +1,192 @@
+In the world of coding, the tools we choose can shape our experience in profound ways. One such tool that has recently caught the attention of Neovim users is [**undo-glow.nvim**](https://github.com/y3owk1n/undo-glow.nvim). This plugin introduces a unique visual feedback mechanism that enhances the editing experience, making it not just functional but also visually engaging. Let’s take a closer look at what [**undo-glow.nvim**](https://github.com/y3owk1n/undo-glow.nvim) is, the inspiration behind it, and how you can weave it into your Neovim setup.
+
+## What is `undo-glow.nvim`?
+
+At its core, [**undo-glow.nvim**](https://github.com/y3owk1n/undo-glow.nvim) is a Neovim plugin that adds a captivating animated "glow" effect to your editing operations. When you make changes to your text, the plugin highlights the specific regions that have been altered, providing immediate visual feedback. This feature extends beyond just changes made through commands like undo and redo; it can also highlight non-changing text operations, such as searching or yanking text.
+
+### Key Features:
+
+- **Visual Feedback for Changes**: Instantly see the regions affected by your edits.
+- **Non-Intrusive Design**: The plugin doesn’t create automatic keymaps or autocmds by default, allowing for a clean and customizable setup.
+- **Customizable Appearance**: Tailor the glow duration, colors, and animations to fit your style.
+- **Zero Dependencies**: Built using Neovim's native APIs, ensuring efficient real-time highlighting.
+- **Create Your Own Actions**: If the built-in actions don’t quite fit your needs, you can easily create your own using simple APIs.
+- \****[**Beacon.nvim**](https://github.com/DanilaMihailov/beacon.nvim) **Like Cursor Movement Highlighting**: Automatically highlights when the cursor moves significantly, providing visual feedback on your navigation.
+
+## The Inspiration Behind the Plugin
+
+The journey to creating [**undo-glow.nvim**](https://github.com/y3owk1n/undo-glow.nvim) stemmed from a desire for a more intuitive way to visualize edits in Neovim. Traditional text editors provide some feedback, but there was a yearning for something more dynamic—something that would not only inform but also enhance the overall coding experience.
+
+This plugin aims to fill a gap in the existing tools available for Neovim users, providing a straightforward alternative to plugins like [highlight-undo.nvim](https://github.com/tzachar/highlight-undo.nvim). It’s about making the editing process more engaging and visually appealing.
+
+## How to Use `undo-glow.nvim`
+
+Integrating [**undo-glow.nvim**](https://github.com/y3owk1n/undo-glow.nvim) into your Neovim setup is a straightforward process. Here’s how you can get started:
+
+### Installation
+
+If you’re using [lazy.nvim](https://github.com/folke/lazy.nvim), you can install the plugin with the following configuration:
+
+```lua
+-- undo-glow.lua
+return {
+  "y3owk1n/undo-glow.nvim",
+  version = "*", -- remove this if you want to use the `main` branch
+  opts = {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+  }
+}
+```
+
+For other package managers, you can call the `setup` function:
+
+```lua
+require("undo-glow").setup({
+  -- your configuration
+})
+```
+
+### Configuration
+
+[**undo-glow.nvim**](https://github.com/y3owk1n/undo-glow.nvim) is highly customizable. You can adjust the glow effects, colors, and animations to suit your preferences. Here’s a sample configuration to get you started:
+
+```lua
+require("undo-glow").setup({
+  animation = {
+    enabled = true,               -- Enable or disable animations
+    duration = 500,              -- Duration of the glow effect in milliseconds
+    animation_type = "fade",     -- Type of animation (e.g., fade, blink)
+  },
+  highlights = {
+    undo = { hl_color = { bg = "#FF5555" } },  -- Highlight color for undo
+    redo = { hl_color = { bg = "#50FA7B" } },  -- Highlight color for redo
+    yank = { hl_color = { bg = "#F1FA8C" } },  -- Highlight color for yank
+    -- Add more customizations as needed
+  },
+})
+```
+
+### Using the Plugin
+
+Once installed and configured, you can start using **undo-glow.nvim** right away. Here are some of the commands you can utilize:
+
+- **Undo with Highlight**: Use the `u` key to undo changes with a glowing effect.
+- **Redo with Highlight**: Use the `U` key to redo changes with a glowing effect.
+- **Yank with Highlight**: Automatically highlight text when yanking.
+- **Search with Highlight**: Highlight search results for better visibility.
+- And more… Learn more about it at the [GitHub repo](https://github.com/y3owk1n/undo-glow.nvim)
+
+### Example Key Mappings
+
+You can set up key mappings to enhance your experience further. Here’s how you can bind the undo and redo commands to keys:
+
+```lua
+-- Key mappings for undo and redo with highlight
+vim.keymap.set("n", "u", function()
+  require("undo-glow").undo()  -- Call the undo function with highlight
+end, { noremap = true, desc = "Undo with highlight" })
+
+vim.keymap.set("n", "U", function()
+  require("undo-glow").redo()  -- Call the redo function with highlight
+end, { noremap = true, desc = "Redo with highlight" })
+```
+
+### Custom Actions
+
+One of the standout features of [**undo-glow.nvim**](https://github.com/y3owk1n/undo-glow.nvim) is the ability to create your own actions. If the built-in actions don’t cover your specific needs, the plugin provides simple APIs that allow you to craft your own highlight actions. In fact, the very same API are used for building the builtin actions.
+
+For example, if you want to create a custom highlight for a specific text change, you can use the `highlight_changes` API:
+
+```lua
+-- Custom function to highlight changes in a specific action
+function custom_action()
+  require("undo-glow").highlight_changes({
+    hlgroup = "CustomHighlightGroup",  -- Specify a highlight group
+    animation = {
+      enabled = true,
+      duration = 300,
+      animation_type = "pulse",  -- Choose an animation type
+    },
+  })
+  -- Perform the action that causes text changes
+  -- For example, let's say you want to delete a line
+  vim.cmd("normal! dd")  -- Delete the current line
+end
+
+-- Bind the custom action to a key
+vim.keymap.set("n", "<leader>d", custom_action, { noremap = true, desc = "Custom delete with highlight" })
+```
+
+If you want to create a custom highlight for a specific area, you can use the `highlight_region` API and pass the coordinates to it:
+
+```lua
+function yank()
+ local opts = {
+    hlgroup = "CustomHighlightGroup",  -- Specify a highlight group
+    animation = {
+      enabled = true,
+      duration = 300,
+      animation_type = "pulse",  -- Choose an animation type
+    },
+ }
+
+ local pos = vim.fn.getpos("'[")
+ local pos2 = vim.fn.getpos("']")
+
+ require("undo-glow").highlight_region(vim.tbl_extend("force", opts, {
+  s_row = pos[2] - 1,
+  s_col = pos[3] - 1,
+  e_row = pos2[2] - 1,
+  e_col = pos2[3],
+ }))
+end
+```
+
+### Highlighting Search Results
+
+You can also highlight search results using the built-in search functions. Here’s how to set up key mappings for search with highlights:
+
+```lua
+-- Highlight search results
+vim.keymap.set("n", "n", function()
+  require("undo-glow").search_next()  -- Highlight next search result
+end, { noremap = true, desc = "Search next with highlight" })
+
+vim.keymap.set("n", "N", function()
+  require("undo-glow").search_prev()  -- Highlight previous search result
+end, { noremap = true, desc = "Search previous with highlight" })
+```
+
+### Beacon.nvim Like Cursor Movement Highlighting
+
+Another notable feature of **undo-glow.nvim** is its ability to highlight significant cursor movements. This feature provides visual feedback when the cursor moves a considerable distance, helping you keep track of your navigation within the document.
+
+To enable this feature, you can set up an autocmd that triggers the highlight when the cursor moves significantly:
+
+```lua
+-- Highlight when the cursor moves significantly
+vim.api.nvim_create_autocmd("CursorMoved", {
+  desc = "Highlight when cursor moved significantly",
+  callback = function()
+    vim.schedule(function()
+      require("undo-glow").cursor_moved()  -- Call the cursor moved highlight function
+    end)
+  end,
+})
+```
+
+## Alternatives to Consider
+
+While **undo-glow.nvim** offers unique features, there are other plugins available that provide similar functionality, such as:
+
+- [highlight-undo.nvim](https://github.com/tzachar/highlight-undo.nvim)
+- [tiny-glimmer.nvim](https://github.com/rachartier/tiny-glimmer.nvim)
+- [emission.nvim](https://github.com/aileot/emission.nvim)
+- [beacon.nvim](https://github.com/DanilaMihailov/beacon.nvim)
+
+Each of these plugins has its own strengths and may suit different workflows or preferences.
+
+## Conclusion
+
+**undo-glow.nvim** presents an interesting approach to visual feedback in Neovim. It aims to be a utility based plugin that you can glue together any actions with animated highlights. If you’re curious about trying it out, you can find more information and the source code on its [GitHub repository](https://github.com/y3owk1n/undo-glow.nvim).
