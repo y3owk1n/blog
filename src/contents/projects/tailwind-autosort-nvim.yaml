@@ -1,0 +1,9 @@
+name: tailwind-autosort.nvim
+link: https://github.com/y3owk1n/tailwind-autosort.nvim
+image: /keystatic/projects/tailwind-autosort-nvim/image.jpg
+githubLink:
+  discriminant: true
+  value: https://github.com/y3owk1n/tailwind-autosort.nvim
+description: >-
+  Format tailwind classes without prettier-plugin-tailwindcss in class,
+  className, cn, cva, clsx and twMerge.
