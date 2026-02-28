@@ -1,0 +1,9 @@
+name: nvs (Neovim Version Switcher)
+link: https://github.com/y3owk1n/nvs
+image: /keystatic/projects/nvs-neovim-version-switcher/image.jpg
+githubLink:
+  discriminant: true
+  value: https://github.com/y3owk1n/nvs
+description: >-
+  A lightweight Neovim Version & Config Manager CLI tool to install, switch,
+  list, uninstall, and reset Neovim versions.
