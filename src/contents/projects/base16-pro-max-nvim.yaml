@@ -1,0 +1,7 @@
+name: base16-pro-max.nvim
+link: https://github.com/y3owk1n/base16-pro-max.nvim
+image: /keystatic/projects/base16-pro-max-nvim/image.jpeg
+githubLink:
+  discriminant: true
+  value: https://github.com/y3owk1n/base16-pro-max.nvim
+description: Base16 for modern Neovim — not just colors.
