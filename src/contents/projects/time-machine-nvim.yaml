@@ -1,0 +1,9 @@
+name: time-machine.nvim
+link: https://github.com/y3owk1n/time-machine.nvim
+image: /keystatic/projects/time-machine-nvim/image.jpg
+githubLink:
+  discriminant: true
+  value: https://github.com/y3owk1n/time-machine.nvim
+description: >-
+  Undo. Redo. Time travel. Take control of your edit history with an interactive
+  timeline, diff previews, taggings, live reloading trees and cleanup functions.
