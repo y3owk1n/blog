@@ -1,0 +1,9 @@
+name: dotmd.nvim
+link: https://github.com/y3owk1n/dotmd.nvim
+image: /keystatic/projects/dotmd-nvim/image.jpg
+githubLink:
+  discriminant: true
+  value: https://github.com/y3owk1n/dotmd.nvim
+description: >-
+  Organize. Navigate. Create. Markdown. Keep all your notes, todos, and journals
+  inside Neovim without ever leaving the editor.
