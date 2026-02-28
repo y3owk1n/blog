@@ -1,0 +1,10 @@
+name: undo-glow.nvim
+link: https://github.com/y3owk1n/undo-glow.nvim
+image: /keystatic/projects/undo-glow-nvim/image.jpg
+githubLink:
+  discriminant: true
+  value: https://github.com/y3owk1n/undo-glow.nvim
+description: >-
+  Add animated glow/highlight effects to your neovim operation (undo, redo,
+  yank, paste and more) with simple APIs. Alternatives to highlight-undo.nvim
+  and tiny-glimmer.nvim.
