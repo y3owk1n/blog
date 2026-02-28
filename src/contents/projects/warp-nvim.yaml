@@ -1,0 +1,9 @@
+name: warp.nvim
+link: https://github.com/y3owk1n/warp.nvim
+image: /keystatic/projects/warp-nvim/image.jpg
+githubLink:
+  discriminant: true
+  value: https://github.com/y3owk1n/warp.nvim
+description: >-
+  Warp is a lightweight project-local file list for Neovim — add, view, jump,
+  reorder, and remove files, all from a floating window or a keymap away.
