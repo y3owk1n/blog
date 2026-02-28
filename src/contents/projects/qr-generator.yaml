@@ -1,7 +1,0 @@
-name: QR Generator
-link: https://qr.k92.gg
-image: /keystatic/projects/qr-generator/image.jpg
-githubLink:
-    discriminant: true
-    value: https://github.com/y3owk1n/qr-gen
-description: An open source QR Code generator with Next.JS severless function.
