@@ -1,0 +1,10 @@
+name: Neru
+link: https://github.com/y3owk1n/neru
+image: /keystatic/projects/neru/image.jpg
+githubLink:
+  discriminant: true
+  value: https://github.com/y3owk1n/neru
+description: >-
+  Keyboard-driven navigation for macOS - Navigate and click without touching
+  your mouse 🖱️ Open source alternative to homerow, vimac, shortcat and
+  mouseless in macos.
