@@ -1,7 +1,0 @@
-name: ChadType
-link: https://chadtype.k92.gg
-image: /keystatic/projects/chad-type/image.jpg
-githubLink:
-    discriminant: true
-    value: https://github.com/y3owk1n/chadtype
-description: An open source minimalist typing game built on latest Next.JS features.
