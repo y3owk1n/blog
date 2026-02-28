@@ -1,0 +1,10 @@
+name: notifier.nvim
+link: https://github.com/y3owk1n/notifier.nvim
+image: /keystatic/projects/notifier-nvim/image.jpg
+githubLink:
+  discriminant: true
+  value: https://github.com/y3owk1n/notifier.nvim
+description: >-
+  A modern, feature-rich notification system for Neovim that transforms the
+  standard vim.notify experience with beautiful UI, smart grouping, and powerful
+  customization options.
